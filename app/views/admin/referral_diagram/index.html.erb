@@ -1,0 +1,27 @@
+<head>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+<!-- (Optional) Latest compiled and minified JavaScript translation files -->
+
+</head>
+<body onload="init()">
+
+<div id="sample">
+  <form id="live-search-ref" method="get" action="/admin/referral_diagram">
+    <select class="selectpicker" data-live-search="true" id="search_email" name="search_email">
+      <% @search_email.each do |email| %>
+         <option><%= email.email %></option>
+      <% end %>
+    </select>
+    <button class="btn btn-default" type="submit">Submit</button>
+  </form>
+  </br>
+  <div id="fullDiagram" style="height:800px;width:100%;border:1px solid black;margin:2px"></div>
+  <!-- <div id="localDiagram" style="height:350px;width:100%;border:1px solid black;margin:2px"></div> -->
+  <!-- <button onclick="setupDiagram()">Create New Tree</button> -->
+</div>
+</body>
+</html>

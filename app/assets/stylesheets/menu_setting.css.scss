@@ -1,0 +1,148 @@
+.setting-level {
+  margin: 15px auto 15px;
+  display: inline-block;
+
+  .level-item{
+    float: left;
+    text-align: center;
+    img {
+      width: 50px;
+      @media screen and (min-width: 991px) {
+        width: 60px;
+      }
+    }
+    span {
+      font-size: 16px;
+      color:#696969;
+      display: block;
+      margin-top: 10px;
+      @media screen and (max-width: 991px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 600px) {
+        font-size: 13px;
+      }
+      @media screen and (max-width: 375px) {
+        font-size: 12px;
+      }
+    }
+  }
+  .line {
+    background:#b3b3b3;
+    border-radius:2px;
+    width:253px;
+    height:2px;
+    float: left;
+    margin-top: 64px;
+    @media screen and (max-width: 1200px) {
+      width: 180px;
+    }
+    @media screen and (max-width: 991px) {
+      width: 120px;
+      margin-top: 55px;
+    }
+    @media screen and (max-width: 600px) {
+      width: 70px;
+      margin-top: 30px;
+      height: 1px;
+    }
+    @media screen and (max-width: 375px) {
+      width: 55px;
+    }
+  }
+}
+
+.nav-settings {
+  clear: both;
+  list-style: none;
+  text-align: center;
+  background: #fff;
+  margin-bottom: 0;
+  border-bottom: 2px solid #dcdcdc;
+
+  .active {
+    a {
+      border-bottom: 2px solid #2591fd;
+    }
+  }
+
+  li {
+    display: inline-block;
+    padding: 0px 15px;
+    a{
+      padding-bottom: 12px;
+      line-height: 40px;
+      cursor: pointer;
+    }
+    img {
+      margin-right: 10px;
+      position: relative;
+      bottom: 3px;
+      width: 17px;
+    }
+    img.email, img.password {
+      width: 20px;
+    }
+    span {
+      font-size: 16px;
+      color: #696969;
+      letter-spacing: 0;
+      text-align: left;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    li {
+      padding: 0px 20px;
+      img {
+        width: 15px;
+      }
+      img.email, img.password {
+        width: 18px;
+      }
+      span {
+        font-size: 16px;
+      }
+    }
+  }
+  @media screen and (max-width: 600px) {
+    li {
+      padding: 0px 10px;
+      img {
+        width: 12px;
+        bottom: 1px;
+        margin-right: 5px;
+      }
+      img.email, img.password {
+        width: 15px;
+      }
+      span {
+        font-size: 13px;
+      }
+      a{
+        line-height: 33px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  @media screen and (max-width: 375px) {
+    border-width: 1px;
+    li {
+      padding: 5px 10px;
+      span {
+        font-size: 12px;
+      }
+      a {
+        line-height: 23px;
+      }
+    }
+  }
+  @media screen and (max-width: 320px) {
+    li {
+      padding: 5px 7px;
+      span {
+        font-size: 11px;
+      }
+    }
+  }
+}

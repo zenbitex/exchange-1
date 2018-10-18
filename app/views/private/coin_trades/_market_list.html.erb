@@ -1,0 +1,14 @@
+<ul id="list_market_tiny" class="dropdown">
+  <a class="dropdown-toggle" data-toggle="dropdown">
+    <span class="noselect" style="cursor: pointer"><%= @market.name %></span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <% @markets.each do |m| %>
+      <li class="market quote-<%= m.quote_unit %>" data-market="<%= m.id %>" id="market-list-<%= m.id %>">
+        <%= link_to m.name, coin_trades_path(market: m.id) %>
+        <!-- <a href="<%= m.id %>"> <%= m.name %></a> -->
+      </li>
+    <% end %>
+  </ul>
+</ul>

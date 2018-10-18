@@ -1,0 +1,26 @@
+= render "shared/menu_settings"
+= simple_form_for @token, :url => edit_api_token_path, :method => 'PATCH', html: {class: "edit_api_token form-default"} do |f|
+  .edit_content
+    = f.input :label, hint: t('.label_hint')
+    = f.input :access_key do
+      .input-group
+        .form-control.form-control-static#data-copy-access = @token.access_key
+        .input-group-addon.token-data id="i-data-copy-access" idata-clipboard-action="copy" data-clipboard-target="#data-copy-access"
+          i.fa.fa-copy
+          span class="i-tooltip" Click To Copy
+    = f.input :ip_whitelist, hint: t('.ip_whitelist_hint')
+  = two_factor_tag(current_user)
+  .edit_button
+    = f.button :wrapped, t('actions.confirm'), class: "button-primary"
+
+javascript:
+  $('.token-data').click(function() {
+    $('.i-tooltip').html("Copied");
+    $('.i-tooltip').addClass('copied');
+    $(this).addClass("active");
+  }) 
+  $('.token-data').mouseleave(function(){
+    $('.i-tooltip').html("Click To Copy");
+    $('.i-tooltip').removeClass('copied');
+    $(this).removeClass("active");
+  })

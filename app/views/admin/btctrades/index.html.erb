@@ -1,0 +1,43 @@
+<div class="list-trade">
+	<h2>Bitcoin Trades</h2>
+
+
+	<div class="table" >
+		<div class="tr-header">
+			<span class="id">ID</span>
+			<span class="email">User</span>
+			<span class="tradecode">Tradecode</span>
+			<span class="address">Address</span>
+			<span class="amount">Amount</span>
+			<span class="rate">Exchange Rate</span>
+			<span class="price">Prices</span>
+			<span class="price">Status</span>
+			<span class="change">Change</span>
+		</div>
+		<div class="t-content">	
+			<% @trades.each do |t| %>
+				<div class="tr-body">
+					<span class="id"><%= t.id %></span>
+					<span class="email"><%= t.account.member.email %></span>
+					<span class="tradecode"><%= t.tradecode %></span>
+					<span class="address"><%= t.account.payment_address.address %></span>
+					<span class="amount"><%= t.amount %></span>
+					<span class="rate"><%= t.exchangerate %></span>
+					<span class="price"><%= t.price %></span>
+					<span class="price">
+						<% if t.status_id == 1 %>
+							Completed
+						<% elsif t.status_id == 0 %>
+							Pending
+						<% else %>
+							Rejected
+						<% end %>
+										
+					</span>
+					<span class="change"><%= link_to "View", admin_btctrade_path(t) %></span>
+				</div>
+			<% end %>
+			<%= paginate @trades %>
+		</div>	
+	</div>
+</div>

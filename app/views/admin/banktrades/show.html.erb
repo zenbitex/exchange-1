@@ -1,0 +1,31 @@
+<div class="trade-detail">
+	<h2>Trade details</h2>
+	<p id="notice"><%= notice %></p>
+
+	<p><label>Trade Code: </label> <%= @trade.tradecode %></p>
+	<p><label>Email: </label> <%= @trade.account.member.email %></p>
+	<p><label>Amount: </label> <%= @trade.amount %></p>
+	<p><label>Exchange Rate: </label> <%= @trade.exchangerate %></p>
+	<p><label>Prices: </label> <%= @trade.price %></p>
+
+	<% if @trade.status_id == 0 %>
+		<div class="actions">
+			<% if @balance >= @trade.amount %>
+	    		<%= link_to 'Accept', admin_banktrade_path, class: 'btn btn-primary', method: 'PATCH' %>
+	    	<% else %>
+	    		<p style="color: red">Amount your TAOCOIN not enought, Please sent TAOCOIN to your address </p>
+	    	<% end %>
+	    	<%= link_to 'Reject', admin_banktrade_path, class: 'btn btn-primary', method: 'DELETE' %>
+	    	
+	    </div>
+	<% elsif @trade.status_id == 1 %>
+		<a class="btn btn-success active">Accepted</a>
+	<% else %>
+		<a class="btn btn-danger active">Rejected</a>
+	<% end %>
+
+	<a class="btn btn-info btn-top" href="/admin/banktrades">Back to Trades</a>
+
+</div>
+
+

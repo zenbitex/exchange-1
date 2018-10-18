@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "withdraw_jpy_history") do |sheet|
+    sheet.add_row ["ID", "メンバー", "名前", "金額", "手数料", "銀行名", "銀行口座番号", "日時"]
+    @withdraws.each do |withdraw|
+      sheet.add_row [withdraw.id, withdraw.member, withdraw.member.name.nil? ? "なし" : withdraw.member.name, withdraw.amount, withdraw.fee, withdraw.bank_account.bank_name, withdraw.bank_account.account_number.to_s, withdraw.created_at.to_s]
+    end
+  end
+
+end

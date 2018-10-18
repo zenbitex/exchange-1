@@ -1,0 +1,25 @@
+<div class="trade-detail">
+	<h2>Trade details</h2>
+	<p><label>Trade Code: </label> <%= @trade.tradecode %></p>
+	<p><label>Email: </label> <%= @trade.account.member.email %></p>
+	<p><label>Amount: </label> <%= @trade.amount %> TAOCOIN</p>
+	<p><label>Exchange Rate: </label> <%= @trade.exchangerate %> BTC</p>
+	<p><label>Prices: </label> <%= @trade.price %> BTC</p>
+	<% if @trade.status_id == 1 %>
+		<% @status = "Completed" %>
+	<% elsif @trade.status_id == 0 %>
+		<% @status = "Pending" %>
+	<% else %>
+		<% @status = "Rejected" %>
+	<% end %>
+	<p><label>Status: </label><%= @status %></p>
+	<a class="btn btn-info btn-top" href="/admin/btctrades">Back to Trades</a>
+
+	<% if @trade.status_id == 0 %>
+		<div class="actions">
+	    	<%= link_to 'Accept', admin_btctrade_path, class: 'btn btn-primary', method: 'PATCH' %>
+	    </div>
+	<% end %>
+
+</div>
+

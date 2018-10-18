@@ -1,0 +1,20 @@
+.history-pages
+  .history-tab
+    = render 'tabs', active: :arb_history
+
+  .history-transaction#arb_history
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @arb_histories.empty?)
+          th = t('.member_id')
+          th = t('.type')
+          th = t('.tao_amount')
+          th = t('.timestamp')        
+        - if @arb_histories.length != 0            
+          tbody.list
+            = render partial: 'arb_history', collection: @arb_histories
+      - if @arb_histories.length == 0
+        div.empty_history 
+          = t('.empty_arb_histories').html_safe
+      .pull-right
+        = paginate @arb_histories

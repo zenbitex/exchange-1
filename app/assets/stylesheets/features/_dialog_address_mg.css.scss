@@ -1,0 +1,60 @@
+// FundSource Management Dialog
+#ngdialog1{
+  .ngdialog-content {
+    ul > li{
+      color: #f0f0f0;
+    }
+    ul > li div{
+      color: #444444;
+    }
+  }
+}
+
+.ngdialog.ngdialog-theme-default .ngdialog-content{
+  width: 95%;
+  padding-left: 2px;
+  padding-right: 2px;
+  .funds-source{
+    .lb{
+      width: 33%;
+    }
+    .uid{
+      max-width: 150px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .check-default{
+      width: 15%;
+    }
+  }
+}
+
+@media screen and (min-width: 450px) {
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .ngdialog.ngdialog-theme-default .ngdialog-content{
+    max-width: 600px;
+  }
+}
+
+.new_address_cf{
+  p{
+    margin-bottom: 10px;
+  }
+  .cancel,.confirm{
+    margin-right: 10px;
+  }
+}

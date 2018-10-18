@@ -1,0 +1,35 @@
+<div class="funds-top" ng-class="{'hidden': currency == 'jpy'}">
+  <ul class="list-coin">
+    <li class="list-coin-item" ng-class="{active: accountsCtrl.isSelected(account.currency)}" ng-repeat="account in accounts" bind="accounts"  ng-if="account.currency != 'jpy'"> 
+
+      <a href="#" ng-click="accountsCtrl.withdraw(account); $event.preventDefault()" ng-if="deposit_mode == false">
+        <img src="/funds_img/icon-{{account.currency}}.png">
+        <span>{{account.currency | uppercase}}</span>
+      </a>
+
+      <a href="#" ng-click="accountsCtrl.deposit(account); $event.preventDefault()" ng-if="deposit_mode != false">
+        <img src="/funds_img/icon-{{account.currency}}.png">
+        <span>{{account.currency | uppercase}}</span>
+      </a>
+
+    </li>
+  </ul>
+</div>
+
+<!-- <table class="table table-currencies" ng-repeat="account in accounts" bind="accounts">
+  <tr class="currency-item" ng-class="{selected: accountsCtrl.isSelected(account.currency),
+    'deposit-now': accountsCtrl.isDeposit(),
+    'withdraw-now': accountsCtrl.isWithdraw() }"
+    data-currency="{{account.currency}}">
+    <td class="currency-logo"><img ng-src="/icon-{{account.currency}}.png" alt="{{account.currency}}">{{account.currency}}
+    </td>
+    <td class="currency-balance-col">
+      <p class="currency-balance"><span class="currency-sign"></span>{{account.balance | round_down }}</p>
+      <span class="currency-balance-locked"><i class="fa fa-lock"></i> {{account.locked}}</span>
+    </td>
+    <td class="currency-actions">
+      <p class="currency-deposit"><a href="#" ng-click="accountsCtrl.deposit(account); $event.preventDefault()" class="btn-deposit">{{ 'funds.deposit' | t }}</a></p>
+      <p class="currency-withdraw"><a href="#" ng-click="accountsCtrl.withdraw(account); $event.preventDefault()" class="btn-withdraw" >{{ account.currency == 'jpy' ? '出金' : ('funds.withdraw' | t ) }}</a></p>
+    </td>
+  </tr>
+</table> -->

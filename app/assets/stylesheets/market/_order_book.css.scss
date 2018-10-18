@@ -1,0 +1,120 @@
+#table_orders{
+  $front_color: #bccad6;
+  $back_color: #e0876a;
+
+  position: relative;
+  width: 100%;
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+
+  tbody {
+    tr td {
+        position: relative;
+        border-top: none;
+        padding: 0px;
+        text-align: center;
+        height: $row_height;
+        width: 100%;
+
+        span {
+          white-space: pre;
+          color: white;
+          cursor: default;
+          line-height: 30px;
+          width: 33%;
+          height: 100%;
+          text-align: center;
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 15px;
+          margin: 0px;
+          transition: all 0.2s linear;
+        }
+
+
+        span:nth-child(2){
+          cursor: pointer;
+          border-top: none;
+          border-bottom: none;
+        }
+
+        .bid_price{
+          color: $buy_color;
+        }
+        .ask_price{
+          color: $sell_color;
+        }
+
+        > div {
+          width: 100%;
+          height: 100%;
+          -webkit-transform-style: preserve-3d;
+          -moz-transform-style: preserve-3d;
+          -o-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+
+          div.figure {
+              display: inline-block;
+              color: black;
+              margin: 0;
+              display: block;
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              // transition-delay: 0.5s;
+              backface-visibility: hidden;
+              -o-backface-visibility: hidden;
+              -moz-backface-visibility: hidden;
+              -webkit-backface-visibility: hidden;
+          }
+          .back {
+            -webkit-transform: rotateY( 180deg );
+            -moz-transform: rotateX( 180deg );
+            -o-transform: rotateX( 180deg );
+            transform: rotateX( 180deg );
+          }
+        }
+    }
+
+    tr td.separator{
+      border-bottom: 2px solid $market_background;
+    }
+
+    tr.ask{
+      span:nth-child(2){
+        color: $sell_color;
+      }
+    }
+
+    tr.bid {
+      span:nth-child(2){
+        color: $buy_color;
+      }
+    }
+  }
+}
+
+// animation
+$interval: 1.2s;
+$hi_color: #337ab7;
+.row_fade{
+  animation: fadeout $interval;
+  -moz-animation: fadeout $interval; /* Firefox */
+  -webkit-animation: fadeout $interval; /* Safari and Chrome */
+  -o-animation: fadeout $interval; /* Opera */
+}
+
+@keyframes fadeout{
+  0% {background-color: $hi_color;}
+  100% {background-color: #122027;}
+}
+@-webkit-keyframes fadeout{
+  0% { background-color: $hi_color;}
+  100% {background-color: #122027;}
+}
+@-moz-keyframes fadeout{
+  0% {background-color: $hi_color;}
+  100% {background-color: #122027;}
+}

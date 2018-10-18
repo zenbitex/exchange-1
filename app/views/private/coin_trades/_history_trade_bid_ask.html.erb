@@ -1,0 +1,34 @@
+<div class="table-responsive">
+  <table class="table withdraw-history table-history">
+    <thead>
+      <tr>
+        <th><%= t('.type') %></th>
+        <th><%= t('.currency') %></th>
+        <th><%= t('.payment_type') %></th>
+        <th><%= t('.price') %></th>
+        <th><%= t('.amount') %></th>
+        <th><%= t('.total_price') %></th>
+        <th><%= t('.trade_time') %></th>
+      </tr>
+    </thead>
+  <tbody>
+    <% history.each do |h| %>
+      <tr>
+        <th><%= type_to_text(h.type) %></th>
+        <th class="uppercase"><%= h.currency %></th>
+        <th class="uppercase"><%= h.payment_type %> </th>
+        <th><%= h.price %> </th>
+        <th><%= h.amount %> </th>
+        <th><%= h.total %> </th>
+        <th><%= h.created_at %> </th>
+      </tr>
+    <% end %>
+  </tbody>
+  </table>
+</div>
+<div class="paginate">
+  <button type="button" name="button" ng-click="loadHistory()" class="btn btn-primary">
+    <span id="loading" class="glyphicon glyphicon-refresh glyphicon-refresh-animate hidden"></span>
+    <%= t('.load_more') %>
+  </button>
+</div>

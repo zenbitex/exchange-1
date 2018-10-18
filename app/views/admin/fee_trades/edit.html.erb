@@ -1,0 +1,23 @@
+<% if flash[:note] %>
+  <h3 class="success"><%= flash[:note] %></h3>
+<% end %>
+<%= form_for @fee, :html => {:class => 'form-fee'}, :url => admin_fee_trade_path, :method => :PATCH do |f| %>
+  <div class="field">
+    <%= f.label :currency %><br>
+    <%= f.hidden_field :currency, :readonly => true, :hidden => true, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <% if @fee.currency == 2 %>
+      <input type="text" value="BTC" readonly="true" ="true" name="" class="form-control">
+    <% elsif @fee.currency == 3 %>
+      <input type="text" value="TAOCOIN" readonly="true" name="" class="form-control">
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :fee %><br>
+    <%= f.text_field :amount, :class => 'fee-amount form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Update", :class => 'btn btn-primary' %>
+  </div>
+<% end %>

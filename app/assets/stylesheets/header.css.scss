@@ -1,0 +1,279 @@
+.bitirade-topheader{
+  background: #0067a3;
+  padding: 0px 10px;
+  width: 100%;
+  z-index: 10000;
+  height: 55px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .pull-left{
+    a{
+      width: 80px;
+      display: inline-block;
+      .logo-icon{
+        width: 80px;
+      }
+    }
+  }
+  .pull-right{
+    width: 100%;
+    text-align: right;
+    .menu_right{
+      display: flex;
+      float: right;
+      align-items: center;
+    }
+    .button_market{
+      display: inline-block;
+      margin-right: 5px;
+      .btn {
+        clear:both;
+        white-space:nowrap;
+        font-size: 10px;
+        display:inline-block;
+        border-radius:5px;
+        box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.35);
+        margin:2px;
+        -webkit-transition:all .5s;
+        -moz-transition:all .5s;
+        transition:all .5s;
+        overflow:hidden;
+        padding: 0;
+        span, i {
+          float:left;
+          padding: 10px 5px;
+          -webkit-transition:all .5s;
+          -moz-transition:all .5s;
+          transition:all .5s;
+          line-height:1em;
+          color: white;
+        }
+        i {
+          border-radius:5px 0 0 5px;
+          position:relative;
+          width: 35px;
+          text-align:center;
+          color:#fff;
+          background:#212121;
+        }
+        i:after {
+          content: "";
+          border: 8px solid;
+          border-color: transparent transparent transparent #222;
+          position: absolute;
+          top: 7px;
+          right: -12px;
+        }
+      }
+
+      .btn:hover {
+        box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.45);
+      }
+
+      .btn:focus {
+        box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+        span {
+          background:#9a9a9a;
+        }
+      }
+
+      .btn-exchange:hover > i,.btn-exchange:focus > i {
+        color:#dd4b39;
+      }
+
+      .btn-exchange > span {
+        background:#dd4b39;
+      }
+    }
+    .menu_mini{
+      display: inline-block;
+      height: 60px;
+    }
+    .menu_select{
+      text-align: right;
+      display: inline-block;
+      li{
+        list-style: none;
+      }
+      img{
+        width: 35px;
+      }
+    }
+    .menu_user{
+      li{
+        list-style: none;
+      }
+      .icon-user {
+        width: 30px;
+        border-radius: 50%;
+        background: white;
+        text-align: center;
+        display: table;
+        float: left;
+        line-height: 30px;
+      }
+      .caret{
+        display: none;
+      }
+      #setting_dropdown{
+        top: 28px;
+        left: -108px;
+        width: 215px;
+        a{
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+    .signup_signin{
+      a{
+        color: white;
+      }
+      a:first-child{
+        padding-right: 5px;
+      }
+    } 
+    .menu_toggle{
+      float: right;
+      margin-left: 7px;
+      font-size: 14px;
+      color: white;
+    }
+    .dropdown_languages{
+      float: left;
+      display: none;
+    }
+    #languages{
+      min-width: 49px;
+      left: -7px;
+      a{
+        padding: 3px 6px;
+      }
+    }
+  }
+  .user_login{
+    .menu_mini{
+      height: auto;
+    }
+    .menu_select{
+      float: right;
+      .dropdown-toggle{
+        line-height: 23px;
+      }
+    }
+    .menu_user{
+      float: right;
+      .user_manage
+      {
+        margin-right: 10px;
+      }
+    }
+  }
+  @media screen and (min-width: 375px) {
+    .pull-right{
+      .button_market .btn {
+        font-size: 13px;
+        margin-right: 20px;
+        span, i {
+          padding: 10px;
+        }
+        i:after{
+          top: 9px;
+          right: -15px;
+        }
+      }
+
+      .menu_mini{
+        height: auto;
+      }
+      .menu_select{
+        float: right;
+      }
+      .menu_user{
+        margin-right: 10px;
+        float: right; 
+        line-height: 23px;
+      }
+    }
+    .user_login{
+      .menu_user{
+        .user_manage
+        {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 576px) { 
+    .pull-right{
+      .button_market .btn {
+        font-size: 15px;
+      }
+      .menu_user{
+        font-size: 15px;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .menu_toggle{
+      display: none;
+    }
+    .pull-right{
+      .button_market .btn {
+        font-size: 16px;
+      }
+      .dropdown_languages{
+        display: block;
+      }
+      .menu_select{
+        img{
+          width: 40px;
+        }
+      }
+      .menu_user{
+        font-size: 17px;
+      }
+      #languages{
+        min-width: 55px;
+        left: -8px;
+        a{
+          padding: 4px 7px;
+        }
+      }
+    }
+    .user_login{
+      .menu_select{
+        .dropdown-toggle{
+          line-height: 31px;
+        }
+      }
+      .menu_toggle{
+        font-size: 16px;
+      }
+      .menu_user{
+        .user_manage
+        {
+          margin-top: 2px;
+        }
+        #setting_dropdown{
+          left: -134px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 992px) { 
+    padding: 0px 20px;
+    .pull-right{
+      .menu_user{
+        font-size: 19px;
+      }
+    }
+  }
+}

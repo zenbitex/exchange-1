@@ -1,0 +1,9 @@
+- if flash[:error]
+    h3.error
+    = flash[:error]
+= simple_form_for @fee, :url => admin_fee_trades_path , :class => 'form-add-fee' do |f|
+  = f.input :currency, label: t('.currency')
+   = f.select :currency, options_for_select(@currencies_summary.collect{ |cs| [cs[:name], cs[:id]] })
+  = f.input :amount, as: :decimal, required: true, label: t('.amount'), input_html: { min: '0' }
+  = f.button :submit, value: 'create' ,class: "btn btn-default btn-lg pull-right"
+  = f.select :fee_type, options_for_select(@fee_type)

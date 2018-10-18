@@ -1,0 +1,15 @@
+<% if sendcoin.currency == '2' %>
+<% sendcoin.currency = 'BTC' %>
+<% elsif sendcoin.currency == '3' %>
+<% sendcoin.currency = 'TAOCOIN' %>
+<% elsif sendcoin.currency == '5' %>
+<% sendcoin.currency = 'XRP' %>
+<% elsif sendcoin.currency == '10' %>
+<% sendcoin.currency = 'BCH' %>
+<% end %>
+<tr>
+  <td data-th = <%= t('.from') %> > <%= @user_source %> </td>
+  <td data-th = <%= t('.to') %> > <%= sendcoin.email %> </td>
+  <td data-th = <%= t('.amount') %> > <%= sendcoin.amount %> </td>
+  <td data-th = <%= t('.currency') %> > <%= sendcoin.currency %> </td>
+  <td data-th = <%= t('.timestamp') %> > <%= sendcoin.created_at %> </td>

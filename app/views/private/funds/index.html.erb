@@ -1,0 +1,20 @@
+<div class="funds-container withdraw-container">
+  <accounts></accounts>
+
+  <div class="funds-bottom">
+    <div class="funds-bottom-content">
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>
+
+<% content_for :scripts do %>
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function(){
+      $.ajax({
+        type: "post",
+        url: "<%= gen_address_funds_path %>"
+      })
+    });
+  </script>
+<% end %>

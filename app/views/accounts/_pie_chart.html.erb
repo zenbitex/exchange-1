@@ -1,0 +1,51 @@
+<style media="screen">
+  .highcharts-background{
+    fill: white;
+  }
+  .highcharts-title, .highcharts-credits{
+    display: none;
+  }
+  #pie_chart{
+    min-width: 310px;
+    height: 400px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+</style>
+
+<div id="pie_chart"></div>
+
+<script type="text/javascript">
+  Highcharts.chart('pie_chart', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    // title: {
+    //     text: 'Browser market shares January, 2015 to May, 2015'
+    // },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: '率',
+        colorByPoint: true,
+        data: gon.series_data
+    }]
+  });
+</script>

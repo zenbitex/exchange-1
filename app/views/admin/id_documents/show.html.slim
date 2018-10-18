@@ -1,0 +1,394 @@
+.col-xs-18
+  .panel: .panel-body
+    .row
+      .col-xs-6.text-right
+      .col-xs-18
+        label.color-message = check_account_exist @id_document
+    .row
+      .col-xs-6.text-right
+      .col-xs-18
+        = link_to edit_admin_id_document_path(@id_document), style: 'color: white;' do
+          button.btn.btn-primary = "Edit member information"
+    .row
+      .col-xs-6.text-right
+        label = t('.id')
+      .col-xs-18
+        span = @id_document.member_id
+    .row
+      .col-xs-6.text-right
+        label = "紹介コードを登録済み"
+      .col-xs-18
+        - if !@aff_code.nil?
+          = link_to @aff_code , admin_id_document_path(@id_document.member.referrer_member_id)
+    .row
+      .col-xs-6.text-right
+        label = t('.name')
+      .col-xs-18
+        span = link_to @id_document.name, admin_member_path(@id_document.member)
+    .row
+      .col-xs-6.text-right
+        label = t('.email')
+      .col-xs-18
+        span = link_to @id_document.member.email, admin_member_path(@id_document.member)
+    - if @id_document.user_type == 1
+      .row.title
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.title.company_infor')
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.company_name')
+        .col-xs-18
+          span = @id_document.company_name
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.country')
+        .col-xs-18
+          span = @id_document.company_country
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.zipcode')
+        .col-xs-18
+          span = @id_document.company_zipcode
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.city')
+        .col-xs-18
+          span = @id_document.company_city
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.address')
+        .col-xs-18
+          span = @id_document.company_address
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.company_job_content')
+        .col-xs-18
+          span = @id_document.company_job_content
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.trade_purpose')
+        .col-xs-18
+          span = t("enumerize.id_document.company_trade_purpose.#{@id_document.company_trade_purpose}")
+      .row.title
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.title.manager_infor')
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.name')
+        .col-xs-18
+          span = @id_document.manager_name
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.position')
+        .col-xs-18
+          span = @id_document.manager_position
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.birth_date')
+        .col-xs-18
+          span = @id_document.manager_birth_date
+      .row
+        .col-xs-6.text-right
+          label = t('.country')
+        .col-xs-18
+          span = @id_document.manager_country
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.zipcode')
+        .col-xs-18
+          span = @id_document.manager_zipcode
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.city')
+        .col-xs-18
+          span = @id_document.manager_city
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.address')
+        .col-xs-18
+          span = @id_document.manager_address
+      .row
+        .col-xs-6.text-right
+          label = "外国の重要な公人について"
+        .col-xs-18
+          span = t("enumerize.id_document.manager_foreign.#{@id_document.manager_foreign}")
+      .row
+        .col-xs-6.text-right
+          label = "実質的支配者について"
+        .col-xs-18
+          span = t("enumerize.id_document.manager_role.#{@id_document.manager_role}")
+      .row.title
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.title.represent_infor')
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.type_role')
+        .col-xs-18
+          span = t("enumerize.id_document.type_role.#{@id_document.type_role}")
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.name')
+        .col-xs-18
+          span = @id_document.name
+      .row
+        .col-xs-6.text-right
+          label = t('private.id_documents.edit.position')
+        .col-xs-18
+          span = @id_document.position
+
+    .row
+      .col-xs-6.text-right
+        label = t('.birth_day')
+      .col-xs-18
+        span = @id_document.birth_date
+    .row
+      .col-xs-6.text-right
+        label = t('.country')
+      .col-xs-18
+        span = @id_document.country
+    .row
+      .col-xs-6.text-right
+        label = t('.zipcode')
+      .col-xs-18
+        span = @id_document.zipcode
+    .row
+      .col-xs-6.text-right
+        label = t('.city')
+      .col-xs-18
+        span = @id_document.city
+    .row
+      .col-xs-6.text-right
+        label = t('.address')
+      .col-xs-18
+        span = @id_document.address
+    .row
+      .col-xs-6.text-right
+        label = t('.job_type')
+      .col-xs-18
+      - case @id_document[:job_type]
+      - when "0"
+        | 会社員役員
+      - when "1"
+        | 会社員
+      - when "2"
+        | 公務員
+      - when "3"
+        | 団体職員
+      - when "4"
+        | 医師・その他医療機関系
+      - when "5"
+        | 弁護士・会計士・税理士
+      - when "6"
+        | 教職員
+      - when "7"
+        | 自営業
+      - when "8"
+        | パート・アルバイト・派遣・契約
+      - when "9"
+        | 専業主婦（主夫）
+      - when "10"
+        | 学生
+      - when "11"
+        | 無職
+      - when "12"
+        | その他
+      end
+    .row
+      .col-xs-6.text-right
+        label = t('.trading_purpose')
+      .col-xs-18
+      - case @id_document[:trade_purpose]
+      - when "0"
+        | 仮想通貨を購入して、国内外への送金、決済等のため
+      - when "1"
+        | 仮想通貨の価格変動による差益取引のため
+      - when "2"
+        | 分散投資を行うため
+      - when "3"
+        | 中・長期投資のため
+      - when "4"
+        | その他
+      end
+    .row
+      .col-xs-6.text-right
+        label = t('.id_document_type')
+      .col-xs-18
+        span = t("enumerize.id_document.id_document_type.#{@id_document.id_document_type}")
+    .row.title
+      .col-xs-6.text-right
+        label = t('private.id_documents.edit.id_document_type')
+    .row
+      .col-xs-6.text-right
+        / label = t('.id_document_file')
+      .col-xs-18.document_image
+        / = binding.pry
+
+        - assets = Asset.where(:attachable_id => @id_document.id, :type => "Asset::IdDocumentFile").order(:attachable_type)
+        - if assets.count == 0
+          img src="/no_image.jpg"
+        - else
+          - if @id_document.id_document_type != "passport"
+            -assets = assets.slice(0 , 2)
+             - if @id_document.id_document_type == "seal_certificate"
+              -assets = assets.slice(0 , 1)
+            end
+          end
+          - assets.each do |asset|
+            = id_document_link_to(asset)
+          end
+        end
+        /= admin_asset_tag @id_document.id_document_file
+
+    - if @id_document.user_type == 1
+      .row.title
+        .col-xs-6.text-right
+          label = "登記事項証明書"
+      .row
+        .col-xs-6.text-right
+        .col-xs-18.document_image
+          - assets = Asset.where(:attachable_id => @id_document.id, :type => "Asset::IdDocumentInfor")
+          - if assets.count == 0
+            img src="/no_image.jpg"
+          - else
+            - assets.each do |asset|
+              = id_document_link_to(asset)
+            end
+          end
+
+      .row.title
+        .col-xs-6.text-right
+          label = "取引権限を有することを証明する書類"
+      .row
+        .col-xs-6.text-right
+        .col-xs-18.document_image
+          - assets = Asset.where(:attachable_id => @id_document.id, :type => "Asset::IdDocumentTrade")
+          - if assets.count == 0
+            img src="/no_image.jpg"
+          - else
+            - assets.each do |asset|
+              = id_document_link_to(asset)
+            end
+          end
+    .row
+      .col-xs-6.text-right
+        label = t('.created_at')
+      .col-xs-18
+        span = @id_document.created_at
+    .row.updated_at
+      .col-xs-6.text-right
+        label = t('.updated_at')
+      .col-xs-18
+        span = @id_document.updated_at
+    / .row
+    /   .col-xs-6.text-right
+    /     label = t('.state')
+    /   .col-xs-18
+    /     span = t(".state_#{@id_document.aasm_state}")
+    .row.detail_confirm
+      .col-xs-13.text-right
+        label = t('.detail_confirm')
+    .row
+      .col-xs-6.text-right
+        label = t('.email_verified')
+      .col-xs-18
+        = yesno(@id_document.member.activated?)
+    .row
+      .col-xs-6.text-right
+        label = t('.document_info_verified')
+      .col-xs-6
+        = yesno(@id_document.verified?)
+      .col-xs-12.document_info_verified
+        .col-xs-6
+          - if @id_document.may_approve?
+            .col-xs-6
+              = link_to admin_id_document_path(@id_document, approve: 'true'), method: :patch, style: 'color: white;' do
+                button.btn.btn-primary = t('.approve')
+        .col-xs-6
+          - if @id_document.may_reject?
+              = link_to admin_id_document_path(@id_document, reject: 'true'), method: :patch, style: 'color: white;' do
+                button.btn.btn-danger = t('.reject')
+        = simple_form_for @id_document, method: "POST", url: admin_id_documents_send_mail_reject_path do |f|
+          = f.hidden_field :member_id, :value => @id_document.member.id.to_i
+          .input-trade.col-xs-8
+            = f.input :reason_reject, prompt: t('.select'), required: false, label: false
+          .id-document-button.col-xs-4
+            = f.button :submit, value: t('.submit_send_mail')
+    .row
+      .col-xs-6.text-right
+        label = t('.verified_phone')
+      .col-xs-18
+        = yesno(@phone_verified.activated?)
+    .row
+      .col-xs-6.text-right.foreight-row
+        label = t('.foreign')
+      .col-xs-18
+        = @id_document.foreign.nil? ? "nil" : yesno(@id_document.foreign.is_not?)
+    .row
+      .col-xs-6.text-right
+        label = t('.address_accepted')
+      .col-xs-6
+        = yesno(@id_document.is_address?)
+      .col-xs-12.address_id_document
+        .col-xs-6
+        - if @id_document.verified?
+          - if @id_document.is_address == 0 || @id_document.is_address == nil
+            .col-xs-6
+              = link_to admin_id_document_path(@id_document, accepted: 'true'), method: :patch, style: 'color: white;' do
+                button.btn.btn-primary = t('.accept_address')
+          - else
+            .col-xs-6
+              = link_to admin_id_document_path(@id_document, reject_address: 'true'), method: :patch, style: 'color: white;' do
+                button.btn.btn-danger = t('.reject_address')
+    .row
+      .col-xs-6.text-right
+        label = t('.level')
+      .col-xs-18
+        = @id_document.member.account_class
+    - if @delivery_infor
+      .row
+        .col-xs-6.text-right
+          label = "お問い合わせ番号(ハガキ)"
+        .col-xs-18
+          = @delivery_infor[0]
+      .row
+        .col-xs-6.text-right
+          label = "送達結果(ハガキ)"
+        .col-xs-18
+          = @delivery_infor[1]
+    / hr.split
+
+    / .row
+    /   .col-xs-5.text-right
+
+    /   - if @id_document.may_approve?
+    /     .col-xs-4
+    /       = link_to admin_id_document_path(@id_document, approve: 'true'), method: :patch, style: 'color: white;' do
+    /         button.btn.btn-primary = t('.approve')
+
+    /   - if @id_document.may_reject?
+    /     .col-xs-4
+    /       = link_to admin_id_document_path(@id_document, reject: 'true'), method: :patch, style: 'color: white;' do
+    /         button.btn.btn-danger = t('.reject')
+    /   - if @id_document.verified?
+    /     - if @id_document.is_address == 0 || @id_document.is_address == nil
+    /       .col-xs-4
+    /         = link_to admin_id_document_path(@id_document, accepted: 'true'), method: :patch, style: 'color: white;' do
+    /           button.btn.btn-primary = t('.accept_address')
+    /     - else
+    /       .col-xs-4
+    /         = link_to admin_id_document_path(@id_document, reject_address: 'true'), method: :patch, style: 'color: white;' do
+    /           button.btn.btn-danger = t('.reject_address')
+
+css:
+  .title {
+    color: red;
+  }
+  .document_image{
+    color: green;
+  }
+  a img{
+    max-height: 150px !important;
+    float: left;
+    display: inline-block;
+    margin: 10px;
+  }

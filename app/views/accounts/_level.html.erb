@@ -1,0 +1,17 @@
+<div id="level" class="col-xs-12">
+  <h2 class="title-header"><%= t('.header')%></h2>
+  <div class="content">
+    <div>
+      <%= image_tag (current_user.activated? ? "/check.png" : "/uncheck.png"), class: "icon-currency" %>
+      <span><%= t('.email_verifi') %></span>
+    </div>
+    <div>
+      <%= image_tag (current_user.activated_both? ? "/check.png" : "/uncheck.png"), class: "icon-currency" %>
+      <span><%= t('.account_phone_verifi') %></span>
+    </div>
+    <div>
+      <%= image_tag (current_user.id_document_verified? ? "/check.png" : "/uncheck.png"), class: "icon-currency" %>
+      <span><%= t('.post_card') %></span>
+    </div>
+  </div>
+</div>

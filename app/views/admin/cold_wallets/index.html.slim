@@ -1,0 +1,78 @@
+.row
+  .col-xs-24
+    .panel.panel-primary
+      .panel-heading History
+      .panel-body
+        table.table.table-condensed
+          thead: tr
+            th 通貨
+            th アドレス
+            th.text-right 金額
+            th.text-right 時間
+            th.text-right TXid
+
+          tbody
+            - @cold_wallets.each do |c|
+              tr
+                td: b = c[:currency].upcase
+                td = c[:address]
+                td.text-right = c[:amount]
+                td.text-right = c[:created_at]
+                td.text-right = c[:txid]
+.row
+  .col-xs-12: .panel.panel-primary
+    .panel-heading Hot wallet
+    .panel-body
+      table.table.table-condensed
+        thead: tr
+          th Asset
+          th Hot wallet
+          th Address
+
+        tbody
+          - @currencies_summary.each do |css|
+            tr
+              td: b = css[:name]
+              td = css[:hot]
+              td = css[:address]
+
+  .col-xs-12: .panel.panel-primary
+    .panel-heading Hot -> cold
+    .panel-body
+      = simple_form_for @cold_wallet, :url => admin_cold_wallets_path do |f|
+        = f.input :currency
+          = f.select :currency, options_for_select(@currencies_summary.collect{ |cs| [cs[:name], cs[:name].downcase] }), {}, {:class => "form-control", :style => "width: 15%"}
+        = f.input :address, required: false, :label => "アドレス"
+        = f.input :amount, as: :decimal, required: false, :label => "金額"
+        = f.input :fee, as: :decimal, required: false, :label => "手数料"
+        p.help-block = "KBRの場合、手数料を入力しないでください！"
+        label.btn.btn-default.btn-lg.pull-left.btn#count_fee = "手数料を見積り"
+        = f.button :submit, "送金" ,class: "btn btn-default btn-lg pull-right btn"
+.row
+  .col-xs-12: .panel.panel-primary
+    .panel-heading Cold -> hot
+    .panel-body
+      table.table.table-condensed.ad-wallet-qr-code
+        thead: tr
+          th Asset
+          th Address
+
+        tbody
+          - i=1 
+          - @currencies_summary.each do |css|
+            tr
+              td: b = css[:name]
+              td = css[:address]
+              td  
+                a class="second-#{i} btn btn-default btn-show-qr-code" id="qrcode#{i}" Show QR Code 
+
+              div class="qrcode#{i} admin-show-qr-code" id="qrcode#{i}"
+              - i=i+1
+
+javascript:
+  var a = "#{@currencies_summary[0][:address]}";
+  var b = "#{@currencies_summary[1][:address]}";
+  var c = "#{@currencies_summary[2][:address]}";
+  new QRCode(document.getElementById("qrcode1"), a);
+  new QRCode(document.getElementById("qrcode2"), b);
+  new QRCode(document.getElementById("qrcode3"), c);

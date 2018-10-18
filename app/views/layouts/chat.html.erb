@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <%- stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "chat" %>
+    <link href="/favicon.ico" rel="shortcut icon"></link>
+    <%= include_gon %>
+    <%= stylesheet_link_tag stylesheet, media: "all" %>
+    <%= javascript_include_tag "locales/#{I18n.locale}" %>
+    <%= javascript_include_tag "chats" %>
+    <%= yield(:scripts) if content_for?(:scripts) %>
+    <%= render 'shared/html5' %>
+    <%= render 'shared/meta' %>
+    <%= csrf_meta_tags %>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+
+  <body id="<%= body_id %>" data-lang="<%= "#{locale_name}" %>" class="#{locale_name}">
+
+    <div class="bitirade-home-wrapper">
+      <%- if content_for?(:header) %>
+        <%= yield(:header) %>
+      <%- else %>
+        <%= render 'shared/header' %>
+      <%- end %>
+
+      <div class='bititrade-content'>
+        <%= yield %>
+      </div>
+      <div id="push"></div>
+
+      <%- if content_for?(:footer) %>
+        <%= yield(:footer) %>
+      <%- else %>
+        <%= render 'shared/footer' %>
+      <%- end %>
+    </div>
+  </body>
+  <script>
+      $(document).one('ready', function() {
+          // angular.bootstrap(document.getElementById("ng-chat"), ["Chats"]);        
+      });
+  </script>
+</html>

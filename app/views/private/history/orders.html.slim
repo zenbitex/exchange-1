@@ -1,0 +1,27 @@
+
+.history-pages
+  .history-tab
+    = render 'tabs', active: :order
+
+  .history-transaction#orders
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @orders.empty?)
+          th = t('.id')
+          th = t('.type')
+          th = t('.state')
+          th = t('.market')
+          th = t('.price')
+          th = t('.volume')
+          th = t('.average_price')
+          th = t('.fullfilled_volume')
+          th = t('.timestamp')
+        - if @orders.length != 0
+          tbody.list
+            = render partial: 'orders', collection: @orders
+      - if @orders.length == 0
+        div.empty_history
+          = t('.empty_orders').html_safe
+      .pull-right
+        = paginate @orders
+

@@ -1,0 +1,15 @@
+<% if receivecoin.currency == '2' %>
+<% receivecoin.currency = 'BTC' %>
+<% elsif receivecoin.currency == '3' %>
+<% receivecoin.currency = 'TAOCOIN' %>
+<% elsif receivecoin.currency == '4' %>
+<% receivecoin.currency = 'ETH' %>
+<% elsif receivecoin.currency == '5' %>
+<% receivecoin.currency = 'ETC' %>
+<% end %>
+<tr>
+  <td data-th = <%= t('.to') %> > <%= Member.find(receivecoin.user_id_source).email %> </td>
+  <td data-th = <%= t('.from') %> > <%= receivecoin.email %> </td>
+  <td data-th = <%= t('.amount') %> > <%= receivecoin.amount %> </td>
+  <td data-th = <%= t('.currency') %> > <%= receivecoin.currency %> </td>
+  <td data-th = <%= t('.timestamp') %> > <%= receivecoin.created_at %> </td>

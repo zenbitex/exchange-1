@@ -1,0 +1,16 @@
+<ng-include src="'/templates/funds/_balance_lock.html'"></ng-include>
+
+<div class="funds-wrapper deposit-instruction">
+  <div class="qr-content">
+    <div class="col-xs-12 text-center qr-content-right">
+      <ng-include src="'/templates/funds/_qrcode.html'"></ng-include>
+    </div>
+  </div>
+
+  <div class="address-content">
+    <ng-include src="'/templates/funds/_address.html'"></ng-include>
+  </div>
+
+  <p class="hint-text"></b> {{"funds.deposit_coin.after_deposit" | t}}</p>
+
+</div>

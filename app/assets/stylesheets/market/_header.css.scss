@@ -1,0 +1,198 @@
+#header{
+  #desktop-menu{
+    display: none;
+  }
+  #mobile-menu{
+    .container-fluid{
+      display: flex;
+      justify-content: space-between;
+      .navbar-header{
+        margin-right: auto;
+        margin-left: 0px;
+        .navbar-brand{
+          padding-left: 0px;
+        }
+      }
+      .login{
+        margin: auto;
+        margin-right: 0px;
+      }
+      .btn-signin{
+        background-color: $buy_color;
+        border-color: transparent;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        font-size: 12px;
+      }
+
+      .mk_list{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .user_menu{
+        margin-left: auto;
+        margin-right: 0px;
+        .dropdown-toggle{
+          padding-right: 9px;
+        }
+      }
+    }
+    #main-info{
+      padding: 7px 10px;
+      border: 2px solid $market_background;
+      .col-xs-3{
+        padding-left: 5px;
+        padding-right: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span:nth-child(2){
+          color: #777777;
+        }
+      }
+      .vol,.high,.low,.change{
+        color: white;
+      }
+    }
+
+    .mk_list > .text-lb{
+      display: none;
+    }
+  }
+
+  .logo-icon-exchange{
+    height: 30px;
+    transition: height 2s;
+  }
+
+  .text-lb{
+    color: $header-color-hint;
+    text-align: center;
+  }
+
+  //dropdown-menu
+  .navbar-nav > li > .dropdown-menu {
+    background-color: $market_background;
+    position: absolute;
+  }
+
+  .dropdown-menu{
+    right: 0;
+    left: auto;
+  }
+
+  .dropdown:hover{
+    .dropdown-menu{
+      // display: block;
+    }
+  }
+  .navbar-default .navbar-nav{
+    > li > a{
+      color: white;
+      font-size: 14px;
+      padding-bottom: 5px;
+    }
+  }
+
+  //user icon dropdown
+  .icon-user{
+    background: #26343c;
+    border-radius: 50%;
+    padding: 8px 11px;
+    i{
+      color: white;
+    }
+  }
+  .dropdown .caret{
+    color: white;
+  }
+
+  //low-high-volume_24h...
+  .navbar-text{
+    display: flex;
+    flex-direction: column;
+    .vol,.high,.low,.change{
+      color: white;
+      font-size: 18px;
+    }
+    span:nth-of-type(2){
+      color: $header-color-hint;
+      text-align: center;
+    }
+  }
+
+  //market list dropdown
+  .mk_list{
+    ul.dropdown-menu{
+      right: -20px;
+    }
+    ul.dropdown-menu a{
+      text-align: center;
+    }
+  }
+}
+
+#drop_down_content{
+  z-index: 2000;
+  li > a{
+    color: white;
+  }
+  li:hover, a:hover{
+    background-color: rgba(245, 245, 245, 0.13);
+  }
+}
+
+//RESPONSIVE
+@media screen and (min-width: 400px) {
+  #header{
+    .navbar-default .navbar-nav{
+      > li > a{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #header{
+    .logo-icon-exchange {
+      height: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 800px) {
+  #header{
+    #desktop-menu{
+      display: block;
+      .navbar-right{
+        padding-top: 20px;
+        .btn{
+          font-size: 14px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          border-color: transparent;
+        }
+        .btn:hover{
+          opacity: 0.7;
+        }
+      }
+      .btn-signin{
+        background-color: $buy_color;
+        margin-right: 10px;
+
+      }
+      .btn-signup{
+        background-color: $sell_color;
+      }
+    }
+
+    #mobile-menu{
+      display: none;
+    }
+    .logo-icon-exchange {
+      height: 46px;
+    }
+  }
+}

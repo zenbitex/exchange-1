@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "trade") do |sheet|
+    sheet.add_row ["ID", "販売者名", "販売者メール", "購入者名", "購入者メール", "価格", "金額", " トレンド", "通貨", "資金", "手数料", "登録日時"]
+    @trades.each do |trade|
+      sheet.add_row [trade.id, trade.ask_member.id_document.name, trade.ask_member.email, trade.bid_member.id_document.name, trade.bid_member.email, trade.price, trade.volume, trade.trend, trade.currency, trade.funds, trade.fee, l(trade.created_at, format: '%Y-%m-%d %H:%M:%S')]
+    end
+  end
+
+end

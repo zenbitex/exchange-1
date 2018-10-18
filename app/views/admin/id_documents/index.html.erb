@@ -1,0 +1,221 @@
+<div class="row admin-id-document">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <span>検索する</span>
+    </div>
+
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-lg-12 col-md-12">
+          <%= form_tag(admin_id_documents_path, method: 'get', class: 'form-inline') do %>
+            <div class="form-group">
+              <%= select_tag(:search_level, options_for_select([[t('.please_select_level'), 0], [t('.level0'), 1], [t('.level1'), 2], [t('.level2_1'), 3], [t('.level2_2'), 4], [t('.level2_3'), 5], [t('.level2_4'), 6], [t('.level2_5'), 7], [t('.level3'), 8]], @search_level), class: 'form-control') %>
+            </div>
+            <div class="form-group">
+              <%= select_tag(:search_field, options_for_select([[t('.email'), 'email'],[t('.id'), 'member_id'], [t('.name'), 'name'], [t('.id_document'), 'id_document_type']], @search_field), class: 'form-control') %>
+            </div>
+            <div class="form-group">
+              <%= text_field_tag(:search_term, @search_term, class: 'form-control') %>
+            </div>
+            <%= submit_tag t('.search'),class: "btn btn-default" %>
+          <% end %>
+        </div>
+
+        <div class="col-md-4 col-lg-4 level" class="level">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-info"><%= t('.level1') %> <span class="badge"><%= @level1 %></span></li>
+            <li class="list-group-item list-group-item-warning"><%= t('.level2') %> <span class="badge"><%= @level2 %></span></li>
+            <li class="list-group-item list-group-item-success"><%= t('.level3') %> <span class="badge"><%= @level3 %></span></li>
+          </ul>
+        </div>
+
+        <div class="col-md-6 col-lg-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              説明
+            </div>
+            <ul class="list-group">
+              <li class="list-group-item"><span class="label label-success">0</span> 運転免許証（裏・表）</li>
+              <li class="list-group-item"><span class="label label-success">1</span> 在留カード（裏・表）</li>
+              <li class="list-group-item"><span class="label label-success">2</span> パスポート（顔写真ページ見開き・住所記載ページ）＋　住民票</li>
+              <li class="list-group-item"><span class="label label-success">3</span> 外国人登録証明書（裏・表）</li>
+              <li class="list-group-item"><span class="label label-success">4</span> 顔写真付き住基ネットカード（裏・表）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <%= form_tag(admin_id_documents_path, method: 'get', class: 'form-inline') do %>
+          <div class="form-group">
+            <%= select_tag(:search_order, options_for_select([[t('.please_select_order'), 0], [t('.new_update'), 1], [t('.new_create'), 2], [t('.old_create'), 3]], @search_order), class: 'form-control') %>
+          </div>
+          <%= submit_tag t('.search'), class: 'btn btn-default' %>
+        <% end %>
+      </div>
+
+    </div>
+
+    <div class="panel-body">
+      <div class="row">
+       <!--  <%= link_to "Send bonus!!!", admin_send_bonus_path, class: "btn btn-danger", :data => {:confirm => 'Are you sure?'} %> -->
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+       <!--  <%= link_to "Send missing bonus!!!", admin_send_missing_bonus_path, class: "btn btn-danger", :data => {:confirm => 'Are you sure?'} %> -->
+      </div>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+       <!--  <%= link_to "Set level!!!", admin_set_level_path, class: "btn btn-danger", :data => {:confirm => 'Are you sure?'}  %> -->        
+        <%= link_to "ユーザー情報ダウンロード", admin_download_xlsx_id_document_path(format: :xlsx), class: "btn btn-default", style: "float: right;" %>
+        <%= link_to "残高情報をダウンロード", admin_download_xlsx_balance_path(format: :xlsx), class: "btn btn-default", style: "float: right;" %>
+        <%= link_to "銀行口座一覧ダウンロード", admin_download_xlsx_bank_account_path(format: :xlsx), class: "btn btn-default", style: "float: right;" %>
+        <%= link_to "アドレスダウンロード", admin_download_xlsx_address_path(format: :xlsx), class: "btn btn-default", style: "float: right;" %>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="panel panel-primary" id="user_list">
+
+    <div class="panel-heading">
+      <span> <%= t('.verify_account') %></span>
+    </div>
+    <div class="alert alert-danger" style="display: none;">
+    </div>
+    <div class="alert alert-info text-center"  style="display: none;">
+      <img class = "img_loading" src="/loading.gif" style="height: 30px; width: 30px;">
+    </div>
+    <div class="panel panel-body">
+      <table class="table table-condensed table-hover">
+        <thead>
+            <tr>
+              <%  if @post_card_search %>
+                <th>
+                  <span class = "select_all">
+                    <%= check_box_tag "check_all"%>
+                    すべて選択
+                  </span>
+                </th>
+              <% end -%>
+              <th>Id</th>
+              <th>名前</th>
+              <th>メールアドレス</th>
+              <th>時間</th>
+              <th>メール認証</th>
+              <th>携帯認証</th>
+              <th>本人認証</th>
+              <th>レベル</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% @id_documents.each do |f| %>
+            <tr>
+              <%  if @post_card_search %>
+                <td class="col-xs-1">
+                  <%= check_box_tag "check_box#{f.member_id}", "#{f.member_id}", false, class: "check_box"%>
+                </td>
+              <% end -%>
+              <td class="col-xs-1"><%= link_to f.member_id, admin_id_document_path(f) %></td>
+              <td class="col-xs-1"><%= link_to f.name.to_s, admin_member_path(f.member) %></td>
+              <td class="col-xs-2"><%= link_to f.member.email, admin_member_path(f.member) %></td>
+              <td class="col-xs-2"><%= f.updated_at %></td>
+              <td class="col-xs-1"><%= yesno(f.member.activated?) %></td>
+              <td class="col-xs-1"><%= yesno(f.member.sms_two_factor.activated?) %></td>
+              <td class="col-xs-1"><%= yesno(f.verified?) %></td>
+              <td class="col-xs-1"><%= f.member.account_class %></td>
+              <td class="col-xs-1"><%= link_to t('actions.view'), admin_id_document_path(f), class: 'btn btn-primary' %></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+    <%= paginate @id_documents %>
+  </div>
+  <%  if @post_card_search %>
+    <div class="form-inline">
+      <%= select_tag(:postcard_type, options_for_select([[t('.select_postcard_type'), 0], [t('.postcard_type1'), 1], [t('.postcard_type2'), 2], [t('.postcard_type3'), 3], [t('.postcard_type4'), 4], [t('.postcard_type5'), 5] ]), class: "form-control") %> 
+      <button class="btn btn-primary save_postcard" style="border: none; border-radius: 8px; font-size: 20px; padding: 3px 15px; background-color: #006699;">
+        OK
+      </button>
+   </div>
+  <% end -%>
+</div>
+
+<script type="text/javascript">
+  $(".select_all").click(function(){
+    $(".check_box").prop('checked', $("#check_all").is(':checked'));
+  });
+
+  var img_loading = $(".img_loading");
+  $(".save_postcard").click(function()
+  {
+    $(".alert").hide();
+    var select = $("#postcard_type").val();
+    if (select == 0){
+      $(".alert-danger").text("ハガキのタイプを選んでください");
+      $(".alert-danger").fadeIn(500);
+      $("#postcard_type").focus();
+      return;
+    } 
+    var data_send = [];
+    data_send.push(select);
+    $(".check_box").each(function() {
+      if ($(this).is(':checked'))
+      {
+        data_send.push($(this).val());
+      }
+    });
+    if (data_send.length == 1)
+    {
+      $(".alert-danger").text("ユーザーを選んでください");
+      $(".alert-danger").fadeIn(500);
+      return;
+    } 
+    if (select == 1 && !confirm('選択したユーザーに書留を送りますか?')) 
+      return;
+    $(".alert-info").html(img_loading);
+    $(".alert-info").fadeIn(500);
+    $(".save_postcard").prop("disabled",true);
+    $.ajax({
+      type: "get",
+      url: "/admin/set_postcard",
+      data: {"data_send": data_send},
+      success: function(data){
+        $(".alert").hide();
+        $(".save_postcard").prop("disabled", false);
+        data_success = data["data_success"]
+        data_error = data["data_error"]
+        if (data_success.length > 0)
+        {
+          if (select == 1)
+            success =  "選択したユーザーの情報をネクスウェイに送信しました。ユーザID："
+          else 
+            success = $("#postcard_type option:selected").text() + "を成功した, ユーザID： ";
+          $.each(data_success, function(index, value) {
+            $("#check_box" + value).parents("tr").remove();
+            success += value + ", ";
+          });
+          $(".alert-info").text(success);
+          $(".alert-info").fadeIn(500);
+        }
+          
+        if (data_error.length > 0)
+        {
+          error = "ハガキを送られません(エラーが出ました, 名前や郵便番号や住所(都道府県と住所)や登録時間をチェックしてください)。"
+          $.each(data_error, function(index, value) {
+            error += "<br>ユーザのメンバーID: " + value + "."
+          });
+          $(".alert-danger").text("");
+          $(".alert-danger").append(error);
+          $(".alert-danger").fadeIn(500);
+        }
+      }
+    });
+
+  });
+</script>

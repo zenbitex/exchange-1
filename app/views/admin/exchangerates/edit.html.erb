@@ -1,0 +1,22 @@
+<div class="edit-exchange-rate">
+	<%= form_for @excrate, :url => admin_exchangerate_path, :method => :PATCH do |f| %>
+
+	  <div class="field">
+	    <p><%= f.text_field :id, :hidden => true %></p>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :currency %><br>
+	    <%= f.text_field :currency, class: 'form-control', :readonly => true %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :exchange_rates %><br>
+	    <%= f.text_field :rate, class: 'form-control' %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit 'Update Rate', :class => 'btn btn-primary' %>
+	  </div>
+	<% end %>
+</div>

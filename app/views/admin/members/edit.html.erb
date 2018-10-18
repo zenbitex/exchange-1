@@ -1,0 +1,22 @@
+<div class="edit-exchange-rate">
+	<%= form_for @member, :url => admin_member_path, :method => :PATCH do |f| %>
+	  <div class="field">
+	    <p><%= f.text_field :id, :hidden => true %></p>
+	  </div>
+	  <div class="field">
+	    <%= f.label :Email %> <br>
+	    <%= f.text_field :email, class: 'form-control', :readonly => true %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :role %> :  <b class="currenc"></b>
+		<%= f.select :role, [["Please select", nil], ["Admin", 1], ["Pre Admin", 2], ["Guest", 3], ["Normal Member", 4]], :selected => @member.role %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :lock %> :  <b class="currenc"></b>
+		<%= f.select :is_lock, [["Please select", nil], ["Lock", 1], ["Unlock", 0]], :selected => @member.is_lock %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit 'Update', :class => 'btn btn-primary' %>
+	  </div>
+	<% end %>
+</div>

@@ -1,0 +1,292 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+
+zh-CN:
+  js:
+    sendcoin:
+      email_error: 无效的邮件地址
+    buy_coin:
+      action_title: 用信用卡购买硬币
+      min_amount: 信用卡上的最低付款是%{min_amount}日元。
+    buy_sell_coin:
+      amount_null: 请输入您的金额.
+      buy_confirm: 您确定要购买 %{amount}%{currency}?
+      sell_confirm: 您确定要出售 %{amount}%{currency}?
+    alert_confirm:
+      destroy_confirm: 密钥删除之后无法找回，您确认要继续吗？
+    id_documents:
+      errors:
+        empty: 此处不能留空。
+        document_type_empty: 您必须选择文档类型
+    brand: Bit-station
+    submit: 提交
+    cancel: 取消
+    jpy_submit: 提取日元
+    confirm: 确认
+    banks:
+      mufg: Mitsubishi UFJ Trust and Banking
+      smbc: SMBC Trust Bank (Sumitomo Mitsui Banking Corporation)
+      mzh: Mizuho Trust & Banking Co., Ltd (Mizuho FG)
+      nmrt: Nomura Trust and Banking
+      jpp: Japan Post Bank
+    bank_account:
+      current_bank_account: 经常账户
+      ordinary_bank_account: 普通存款
+    fund_sources:
+      manage_bank_account: 银行帐号管理
+      manage_bank_account_desc: 通过增加提现银行帐号，以便每次提现时快速选择。
+      manage_coin_address_bitcoin: 比特币地址管理
+      manage_coin_address_taocoin: 陶币地址管理
+      manage_coin_address_ripple: 纹波地址管理
+      manage_coin_address_desc: 通过增加提现地址，以便每次提现时快速选择。
+      bank: 银行
+      account: 银行账号
+      label: 标签
+      address: 地址
+      address_btc: 比特币地址
+      address_tao: 陶硬币地址
+      address_bch: 比特币现金地址
+      address_btg: 位币黄金地址
+      address_xrp: 纹波地址
+      action: 操作
+      add: 添加
+      remove: 移除
+      default: 默认
+    funds:
+      deposit: 充值
+      withdraw: 提现
+      currency_name:
+        jpy: JPY
+        btc: BTC
+        bch: BCH
+      deposit_jpy:
+        title: 圈存款
+        desc: "通过银行转账汇款的方式，经人工审核后充值人民币到您的交易账户中，流程如下："
+        desc_item_1: "1. 提交以下表单，获得转账识别码；"
+        desc_item_2: "2. 银行转账汇款到云币交易所开户行，务必在备注栏填写识别码；"
+        desc_item_3: "3. 人工审核汇款记录，确认后充值到您的云币账户。"
+        attention: "特别提醒：充值银行账户姓名必须与您的实名认证姓名一致。"
+        from: 汇款人
+        to: 收款人
+        deposit_name: 开户户名
+        deposit_account: 充值账号
+        add: 添加
+        manage: 管理
+        amount: 充值金额
+        min_amount: 最低金额100円
+        to_account: 收款账号
+        to_name: 收款账户
+        to_bank_name: 收款银行
+        opening_bank_name: 开户行
+        label:
+          company_name: 帐户持有人
+          bank_name: 银行名
+          branch: 银行支行
+          account_number: 帐号
+          account_kind: 账户类型
+          transfer_name: 转移提名
+        content:
+          company_name: ビットステーション (カ
+          bank_name: The Bank of Nagoya
+          branch: Head Office Sales Dept. (101)
+          account_number: 3937838
+          account_kind: Normal
+        user_id: '您的用户ID: <b class="de-id">%{id}</b>'
+        title_note: 之前转移
+        user_info: '<b class="de-id">%{id} &nbsp; %{name}</b>'
+        user_info_not_name: '<b class="de-id">%{id} &nbsp; 你的名字</b>'
+        title_info_user: 账户信息
+        title_note_2: 笔记
+        note_1: ・上的账户信息，银行账户信息的注册，请转移。
+        note_2: ・请从该账户的同一账户持有人和帐户的名称始终转移。
+        note_2_content: 如果传输提名人是不同的，不能顺利办理，支付和退款
+        note_2b_content: 你可能不能够。
+        note_3: ・请确保输入的用户ID转移提名列。
+        note_3_content: 如果不输入ID，
+        note_3_link: 「联系日元存款」
+        note_4_content: 从页面
+        note_5_content: 在描述信息·金的ID，请与我们联系。
+        user_name: 你的名字
+        desc_item_1: 账号信息/
+        desc_item_1_2: 银行帐户信息。
+        desc_item_1_1: ・请注册
+        desc_item_2: "请设置付款人: <b>%{ids} 你的名字</b>"
+        help_item_0: 付款人的名称必须与Bit-station的帐户名称相同。
+        help_item_1: 如果付款人的姓名不正确，我们可能无法存款或退款。
+        help_item_2: 一旦我们完成存入您的银行帐户，我们将立即向您发送一封电子邮件。
+        help_item_3: 如果您的存款没有用户ID，请从<a href="" onClick="window.open('/deposit_infomation')">「这」</a>里通知我们您的存款信息。
+      deposit_btc:
+        title: 比特币充值
+
+      deposit_tao:
+        title: 存款 TAOCOIN
+
+      deposit_xrp:
+        title: 存款 RIPPLE
+
+      deposit_bch:
+        title: 存款 BCH
+
+      deposit_coin:
+        address: 地址
+        new_address: 生成新地址
+        confirm_gen_new_address: 您确认要生成一个新的充值地址么？
+        open-wallet-btc: 请使用您常用的钱包服务，本地钱包、在线钱包或移动端的钱包，选择付款或发送。
+        open-wallet-tao: 请使用您常用的钱包服务，本地钱包、在线钱包或移动端的钱包，选择付款或发送。
+        open-wallet-bch: 请使用您常用的钱包服务，本地钱包、在线钱包或移动端的钱包，选择付款或发送。
+        detail-1: 电子钱包应用的工资，
+        detail-2: 扫描样品QR码。
+        scan-qr: 在移动端钱包中扫描二维码来进行支付。
+        after_deposit: 完成以上操作后点击发送付款，此交易将被广播到全网，您便可以这⾥查看到此笔交易的状态，当交易达到全网1个确认 (⼤约10⾄至60分钟) 时，系统将自动充值到账。您可以到资产公开中查询。
+        generate-new: 生成新地址
+        cancle: 您确定要取消这项要求吗？
+      deposit_history:
+        title: 历史记录
+        identification: 转账识别码
+        time: 时间
+        txid: 交易哈希
+        confirmations: 确认数
+        from: 充值银行
+        amount: 充值金额
+        state_and_action: "状态/操作"
+        cancel: 取消
+        no_data: 暂无历史数据
+        submitting: 已提交
+        cancelled: 已撤销
+        submitted: 受理中
+        accepted: 充值成功
+        rejected: 已驳回
+        checked: 充值成功
+        warning: 异常
+        suspect: 异常
+      withdraw_jpy:
+        title: 人民币提现
+        fee_name: 提款费（日本）
+        three_man_less: 不到3万日元
+        three_man_greater: 大于或等于3万日元
+        yen: 日元
+        intro_item_1: 您的首选金额将被转移到下面的帐户。
+        intro_item_2: 如果您的帐户信息不正确，则无法退款。 请小心
+        intro_item_3: 您的提款请求后，您的资金将在<a>约3个工作日内（3〜4天外国银行账户）</a>转入您的银行账户。
+        intro_item_4: <a>银行汇款是该国撤出里面。</a>
+        account_name: 账户名
+        withdraw_address: 提现账号
+        balance: 可用余额
+        withdraw_amount: 提取数量
+        manage_withdraw: 管理提现账号
+        fee_explain: 资费说明
+        min: 最低
+        withdraw_all: 全部提取
+        bank_account: 银行账户
+        bank_name: 银行名称
+        bank_branch: 分支名
+        account_type: 帐户类型
+        account_number: 帐号
+        owner: 帐户持有人
+        bank_account_register: 开设账户
+        bank_account_edit: 修改帐户信息
+        fee: 费用
+        total: 总
+        remain: 保持平衡
+        insufficient_funds: 资金不足
+      withdraw_btc:
+        title: 比特币提现
+        intro: 请输入陶硬币地址和金额。为了验证它大约需要10分钟。
+      withdraw_tao:
+        title: TAOCOIN撤离
+        intro: 请输入陶硬币地址和金额。为了验证它大约需要10分钟。
+      withdraw_xrp:
+        title: RIPPLE撤离
+        intro: 请输入陶硬币地址和金额。为了验证它大约需要10分钟。
+      withdraw_bch:
+        title: BCH撤离
+        intro: 请输入陶硬币地址和金额。为了验证它大约需要10分钟。
+      withdraw_coin:
+        intro: 指定要提现的地址，输入提取数量，提交即可，10分钟之内到账。
+        label: 标签
+        balance: 可用余额
+        locked: 锁定
+        amount: 提取数量
+        manage_withdraw: 管理提现地址
+        min: 最低
+        withdraw_all: 全部提取
+        fee_explain: 资费说明
+        cancle: 您确定要取消这项要求吗？
+        destination_tag: 目的地标签（任意）
+        number: 数字
+        send_coin: 用电子邮件地址发送
+        send_coin_link: 点击这里通过电子邮件地址发送
+
+      withdraw_history:
+        title: 提现历史
+        number: 编号
+        withdraw_time: 提现时间
+        withdraw_account: 提现账户
+        withdraw_address: 提现地址
+        withdraw_amount: 金额
+        actual_amount: 实际到账
+        fee: 手续费
+        miner_fee: 矿工费
+        state_and_action: "状态/操作"
+        cancel: 取消
+        no_data: 暂无历史数据
+        submitting: 待确认
+        submitted: 待校验
+        rejected: 已驳回
+        accepted: 已提交
+        suspect: 异常
+        processing: 受理中
+        coin_ready: 准备中
+        coin_done: 完毕
+        done: 提现成功
+        almost_done: 发送中
+        canceled: 已撤销
+        failed: 提现出错
+    auth:
+      please_active_two_factor: 为了您的资金安全, 请先绑定手机或设置两步验证。
+      submit: 确认
+      otp_placeholder: 请输入验证码（6位）
+      google_app: 谷歌身份验证器
+      sms: 手机短信验证
+      mail: 邮件验证信息
+      mail_guide: 您将收到授权代码的电子邮件地址。
+      send_code: 获取验证码
+      send_code_alt: COUNT秒后重新发送
+      hints:
+        app: 谷歌验证器每三十秒会重新生成新密码，请及时输入。
+        sms: 请点击“获取验证码”按纽，我们将会把验证码以短信的方式发到您的手机上。
+        mail: 该代码发送到E-mail地址。
+    private:
+      markets:
+        range_switch:
+          unknown: 不明
+          switch_1: 1m
+          switch_5: 5m
+          switch_15: 15m
+          switch_30: 30m
+          switch_60: 1h
+          switch_120: 2h
+          switch_240: 4h
+          switch_360: 6h
+          switch_720: 12h
+          switch_1440: 1d
+          switch_4320: 3d
+          switch_10080: 1w
+        market_trades:
+          up-price: 买进
+          down-price: 出售
+
+    markets:
+      market_list:
+        all: 全部交易对
+        jpy: JPY交易对
+        btc: BTC交易对
+        xrp: XRP交易对
+        bch: BCH交易对
+  private:
+    markets:
+      charts:
+        candlestick_period: 烛台期
+        loading: 加载...

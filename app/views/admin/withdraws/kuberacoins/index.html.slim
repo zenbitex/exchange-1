@@ -1,0 +1,11 @@
+- unless @one_kuberacoins.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {kuberacoins: @one_kuberacoins}
+- unless @all_kuberacoins.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {kuberacoins: @all_kuberacoins}
+
+- if @all_kuberacoins.empty? and @one_kuberacoins.empty?
+  h3.text-info.text-center = t('.empty')

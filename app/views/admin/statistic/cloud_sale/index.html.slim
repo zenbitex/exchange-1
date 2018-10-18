@@ -1,0 +1,34 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      span = t('.search')
+    .panel-body
+      = form_tag admin_statistic_cloud_sale_index_path, method: :get do |f|
+        .col-xs-4.time-start
+          label = "Start:" 
+          = date_field_tag :start_period, @start_period, class: 'form-control'
+        .col-xs-4.time-end 
+          label = "End:" 
+          = date_field_tag :end_period, @end_period, class: 'form-control'
+        .col-xs-4.col-xs-offset-1
+          = submit_tag "search", class: 'btn btn-default'
+        .col-xs-4.col-xs-offset-1
+          label = "Sum amount:" 
+          div = @total_amount.to_s + " TAOCOIN"
+.row
+  .panel.panel-primary
+    .panel-heading: span = t('.verify_account')
+    = table_for(@tao_trades , class: 'table table-condensed table-hover') do |t|
+      - t.column :account, class: 'col-xs-1' do |x|
+        = link_to x.account.member.email  
+      - t.column :id, class: 'col-xs-1' do |x|
+        = link_to x.tradecode
+      - t.column :amount, class: 'col-xs-1' do |x|
+        = link_to x.amount
+      - t.column :price, class: 'col-xs-1' do |x|
+        = link_to x.price  
+      - t.column :currency, class: 'col-xs-1' do |x|
+        = link_to x.currency
+      - t.column :purchased_at, class: 'col-xs-1' do |x|
+        = link_to x.updated_at
+    = paginate @tao_trades

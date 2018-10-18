@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "user_balance") do |sheet|
+    sheet.add_row ["ID", "メール", "通貨", "アドレス", "残高", "登録日時"]
+    @user_balances.each do |user_balance|
+      sheet.add_row [user_balance.id, user_balance.member.nil? ? "なし" : user_balance.member.email, user_balance.currency, user_balance.payment_address.address.nil? ? user_balance.member.nil? ? "なし" : user_balance.member.bank_account.nil? ? "なし" : user_balance.member.bank_account.bank_branch : user_balance.payment_address.address, user_balance.balance, l(user_balance.payment_address.created_at, format: '%Y-%m-%d %H:%M')]
+    end
+  end
+
+end

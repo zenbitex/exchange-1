@@ -1,0 +1,124 @@
+.row
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "価格報告"
+      .panel-body
+        = form_tag admin_download_xlsx_export_price_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_" required=""
+          .form-group
+            label for="date_end_" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_export_price_path(format: :xlsx), class: "btn btn-primary btn-download-price-report"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "残高報告"
+      .panel-body(style="height: 227px")
+        = form_tag admin_download_xlsx_export_balance_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_select" = "日付選択："
+            input.form-control type="date" name="date_select" id="date_select" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_export_balance_path(format: :xlsx), class: "btn btn-primary btn-download-balance-report"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "手数料報告"
+      .panel-body
+        = form_tag admin_download_xlsx_trade_fee_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_fee" = " 開始日付："
+            input.form-control type="date" name="start" id="date_start_fee" required=""
+          .form-group
+            label for="date_end_fee" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_fee" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_trade_fee_path(format: :xlsx), class: "btn btn-primary btn-download-trade-fee"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "送金履歴"
+      .panel-body
+        = form_tag admin_download_xlsx_withdraw_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_withdraw" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_withdraw" required=""
+          .form-group
+            label for="date_end_withdraw" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_withdraw" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_withdraw_history_path(format: :xlsx), class: "btn btn-primary btn-download-withdraw-history"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "入金履歴"
+      .panel-body
+        = form_tag admin_download_xlsx_deposit_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_deposit" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_deposit" required=""
+          .form-group
+            label for="date_end_deposit" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_deposit" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_deposit_history_path(format: :xlsx), class: "btn btn-primary btn-download-deposit-history"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "売り注文履歴"
+      .panel-body
+        = form_tag admin_download_xlsx_order_ask_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_order_ask" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_order_ask" required=""
+          .form-group
+            label for="date_end_order_ask" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_order_ask" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_order_ask_history_path(format: :xlsx), class: "btn btn-primary btn-download-order-ask"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "買い注文履歴"
+      .panel-body
+        = form_tag admin_download_xlsx_order_bid_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_order_bid" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_order_bid" required=""
+          .form-group
+            label for="date_end_order_bid" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_order_bid" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_order_bid_history_path(format: :xlsx), class: "btn btn-primary btn-download-order-bid"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "成功取引履歴"
+      .panel-body
+        = form_tag admin_download_xlsx_trade_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_trade" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_trade" required=""
+          .form-group
+            label for="date_end_trade" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_trade" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_trade_history_path(format: :xlsx), class: "btn btn-primary btn-download-trade"
+  .col-md-6
+    .panel.panel-primary
+      .panel-heading
+        span = "注文履歴をキャンセルする"
+      .panel-body
+        = form_tag admin_download_xlsx_order_cancel_history_path(format: :xlsx), method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_order_cancel" = "開始日付："
+            input.form-control type="date" name="start" id="date_start_order_cancel" required=""
+          .form-group
+            label for="date_end_order_cancel" = "終了日付："
+            input.form-control type="date" name="end" id="date_end_order_cancel" required=""
+          .form-group
+            = link_to "ダウンロードする", admin_download_xlsx_order_cancel_history_path(format: :xlsx), class: "btn btn-primary btn-download-order-cancel"

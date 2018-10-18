@@ -1,0 +1,14 @@
+div#account_balance_header
+  - if current_user
+      div.color-primary.balance
+        span = t("activerecord.attributes.account.balance")
+        = " "
+        = @market.base_unit.upcase
+        = " "
+        = @accounts.first.balance
+        br
+        = @market.quote_unit.upcase
+        = " "
+        = @accounts.last.balance
+  - price = t('welcome.index.price') + ":" + header_value["price"].to_s
+  p.color-primary.visible-pc #{{price}}

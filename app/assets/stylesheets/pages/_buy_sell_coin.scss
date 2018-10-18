@@ -1,0 +1,435 @@
+//PAGE: bit-station.jp/coin_trade_bids
+
+$title_color: #a02c29;
+$money_color: #bc6012;
+$buy_sell_background_color: #feebc1;
+$text_color: #af4b34;
+$label_color: #9e2a19;
+$border_color: #bc6122;
+$active_color: #f0d9c7;
+$history_color: #861001;
+$link_color: #70bf41;
+//>>>>>>>> MIXIN >>>>>>>>>>>>>>>>>>>>
+@mixin money {
+  font-size: 30px;
+  color: $money_color;
+  margin-bottom: 15px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+
+  .currency {
+    font-size: 18px;
+    color: $title_color;
+  }
+
+  @media screen and (min-width: 400px) {
+    font-size: 35px;
+    .currency {
+      font-size: 21px;
+    }
+  }
+
+  @media screen and (min-width: 765px) {
+    font-size: 40px;
+    .currency {
+      font-size: 20px;
+    }
+  }
+}
+
+@mixin common {
+  .input-lg{
+    font-size: 15px;
+  }
+
+  .vis-hidden{
+    visibility: hidden;
+  }
+
+  .dis-none{
+    display: none;
+  }
+
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+//>>>>>>>>> MAIN >>>>>>>>>>>>>>>>>>>>>>
+#coin_trade{
+  @include common;
+
+  margin: auto;
+  margin-top: 20px;
+  .page-title {
+    transition: all .3s;
+    -webkit-transition: all .3s;
+    color: $title_color;
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 30px;
+    margin-bottom: 15px;
+
+    img {
+      max-height: 40px;
+    }
+  }
+
+  #list_market{
+    margin-bottom: 20px;
+    margin-top: 12px;
+    text-align: center;
+  }
+
+  .price-border {
+    border: solid 5px;
+    border-radius: 15px;
+    padding: 9px 10px;
+    width: 65%;
+    margin: auto;
+    margin-bottom: 20px;
+    color: $title_color;
+    .price-title{
+      font-size: 25px;
+      margin-bottom: 3px;
+    }
+    .currency{
+      font-size: 20px;
+    }
+  }
+  .price-num{
+    font-weight: 600;
+    font-size: 34px;
+  }
+  .border-buy{
+    border-color: #66be4d;
+  }
+  .border-sell{
+    border-color: #ff7e7b;
+  }
+
+  .sub {
+    border-top-left-radius: 14px !important;
+    border-bottom-left-radius: 14px !important;
+  }
+
+  .minus {
+    border-top-right-radius: 14px !important;
+    border-bottom-right-radius: 14px !important;
+  }
+
+  .total{
+    margin-top: 5px;
+    p {
+      float: right;
+      color: #a02c29;
+    }
+  }
+
+  .buy-coin-link {
+    a {
+      @media screen and (max-width: 320px) {
+        font-size: 10px;
+      }
+      color: $link_color;
+    }
+  }
+
+  .btn-submit-green {
+    margin-bottom: 10px;
+  }
+  #price {
+    text-align: center;
+    @include money;
+  }
+
+  .box_border{
+    border: 1px solid;
+    border-color: #bc6122;
+    border-radius: 0px;
+  }
+
+  .form_buy_sell {
+    margin-top: 30px;
+    .row{
+      display: flex;
+      align-items: center;
+      margin-left: 0px;
+      margin-right: 0px;
+    }
+    .input-amount-control{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .title-left{
+      padding-left: 5px;
+      padding-right: 2px;
+    }
+
+    label {
+      margin-bottom: 5px;
+      color: $label_color;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    #volume{
+      color: $label_color;
+    }
+
+    #icon_volume_plus, #icon_volume_minus {
+      color: $border_color;
+      background-color: white;
+    }
+
+    #icon_volume_plus:active, #icon_volume_minus:active{
+      background-color: $active_color;
+    }
+  }
+
+	#currency_dropdown {
+    button, ul {
+      text-transform: uppercase;
+      width: 100%;
+    }
+    .dropdown-menu > li > a:hover {
+      background-color: $active_color;
+      // background-image: none;
+    }
+  }
+
+  #span_jpy{
+    border: none;
+    background-color: transparent;
+    padding-left: 5px;
+    padding-right: 0px;
+    color: $label_color;
+  }
+
+  #amount {
+    text-align: right;
+    @include money;
+  }
+
+  #total {
+    text-align: right;
+    @include money;
+  }
+
+  hr{
+    color: $border_color;
+    border: 1px solid;
+    width: 80%;
+  }
+
+  #confirm_amount{
+    display: block;
+  }
+
+  #total_text {
+    text-align: right;
+  }
+
+  #submit_btn{
+    text-align: center;
+    padding: 30px;
+    margin: auto;
+    width: 60%;
+  }
+
+  //WARNING MESSAGE
+  .error_block{
+    padding-left: 0px;
+    padding-right: 10px;
+  }
+  .error-msg{
+    float: right;
+    margin-top: 3px;
+    color: $title_color;
+    font-size: 13px;
+  }
+
+  //HISTORY
+  .history {
+    table > thead > tr > th {
+      border-bottom-color: $border_color;
+      border-top: 1px solid;
+      border-top-color: $border_color;
+      border-top-width: 2px;
+      color: $money_color;
+    }
+    tbody > tr > th{
+      font-size: 13px;
+      font-weight: 400;
+      color: $history_color;
+    }
+    .uppercase {
+      text-transform: uppercase;
+    }
+
+    .paginate{
+      text-align: center;
+    }
+
+    @media screen and (min-width: 765px) {
+      table > thead > tr > th {
+        font-size: 17px;
+      }
+      tbody > tr > th{
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+
+//>>>>>>>>>RESPONSIVE>>>>>>>>>>>>>>
+@media screen and (min-width: 400px) {
+  #coin_trade{
+    .form_buy_sell {
+      .form-group{
+        margin-bottom: 30px;
+      }
+      label {
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 500px) {
+  #coin_trade{
+    .price-border {
+      width: 50%;
+    }
+    .price-num{
+      font-size: 38px;
+    }
+    .form_buy_sell {
+      .input-amount-control{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .title-left{
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .form-group{
+        margin-bottom: 30px;
+      }
+      label {
+        margin-bottom: 8px;
+        font-size: 24px;
+        font-weight: 600;
+      }
+      // #dropdownMenu1{
+      //   height: 55px;
+      // }
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  #coin_trade{
+    .input-lg{
+      font-size: 18px;
+    }
+
+    hr {
+      display: none;
+    }
+    margin-left: -40px;
+    margin-right: -40px;
+    transition: all .3s;
+    -webkit-transition: all .3s;
+
+    .price-border {
+      width: 67%;
+    }
+    .price-num{
+      font-size: 34px;
+    }
+    .form_buy_sell {
+      .form-group{
+        margin-bottom: 30px;
+      }
+      label {
+        margin-bottom: 8px;
+        font-size: 21px;
+        font-weight: 600;
+      }
+      .title-left{
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+      .input-amount-control{
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+    }
+    .page-title {
+      font-size: 30px;
+    }
+
+    #buy{
+      position: relative;
+    }
+    #buy:after {
+      content: '';
+      height: 75%; //You can change this if you want smaller/bigger borders
+      width: 1px;
+      position: absolute;
+      right: 0;
+      top: 0; // If you want to set a smaller height and center it, change this value
+      background-color: $border_color; // The color of your border
+    }
+  }
+}
+
+@media screen and(min-width: 900px){
+  #coin_trade{
+    margin: auto;
+    // margin-top: 30px;
+    max-width: 1000px;
+    .page-title{
+      font-size: 35px;
+    }
+    .price-border {
+      border-width: 6px;
+      width: 60%;
+    }
+    .form_buy_sell {
+      padding: 10px 10px;
+      margin-top: 30px;
+      .form-group{
+        margin-bottom: 40px;
+      }
+    }
+
+    #submit_btn{
+      max-width: 250px;
+    }
+
+  }
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}

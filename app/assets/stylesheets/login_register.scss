@@ -1,0 +1,173 @@
+
+#register_form {
+  .form-input{
+    width: 100%;
+  }
+  span.hint{
+    margin-bottom: 10px;
+  }
+  .term-link{
+    font-size: 18px;
+    text-align: center;
+    .term_content{
+      display: inline-block;
+      margin: auto;
+      p{
+        float: left;
+      }
+      input{
+        width: 15px;
+        float: left;
+        margin: -7px 10px;
+      }
+    }
+    .check_term{
+      height: 15px;
+      width: 15px;
+      margin: 4px 10px;
+    }
+  }
+  .form-error{
+    color: red;
+  }
+}
+
+#resetPassword {
+  .sub-title {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #0d07e1;
+  }
+}
+
+.login_register_form {
+  max-width: 500px;
+  margin: auto;
+  background: #ffffff;
+  margin-top: 70px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 7px 7px 3px 3px;
+  margin-bottom: 200px;
+  form{
+    padding: 20px 10px;
+  }
+  .identity_captcha{
+    margin: 0;
+    text-align: center;
+  }
+  .btn_facebook_twitter{
+    text-align: center;
+    width: 100%;
+    padding: 0 10px;
+    a{
+      font-size: 17px;
+      span{
+        font-size: 25px !important;
+      }
+    }
+  }
+  .title-header{
+    background: #64b1ff;
+    padding: 20px 0;
+    font-size: 28px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  #new_identity{
+    padding: 30px;
+  }
+  .form-group{
+    margin: 10px 0;
+  }
+  .input-group{
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    margin: 10px 0;
+    .form-group{
+      width: 100%;
+      margin: 0px;
+    }
+    span{
+      height: 40px;
+      padding: 8px 25px;
+      float: left;
+      i{
+        font-size: 1.2em;
+      }
+    }
+  }
+  .link-to-reset{
+    width: 100%;
+    display: block;
+    text-align: right;
+    color: #55acee;
+    font-size: 18px;
+    text-decoration: none;
+    float: none;
+  }
+  @media screen and (max-width: 767px) {
+    .input-group{
+      span{
+        height: 39px;
+        i{
+          font-size: 17px;
+        }
+      }
+    }
+    .col-sm-6{
+      width: 50%;
+      float: left;
+    }
+    .link-to-reset {
+      font-size: 16px;
+    }
+    .term-link{
+      font-size: 14px !important;
+      .term_content{
+        input{
+          width: 12px !important;
+          margin: -8px 5px !important;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    #new_identity{
+      padding: 10px;
+    }
+    .input-group{
+      span{
+        padding: 10px;
+      }
+    }
+    .col-sm-6{
+      width: 100%;
+      float: none;
+      a{
+        max-width: 200px;
+        margin: auto;
+      }
+    }
+    .form-input input{
+      height: 38px;
+    }
+    .title-header{
+      font-size: 20px;
+      padding: 15px 0;
+    }
+    .twitter{
+      padding-top: 10px;
+    }
+  }
+  @media screen and (max-width: 375px)
+  {
+    .input-group .input-group-addon{
+      height: 39px;
+    }
+    .link-to-reset {
+      text-align: center;
+    }
+  }
+}

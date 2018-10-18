@@ -1,0 +1,21 @@
+.history-pages
+  .history-tab
+    = render 'tabs', active: :receivecoin
+
+  .history-transaction#receivecoin
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @receivecoins.empty?)          
+          th = t('.from')
+          th = t('.to')
+          th = t('.amount')
+          th = t('.currency')
+          th = t('.timestamp')     
+        - if @receivecoins.length != 0              
+          tbody.list
+            = render partial: 'receivecoin', collection: @receivecoins
+      - if @receivecoins.length == 0
+        div.empty_history 
+          = t('.empty_receivecoins').html_safe
+      .pull-right
+        = paginate @receivecoins

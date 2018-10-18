@@ -1,0 +1,18 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "arb_profit") do |sheet|
+    sheet.add_row ["ID", "メール", "名前", "配当金額(円)", "日付"]
+    @profit.each do |profit|
+      sheet.add_row [profit.member_id,
+                    profit.member.email,
+                    profit.member.name.nil? ? 'なし' : profit.member.name,
+                    profit.balance,
+                    profit.created_at]
+    end
+  end
+
+end

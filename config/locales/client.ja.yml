@@ -1,0 +1,364 @@
+ja:
+  date:
+    formats:
+      # Use the strftime parameters for formats.
+      # When no format has been given, it uses default.
+      # You can provide other formats here if you like!
+      default: "%Y-%m-%d"
+      short: "%b %d"
+      long: "%B %d, %Y"
+    month_names: [~, 1月, 2月, 3月, 4月, 5月, 6月, 7月, 8月, 9月, 10月, 11月, 12月]
+    time:
+      formats:
+        default: "%a, %d %b %Y %H:%M:%S %z"
+        short: "%d %b %H:%M"
+        long: "%B %d, %Y %H:%M"
+      am: "am"
+      pm: "pm"
+  js:
+    sendcoin:
+      email_error: 無効なメール アドレス
+    buy_coin:
+      action_title: クレジットカードで購入する
+      min_amount: クレジットカード決済での購入は%{min_amount}円から受け付けております。
+    buy_sell_coin:
+      amount_null: 数量をご入力してください。
+      buy_confirm: "%{amount} %{currency}を購入します。よろしいでしょうか？"
+      sell_confirm: "%{amount} %{currency}を売却します。よろしいでしょうか？"
+    alert_confirm:
+      destroy_confirm: 削除してよろしでしょうか？
+    id_documents:
+      errors:
+        empty: 入力必須項目です。
+        document_type_empty: 書類タイプを選択してください。
+    brand: Bit-station
+    submit: 送金
+    jpy_submit: 出金
+    cancel: キャンセル
+    confirm: 作成する
+    bank_account:
+      current_bank_account: 当座預金
+      ordinary_bank_account: 普通預金
+    banks:
+      mufg: 三菱UFJ信託銀行
+      smbc: SMBC信託銀行（三井住友銀行）
+      mzh: みずほ信託銀行（みずほFG）
+      nmrt: 野村信託銀行 （野村グループ）
+      jpp: ゆうちょ銀行
+    fund_sources:
+      manage_bank_account: 銀行アカウント管理
+      manage_bank_account_desc: 銀行から送金アドレスの選択ように容易にする
+      manage_coin_address_bitcoin: ビットコインアドレス管理
+      manage_coin_address_taocoin: タオコインアドレス管理
+      manage_coin_address_ripple: リップルアドレス管理
+      manage_coin_address_bitcoincash: ビットコインキャッシュアドレス管理
+      manage_coin_address_bitcoingold: ビットコインゴールドアドレス管理
+      manage_coin_address_ethereum: イーサリアムアドレスの管理
+      manage_coin_address_ethereumclassic: イーサリアム・クラシックアドレス管理
+      manage_coin_address_kuberacoin: クベラアドレスの管理
+      manage_coin_address_desc: コインアドレスを登録する
+      bank: 銀行
+      account: 銀行アカウント
+      label: 名前
+      address: アドレス
+      address_btc: ビットコインアドレス
+      address_tao: タオコインアドレス
+      address_bch: ビットコインキャッシュアドレス
+      address_btg: ビットコインゴールドアドレス
+      address_xrp: リップルアドレス
+      address_eth: ETHアドレス
+      address_etc: ETCアドレス
+      address_kbr: KBRアドレス
+      action: 行動
+      add: 追加
+      remove: 解消
+      default: 選択
+    funds:
+      deposit: 入金
+      withdraw: 送金
+      currency_name:
+        jpy: JPY
+        btc: BTC
+        tao: TAOCOIN
+        xrp: XRP
+        bch: BCH
+        btg: BTG
+        eth: ETH
+        etc: ETC
+        etc: KBR
+      deposit_jpy:
+        title: 日本円入金
+        desc: "銀行振込みで入金するには、次の手順に従ってください"
+        attention: "注意:サイトでアカウント名は銀行アカウント名と同じでなければなりません。そうでない場合は、入金は失敗します。"
+        from: から
+        to: まで
+        deposit_name: 名前
+        deposit_account: 入金アカウント
+        add: 追加
+        manage: 管理
+        amount: 入金額
+        min_amount: １０円以上
+        to_account: アカウント
+        to_name: 名前
+        to_bank_name: 銀行名
+        opening_bank_name: アカウントを作成した所
+        remark: '紹介コード (識別コードトランスファー)'
+        label:
+          company_name: 口座名義
+          bank_name: 銀行名
+          branch: 支店名
+          account_number: 口座番号
+          account_kind: 口座種類
+          transfer_name: 振込名義人
+        content:
+          company_name: ビットステーション (カ
+          bank_name: 名古屋銀行
+          branch: 本店営業部(101)
+          account_number: 3937838
+          account_kind: 普通
+        user_id: 'お客様のユーザーIDは <b class="de-id">%{id}</b>です。'
+        user_info: '<b class="de-id">%{id} &nbsp; %{name}</b>'
+        user_info_not_name: '<b class="de-id">%{id} &nbsp; あなたのお名前</b>'
+        title_note: お振込の前に
+        title_info_user: 口座情報
+        title_note_2: 注意事項
+        note_1: ・アカウント情報・銀行口座情報を登録の上、お振り込みください。
+        note_2: ・アカウントの氏名と同じ口座名義人の口座から必ずお振り込みください。
+        note_2_content: 振込名義人が異なる場合は正常に取り扱いできず、入金及び返金が
+        note_2b_content: 出来ない場合がございます。
+        note_3: ・ユーザーIDを振込名義人欄に必ず入力してください。
+        note_3_content: IDを入力しなかった場合は、
+        note_3_link: 「日本円入金のお問い合わせ」
+        note_4_content: ページより
+        note_5_content: 入金の情報・IDを記載の上、お問い合わせください。
+        user_name: あなたのお名前
+        desc_item_1: ・アカウント情報/
+        desc_item_1_2: 銀行口座情報
+        desc_item_1_1: をご登録ください。
+        desc_item_2: "振込人名義は<b>「%{ids} あなたのお名前」</b>にしてください。"
+        help_item_0: 必ずアカウントの名前と同じ振込名義人の口座からお振込みください。
+        help_item_1: 振込人名義が違った場合、正常に取り扱いできず、入金及び返金できない場合があります。
+        help_item_2: 入金処理が完了次第、メールが届きます。
+        help_item_3: IDを入力せず振り込んだ場合は、<a href="" onClick="window.open('/deposit_infomation')">「日本円入金のお問い合わせ」</a>から入金の情報を送信してください。
+      deposit_btc:
+        title: BTC 入金
+
+      deposit_tao:
+        title: TAOCOIN 入金
+
+      deposit_xrp:
+        title: RIPPLE 入金
+
+      deposit_bch:
+        title: BCH 入金
+
+      deposit_btg:
+        title: BTG 入金
+
+      deposit_eth:
+        title: ETH 入金
+
+      deposit_etc:
+        title: ETC 入金
+
+      deposit_kbr:
+        title: KBR 入金
+
+      deposit_coin:
+        balance: 残高
+        locked: ロック
+        address: アドレス
+        new_address: 新しいアドレス
+        confirm_gen_new_address: 新しい入金アドレスを作成するのはよろしいですか？
+        open-wallet-btc: ビットコインアドレスを入力するか、ビットコインアプリでQRコードを読み込んでください。
+        open-wallet-tao: タオコインアドレスを入力するか、ビットコインアプリでQRコードを読み込んでください。
+        open-wallet-xrp: リップルアドレスを入力するか、ビットコインアプリでQRコードを読み込んでください。
+        open-wallet-bch: キャッシュアドレスを入力するか、ビットコインアプリでQRコードを読み込んでください。
+        open-wallet-btg: キャッシュアドレスを入力するか、ビットコインアプリでQRコードを読み込んでください。
+        detail-1: ウォレットアプリで引き出すには、
+        detail-2: QRコードをスキャンします。
+        scan-qr: ウォレットアプリで支払うには、QR​​コードをスキャンします。
+        after_deposit: 送信が完了すると、下記【入金履歴】に反映されます。
+        generate-new: 新しいアドレスを作成します。
+        cancle: キャンセルのはよろしでしょうか？
+
+      deposit_history:
+        title: 入金履歴
+        number: '#'
+        identification: 識別コード
+        time: 時間
+        txid: 取引ID
+        confirmations: 確認
+        from: から
+        amount: 金額
+        state_and_action: "状況/進行"
+        cancel: キャンセル
+        no_data: データ履歴がありません。
+
+        submitting: 提出しています
+        cancelled: キャンセルしました
+        submitted: 提出しました
+        accepted: 完成しました。　
+        rejected: 拒否しました
+        checked: チェックしました
+        warning: 警告
+        suspect: 疑います
+
+      withdraw_jpy:
+        title: 円送金
+        fee_name: 手数料(日本国内)
+        three_man_less: 3万円未満
+        three_man_greater: 3万円以上
+        yen: 円
+        intro_item_1: 以下の口座に振り込みます。
+        intro_item_2: 口座情報が間違っていた場合,返金はできません。
+        intro_item_3: 送金申請を頂いてから<a>約3営業日</a>でお客様の口座に振込を行います。
+        intro_item_4: <a>銀行振込送金は国内に限ります。</a>
+        account_name: アカウント名
+        withdraw_address: 送金アドレス
+        balance: 数量
+        withdraw_amount: 送金金額
+        manage_withdraw: 送金管理
+        fee_explain: 手数料について
+        min: 以上
+        withdraw_all: 全て送金
+        bank_account: 銀行口座
+        bank_name: 銀行名
+        bank_branch: 支店名
+        account_type: 口座種類
+        account_number: 銀行口座
+        owner: 口座名義人
+        bank_account_register: 口座登録
+        bank_account_edit: 口座情報を修正
+        fee: 手数料
+        total: 合計
+        remain: 送金後所持残高
+        insufficient_funds: 残高が不足しています。
+
+      withdraw_btc:
+        title: BTC 送金
+        intro: ビットコインアドレスと金額を入力してください。
+      withdraw_tao:
+        title: TAOCOIN 送金
+        intro: タオコインアドレスと金額を入力してください。
+
+      withdraw_xrp:
+        title: XRP 送金
+        intro: リップルアドレスと金額を入力してください。
+
+      withdraw_bch:
+        title: BCH 送金
+        intro: '<u><strong>ビットコインキャッシュアドレス</strong></u>と金額を入力してください。確認するのに10分ほどかかります。'
+      
+      withdraw_btg:
+        title: BTG 送金
+        intro: '<u><strong>ビットコインゴールドアドレス</strong></u>と金額を入力してください。確認するのに10分ほどかかります。'
+
+      withdraw_eth:
+        title: ETH 送金
+        intro: アドレスと数量を入力してから、ボタンを押してください.
+
+      withdraw_etc:
+        title: ETC 送金
+        intro: アドレスと数量を入力してから、ボタンを押してください.
+
+      withdraw_kbr:
+        title: KBR 送金
+        intro: アドレスと数量を入力してから、ボタンを押してください.
+
+      withdraw_coin:
+        confirm: |
+          %{amount}%{currency}を送金するのはよろしいですか？
+        amount_not_blank: 数量が入力してください！
+        intro: ビットコインアドレスと金額を入力してください。
+        label: ラベル
+        balance: 残高
+        locked: ロック
+        amount: 金額
+        manage_withdraw: アドレス管理
+        min: 以上
+        withdraw_all: 全て送金
+        fee_explain: 手数料について
+        cancle: キャンセルのはよろしでしょうか？
+        destination_tag: 宛先タグ(オプション)
+        number: 数字
+        send_coin: メールアドレスで送る
+        send_coin_link: メールアドレスでの送信はコチラ
+
+      withdraw_history:
+        title: 送金履歴
+        number: 番号
+        withdraw_time: 時間
+        withdraw_account: 送金アカウント
+        withdraw_address: アドレス
+        withdraw_amount: 金額
+        actual_amount: 金額
+        fee: 手数料
+        miner_fee: 手数料
+        state_and_action: "進行/状況"
+        cancel: キャンセル
+        no_data: データ履歴がありません
+
+        submitting: 提出しています
+        submitted: 提出しました
+        rejected:  拒否しました
+        accepted: 手続中
+        suspect: 疑います
+        processing: 修理しています
+        coin_ready: 準備したコイン
+        coin_done: 完了したコイン
+        done: 完了しました
+        almost_done: もうすぐ完了します
+        canceled: キャンセルしました
+        failed: 失敗しました
+
+    auth:
+      please_active_two_factor: 最初に携帯番号又はGoogle認証システムを設定してください。.
+      submit: 提出
+      otp_placeholder: 確認コード（６桁）を入力してください
+      google_app: Google認証システム
+      sms: SMS　確認メッセージ
+      mail: メール 確認メッセージ
+      mail_guide: メールアドレス宛に承認コードをお送りします。
+      send_code: コードを送信します
+      send_code_alt: COUNT秒後に再送信します
+      hints:
+        app: Google認証システムのコード
+        sms: メールアドレス、携帯電話に確認コードの記載されたメッセージを送ります。
+        mail: メールアドレスにコードを送信します。
+    private:
+      markets:
+        range_switch:
+          unknown: 未知の
+          switch_1: 1m
+          switch_5: 5m
+          switch_15: 15m
+          switch_30: 30m
+          switch_60: 1h
+          switch_120: 2h
+          switch_240: 4h
+          switch_360: 6h
+          switch_720: 12h
+          switch_1440: 1d
+          switch_4320: 3d
+          switch_10080: 1w
+        market_trades:
+          up-price: 売
+          down-price: 買
+    markets:
+      market_list:
+        all: All マーケット
+        jpy: JPY マーケット
+        btc: BTC マーケット
+        tao: TAOCOIN マーケット
+        xrp: XRP マーケット
+        bch: BCH マーケット
+        btg: BTG マーケット
+        eth: ETHEREUM マーケット
+        etc: ETC マーケット
+        kbr: KUBERA マーケット
+  private:
+    markets:
+      charts:
+        candlestick_period: 期間
+        loading: 読み込み中...

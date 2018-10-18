@@ -1,0 +1,57 @@
+<div class="price-border border-buy">
+  <h1 class="price-title"><%= t('.buy_price') %></h1>
+  <h1 class="price-num"id="price_buy"> <span class="val">{{ price | currency : "" : price_precision }}</span>  <span class="currency"> <%= t(".#{@payment_type}") %> </span></h1>
+</div>
+
+<%= form_tag('coin_trade/buy_create', name: 'buySellForm', "ng-submit" => 'submitForm($event)') do %>
+  <input name="coin_buy[price]" ng-model="price" ng-change="setPrice(price)" hidden>
+  <input name="coin_buy[currency]" value="{{currency}}" hidden>
+  <input name="coin_buy[payment_type]" value="{{payment_type}}" hidden>
+
+  <div class="form_buy_sell">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-2 title-left">
+        <label><%= t('.amount') %></label>
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-8 input-amount-control">
+        <div class="input-group">
+          <span ng-click="plusAmount()" class="sub input-group-addon input-lg text-success box_border" id="icon_volume_plus"><span class="glyphicon glyphicon-plus"></span></span>
+          <input type="number" class="form-control input-lg text-right box_border" name="coin_buy[amount]" min="0" step="any" ng-model="amount" required>
+          <span ng-click="minusAmount()" class="minus input-group-addon input-lg text-danger box_border" id="icon_volume_minus"><span class="glyphicon glyphicon-minus"></span></span>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <label for="">{{currency | uppercase}}</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-2"></div>
+      <div class="col-md-8 col-sm-8 col-xs-8 error_block">
+        <span class="error-msg" ng-show="over"> <%= t('.error_over', {max: "{{threshold}}", currency: "{{payment_type | uppercase}}"}) %> </span>
+        <span class="error-msg" ng-show="min_warning"> <%= t('.min_amount', {min: "{{min}}", currency: "{{currency | uppercase}}"}) %> </span>
+        <span id="space_buf" class="dis-none">space</span>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-2"></div>
+    </div>
+
+    <div class="row total">
+      <div class="col-md-2 col-sm-2 col-xs-2 title-left">
+        <label><%= t('.total_price') %></label>
+      </div>
+      <div class="col-md-8 col-sm-8 col-xs-8">
+        <p class="price-num">{{ total_purchase | currency: "" : total_precision }}</p>
+      </div>
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <label >{{payment_type | uppercase}}</label>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="form-group buy-coin-link" id="submit_btn">
+    <button id="buy_submit" ng-disabled="amount < min" class="btn btn btn-submit-green" type="submit"><%= t(button)%></button><br>
+      <%= link_to t('.buy_coin'), buy_coin_path, class: "text-center" %>
+  </div>
+
+<% end %>

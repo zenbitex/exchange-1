@@ -1,0 +1,3933 @@
+en:
+  wait_activation:
+    header: Verify your email
+    resend: Resend Email
+    back: Back to main page
+    sent: We have sent a verivication email to <span>%{email}</span>
+    click: Click the link in the email to started.
+  accounts:
+    index:
+      header: My account
+      id: Customer ID
+      total: Total assets
+    account_balance:
+      account_balance: Account Balance
+      currency: Currency
+      amount: Amount
+      lock: Lock
+      available: Available Balance
+      withdraw: Withdraw
+      deposit: Deposit
+      rate: Rate
+      total: Total
+      convert_to_yen: Estimated Value
+    current_rate:
+      header: Current Rate
+    level:
+      header: Level
+      email_verifi: Email confirmed
+      account_phone_verifi: Account verifed and confirmed Phone
+      post_card: Post card
+    history:
+      header: Bonus History
+      amount: Amount
+      reason: Reason
+      time: Time
+      blank: There is no history
+  securities:
+    update:
+      successfull: Successful update
+      failed: Update failed
+      update_failed: You can't turn on two factor settings before active it
+    edit:
+      submit: Save settings
+      header: Security
+      email_withdraw: Send email when withdraw
+      email_login: Send email when login
+      two_factor_withdraw: Use two factor when withdraw
+      two_factor_login: Use two factor when login
+  two_factors_access:
+    index:
+      title: Two-factor authentication
+      help_text: To login you need Two-factor authentication code.
+      send: Submit
+      otp_wrong: Code wrong! please try again!
+      code_placeholder: 6-digit passcode
+  buy_coin:
+    title: Buy coin with credit card
+    title_list_coin: 1.Please select a coin type
+    title_input_money: 2.Input amount and buy coin
+    title_confirm: 3.Buy order confirm quantity
+    price: Price
+    yen: yen
+    amount: Amount
+    money: Money
+    buy: Buy coin
+    server_busy: Server busy
+    max_amount: Now you only buy a maximum of %{amount}.
+    amount_zero: Sorry. The service is currently stopped. Please wait.
+    order_fail: The transaction was wrong or over time transaction. Please buy again.
+    paymement_finish: Paymement finish
+    paymement_error: The transaction was occurred error.
+    history:
+      coin: Coin
+      price: Price
+      amount: Amount
+      time: Time
+    information: • The payment date will be the debit date based on the name credit company stipulations.
+                 <br>• For details, please refer to the usage statement.
+                 <br>• Cancellation after the purchase procedure, refunds are not received.
+  bit_station: Bit Station
+  id_documents:
+    invalid_zipcode: zipcode format is invalid (have to include hyphen)
+    invalid_birthdate: Please type exactly day for month
+    invalid_job_type: Please select an occupation
+    invalid_trade_purpose: Please select a trading purpose
+    blank_name: Name can't be blank
+    blank_job_type: Please select an occupation
+    blank_zipcode: Zipcode can't be blank
+    blank_trade_purpose: Please select a trading purpose
+    blank_city: City can't be blank
+    blank_address: Address can't be blank
+    blank_foreign: Please select a foreign
+    blank_id_document_type: Please select a document type
+  reply_user:
+    send_email_user:
+      footer_reply:
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  contacts:
+    new:
+      title: Contact Us
+      name: Name
+      email: Email address
+      category_select: Category
+      content: Content
+      button_confirm: Confirm
+      button_back: Back
+      button_send: Send
+      error:
+        name_blank: Please enter your name
+        email_blank: Please enter your email address
+        category_blank: Please select a category
+        content_blank: Please enter the content
+        email: Email is invalid, please try again!
+      category_type1: About change of registered information
+      category_type2: About creation of account
+      category_type3: About payment
+      category_type4: About dealing with virtual currency
+      category_type5: Receiving and sending virtual currency
+      category_type6: About ICO (cloud sale)
+      category_type7: Other
+    create:
+      notice:
+        fails: Send message error
+        ok: Thanks for your message, we will contain as soon!
+        sorry: Sorry you sent contact us too many of 3 times in day
+  welcome:
+    index:
+      exchange_name: Bit-trading
+      public_content: The easiest way to buy and sell cryptocurrency in Asia.
+      logo_content: Easy to use exchange
+      menu_mini:
+        chart: Chart
+        help: Help
+        logout: Logout
+        login: Login
+        account: Account
+        signup: Signup
+      menu: Menu
+      price_ask: Buy Bitcoin (JPY)
+      price_bid: Sell Bitcoin (JPY)
+      price: Price(BTC/JPY)
+      tao_price: Price（TAO/JPY）
+      balance_btc: Balance(BTC)
+      balance_jpy: Balance(JPY)
+      balance_tao: Balance(TAO)
+      balance_xrp: Balance(XRP)
+      yen: JPY
+      jpy: JPY
+      btc: BTC
+      tao: TAO
+      xrp: XRP
+      slide_title: Let's operate my own assets !!!
+      what_is_tao_toin: Tao Coin and Arbitrage · Pod
+      arbitrage_pot_service: Arbitrage pot service
+      service-1: Can be used in the world
+      service-2: Can be used for shopping
+      service-3:
+        Reliable<br>
+        Security
+      service-4:
+        We can automatically increase assets<br>
+        Automatic system
+      news: News
+      phone:
+        title: Contact Us
+        content: Bit station customer support center
+      arb: Arbitrage pot
+      exchange: Exchanges
+      fund: Wallet
+      history: Order History
+      account: Account
+      term_of_service: Terms of service
+      sendcoin: Send coin
+      contact: Contact us
+      logout: Logout
+      back: Back
+    success_message:
+      title: Send mail successful
+      message: I have sent an e-mail.
+      content-1: I have sent an e-mail.
+      content-2: When you receive the reset password, please follow step in there to create a new password.
+      back: Return to home page
+  activerecord:
+    models:
+      api_tokens: API Token
+      trade: Trades
+      order: Orders
+      order_bid: BID
+      order_ask: ASK
+      document: Document
+      withdraw: Withdraw
+      deposit: Deposit
+      payment_transaction: Payment
+      id_document: ID Document
+      statistic/orders_grid: Orders Stat
+      statistic/trades_grid: Trading Stat
+      statistic/members_grid: Members Stat
+      statistic/deposits_grid: Deposits Stat
+      statistic/withdraws_grid: Withdraws Stat
+      admin/deposits_grid: Deposits
+      admin/withdraws_grid: Withdraws
+      deposits/bank: Deposit Bank
+      withdraws/bank: Withdraw Bank
+      withdraws/satoshi: Withdraw
+      withdraws/taocoin: Withdraw
+      withdraws/ethereum: Withdraw
+      withdraws/ripple: Withdraw
+      withdraws/bitcoincash: Withdraw
+      withdraws/bitcoingold: Withdraw
+    attributes:
+      api_token:
+        access_key: Access Key
+        trusted_ip_list: IP Whitelist
+        ip_whitelist: IP Whitelist
+        label: Label
+        actions: Actions
+      identity:
+        email: Email
+        password: New Password
+        password_confirmation: Confirm Password
+        referrer_code: Referrer code
+      document:
+        zh_cn_body: JPY content
+        zh_cn_title: JPY title
+        zh_cn_desc: JPY description
+        zh_cn_keywords: JPY keyword
+        en_body: English content
+        en_title: English title
+        en_desc: English description
+        en_keywords: English keyword
+        key: Key
+        is_auth: Is Auth
+      fund_source:
+        address: Address
+        category: Category
+        label: Label
+      account:
+        currency: Currency
+        currency_text: Currency
+        balance_and_locked: Balance / Locked
+        balance: Balance
+        locked: Frozen
+      deposit:
+        state: State
+        tx_id: TxID
+        member_id: Member ID
+        created_at: Submitted at
+        address: Address
+        amount: Amount
+        done_at: Completed at
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: Created At
+        done_at: Done At
+        sum: Sum
+        fee: Fee
+        currency: Currency
+        amount: Amount
+        address: Address
+        state: Status
+        state_text: Status
+        tx_id: TxID
+        fund_source_id: Withdraw address
+        detail: Detail
+      account_version:
+        id: ID
+        locked: Forzen
+        amount: Amount
+        balance: Balance
+        reason: Reason
+        reason_text: Reason
+        modifiable_id: LINK ID
+        modifiable_type: LINK
+        created_at: Created At
+        in: Income
+        out: Expenses
+        fee: Fee
+      token/reset_password:
+        email: Sign in email
+        member: Member
+      trade:
+        bid: Bid
+        ask: Ask
+        fee: Fee
+        price: Strike Price
+        volume: Strike Volume
+        category: Bid/Ask
+        order: Order
+      order:
+        bid: Bid
+        ask: Ask
+        price: Price
+        total: Total
+        volume: Volume
+        origin_volume: Volume
+        sum: Sum
+        category: Bid/Ask
+        kind: Kind
+        at: At
+        id: ID
+        state: State
+        operation: Operation
+      payment_transaction:
+        at: Date Time
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmations
+        state: State
+        state_done: Done
+        state_wait: Wait
+      member:
+        id: ID
+        name: Real Name
+        display_name: Display Name
+        email: Email
+        created_at: Register At
+        sn: SN
+        id_document_number: Id Document Number
+        tag_list: Tags
+        activated: Activated
+        activated?: "Activated?"
+        id_document_verified?: "Id Document Verified?"
+        two_factor_activated?: "Phone number Activated?"
+        phone_number: Phone Number
+      two_factor/sms:
+        country: Country
+        phone_number: Phone Number
+        otp: Verify Code
+        country_error: Please select a country
+        phone_error: Please type exactly font number
+      withdraws/bank:
+        id: ID
+        member_name: Member
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_source: Bank
+        fund_extra: Bank
+        fund_extra_text: Bank
+        fund_uid: Bank Account
+        sum: Amount
+        fee: Fee
+        amount: Amount
+        remark: Remark
+        created_at: Created At
+      deposits/bank:
+        created_at: Created At
+        holder: Holder
+        fund_extra: Sender Bank
+        fund_uid: Sender Account
+        member_sn: Member SN
+        member_name: Sender Name
+        amount: Amount
+        sn: SN
+        state_and_action: State/Action
+        label: Label
+        fund_source: Fund Source
+      deposits/satoshi:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/taocoin:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/ethereum:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/ripple:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/bitcoincash:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      deposits/bitcoingold:
+        created_at: Created At
+        txid: Transaction ID
+        amount: Amount
+        confirmations: Confirmation
+        aasm_state_text: State
+      withdraws/satoshi:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/taocoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/ethereum:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/ripple:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/bitcoincash:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/bitcoingold:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/ethereumclassic:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+      withdraws/kuberacoin:
+        id: ID
+        member_name: Account
+        currency_obj_key_text: Currency
+        state_and_actions: State/Action
+        fund_extra_text: Withdraw Label
+        fund_extrat: Withdraw Label
+        fund_source: Bank
+        fund_uid: Account
+        created_at: Created At
+        sum: Amount
+        amount: Amount
+        remark: Remark
+        fee: Fee
+    errors:
+      models:
+        coin_trade:
+          min_amount: The minimum quantity must be from %{min}%{currency}
+          user_insufficient: '%{currency} is insufficient funds'
+        coin_trade_bid:
+          suspect_price: Buy Coin Error Occurred! Please try again!
+          admin_insufficient: Server account is insufficient funds, please try again later
+          invalid_amount: Amount is invalid
+        coin_trade_ask:
+          suspect_price: Sell Coin Error Occurred! Please try again!
+          admin_insufficient: Server account is insufficient funds, please try again later
+          invalid_amount: Amount is invalid
+          cannot_sell_tao: Can not sell TAOCOIN
+        order_bid:
+          attributes:
+            sum:
+              expensive: Expensive Account
+            price:
+              range: Invalid Price Range
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: Expensive Account
+            price:
+              range: Invalid Price Range
+        account:
+          attributes:
+            balance:
+              less: Blance Less
+        identity:
+          attributes:
+            email:
+              invalid: Invalid Email
+              taken: Email has been taken
+              blank: Please enter your email
+            password:
+              invalid: Invalid Password
+            password_confirmation:
+              confirmation: Inconsistent with the new password you enter, please re-enter.
+        token/reset_password:
+          attributes:
+            base:
+              too_soon: Visit too soon, please try it later.
+            email:
+              not-member: Invalid Email
+              match: Invalid Sign in Email
+            password:
+              invalid: Invalid Password
+            member:
+              blank: Not exist!
+        activation:
+          attributes:
+            base:
+              too_soon: An activation email was sent to your email address less than
+                5 minutes ago.
+        fund_source:
+          attributes:
+            address:
+              satoshi_ismine: Used Address
+              satoshi_invalid: Invalid Address
+              taocoin_ismine: Used Address
+              taocoin_invalid: Invalid Address
+              ethereum_ismine: Used Address
+              ethereum_invalid: Invalid Address
+              ripple_ismine: Used Address
+              ripple_invalid: Invalid Address
+              bitcoincash_ismine: Used Address
+              bitcoincash_invalid: Invalid Address
+              bitcoingold_ismine: Used Address
+              bitcoingold_invalid: Invalid Address
+        withdraw:
+          account_balance_is_poor: Account balance is insufficient
+          attributes:
+            password:
+              match: invalid
+            amount:
+              poor: insufficient
+              bank_min: Less 5000.00
+        withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/taocoin:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/ethereum:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/ripple:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/bitcoincash:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        withdraws/bitcoingold:
+          attributes:
+            fund_uid:
+              blank: Please enter your withdrawal address
+              invalid: Invalid withdrawals address, please review.
+              ismine: Please use a new address.
+        two_factor:
+          attributes:
+            otp:
+              invalid: Wrong Password!Please re-enter.
+        application:
+          attributes:
+            redirect_uri:
+              fragment_present: cannot contain a fragment.
+              invalid_uri: must be a valid URI.
+              relative_uri: must be an absolute URI.
+        cold_wallet:
+          currency_balance_is_poor: Hot wallet is insufficient funds
+          insufficient_funds: Hot wallet is insufficient funds
+      messages:
+        invalid_email: Invalid Email Address
+        undef: unknown reason
+        less: balance less
+        verify: verify error
+        strength: is invalid password strength
+        password: Please enter a password at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+        orders:
+          price: limit price %{l} ~ %{h}
+          sum: limit sum price %{l} ~ %{h}
+          precision: minimum precision %{p}
+  banks:
+    mufg: Mitsubishi UFJ Trust and Banking
+    smbc: SMBC Trust Bank (Sumitomo Mitsui Banking Corporation)
+    mzh: Mizuho Trust & Banking Co., Ltd (Mizuho FG)
+    nmrt: Nomura Trust and Banking
+    jpp: Japan Post Bank
+  market:
+    exchange: Exchanges
+    currency:
+      btc: BTC
+      jpy: JPY
+      doge: DOGE
+      pts: PTS
+      ltc: LTC
+      tao: TAO
+      eth: ETH
+      xrp: XRP
+      bch: BCH
+      btg: BTG
+  currency:
+    satoshi:
+      key: BTC
+      code: BTC
+      name: Bitcoin
+      format: '0,0.0000'
+    bitsharesx:
+      key: BTS
+      code: BTSX
+      name: BitsharesX
+      format: '0,0.0000'
+    renminbi:
+      key: JPY
+      code: JPY
+      name: JPY Yuan
+      format: '0,0.00'
+    dogecoin:
+      key: DOG
+      code: DOGE
+      name: Dogecoin
+      format: '0,0.0000'
+    protoshare:
+      key: PTS
+      code: PTS
+      name: Protoshare
+      format: '0,0.0000'
+    taocoin:
+      key: TAOCOIN
+      code: TAOCOIN
+      name: Taocoin
+      format: '0,0.0000'
+    ethereum:
+      key: ETH
+      code: ETH
+      name: Ethereum
+      format: '0,0.0000'
+    ripple:
+      key: XRP
+      code: XRP
+      name: Ripple
+      format: '0,0.0000'
+    bitcoincash:
+      key: BCH
+      code: BCH
+      name: Bitcoin Cash
+      format: '0,0.0000'
+    bitcoingold:
+      key: BTG
+      code: BTG
+      name: Bitcoin Gold
+      format: '0,0.0000'
+    ethereumclassic:
+      key: ETC
+      code: ETC
+      name: Ethereum Classic
+      format: '0,0.0000'
+    kuberacoin:
+      key: KBR
+      code: KBR
+      name: Kubera Coin
+      format: '0,0.0000'
+  datagrid:
+    empty: no data found
+    filters:
+      date:
+        range_separator: " - "
+      datetime:
+        range_separator: " - "
+    form:
+      submit: Search
+    admin_deposits_grid:
+      columns:
+        sn: SN
+        created_at: At
+        channel_key_text: Channel
+        fund_extra_text: Extra
+        fund_uid: UID
+        txid: TXID
+        amount: Amount
+        fee: Fee
+        currency_text: Currency
+        aasm_state_text: State
+        member_name: Member
+    bank_deposits_grid:
+      columns:
+        sn: SN
+        created_at: At
+        channel_key_text: Category
+        fund_extra_text: Bank
+        fund_uid: Account
+        amount: Amount
+        fee: Fee
+        aasm_state_text: State
+    coin_deposits_grid:
+      columns:
+        sn: SN
+        txid: Transaction ID
+        created_at: At
+        amount: Amount
+        aasm_state_text: State
+        confirmations: Confirm
+    withdraws_grid:
+      columns:
+        sn: SN
+        name: Name
+        currency_text: Currency
+        amount: Amount
+        fee: Fee
+        created_at: Created at
+        done_at: Completed at
+        state_text: State
+    members_grid:
+      columns:
+        sn: Serial number
+        email: Email
+        created_at: Created at
+        actions: Actions
+    account_versions_grid:
+      columns:
+        created_at: Created at
+        currency_text: Currency
+        balance: Balance
+        in: In
+        out: Out
+        amount: Amount
+        reason_text: Reason
+        modifiable_type: Link
+        fee: Fee
+      filters:
+        reason: Reason
+        currency: Currency
+    statistic_members_grid:
+      columns:
+        sn: Serial number
+        id: ID
+        email: Email
+        created_at: Created at
+        activated: Active
+        detail: Detail
+        action: Action
+      filters:
+        sn: Serial number
+        activated: Active
+        created_at: Created at
+        email: Email
+    statistic_orders_grid:
+      columns:
+        id: Serial number
+        price: Price
+        volume: Volume
+        created_at: Created at
+        state_text: State
+        member_id: Member
+      filters:
+        state: State
+        currency: Currency
+        created_at: Created at
+        type: Ask/Bid
+    statistic_trades_grid:
+      columns:
+        id: ID
+        price: Price
+        volume: Volume
+        strike_amount: Amount
+        created_at: Created at
+        fee: Trade fee
+      filters:
+        currency: Currency
+        created_at: Created at
+    statistic_deposits_grid:
+      columns:
+        member: Member
+        tx_id: TxID
+        amount: Amount
+        currency: Currency
+        created_at: Created at
+        state_text: State
+      filters:
+        currency: Currency
+        state: State
+        created_at: Created at
+    statistic_withdraws_grid:
+      columns:
+        member: Member
+        address: Adress
+        amount: Amount
+        currency: Currency
+        created_at: Created at
+        state_text: State
+      filters:
+        state: State
+        created_at: Created at
+  deposit_channel:
+    bank:
+      key: Bank transfer
+      title: Bank transfer
+      intro: Bank transfer deposits, recommend for large recharge
+      latency: 10 minutes
+      transfer: Manual
+      go: Deposit
+    satoshi:
+      key: Block Chain
+      title: Bitcoin Deposits
+      intro: Deposit bitcoin from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    taocoin:
+      key: Block Chain
+      title: Taocoin Deposits
+      intro: Deposit taocoin from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    ethereum:
+      key: Block Chain
+      title: Ethereum Deposits
+      intro: Deposit bitcoin from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    ripple:
+      key: Block Chain
+      title: Ripple Deposits
+      intro: Deposit bitcoin from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    bitcoincash:
+      key: Block Chain
+      title: Bitcoincash Deposits
+      intro: Deposit bitcoincash from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    bitcoingold:
+      key: Block Chain
+      title: Bitcoingold Deposits
+      intro: Deposit bitcoingold from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    ethereumclassic:
+      key: Block Chain
+      title: Ethereum Classic Deposits
+      intro: Deposit ethereumclassic from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+    kuberacoin:
+      key: Block Chain
+      title: Kubera Coin Deposits
+      intro: Deposit kuberacoin from your own wallet address to Bit-Trading Solo account
+      latency: 1 confirmation
+      transfer: Manual
+      go: Deposit
+  deposits/bank:
+    aasm_state:
+      submitting: Submitting
+      cancelled: Cancelled
+      submitted: Submitted
+      accepted: Accepted
+      rejected: Rejected
+      checked: Checked
+      warning: Warning
+  private:
+    affiliates:
+      link:
+        aff_link: Bit-Trading Solo Affiliate Link %{i}
+        copy_link: Copy Link
+      index:
+        help-text: By introducing Bit-Trading Solo, you can earn the Japanese yen. For details, please refer to <a href="/affiliate"> Bit-Trading Solo Affiliate </a>.
+        target_text: Payment at the time of 10,000 account achievement
+        affiliate_program: Affiliate Program
+        affiliate_status: Affiliate achievement status
+        people: "People affiliate:"
+        summary: "Summary money you can have:"
+        rewards: Rewards
+        rewards_condition: Affiliate rewards condition
+        verify_account_lvl2: Verify Account Level 2
+        verify_account_lvl3: Verify Account Level 3
+        order_account: Order BTC more than 0.1 BTC
+        total: Total
+        reward_history: Reward history
+        member_id: Member ID
+        email: Email
+        level: Level
+        order_btc: Order BTC
+        created_at: Date
+    coin_trade_bids:
+      index:
+        title: Buy Coin
+        history: Coin purchase history
+      create:
+        successful: Buy coin successful
+        no_price: Have no price
+    coin_trade_asks:
+      index:
+        title: Sell Coin
+        history: Coin Sell History
+      create:
+        successful: Sell coin successful
+        no_price: Have no price
+    coin_trades:
+      load_history:
+        buy: Sell
+        sell: Buy
+      index:
+        title: Coin Trades
+      buy_create:
+        successful: Buy Coin Successfull!
+        no_price: Price is not available
+      sell_create:
+        not_sell_tao:  Could not sell TAOCOIN. please try again later!
+        successful: Coin Sell have done!
+        no_price: Price is not available
+      buy_form:
+        jpy: JPY
+        btc: BTC
+        xrp: XRP
+        buy_price: Buy Price
+        amount: Amount
+        total_price: Total
+        btn_buy: Buy
+        btn_sell: Sell
+        buy_coin: Pay with credit
+        error_over: "Maximum amount is %{max} %{currency}"
+        min_amount: "Minimum amount is %{min} %{currency}"
+      sell_form:
+        jpy: JPY
+        btc: BTC
+        xrp: XRP
+        sell_price: Sell Price
+        amount: Amount
+        total_price: Total
+        btn_buy: Buy
+        btn_sell: Sell
+        error_over: "Maximum amount is %{max} %{currency}"
+        min_amount: "Minimum amount is %{min} %{currency}"
+      history_trade_bid_ask:
+        load_more: Load more
+        currency: Coin
+        payment_type: Payment By
+        price: Price
+        amount: Amount
+        total_price: Total
+        trade_time: Time
+    deposit_infomations:
+      new:
+        header: Submit deposit infomation
+        hint: If you deposit without your user id or your deposit does not complete, please submit your deposit infomation.
+        bank: Bank you deposit
+        label:
+          company_name: Trade
+          bank_name: Bank name
+          branch: Bank branch
+          account_number: Account number
+          account_kind: Account type
+          account_name: Account name
+        content:
+          company_name: The Bank of Nagoya
+          bank_name: The Bank of Nagoya
+          branch: Head Office Sales Dept. (101)
+          account_number: 3937838
+          account_kind: Normal
+          account_name: Bit station
+        date_deposit: Date
+        payer_name: Payer name
+        user_id: User ID
+        holder_payer: Your Name
+        amount: Amount
+        memo: Memo
+        submit: Submit
+      create:
+        successfull: Your deposit informations had been sent to admin
+        failed: Somethings wrong with your deposit, please try again later!
+    arbs:
+      index:
+        title: ARBITRAGE
+        tao_amount: Owned TAO
+        jpy_amount: Yen
+        datetime: Number of days
+        days: Day(s)
+        withdraw: Withdraw
+        deposit: Deposit
+        profit: Your last month profit
+        insufficient_fund: TAOCOIN is not enough
+        deposit_successful: Deposit TAO successful
+        withdraw_successful: Withdraw TAO successful
+        error:
+          tao_amount_too_small: Amount must greater than 100
+          tao_amount_integer: The quantity entered must be a whole number, since this is a non-divisible asset
+        white_paper: Detail of white paper
+      update:
+        invalid_amount: The quantity is invalid.
+        insufficient_fund: TAOCOIN is not enough
+        deposit_successful: Deposit TAO successful
+        withdraw_successful: Withdraw TAO successful
+        tao_amount_integer: The quantity entered must be a whole number, since this is a non-divisible asset
+      create:
+        invalid_amount: The quantity is invalid.
+        insufficient_fund: TAOCOIN is not enough
+        deposit_successful: Deposit TAO successful
+        withdraw_successful: Withdraw TAO successful
+    deposits:
+      satoshis:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      taocoins:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      ethereums:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      ripples:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      bitcoincashes:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      bitcoingolds:
+        gen_address:
+          require_transaction: it can't generate new address if it hasn't been used.
+      banks:
+        destroy:
+          notice: Revocation request is successful.
+        create:
+          notice: Recharge request successfully submitted. Use the info below to complete the bank transfer.
+          submit: Submit
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+        edit:
+          bank: Receive Bank Name
+          branch: Receive Bank Branch
+          hodler: Receive holder
+          account: Receive Account
+    history:
+      tabs:
+        title_history: History
+      transaction:
+        Deposit: Deposit
+        Withdraw: Withdraw
+      account:
+        currency: Currency
+        buy: Buy
+        sell: Sell
+        filter_by_type: Filter by type
+        account_history: Deposit/Withdraw History
+        type: type
+        timestamp: date and time
+        fee: fee
+        currency: Currency
+        amount: Amount
+        txid: Txid
+        empty_transactions: Do not have any deposit/withdraw history
+      orders:
+        order_history: Order History
+        id: ID
+        type: Type
+        state: State
+        market: Market
+        price: Price
+        volume: Volume
+        average_price: Avg. Price
+        fullfilled_volume: Fullfilled
+        timestamp: Created At
+        empty_orders: Do not have any order history
+      order:
+        ask: Sell
+        bid: Buy
+        wait: Open
+        cancel: Cancelled
+        done: Done
+      trades:
+        trade_history: Trade History
+        side: Side
+        created_at: Time
+        base_currency: Base Currency
+        base_amount: Base Amount
+        quote_currency: Quote Currency
+        quote_amount: Quote Amount
+        price: Price
+        empty_trades: Do not have any trade history
+      trade:
+        sell: Sell
+        buy: Buy
+      cloudsafe:
+        tradecode: Trade Code
+        amount: Amount
+        price: Price
+        status: Status
+        wait: Waiting
+        done: Done
+        cancel: Canceled
+        currency: Currency
+        timestamp: Created At
+        empty_taocoin_trades: Do not have any cloudsafe trade history
+      sendcoin:
+        from: From
+        to: To
+        amount: Amount
+        currency: Currency
+        timestamp: Send at
+        empty_sendcoins: Do not have any send coin history
+      signup_history:
+        title: Login history
+        login_time: Time Login
+        ip: IP
+        local_system: Local System
+        empty_signup_histories: Do not have any signup history
+      arb_history:
+        member_id: Member ID
+        type: Type
+        tao_amount: TAO Amount
+        timestamp: Created At
+        deposit: DEPOSIT
+        withdraw: WITHDRAW
+        empty_arb_histories: Do not have any arb history
+      receivecoin:
+        from: From
+        to: To
+        amount: Amount
+        currency: Currency
+        timestamp: Send at
+        empty_receivecoins: Do not have any receive coin history
+    trade:
+      trades:
+        orders:
+          title: Orders
+        trades:
+          title: Trades
+        charges:
+          title: Charges
+      orders:
+        index:
+          done: Done
+          cancel: Cancel
+          confirm: 'Are you sure cancel order #%{id}?'
+        destroy:
+          'true': "#%{id} Cancel Order Successful"
+          'false': "#%{id} Cancel Order Reject"
+    withdraws:
+      update:
+        request_accepted: Withdraw request accepted.
+      destroy:
+        request_canceled: Withdraw request canceled
+      index:
+        fee: Fee
+        total: Total
+        withdraw_history: Withdrawal History
+      create:
+        address_same: Your withdrawal address is like deposit address
+        address_error: Your withdrawal address format is wrong!
+        address_hotwallet: Your withdrawal address in Bit-trading, we recommend you use function send coin in Bit-trading
+        success: 'Request Withdraw %{currency} submitted!'
+        two_factors_error: Code number authentication failed.
+        insufficient_fund: Account balance is inadequate
+        insufficient_balance_ethereum: Ethereum account balance is inadequate %{amount}
+        limit_tao_withdraw: Amount withdraw must be greater than 10
+        invalid_captcha: Invalid captcha
+        bank_account: You must register the bank account before withdraw
+        active_phone_number: Please verify your phone number
+        limit_amount_withdraw: Your address must have least 20 XRP
+        limit_amount_withdraw_kbr: Amount withdraw at least 1000
+        limit_amount_withdraw_eth: Amount withdraw at least 0.1
+        limit_amount_withdraw_btc: Amount withdraw at least 0.005
+        limit_amount_active_account: Your withdraw address hasn't been activated, so withdraw amount must be greater than 20 XRP.
+        error_withdraw_address: Your withdraw address is not valid
+        missing_destination_tag: Your address have destination tag
+        dont_have_destination_tag: Your address don't have destination tag
+      banks:
+        update:
+          notice: Bank Transfer withdrawal application has been submitted, we will
+            process it as soon as possible
+          alert_two_factor: Code number authentication error
+        destroy:
+          notice: Bank Transfer withdraw has been cancelled, frozen amount has been
+            returned to your account.
+        new:
+          fund_source: Select Fund Source
+          manage_fund_source: Manage Fund Source
+          submit: Submit
+          allin: All-In
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      satoshis:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      taocoins:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      ethereums:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      ripples:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      bitcoincashes:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      bitcoingolds:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      ethereumclassics:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+      kuberacoins:
+        destroy:
+          notice: Withdraw been canceled, frozen balance has returned to your account
+        update:
+          notice: Withdraw request is submit successful, we will process it as soon
+            as possible
+          alert_two_factor: Phone number authentication error
+        new:
+          submit: Submit
+          allin: All-In
+          fund_source_label: Label
+          manage_fund_source: Manage Fund Source
+        create:
+          notice: Withdrawal request successfully submitted. Use the info below to
+            complete the bank transfer.
+    tickets:
+      index:
+        new_ticket: New Ticket
+        intro: If you have any problems, start a new discussion so that our staff
+          can help you out as soon as possible. All discussions are private between
+          you and the support staff.
+      new:
+        intro: If you have any problems, start a new discussion so that our staff
+          can help you out as soon as possible. All discussions are private between
+          you and the support staff.
+      ticket_create_succ: Ticket created successfully.
+      ticket_create_fail: Failed to create ticket, please try again latter.
+      comment_succ: Comment successfully.
+      cooment_fail: Comment failed, please try again latter
+      me: me
+      supporter: Support
+      close: Close Ticket
+      close_succ: Ticket closed successfully
+      close_confirm: Are you sure to close this ticket?
+      title_content_both_blank: Title and content could be both be empty.
+      from: from
+      view_closed_tickets: View closed tickets
+      view_open_tickets: View open tickets
+    account_versions:
+      index:
+        description: Every transaction and every penny of income in Bit-Trading Solo are well
+          documented and exhaustive.
+    api_tokens:
+      user_tokens:
+        no_token: You have no API token.
+        edit: Edit
+        destroy: Destroy
+        destroy-confirm: Are you sure?
+        create: Create New Token
+        http: HTTP API Document
+        websocket: Websocket API Document
+        more: 'For more information please check the API section on github:'
+      oauth_tokens:
+        panel_title: Authorizations
+        title: Authorized Applications
+        oauth: OAuth Integration
+        intro: Manage all your authorized applications.
+        no_token: No Application.
+        unbind: Revoke
+        unbind-confirm: Are you sure?
+        oauth_app_name: Name
+        oauth_app_expire: Expire At
+        oauth_app_scope: Scopes
+      unbind:
+        success: Successfully revoked.
+        failed: Revoke failed.
+      new:
+        label_hint: Label helps you remember token usage, optional.
+      create:
+        alert_two_factor: Phone number authentication failed.
+        success: API token created successfully.
+        failed: Failed to create API token. Please try again later or contact admin.
+        desc: Please copy and paste keys below to a safe place and save. The secret key will never be displayed again.
+        access_key: Access Key
+        secret_key: Secret Key
+      edit:
+        access_key_hint: Created at %{created_at}
+        label_hint: Label helps you remember token usage, optional.
+        ip_whitelist_hint: Seperate IP by commas, leave this field blank means all IP are allowed.
+      update:
+        alert_two_factor: Phone number authentication failed.
+        success: Saved successfully.
+        failed: Failed to save token. Please try again later or contact admin.
+      destroy:
+        success: The token has been successfully destroyed.
+        failed: Failed to destroy token.
+    assets:
+      index:
+        liability-proof: Proof of Liabilities
+        btc-assets: BTC Assets
+        jpy-assets: JPY Assets
+        tao-assets: TAOCOIN Assets
+        eth-assets: ETH Assets
+        xrp-assets: XRP Assets
+      liability_tabs:
+        verify-btc: Verify My BTC Assets
+        verify-jpy: Verify My JPY Assets
+        verify-tao: Verify My TAOCOIN Assets
+        verify-eth: Verify My ETH Assets
+        verify-xrp: Verify My XRP Assets
+        btc-assets-total: 'Total BTC assets of exchange: '
+        jpy-assets-total: 'Total JPY assets of exchange: '
+        tao-assets-total: 'Total TAOCOIN assets of exchange: '
+        eth-assets-total: 'Total ETH assets of exchange: '
+        xrp-assets-total: 'Total XRP assets of exchange: '
+      liability_proof:
+        title: Proof of Liabilities
+        intro: As an exchange, our liabilities refer to the sum of money (in both
+          crypto currencies and fiat currencies) that our users trust us with. On
+          this page, we present you our liabilities. We also provide you a way to
+          verify that your account balance is indeed part of our liabilities.
+        how-to-verify: How to verify an exchange is solvent?
+        how-to-verify-uri: https://Bit-Trading Solo.js/documents
+      liability_data:
+        liability-proof-generating: Proof of Liability generation in process, please
+          come back after 30 minutes.
+        root-json: Root node
+        partial-tree: 'My %{currency} Assets: '
+        get-partial-tree: Get my partial tree data
+        timestamp: The proof data is generated at %{time}.
+        go-verify: Verify
+      btc_assets:
+        title: BTC Assets
+        intro: All of exchange's BTC assets are listed here.
+        total: Total BTC Assets
+        address: Address
+      tao_assets:
+        title: TAOCOIN Assets
+        intro: All of exchange's TAOCOIN assets are listed here.
+        total: Total TAOCOIN Assets
+        address: Address
+      eth_assets:
+        title: ETH Assets
+        intro: All of exchange's ETH assets are listed here.
+        total: Total ETH Assets
+        address: Address
+      xrp_assets:
+        title: XRP Assets
+        intro: All of exchange's XRP assets are listed here.
+        total: Total XRP Assets
+        address: Address
+      jpy_assets:
+        title: JPY Assets
+        intro: All of exchange's JPY assets are listed here.
+        total: Total JPY Assets
+        description: " <p>For supervision, you can inquiry the balance of our deposit
+          account:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry
+          Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
+      partial_tree:
+        success: 'Success! Verification data generated at: %{timestamp}'
+    funds:
+      show:
+        account_history: Account History
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        tao_format: '0.00000000'
+        eth_format: '0.00000000'
+        xrp_format: '0.00000000'
+        bch_format: '0.00000000'
+        btg_format: '0.00000000'
+        reason:
+          jpy:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          btc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          tao:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          eth:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          xrp:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          bch:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          btg:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+          etc:
+            strike_add: Plus
+            strike_sub: Sub
+            deposit: Deposit
+            withdraw: Withdraw
+            fix: Fix
+        ref:
+          system: System
+          default: Default
+    id_documents:
+      edit:
+        header_personal_information: Register your personal information
+        header_id_card: Submit identification card
+        warning: ※Please be sure to register one of them
+        hint_upload:
+          In the case of a driver's license and an alien registration card,<br>
+          In the case of a passport please submit the spread of the page with the face picture.
+        hint_label_1: Driver's license and residence card
+        hint_label_2: Passport and resident card
+        hint_label_3: My number card
+        hint_content_1: (Front side, rear side)
+        hint_content_2: Page with face picture<br>Page with foreign minister sign<br>Address description page
+        hint_content_3: Surface only (please do not upload on the back)
+        required: required
+        nav_header_user: User
+        nav_header_staff: Staff
+        nav_select_text: Please select either individual or corporate
+        nav_content_select_text: Enter your name as showed in identity document
+        state: State
+        state_unverified: UNVERIFIED
+        state_verifying: VERIFYING(It will take about 5 business days)
+        state_verified: VERIFIED
+        title:
+          company_infor: Basic information
+          manager_infor: Manager information
+          represent_infor: Represent/person trades information
+          document_infor: Identity verification documents
+          document_certificate: ① Please attach certificate of registration matter.
+          document_represent: ② Please attach a copy of the identity confirmation document of the representative or the transaction representative.
+          document_trade: ③ Please attach documents certifying that you have transaction authority.
+        document_explain: When entering information on trading personnel, please submit proxy letter to transaction personnel.
+                          <br> When entering information on representative, by registered matter certificate submitted as identity confirmation document.
+                          <br> We will confirm that you have transaction authority, so submitting here is unnecessary.
+        document_note: Transfer documents related to business office or head office, by registered mail. We will send it as unnecessary postal matter.
+                        <br> We will send you transaction related documents as a confirmation of the identity of the representative / transaction personnel in the same manner as above.
+        company_name: Company name
+        company_address: Company address
+        company_job_content: Business contents
+        position: Position
+        name: Real Name
+        birth_date: Birth Date
+        address: Address
+        city: City
+        country: Country
+        job_type: Your occupation
+        trade_purpose: Trading purpose
+        zipcode: Zipcode
+        id_document_type: Document Type
+        id_document_number: Document Number
+        id_document_file: Document Photo
+        id_bill_type: Proof Of Residence
+        id_bill_file: Proof Of Residence Photo
+        cell_phone: Cell phone
+        fixed_phone: Fixed phone
+        foreign: About important foreign public figures <abbr>※</abbr> <a href="/faqs"> Here </a> for an explanation about important overseas public figures
+        manager_role: Please select a role in the company. Details of the role in company can read <a href="/faqs#other&id=manager">here</a>.
+        type_role: Representatives
+        submit: Update
+        placeholder:
+          name: Yamada Taro
+          address: 1-2 Monzencho, Naka-ku Nagoya-shi, Aichi Prefecture 123 - 456
+          zipcode: 123-456
+          city: Aichi Prefecture
+          company_name: ABC company
+          company_job_content: Electronic
+          position: Director
+        label:
+          user_upload_1: Front
+          user_upload_2: Back
+          upload: Upload File
+          staff_upload_1: Document Photo(1)
+          staff_upload_2: Document Photo(2)
+          staff_upload_3: Document Photo(3)
+          staff_upload_4: Document Photo(4)
+          span_upload_1: Copy of the cover page of the account passbook in the name of the corporation
+          span_upload_2: Copy of a registry or the like within six months from issuance
+          span_upload_3: Director of the transaction (equivalent to the director in charge) Personal license or passport etc. with photos
+        error:
+          type: "Only image file with extension: jpg, jpeg, gif, png or pdf is allowed"
+          size: This file exceeds the maximum allowed file size (5 MB)
+
+      update:
+        notice: Your account verification has been submitted.
+    bank_accounts:
+      new:
+        title: Bank account register
+        bank_name: Bank name
+        bank_branch: Bank branch
+        account_type: Account type
+        account_number: Account number
+        owner: Owner
+        update: Register
+        cancel: Cancel
+        hint: '* In case of Japan Post Bank: <br>Please register receipt account of transfer from other financial institution. '
+      edit:
+        title: Bank account register
+        bank_name: Bank name
+        bank_branch: Bank branch
+        account_type: Account type
+        account_number: Account number
+        owner: Owner
+        update: Edit
+        cancel: Cancel
+        hint: '* In case of Japan Post Bank: <br>Please register receipt account of transfer from other financial institution. '
+      create:
+        notice: Your bank account has been submitted.
+      update:
+        notice: Your bank account has been submitted.
+      show:
+        title: Bank account register
+        bank_name: Bank name
+        bank_branch: Bank branch
+        account_type: Account type
+        account_number: Account number
+        owner: Owner
+        change: Change
+    sendcoin:
+      new:
+        free_fee_send: You can send coins without a fee between Bit-trading wallets.
+        history_hint: '**List email sent coin'
+        manage_email: Address Management
+        manage_title: Email Address Management
+        label_name: Label
+        email_address: Email address
+        select_action: Select
+        add_address: Add
+        balance: Balance
+        jpy_label: Japanese yen
+        yen: yen
+        currency: Currency
+        email: Email
+        submit: Submit
+        amount: Amount
+        send: Send
+        amount_is_int: The quantity entered must be a whole number, since this is a non-divisible asset.
+        amount_small: Amount must be greater than 0
+        next: Next
+        cancel: Cancel
+        email_not_valid: Email is not valid
+        safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use Two-Factor Authentication.
+        notice: You can not cancel after send coin.
+        confirm_delete: Are your sure delete email?
+      create:
+        successful: Successful
+        cannot_send: Cannot send
+        insufficient_fund: Insufficient funds
+        email_not_valid: Email is not valid
+        error_confirm_address: Comfirm your address first to sendcoin
+        round_amout: The amout is invalid. There should only be three digits at most after the decimal point.
+      add_or_delete_email:
+        email_exists: Email address already exists
+        email_not_valid: Email is not valid
+
+    markets:
+      balance:
+        available: Available
+      show:
+        price_too_low: Price too low
+        price_too_high: Price too high
+        error: Failed
+        need_login: Please login first!
+        amount_min: Amount must greater than %{min} %{currency}.
+        success: Success
+        analysis_panel: Analysis
+        help_panel: Help
+        done: DONE
+        cancel: CANCEL
+        confirm_message: Are you sure submit order?
+        cancel_confirm: Are your sure cancel order?
+        confirm: CONFIRM
+        ask_order: 'ASK ##sn#'
+        bid_order: 'BID ##sn#'
+        my_active_order: Active
+        my_done_order: Done
+        trades: Trading
+        chat: Chat Channel
+        insufficient_funds: Not enought %{currency}
+      market_list:
+        select-market: Select Markets
+        title: Wallet Balance
+        all: All Markets
+        all_html: "<i class='fa fa-check'></i><span>All Markets</span>"
+        jpy_html: "<i class='fa fa-check'></i><span>JPY Markets</span>"
+        btc_html: "<i class='fa fa-check'></i><span>BTC Markets</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH Markets</span>"
+        btg_html: "<i class='fa fa-check'></i><span>BTG Markets</span>"
+        tao_html: "<i class='fa fa-check'></i><span>TAOCOIN Markets</span>"
+        eth_html: "<i class='fa fa-check'></i><span>ETH Markets</span>"
+        etc_html: "<i class='fa fa-check'></i><span>ETC Markets</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP Markets</span>"
+        price: Price
+        change: "24h %"
+      range_switch:
+        switch_1: 1m
+        switch_5: 5m
+        switch_15: 15m
+        switch_30: 30m
+        switch_60: 1h
+        switch_120: 2h
+        switch_240: 4h
+        switch_360: 6h
+        switch_720: 12h
+        switch_1440: 1d
+        switch_4320: 3d
+        switch_10080: 1w
+      depths:
+        price: Price
+        amount: Amount
+        buy: Buy
+        sell: Sell
+        ask_orders: Sell
+        bid_orders: Buy
+      ticker:
+        last: Last Price
+        ask: ASK
+        bid: BID
+      account_balance:
+        title: Account Balance
+        available: Available %{currency}
+
+      ask_entry:
+        current_balance: Balance
+        sell: Sell
+        buy: Buy
+        price: Price
+        last_price: Last Price
+        amount: Amount
+        total: Total
+        fee: Fee
+
+      bid_entry:
+        current_balance: Balance
+        action: Buy
+        price: Price
+        last_price: Last Price
+        amount: Amount
+        total: Total
+        fee: Fee
+
+      place_order:
+        price_high: HIGH
+        price_low: LOW
+        full_bid: FULL
+        full_ask: EMPTY
+      order_book:
+        title: Order Book
+        volume: Volume
+        price: Price
+        amount: Amount
+        bid_amount: Bid Amount
+        ask_amount: Ask Amount
+        bid_total: Bid Total
+        ask_total: Ask Total
+        ask: ASK
+        bid: BID
+        fade_toggle_depth: Market Depth
+      trade_state:
+        new: New
+        partial: Partial
+      market_trades:
+        title_trades: Trade History
+        all: All
+        my: Mine
+        all_html: "<i class='fa fa-check'></i><span>All</span>"
+        my_html: "<i class='fa fa-check'></i><span>Mine</span>"
+        time: Time
+        price: Price
+        volume: Volume
+      header:
+        bit_station: Bit Station
+        network: Connection State
+        vol: 24h Volume
+        high: High
+        low: Low
+        change: Change
+      footer:
+        arb: Arbitrage pot
+        exchange: Exchanges
+        fund: Wallet
+        history: Order History
+        account: Account
+        term_of_service: Terms of service
+        sendcoin: Send coin
+        contact: Contact us
+        logout: Logout
+        back: Back
+      settings:
+        sound: Sound
+        notification: Notify
+        funds: "Funds"
+        signout: "Sign Out"
+        settings: "Profile"
+        history: "History"
+      account_summary:
+        account: Account
+        amount: Amount
+        locked: Freeze
+        view_all_accounts: "View All"
+        hide_all_accounts: "Hide Other"
+      my_orders:
+        open_menu_hint: 'Click on <span class="glyphicon glyphicon-pencil"></span> to cancel'
+        orders_wait: Latest Orders
+        orders_done: Completed Orders
+        orders_cancel: Cancel Orders
+        no_open_orders: You have no open orders.
+
+        clear_this: Clear this
+        clear_bids: Clear all bid
+        clear_asks: Clear all ask
+        clear_all: Clear all
+        admin_clear_all: Clear all (admin)
+        confirm_clear_all: Clear all orders?
+        confirm_clear_bids: Clear all bid orders?
+        confirm_clear_asks: Clear all ask order?
+        confirm_clear_order:  Clear this order?
+        cancel: Cancel
+        time_order: Time
+        state: Ask/Bid
+        price_order: Price
+        volumn: Order volume
+        total: Total
+        number_remain: Number Contract
+
+        price: Price
+        volume: Volume
+        amount: Amount
+        time: Place Time
+      mask:
+        warning: Please <a class=text-up href='/signin'>login</a> for buy and sell.
+      klime_chart:
+        title: Candlestick Charts
+      global:
+        global_orders_title: ORDERS
+        global_trades_title: TRADES
+      chat:
+        title: Chat Channel
+    settings:
+      success: Settings updated successfully.
+      failure: Invalid passcode. Please try again.
+      index:
+        affiliate: Please upgrade your account to level 3
+        referrer_link: Your affiliate link here
+        safety_instruction: In order to protect your bitcoins and personal information, we strongly suggest that you use Two-Factor Authentication.
+        reset_password: Rest your Password
+        reauthenticate: Authentication
+        activated: An  email has been sent to your mailbox, please check it for verification
+          as soon as possible. If you do not received it , please click "send it again"
+          button
+        auth-activated: Please confirm your email address first.
+        auth-verified: Please verify your account first.
+        upgrade_account: Please upgrade your account.
+        user_id: "User ID: <span>%{user_id}</span>"
+        account_class: 'Account class: <a href="/faqs?level=%{account_class}#cat-acount">level %{account_class}</a>'
+        level0: You must confirm email to upgrade level 1
+        email:
+          title: E-mail verification
+          required: (required)
+          description: Your e-mail has not been verified, click the "Send Mail" button
+            to complete the verification
+          description-activated: Your email adress has been verified successfully,
+            remember and protect this e-mail address, it is the single certificate
+            for your  account
+          resend: Send it again
+          activated: Verified
+          change_email: Change Email
+          go: Set
+        phone_number:
+          title: Phone Number
+          required: (required)
+          description: Providing a phone number will make your account more secure.
+            You can quickly reset your password and your account operations will be
+            notified.
+          go: Set
+          verified: Verified
+          hint: "Verified number %{hint}"
+        two_factor_auth:
+          title: Two-Factor Authentication
+          description: Two-Factor Authentication provides another layer of security
+            to your account.
+          enable: Enable
+          disable: Disable
+        verification:
+          manual_link: <a href="/manual/private_descript.pdf" class="tutorial-link"> How to register</a>
+          title: Verify Account
+          required: (required)
+          description: Help keep the bad guys out of your account by using both your
+            password and your phone
+          verifying: Verifying
+          unverified: Submit
+          verified: Verified
+        asset_passwords:
+          title: Asset password
+          description: The asset password will be needed when you withdraw your money.
+            It is strongly recommended that you do not use the same password as your
+            account password!
+          go: Set
+        passwords:
+          title: Password
+          description: This password is required for login, please remember it.
+          go: Change Password
+          set: Set
+        api_tokens:
+          title: API Tokens
+          description: You can manage and create API tokens. Registering the API token allows you to link with other systems.
+          go: Set
+        bank_accounts:
+          title: Bank Account
+          description: You can register your bank account. Since you can't deposit/withdraw cash unless you register your bank account information, please register.
+          go: Change Bank Account
+          set: Set
+        weibo:
+          title: Connect to Weibo
+          description: After you connecting to Weibo, you can login via Weibo account.
+          bound_desc: This has been connected with %{nickname}.
+          bind: Connect
+          unbind: Disconnect
+    otps:
+      new:
+        step_1: Step 1
+        step_2: Step 2
+        step_3: Step 3
+        or: OR
+        download_app: Install Google Authenticator app on your smart phone and open it.
+        scan_qr_code: Scan the QR code below
+        enter_passphrase: Manually enter the following key into the app
+        enter_passcode: Enter and submit the passcode generated by the Google Authenticator app.
+    shared:
+      balances:
+        locked: Frozen
+        balance: Balance
+        available: Available
+        title: "%{icon} %{c} Account"
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        tao_format: '0.00000000'
+        eth_format: '0.00000000'
+        xrp_format: '0.00000000'
+        total: Total
+  guides:
+    private:
+      settings:
+        panel: Settings
+        index:
+          intro: Admin and revise your profile.
+      api_tokens:
+        panel: API Tokens
+        index:
+          title: My Tokens
+          intro: A list of all your API tokens. An empty 'IP Whitelist' means any
+            ip is allowed to use the token.
+        new:
+          title: Create API Token
+        create:
+          title: Create API Token
+        edit:
+          title: Edit API Token
+        update:
+          title: Edit API Token
+      tickets:
+        panel: Tickets
+      id_documents:
+        panel: Real-name Authentication
+        new:
+          title: Submit real-name authentication information
+          intro: In line with the national laws , identity verification is required.
+            please verify your account to proceed.
+    panels:
+      balance: Account
+    verify:
+      google_auths:
+        panel: Two-Factor Authentication
+        edit:
+          title: Disable Two-Factor Authentication
+          intro: If you have a new phone, you can disable Two-Factor Authentication in the old phone, and enable Two-Factor Authentication  with the new one.
+      sms_auths:
+        panel: Verify Phone Number
+    reset_passwords:
+      panel: Password
+      new:
+        title: Reset Password
+        intro: Please enter your e-mail address which is verified by your  account,
+          enter verification code to submit,and login your mailbox, follow the prompts
+          to reset your password.
+      create:
+        title: Reset password
+        intro: Please enter your e-mail address which is verified by your  account,
+          enter verification code to submit,and login your mailbox, follow the prompts
+          to reset your password.
+      edit:
+        title: Set Password
+      update:
+        title: Set Password
+    sessions:
+      panel: Login
+      new:
+        title: Login my account
+        intro: Login Bit-Trading Solo now for you to exchange.
+      failure:
+        title: Login my account
+        intro: Login Bit-Trading Solo now for you to exchange.
+    identities:
+      panel: Create Account
+      new:
+        title: Create My Account
+        intro:
+      edit:
+        panel: My Account
+        title: Reset Password
+    two_factors:
+      panel: Two Factor Authenticator
+  simple_form:
+    placeholders:
+      deposit:
+        bank:
+          amount: Minimum amount 100
+      session:
+        email: E-mail Address
+        password: Password
+        label_two_factor: Two Factor (Optional)
+      identity:
+        email: Example：youremail@example.com
+        password: Please set your login password
+        password_confirmation: Confirm your password
+        edit:
+          password: Please set your account password!
+      document:
+        key: Document link URL key
+        title: Document Title
+      order_bid:
+        origin_volume: Buy Volume
+        sum: Sum
+      order_ask:
+        origin_volume: Sell Volume
+        sum: Total Turnover
+      reset_password:
+        email: Email address
+        password: Please set your login password!
+        password_confirmation: Confirm your password
+      withdraw:
+        bank:
+          sum: Minimum amount 100
+        satoshi:
+          sum: Minimum amount 0.005
+          fund_extra: Enter a label for this address (optional)
+        taocoin:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        ethereum:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        ripple:
+          sum: Minimum amount 0.001
+          fund_extra: Enter a label for this address (optional)
+        bitcoincash:
+          sum: Minimum amount 0.005
+          fund_extra: Enter a label for this address (optional)
+        bitcoingold:
+          sum: Minimum amount 0.005
+          fund_extra: Enter a label for this address (optional)
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          member_name: "<span class='text-danger'>Recharge bank account name must
+            match the name with your real name authentication</span>"
+          sn: "<span class='text-danger'>Please copy the SN in your bank transfer's
+            message, otherwise we can not process your order quickly.</span>"
+      two_factor:
+        otp_secret: We recommend that you back up QR code image or ciphertext to avoid
+          that you accidental loss of the phone for the inconvenience.
+        otp: Your validator will re-generate a new password every thirty seconds,
+          please input timely.
+      identity:
+        password: Set a password which has at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+      reset_password:
+        password: Set a password which has at least 6 characters and it's better to
+          contain uppercase and lowercase letters and numbers.
+      id_document:
+        name: Please fill in the name which is consistent with your Credentials.
+      withdraw:
+        bank:
+          member_name: "<span class='text-danger'>Withdraw bank account name must
+            match your name used for real-name authentication</span>"
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          fund_extra: If your bank is no longer in the list, please contact customer
+            service
+        satoshi:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        taocoin:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ethereum:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        ripple:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        bitcoincash:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+        bitcoingold:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+    creating: Creating...
+    updating: Updating...
+    buttons:
+      or: Or
+      cancel: Cancel
+    'yes': 'Yes'
+    'no': 'No'
+    required:
+      text: required
+      mark: "※"
+    error_notification:
+      default_message: 'Please review the problems below:'
+    labels:
+      defaults:
+        title: Title
+      google_auth:
+        uri: QR code
+        otp_secret: Ciphertext
+        otp: Password on the authenticator
+      fund_source:
+        label: Label
+        address: Address
+        category: Category
+      session:
+        email: Sign In E-mail
+        password: Sign In Password
+        captcha: Captcha
+      identity:
+        email: Sign In E-mail
+        old_password: Original password
+        password: New Password
+        password_confirmation: Confirm new password
+      reset_password:
+        password: New Password
+      ticket:
+        content: More detail
+      withdraw:
+        bank:
+          fund_extra: Bank
+          sum: Amount
+          account_balance: Account Balance
+          member_name: Account Holder Name
+        satoshi:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        taocoin:
+          fee: Fee
+          sum: Amount
+          fund_uid: Taocoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ethereum:
+          fee: Fee
+          sum: Amount
+          fund_uid: Ethereum Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        ripple:
+          fee: Fee
+          sum: Amount
+          fund_uid: Ripple Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        bitcoincash:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+        bitcoingold:
+          fee: Fee
+          sum: Amount
+          fund_uid: Bitcoin Address
+          fund_extra: Label
+          account_balance: Account Balance
+          member_name: Account
+  admin:
+    contacts_us:
+      create_send_email:
+        subject_reply: "[Bit-Trading Solo] Reply your question"
+        from_email: From Email
+    deposits:
+      banks:
+        new:
+          code: Code※
+          amount: Amount※
+          btn_next: Next
+        confirm_deposit_yen:
+          bank_account_empty: This member does not have a bank account
+          member_not_found: Member not found
+          user_info: User Info
+          id: ID
+          name: name
+          account_info: Account Info
+          bank_name: Bank Name
+          bank_branch: Branch Name
+          account_type: Account Type
+          account_number: Account Number
+          code: Code
+          amount: Amount
+          check_list: Check List
+          check1: We confirmed that the name of the transfer holder and the user's name are consistent.
+          check2: I confirmed that the transferred account matches the registered account.
+          check3: Correct code was entered.
+          check4: I entered the correct amount.
+          check5: We conducted a double check with two persons.
+          btn_send_to_wallet: Send to Wallet
+          btn_cancel: Cancel
+        index:
+          oneday: Requests
+          available: All Pending Requests
+        show:
+          alert: Recharge cannot be located.
+          notice: The recharge have been successful.
+          deposit: Deposit Request
+          accept: Accept
+          target_deposit: Wire Transfer
+          confirm: Confirm recharge?
+        update:
+          blank_txid: TxID can't be blank
+        create:
+          member_not_found: Member not found
+          notice: Deposit successful
+        table:
+          sn: ID
+          at: Created at
+          currency: Currency
+          name: Member
+          amount: Amount
+          state: State
+          action: Action
+      satoshis:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      taocoins:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ethereums:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      ripples:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      bitcoincashes:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+      bitcoingolds:
+        update:
+          notice: The deposit was successful.
+        index:
+          accept: Accept
+          accept_confirm: Confirm deposit?
+    tickets:
+      view: View
+      close: Close Ticket
+      comments_count: Comments Count
+      replies: Replies
+      open_tickets: Open Tickets
+      closed_tickets: Closed Tickets
+    members:
+      index:
+        search: Search
+        members: Members
+        email: Email
+        id: ID
+        name: Name
+        phone: Phone Number
+        wallet_address: Wallet Address
+        level1: Level 1
+        level2: Level 2
+        level3: Level 3
+        please_select_level: Select Level
+        please_select_info: Please select info
+        please_select_order: Please select order
+        new_update: New Update
+        new_create: New Create
+        old_create: Old Create
+      show:
+        member_title: User Information
+        actions_title: Action
+        accounts_title: Account Information
+        account_versions_title: Records
+    id_documents:
+      index:
+        search: Search
+        email: Email
+        name: Name
+        id_document: ID Document
+        id: ID
+        level1: Level 1
+        level2: Level 2
+        level3: Level 3
+        please_select_level: Please select level
+        please_select_info: Please select info
+        please_select_order: Please select order
+        new_update: New Update
+        new_create: New Create
+        old_create: Old Create
+        request_at: Request at
+      show:
+        verified_phone: Verified Phone
+        select: Please Select
+        submit_send_mail: Send
+        detail_confirm: Detail confirm
+      send_mail_reject:
+        reject_user: Send email reject infomation of user successful
+    dashboard:
+      index:
+        accounts_title: Account Summary
+        daemons_title: System Summary
+    documents:
+      index:
+        new: New Document
+    statistic:
+      filter: Filter
+      summary: Summary
+      click-to-expand: Expand
+      members:
+        show:
+          table: Results
+      orders:
+        show:
+          avg: Average
+          sum: Order Volume
+          sum_strike: By Volume
+          count: Count
+      trades:
+        show:
+          count: Transactions
+          volume: Volume
+          amount: Total Amount
+          min_price: Minimum Price
+          max_price: Maximum Price
+          avg_price: Average Price
+          amount_fee: Transaction Fee
+          volume_fee: Total Fee
+      deposits:
+        show:
+          count: Total
+          amount: Total Amount
+      withdraws:
+        show:
+          count: Total
+          amount: Total Amount
+          fee: Fee
+    withdraws:
+      banks:
+        index:
+          one: Pending withdrawal Orders
+          all: Twenty-four hours Orders
+          empty: No Data
+        show:
+          process: Process
+          succeed: Succeed
+          reject: Reject
+          succeed_confirm: Confirm Process?
+          reject_confirm: Confirm Reject?
+          withdraw: Withdraw
+          empty: No Data
+        update:
+          notice: The withdraw was successful
+      satoshis:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: The withdraw was successful
+      taocoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: The withdraw was successful
+      ethereums:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+      ripples:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+      bitcoincashes:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+      bitcoingolds:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+      ethereumclassics:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+      kuberacoins:
+        index:
+          one: Pending withdrawals
+          all: Last 24 hours
+          empty: No data
+        show:
+          process: Accepted
+          succeed: Withdraw
+          reject: Reject
+          succeed_confirm: Process withdrawal?
+          reject_confirm: Reject withdrawal?
+          withdraw: Withdrawals
+        update:
+          notice: Updated
+  deposits/satoshi:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/taocoin:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/ethereum:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/ripple:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/bitcoincash:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  deposits/bitcoingold:
+    aasm_state:
+      submitted: Submitted
+      accepted: Accepted
+      checked: Checked
+      warning: Warning
+  doorkeeper:
+    scopes:
+      profile: Read your basic profile (e.g. name, email) and account balances
+      history: Read your trade history
+      trade: Submit and cancel orders
+    authorizations:
+      new:
+        title: Bit-Trading Solo Application Authorization
+        authorize_html: Authorize <strong class='text-info'>%{name}</strong> to use
+          your account?
+        scopes: 'This application will be able to:'
+        authorize: Authorize
+        deny: Deny
+    errors:
+      messages:
+        invalid_request: The request is missing a required parameter, includes an
+          unsupported parameter value, or is otherwise malformed.
+        invalid_redirect_uri: The redirect uri included is not valid.
+        unauthorized_client: The client is not authorized to perform this request
+          using this method.
+        access_denied: The resource owner or authorization server denied the request.
+        invalid_scope: The requested scope is invalid, unknown, or malformed.
+        server_error: The authorization server encountered an unexpected condition
+          which prevented it from fulfilling the request.
+        temporarily_unavailable: The authorization server is currently unable to handle
+          the request due to a temporary overloading or maintenance of the server.
+        credential_flow_not_configured: Resource Owner Password Credentials flow failed
+          due to Doorkeeper.configure.resource_owner_from_credentials being unconfigured.
+        resource_owner_authenticator_not_configured: Resource Owner find failed due
+          to Doorkeeper.configure.resource_owner_authenticator being unconfiged.
+        unsupported_response_type: The authorization server does not support this
+          response type.
+        invalid_client: Client authentication failed due to unknown client, no client
+          authentication included, or unsupported authentication method.
+        invalid_grant: The provided authorization grant is invalid, expired, revoked,
+          does not match the redirection URI used in the authorization request, or
+          was issued to another client.
+        unsupported_grant_type: The authorization grant type is not supported by the
+          authorization server.
+        invalid_resource_owner: The provided resource owner credentials are not valid,
+          or resource owner cannot be found
+        invalid_token:
+          revoked: The access token was revoked
+          expired: The access token expired
+          unknown: The access token is invalid
+    flash:
+      applications:
+        create:
+          notice: Application created.
+        destroy:
+          notice: Application deleted.
+        update:
+          notice: Application updated.
+      authorized_applications:
+        destroy:
+          notice: Application revoked.
+  easy_table:
+    satoshi:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    taocoin:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    ethereum:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    ripple:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    bank:
+      sn: SN
+      amount: Amount
+      created_at: At
+      fund_source: Fund Source
+      memo: Memo
+      member_name: Member
+      state_and_actions: State/Action
+      currency_obj_key_text: Currency
+    bitcoincash:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+    bitcoingold:
+      amount: Amount
+      txid: TxId
+      created_at: Created At
+      confirmations: Confirmations
+      member_name: Member
+      state_and_actions: State/Actions
+      currency_obj_key_text: Currency
+  enumerize:
+    account_version:
+      reason:
+        fix: FIX
+        unknown: UNKNOWN
+        strike_add: TRADE PLUS
+        strike_sub: TRADE SUB
+        strike_fee: TRADE FEE
+        strike_unlock: TRADE UNLOCK
+        order_cancel: ORDER CANCEL
+        order_submit: ORDER SUBMIT
+        deposit: DEPOSIT
+        withdraw: WITHDRAW
+        withdraw_lock: WITHDRAW LOCK
+        withdraw_unlock: WITHDRAW UNLOCK
+    state:
+      done: Done
+      wait: Wait
+      cancel: Cancel
+    currency:
+      jpy: JPY
+      btc: BTC
+      tao: TAOCOIN
+      eth: ETH
+      xrp: XRP
+      bch: BCH
+      btg: BTG
+      etc: ETC
+    order:
+      state:
+        done: DONE
+        wait: WAIT
+        cancel: CANCEL
+    deposit:
+      aasm_state:
+        submitted: Submitted
+        submitting: Submitting
+        accepted: Accepted
+        cancelled: Canceled
+        rejected: Rejected
+        checked: Checked
+        warning: Warning
+    withdraw:
+      state:
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Rejected
+        accepted: Accepted
+        suspect: Suspect
+        processing: Processing
+        done: Done
+        canceled: Canceled
+    fund_source:
+      category:
+        satoshi: Bitcoin
+        taocoin: Taocoin
+        ethereum: Ethereum
+        ripple: Ripple
+        bank: Bank
+        bitcoincash: Bitcoin Cash
+        bitcoingold: Bitcoin Gold
+    id_document:
+      id_document_type:
+        id_card: Residence card (back and front)
+        passport: Passport (Face photo page · Foreign Minister's seal page · address description page) + Resident's card
+        driver_license:  Driver's license (back and front)
+        alien_registration_card:  Certificate of alien registration (back / front)
+        juki_net_card: Juki Net with Card Photo (Back / Table)
+        my_number_card: My number card
+        health_insurance: Health insurance card (back and front)
+        seal_certificate: Certificate of stamp seal
+      id_bill_type:
+        bank_statement: Bank Statement
+        tax_bill: Tax Bill
+      job_type:
+        office_worker: Office worker
+        employee: Employee
+        civil_servant: Civil servant
+        group_staff: Group staff
+        doctor: Doctors and other medical institutions
+        lawyer: Lawyer, accountant, tax accountant
+        faculty: Faculty and staff
+        self_employed: Self employed
+        part_time_job: Part-time job / temporary staffing / contract
+        house_job: Housewife (husband)
+        student: A Student
+        unemployed: Unemployed
+        other: Other
+      trade_purpose:
+        purchase_virtual: Purchase virtual currency, remittance to domestic and overseas, for settlement etc
+        trading_due_price: For margin trading due to price fluctuation of virtual currency
+        diversified_investment: To make diversified investment
+        investment_time: For medium and long term investment
+        other: Other
+      company_trade_purpose:
+        purchase_virtual: Purchase virtual currency, remittance to domestic and overseas, for settlement etc
+        trading_due_price: For margin trading due to price fluctuation of virtual currency
+        diversified_investment: To make diversified investment
+        investment_time: For medium and long term investment
+        other: Other
+      foreign:
+        is_not: I am not an important public official abroad or its relatives
+        is: I am an important public official overseas, or its relatives (even if it was in the past)
+      manager_foreign:
+        is_not: I am not an important public official abroad or its relatives
+        is: I am an important public official overseas, or its relatives (even if it was in the past)
+      manager_role:
+        shareholder: The person directly or indirectly holding more than 25% of stocks
+        partner: The person with dominant influence on your business activities through investment, loans, transactions and other relationships
+        representative: Representative of the company
+      type_role:
+        representative: Representative
+        transaction_personnel: Transaction personnel
+      reason_reject:
+        inadequate_document: Due to inadequate documentation
+        incomplete_input: Due to incomplete input
+        image_unknown: Because the image is unknown
+    bank_account:
+      account_type:
+        current_bank_account: Current bank account
+        ordinary_bank_account: Ordinary bank account
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      previous: "&lsaquo; Prev"
+      next: Next &rsaquo;
+      truncate: "..."
+
+  mailer:
+    dear_user: Dear user
+    signature_1: Thanks,
+    signature_2: The Bit-Trading Solo
+    please_contact: </br>If it's not you, please contact us with %{contact_mail}.
+    footer: This is an automatically generated email, please do not reply, if you have any question, please contact us with %{contact_mail}.
+  arb_mailer:
+    send_profit:
+      subject: "[Bit-Trading Solo] Arb system notification"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        Please confirm Dividends for Arbitrage Pot service for Last month on your wallet on This month 25th.
+        Your monthly dividend is %{profit} yen.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  comment_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] User reply a ticket"
+      notification_content: User %{email} reply a ticket, please follow the link below to see the detail
+    user_notification:
+      subject: "[Bit-Trading Solo] Your ticket got a new reply"
+      notification_content: 'Your ticket got a new reply, please follow the link below to see the detail:'
+  deposit_mailer:
+    accepted:
+      subject: "[Bit-Trading Solo] Your deposit has been credited into your account"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        You have done sent %{amount} %{currency} into your wallet. Please check your wallet.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  member_mailer:
+    new_password_mail:
+      subject: "[Bit-Trading Solo] New Password"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Your new password: %{new_password}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    notify_signin:
+      subject: "[Bit-Trading Solo] You have just signed in"
+      header: Welcome %{name}
+      header_no_name: Welcome customer
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        You just logged in to Bit Trade.
+
+        If you do not remember, please contact us here.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    google_auth_activated:
+      subject: "[Bit-Trading Solo] Google authenticator activated"
+      google_auth_activated: You have activated google authenticator successfully
+    google_auth_deactivated:
+      subject: "[Bit-Trading Solo] Google authenticator deactivated"
+      google_auth_deactivated: You have deactivated google authenticator successfully
+    sms_auth_activated:
+      subject: "[Bit-Trading Solo] SMS authenticator activated"
+      sms_auth_activated: You have activated SMS authenticator successfully
+    sms_auth_deactivated:
+      subject: "[Bit-Trading Solo] SMS authenticator deactivated"
+      sms_auth_deactivated: You have deactivated SMS authenticator successfully
+    reset_password_done:
+      subject: "[Bit-Trading Solo] Your password changed"
+      successful: Your password has been changed successfully.
+    phone_number_verified:
+      subject: "[Bit-Trading Solo] Your phone number verified"
+      verified: 'Your phone number verified: %{phone_number}'
+  system_mailer:
+    daily_stats:
+      member_stats: Member Stats
+      signup: Signup
+      activation: Activation
+      asset_stats: Assets Changes
+      trade_stats: Trades Changes
+      asset_value_change_total: Digital Assets Changes Total
+      trades_change_total: Trades Changes Total
+  ticket_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] User created a new ticket"
+      admin_notification_content: User %{email} created a new ticket, please follow the link below to see the detail
+    author_notification:
+      subject: "[Bit-Trading Solo] Thank you for submit ticket"
+      thanks_for_submit_ticket: Thank you for submit ticket to us, we will get back to you as soon as possible.
+  token_mailer:
+    activation:
+      subject: "[Bit-Trading Solo] Account Activation"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please click on the link below and active account to Bit-Trading Solo.
+        %{token_url}
+
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    edit_email:
+      subject: "[Bit-Trading Solo] Change email notification"
+      content: |
+        Please click on the link below and change your email on Bit-Trading Solo.
+        %{token_url}
+
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    reset_password:
+      subject: "[Bit-Trading Solo] Please Reset Your Password"
+      hi: Hi,
+      follow_the_link: 'Please follow this link to reset your password within 30 minutes:'
+    send_code:
+      subject: "[Bit-Trading Solo] Verify code"
+      content: 'Code: %{code}'
+    accepted:
+      subject: "[Bit-Trading Solo] Account verification is complete"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+        Thank you for applying for account verification to Bit-Trading Solo.
+        By confirming that your confirmation has been completed and your account has been approved.
+
+        Since we completed the identity verification, we can use Wallet.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+
+        --------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    activation_mobile:
+      subject: "[Bit-Trading Solo] Account Activation"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please enter this code to Bit-Trading Solo mobile application.
+        %{token}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    reset_password_mobile:
+      subject: "[Bit-Trading Solo] Reset Password"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please enter this code to Bit-Trading Solo mobile application.
+        %{token}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  withdraw_mailer:
+    submitted:
+      subject: "[Bit-Trading Solo] Your withdraw is submitted"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        The request of your %{currency} withdrawal has been successfully submitted.
+
+        Withdraw Amount: %{amount}  %{currency}
+
+        We will process it as soon as possible
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    processing:
+      subject: "[Bit-Trading Solo] Your withdraw state update"
+      content: The request of your %{currency} withdrawal is in process. Please be patient with us. Contact us if you have any questions.
+    done:
+      subject: "[Bit-Trading Solo] Your withdraw is completed"
+      content: |
+        Thank you for using Bit-Trading Solo.
+        The request of your %{currency} withdrawal is complete.
+        Please check it out.
+        Contact us if you have any questions.
+
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    withdraw_state:
+      subject: "[Bit-Trading Solo] Your withdraw state update"
+      your_state: 'Your withdrawal state: '
+  taocoin_mailer:
+    banks_taocoin_trades:
+      subject: "[Bit-Trading Solo] Order informations"
+      order_infomations: "You have just ordered %{amount} TAOCOIN with %{price} JPY at %{time}"
+      tradecode: "Your trade code : %{tradecode}"
+      address: "Your address : %{address}"
+      exchange_rate: "The exchange rate : %{exchange_rate}"
+      end: "TAOCOIN has been sent to your address and accumulated into your account on Bit-Trading Solo.jp. Please login to check for more details."
+    reject_trades:
+      subject: "[Bit-Trading Solo] Order informations"
+      order_infomations: "You have just ordered %{amount} TAOCOIN with %{price} JPY at %{time}"
+      tradecode: "Your trade code : %{tradecode}"
+      address: "Your address : %{address}"
+      exchange_rate: "The exchange rate : %{exchange_rate}"
+      end: "Your order has been rejected by Bit-Trading Solo.jp because the Paypal transaction is not completed"
+    bonus:
+      subject: "[Bit-Trading Solo] Notification about the 1000 TAOCOIN gift"
+      content: |
+        Everyone using the Bit-Trading Solo.
+
+        Thank you for always using the Bit-Trading Solo.
+
+        I am carrying out a campaign right now.
+        1000TAOCOIN will be given to customers who completed level up to account class level 3.
+
+        In addition, we will send you time in order as we receive confirmation about sending, so we may receive your time. Please note.
+
+        In future, thank you for the Bit-Trading Solo.
+    bonus_missing:
+      subject: "[ビットステーション] 友人紹介キャンペーンに関するお詫び"
+      content: |
+        いつも、ビットステーションをご利用いただきありがとうございます。
+
+        ご友人紹介キャンペーン1500TAOプレゼント企画において、
+        本来1500TAOをプレゼントする予定でしたが、こちらの手違いで現状1000TAOのみがお客様のウォレットに反映されている状況です。
+        お客様には、ご迷惑をおかけし申し訳ございません。本日中に残りのTAOをお送りいたします。
+
+        今後ともビットステーションをよろしくお願い致します。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+  trade_mailer:
+    btc_trade_email:
+      subject: "[Bit-Trading Solo] Order informations"
+      order_infomations: "You have just ordered %{amount} TAOCOIN with %{price} JPY at %{time}"
+      tradecode: "Your trade code : %{tradecode}"
+      account: "Your account : %{account}"
+      exchange_rate: "The exchange rate : %{exchange_rate}"
+      payment: "Please send BTC to %{btc_address}"
+      end: "TAOCOIN will be sent to your account on Bit-Trading Solo.jp as soon as possible. If not, please contact us for further support!"
+    paypal_email:
+      subject: "[Bit-Trading Solo] Order informations"
+      order_infomations: "You have just ordered %{amount} TAOCOIN with %{price} JPY at %{time}"
+      tradecode: "Your trade code : %{tradecode}"
+      account: "Your account : %{account}"
+      exchange_rate: "The exchange rate : %{exchange_rate}"
+      end: "TAOCOIN will be sent to your account on Bit-Trading Solo.jp as soon as possible. If not, please contact us for further support!"
+    trade_email:
+      subject: "[Bit-Trading Solo] Order informations"
+      order_infomations: "You have just ordered %{amount} TAOCOIN with %{price} JPY at %{time}"
+      tradecode: "Your trade code : %{tradecode}"
+      account: "Your account : %{account}"
+      exchange_rate: "The exchange rate : %{exchange_rate}"
+      reject: "I'm sorry, your order has been rejected because the Paypal transaction is not completed"
+      end: "TAOCOIN will be sent to your account on Bit-Trading Solo as soon as possible. If not, please contact us for further support!"
+  sendcoin_mailer:
+    sendcoin:
+      subject: "[Bit-Trading Solo] Send coin successful"
+      sendcoin_information: "You just sent %{amount} %{currency} to user %{destination}"
+    receivecoin:
+      subject: "[Bit-Trading Solo] Receive coin successful"
+      receivecoin_information: "You just received %{amount} %{currency} from user %{source}"
+  reject_user_mailer:
+    incomplete_input_mail:
+      subject: "【ビットステーション】本人認証を行うことができませんでした"
+      incomplete_input_mail_information: |
+        いつも、ビットステーションをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪入力不備≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        1 入力された住所と本人確認書類に記載の住所が一致しない。
+        2 住所入力欄：「字」の入力が抜けている。
+        3 住所入力欄：「マンション名・号室」の入力が抜けている。
+        4 住所入力欄：ハイフン「―」が「～」になっている。
+        　
+        転居により、本人確認書類に記載の住所と現住所が異なる場合は、他の本人確認書類や補完書類で住所確認を行うことが可能です。詳しくはお問い合わせください。
+
+
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリック から登録の手順が確認できます。
+        http://bit-trading.online/
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。今後ともビットステーションをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    inadequate_document_mail:
+      subject: "【ビットステーション】本人認証を行うことができませんでした"
+      inadequate_document_mail_information: |
+        いつも、ビットステーションをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪書類不備≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        ①免許証の裏面がアップロードされていない
+        ②受付可能書類（※）以外の書類がアップロードされている
+        ③書類の一部が欠けている（少し余白を入れ、欠けないように撮影をして下さい。）
+
+        ※受付可能書類
+        ・免許証（表・裏）
+        ・在留カード（表・裏）
+        ・パスポート（顔写真ページ・外務大臣印ページ・住所記載ページ）＋住民票（発行から３ヶ月以内）
+
+
+        お手数をお掛けして申し訳御座いませんが、再度、本人確認書類を撮影し送信頂きます様お願い申し上げます。
+
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリック から登録の手順が確認できます。
+        http://bit-trading.online/
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。今後ともビットステーションをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    image_unknown_mail:
+      subject: "【ビットステーション】本人認証を行うことができませんでした"
+      image_unknown_mail_information: |
+        いつも、ビットステーションをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪画像不鮮明≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        ①画像がぼやけており文字を判読できない・顔の判別が出来ない
+        ②光が反射して文字を判読できない・顔写真が見えない
+        ③書類の一部が欠けている
+
+
+        お手数をお掛けして申し訳御座いませんが、再度、本人確認書類を撮影し送信頂きます様お願い申し上げます。
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリックから登録の手順が確認できます。
+        http://bit-trading.online/
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。
+        今後ともビットステーションをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+
+  contact_mailer:
+    send_contact:
+      sendcontact_information: |
+        メール: %{email}
+        カテゴリー: %{category}
+        内容:
+          %{content}
+  'true': true
+  'false': false
+  view_on_github: View on Github
+  slogan: An open-source crypto-currency exchange for world.
+  tags:
+    vip: VIP
+    hero: Hero Member
+    admin: Admin
+  trade:
+    markets: Markets
+    realtime_price:
+      title: Realtime Price
+    account_balance:
+      title: Balance
+  gon:
+    ask: Ask
+    bid: Bid
+    brand: Bit-Trading Solo
+    notification:
+      title: Bit-Trading Solo
+      enabled: Notification enabled.
+      new_trade: "%{kind} order#%{id} executed at %{price} %{quote_unit} for %{volume} %{base_unit}。"
+  back: Back
+  invalid_password: Invalid password
+  all: All
+  date:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  time:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  sms:
+    verification_code: 'Your phone number verification code is: %{code}.'
+    password_changed: Hi %{email}, you password has been changed successfully.
+    deposit_done: Hi %{email}, the request of your deposit is complete.
+    withdraw_done: Hi %{email}, the request of your withdrawal is complete.
+  header:
+    facebook: Facebook
+    twitter: Twitter
+    signin_facebook: Facebook
+    signin_twitter: Twitter
+    signup_facebook: Facebook
+    signup_twitter: Twitter
+    name: Bit-Trading Solo
+    brand: Bit-Trading Solo
+    home: Home
+    dashboard: Dashboard
+    admin: Admin Panel
+    market: Trade
+    settings: Profile
+    signin: Sign In
+    signout: Exit
+    signup: Sign Up
+    logout: Logout
+    level_about: About account class
+    demo_screen: Demo screen
+    login_via_weibo: Login via Weibo
+    funds: Funds
+    message_warning: "※Note: you can not cancel the transaction once executed."
+    getstart: Get Start
+    assets: Solvency
+    history: History
+    order_history: Order
+    trade_history: Trade
+    account_history: Deposit/Withdraw
+    cloudsafe_history: Cloudsafe Trade
+    sendcoin_history: Send coin
+    my_profile: My Profile
+    tickets: Tickets
+    account_balance: Total Assets
+    back: Back
+    total: Total
+    deposit: Deposit
+    withdraw: Withdraw
+    sendcoin: Sendcoin
+    termsofuse: Terms of use
+    reset_password: Forgot Password?
+    link_register: Create an account now
+    title_service: Possible services by logging in
+    content1: Purchase and sale at exchanges
+    content2: Utilization of arbitrage function
+    content3: Currency can be sent and received
+    content4: People introduction service
+    receivecoin_history: Receive coin
+    arb_history: Arb
+    password: Enter Password
+    password_note: Please enter your password to change email address
+    next: Next
+    cancel: Cancel
+    email: New Email
+    email_note: You can change the setting of the new mail address
+    update: Update
+    send_mail: An token sent to your email. Please, check your email.
+    error_email: Email is not correct
+    email_exit: Email is exits
+    change_email: Change e-mail address
+  admin_header:
+    deposits: Deposits
+    withdraws: Withdraws
+    statistics: Data Statistics
+    id_documents: Verify Account
+    cloudsafe: Cloudsafe
+    cold_wallet: Cold wallet
+  footer:
+    menu:
+      arbitrage_pot: Arbitrage pot
+      exchanges: Exchanges
+      wallet: Wallet
+      order_history: Order history
+      account: Account
+      terms_of_service: Terms of service
+      faq:  FAQ
+      coin_transmission: Coin transmission
+      contact_us: Contact us
+      logout: Logout
+      back: Back
+    about: About
+    privacy: Privacy
+    contact: Contact Us
+    price: Price
+    liability_proof: liability proof
+  actions:
+    go: Go
+    submit: Submit
+    deposit: Deposit
+    select: Please Select
+    unlock: Unlock
+    confirm: Confirm
+    back: Back
+    block: view in block
+    destroy: Delete
+    destroy_confirm: Are you sure you want to delete this?
+    detail: Detail
+    publish: Publish
+    edit: Edit
+    preview: Preview
+    close: Close
+    cancel: Cancel
+    view: View
+    member: Member
+    transact: Transact
+    reject: Reject
+    clipboard:
+      click: Click to copy
+      done: Copied
+  chart:
+    open: Open
+    high: High
+    low: Low
+    close: Close
+    price: Price
+    volume: Volume
+    candlestick: 'Candlestick'
+    line: 'Line'
+    minute: m
+    hour: Hour
+    day: Day
+    week: Week
+    month: Month
+    year: Year
+    zoom: Zoom
+    ask: ASK
+    bid: BID
+    depth: Depth
+    depth_title: Market Depth
+  'yes': 'Yes'
+  'no': 'No'
+  simple_captcha:
+    label: Refresh page to get new captcha.
+    placeholder: type characters in image
+  helpers:
+    action:
+      view: View
+      customer_service: contact us
+    submit:
+      order_ask:
+        create: ASK
+      order_bid:
+        create: BID
+      document:
+        create: Create Document
+        update: Update Document
+        destroy: Destroy Document
+      member:
+        update: Open Account
+      identity:
+        save: Sign in
+        create: Sign up
+        destroy: Sign out
+        verify: Verify
+        update: Change
+      two_factor:
+        create: Verify
+        update: Activiate
+      reset_two_factor:
+        create: Reset Two-Factor Authentication
+      reset_password:
+        update: Reset Sign in Password
+        create: Reset Sign in Password
+      fund_source:
+        create: Save
+      deposit:
+        create: Deposit
+      id_document:
+        create: Submit
+      withdraw:
+        create: Submit
+      ticket:
+        create: Submit
+  activations:
+    new:
+      notice: An email has been sent to your mailbox, please check it for verification as soon as possible. If you do not received it , please click "send it again" button.
+      verified: Your email adress has been verified successfully.
+      login_required: login required!
+      tip: Activation link was sent to %{email}
+      spam: Please check your spam folder for the activation link.
+    edit:
+      notice: Account activated successfully! Please sign in below.
+      alert: Activation link is expired or invalid.
+  activation_emails:
+    edit:
+      notice: Change email successfully!
+      alert: Change email failed
+  authentications:
+    emails:
+      new:
+        title: Setup Email
+        setup_email: Please setup your email address.
+        warning: Please check your inbox after saving the email address.
+        email_address: Email Address
+        save: Save
+    weibo:
+      destroy:
+        last_auth_alert: You couldn't delete the last authentication
+        unbind_success: Unbind from the Weibo
+    identities:
+      new:
+        title: Setup The Password
+        save: Save
+      create:
+        success: Setup password successfully
+  forum:
+    index:
+      notice:
+        display_name: Please set your display name for the forum.
+  identities:
+    new:
+      title: SIGN UP
+      signin: Sign In
+      password: Please enter a password at least 6 characters and it's better to contain
+        uppercase and lowercase letters and numbers.
+      check_term: Agree with terms and condition
+      password_number: 6 or more alphanumeric characters, including upper case letters and lower case letters respectively
+    update:
+      auth-error: Please enter the password.
+      auth-same: The new password you entered is the same as the old password, please
+        re-enter.
+      notice: Account password updated successfully.
+    edit:
+      old_password: Current password
+      new_password: New password
+      confirm_password: New password (Confirmation)
+      change: Change
+      reset_password: Change password
+      hint: Set a password which has at least 6 characters and it's better to
+        contain uppercase and lowercase letters and numbers.
+    verify_password:
+      password_not_correct: Password is not correct
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: Members
+          deposits: Deposits
+          sites_statistics: Analytics
+          operating: Operations
+        items:
+          operating:
+            proofs: Proof
+            deposits: Deposits
+            documents: Documents
+            withdraws: Withdraws
+            tickets: Tickets
+          deposits:
+            currency: Deposit
+    application:
+      close: Close
+    meta:
+      page_title: Bit-trading
+      page_description: Bit-Trading（ビットトレーディング）では、初めての方でも簡単に仮想通貨・ビットコインのお取引をすることができます。
+      page_keywords: Bit-trading
+  members:
+    edit:
+      name: Please fill out the application.
+  reset_passwords:
+    new:
+      title: Forgot password
+      sub-title: Please enter your email address to reset your password
+      send: Send
+    create:
+      success: E-mail to reset your password with a introduction has been sent to your mailbox. Failure to receive e-mail , go to "junk mail " firstly,or send the request again.
+    edit:
+      title: Reset password
+      sub-title: Confirm password
+      password: Please enter a password at least 6 characters and it's better to contain uppercase and lowercase letters and numbers.
+      invalid: Invalid request
+      submit: Reset Login Password
+      alert: Invalid reset password link.
+      send: Send
+      password_empty: Password can't empty
+      password_confirmation_empty: Password confirm can't empty
+      password_dont_match: Passwords don't match
+    update:
+      success: Login password has been reset, please keep your new password.
+      invalid: Invalid request
+  sessions:
+    new:
+      reset_password: Forgot Password?
+    new_with_two_factor_auth:
+      title: 2 Step Verification
+      reset_two_factor: Lost 2-step-verification device
+    create_with_two_factor_auth:
+      session_expired: Session expired. Try again.
+    create:
+      error: You account has been disabled, contact admin if you have any problem.
+      error_login: Login failed!
+      error_gg_auth: Please try confirm google authenticator code.
+    failure:
+      account_locked: Too many failed login attempts. To ensure the safety of your
+        account, we have locked your account. To unlock, reset your password by clicking
+        on "Forgot Password".
+      error: Wrong customer ID or password,please try again.
+  shared:
+    menu:
+      market: Market
+      security: Security
+      tickets: Ticket Support
+      my_account: My Account
+      withdraw: Withdraw
+      deposit: Deposit
+      setting: Setting
+      history: History
+      send_coin: Send coin
+      bank_account: Bank account
+      withdraw_jpy: Withdraw JPY
+      deposit_jpy: Deposit JPY
+      affiliates: Affiliate
+    menu_settings:
+      level1: Level 1
+      level2: Level 2
+      level3: Level 3
+      email: Change email
+      id_document: Account
+      phone: Phone
+      two_factors: Google authenticator
+      password: Password
+      api: API token
+    footer:
+      support: Support
+      about: About
+      company: Company
+      contact: Contact
+      fee: Fee
+      account_class: Account Class
+      term_of_use: Terms of use
+      about_company: About company
+      jobs: Jobs
+      blog: Blog
+    admin:
+      member:
+        member_info: Member Info
+        deactive_sms_two_factor: SMS TFA
+        deactive_app_two_factor: Google TFA
+        inactive: Inactive
+        deactive: Deactive
+        are_you_sure: Are you sure deactive two factor authentication?
+      account:
+        account_info: Account Info
+        payment_address: Deposit Address
+    alert:
+      modern: In order not to affect trading experience, please use a more popular
+        browser transaction, we recommend you <a target='_blank' href='https://www.google.com/#q=google+chrome'>Google
+        Chrome</a>。
+      pusher_unavailable: The network connection is temporarily unavailable... <a
+        href='#' class='alert-link'>Please refresh</a>.
+    header:
+      balance: Balance
+      market_menu: Market
+      signin: Login
+      signup: Sign Up
+
+    header_account_balance:
+      locked: Locked
+    market:
+      ticker:
+        ask_price: Ask
+        bid_price: Bid
+        high_price: High
+        low_price: Low
+        volume: Volume
+        latest_price: Last
+    frame:
+      deposit_now: Deposit Now
+  two_factors:
+    index:
+      verify: Verify
+    update:
+      alert: Phone number verification code error, please re-enter.
+    auth:
+      please_active_two_factor: Please set google authenticator first.
+      submit: Submit
+      otp_placeholder: 6-digit password
+      google_app: Google Authenticator
+      sms: SMS, Email Verification
+      send_code: Send Code
+      send_code_alt: Resend in COUNT seconds
+      hints:
+        app: Google Authenticator will re-generate a new password every thirty seconds,
+          please input timely.
+        sms: We'll send a text message to you phone with verify code.
+  verify:
+    google_auths:
+      edit:
+        submit: Disable
+        warning: 'Tip: If you have lost your Two-Factor Authentication by some reason
+          and can''t login your Bit-Trading Solo account, please contact our online customer
+          service.'
+      show:
+        step-1: 1.Download and install
+        step-2: 2. Scan the following QR code with Google Authenticator APP，or
+          add cipher text to the validator manually.
+        step-3: 3. Fill in the dynamic password displayed by your phone to activate Two-Factor Authentication.
+        or: OR
+        google_authenticator: Google Authenticator Vertification Messages
+        otp_secret: Secret key
+        download-app: Install Google Authenticator app on your smart phone and open
+          it.
+        guide-link: "<a href='https://support.google.com/accounts/answer/1066447'
+          target='_blank'>Installation Instructions</a>。"
+        scan-qr-code: 2. Scan the following QR code with Google Authenticator APP，or
+          add cipher text to the validator manually.
+        enter-passcode: Fill in the dynamic password  displayed by your phone to activate Two-Factor Authentication.
+        submit: Enable
+        cancel: Cancel
+        ios: Iphone iOS
+        android: Android
+        blackbery: Blackberry
+        notice:
+          already_activated: The Google Authenticator has already been set.
+          not_activated_yet: The Google Authenticator hasn't been set yet.
+          confirm_two_factor: Please confirm google authenticator code first.
+      confirm_two_factor:
+        submit: Confirm
+      update:
+        alert: Password for authentication is incorrect, please re-enter.
+        notice: Two-Factor Authentication has been successfully Enabled.
+        sms_two_factor_error: SMS Verification code is incorrect, please re-enter.
+      destroy:
+        alert: Password for authentication is incorrect, please re-enter.
+        notice: Two-Factor Authentication has been successfully Disabled.
+    sms_auths:
+      notice: Please confirm your phone number first.
+      show:
+        title: Verify Phone Number
+        description: Providing a phone number will make your account more secure. you
+          can quickly reset your password and your account operations will be notified.
+        warning: it will not be able to retrieve your account's password if not set
+          the phone number.
+        phone_number: Phone number
+        send_code: Send Code
+        send_code_alt: Resend in COUNT seconds
+        input_otp: Enter the 6-digit code we sent to you
+        hint_otp: Please enter the 6 digit authentication code described in the received message.
+        submit: Save
+        cancel: Cancel
+        notice:
+          send_code_success: Send verify code success
+          otp_success: Verify Code success.
+          already_activated: You phone number has been activated.
+        alert:
+          phone_number_error: phone number error
+  withdraw_channel:
+    bank:
+      key: Bank Transfer
+      title: Bank Transfer
+      intro: Bank transfer withdraw, Recommend for large recharge
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    satoshi:
+      key: Blockchain
+      title: Bitcoin Withdraw
+      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    taocoin:
+      key: Blockchain
+      title: Taocoin Withdraw
+      intro: Withdraw Bitcoin to your own Taocoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    ethereum:
+      key: Blockchain
+      title: Ethereum Withdraws
+      intro: Withdraw Ethereum to your own Ethereum wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    ripple:
+      key: Blockchain
+      title: Ripple Withdraws
+      intro: Withdraw Ripple to your own Ripple wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    bitcoincash:
+      key: Blockchain
+      title: Bitcoincash Withdraw
+      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    bitcoingold:
+      key: Blockchain
+      title: Bitcoingold Withdraw
+      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 30 minutes
+      transfer: Manual
+      go: Withdraw
+    ethereumclassic:
+      key: Blockchain
+      title: Ethereum Classic Withdraw
+      intro: Withdraw Bitcoin to your own Bitcoin wallet
+      latency: 3 minutes
+      transfer: Manual
+      go: Withdraw
+    kuberacoin:
+      key: Blockchain
+      title: Kubera Coin Withdraw
+      intro: Withdraw Kubera Coin to your own Bitcoin wallet
+      latency: 3 minutes
+      transfer: Manual
+      go: Withdraw
+  withdraws:
+    invalid_address: is not valid. You can not withdraw to this address.
+  withdraws/bank:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: Processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Canceld
+      failed: Failed
+  withdraws/satoshi:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/taocoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ethereum:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ripple:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/bitcoincash:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/bitcoingold:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/ethereumclassic:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  withdraws/kuberacoin:
+    aasm_state:
+      submitting: Submitting
+      submitted: Submitted
+      rejected: Rejected
+      accepted: Accepted
+      suspect: Suspect
+      processing: processing
+      done: Done
+      almost_done: Almost Done
+      canceled: Cancelled
+      failed: Failed
+  activation_mobile:
+    subject: "[BTC-GIAODICH] Account Activation"
+    content: |
+      Thank you for registering for btc-giaodich.
+      It is information of your account registered with us.
+      Email address: %{email}.
+
+      Please enter this code to btc-giaodich mobile application.
+      %{token}
+
+      Thank you for your continued support of Bit-staton.
+      ※ This mail can not be replied because it is dedicated for sending.
+      ※ For those who do not recognize this email, please contact us for any questions or comments
+      ------------------------------------------------------------------------------------
+      BAP JAPAN
+      Contact：lienhe@btc-giaodich.com
+      ------------------------------------------------------------------------------------

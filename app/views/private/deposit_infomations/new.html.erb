@@ -1,0 +1,52 @@
+<div class="funds-container"> 
+  <div class="deposit_infomation">
+    <div class="text-left">
+      <h1 class="legend-primary text-left"><%= t('.header')%></h1>
+    </div>
+    <%= render("shared/flash") %>
+    <span class="hint"><%= t('.hint')%></span>
+    <div class="form-deposit-information">
+      <%= simple_form_for @deposit_info, :url => deposit_infomations_path do |f| %>
+        <div class="form-group">
+          <div class="form-label">
+            <label class="control-label"><abbr>※</abbr> <%= t('.bank') %></label>
+          </div>
+          <div class="form-input text-center bank_infor">
+            <ul class="list-deposit">
+              <li>
+                <div class="left"><span><%= t('.label.bank_name') %></span></div>
+                <div class="right"><span><%= t('.content.bank_name') %></span></div>
+              </li>
+              <li>
+                <div class="left"><span><%= t('.label.branch') %></span></div>
+                <div class="right"><span><%= t('.content.branch') %></span></div>
+              </li>
+              <li>
+                <div class="left"><span><%= t('.label.account_kind') %></span></div>
+                <div class="right"><span><%= t('.content.account_kind') %></span></div>
+              </li>
+              <li>
+                <div class="left"><span><%= t('.label.account_number') %></span></div>
+                <div class="right"><span><%= t('.content.account_number') %></span></div>
+              </li>
+              <li>
+                <div class="left"><span><%= t('.label.account_name') %></span></div>
+                <div class="right"><span><%= t('.content.account_name') %></span></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="group-day">
+          <%= f.input :date_deposit, default: Date.today, label: t('.date_deposit') %>
+        </div>
+        <%= f.input :payer_name, label: t('.payer_name'), placeholder: t('.holder_payer') %>
+        <%= f.input :user_id, label: t('.user_id'), placeholder: "123456" %>
+        <%= f.input :amount, label: t('.amount'), placeholder: "10000"%>
+        <%= f.input :memo, label: t('.memo') %>
+        <div class="button-area text-center">
+          <%= f.submit t('.submit'), class: "btn button-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

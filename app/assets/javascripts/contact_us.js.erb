@@ -1,0 +1,44 @@
+$(document).ready(function() {
+
+  $('#submit_1').on("click", function(){
+    if (!validate_form())
+    {
+      $("#category_list").val($("#category_list").val());
+      $("#create_contact").hide();
+      $("#confirm_form").fadeIn();
+      $("#create_contact").reset();
+    }
+  });
+
+  $(".confirm_form_back").on("click", function(){
+    $("#create_contact").show();
+    $("#confirm_form").hide();
+  });
+  function validate_form() {
+    var regex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var email = $(".email").val();
+    var is_error = false;
+    $(".form-error").hide();
+    $(".required.form-control").each(function(){
+      if ($(this).val() == "")
+      {
+        $(this).parent().children(".form-error").first().fadeIn();
+        $(this).focus();
+        is_error = true;
+      }
+    });
+    if($(".optional.form-control").val() == 0)
+    {
+      $(".optional.form-control").parent().children(".form-error").fadeIn();
+      $(".optional.form-control").focus();
+      is_error = true;
+    }
+    if (!regex.test(email) && email != "") {
+      $(".email").parent().children(".email_invalid").fadeIn();
+      $(".email").focus();
+      is_error = true;
+    }
+    return is_error;
+  }
+
+});

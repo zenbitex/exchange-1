@@ -1,0 +1,18 @@
+.company_about{
+  color: #1e2324;
+  padding: 90px 30px;
+  min-height: 700px;
+  .title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 30px;
+    color: #272f35;
+    font-weight: normal;
+    text-align: center;
+  }
+  .desc {
+    line-height: 1.8;
+    font-size: 17px;
+    font-weight: 300;
+  }
+}

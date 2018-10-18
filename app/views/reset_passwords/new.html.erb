@@ -1,0 +1,13 @@
+<div class="container" >
+  <div id="resetPassword" class="login_register_form" %>
+    <h1 class="title-header"><%= t('.title') %></h1>
+    <%= render("shared/flash") %>
+    <%= simple_form_for @token, url: reset_passwords_path, class: "form-default", as: :reset_password do |f| %>
+    	<h3 class="sub-title"><%= t('.sub-title') %></h3>
+    	<%= f.input :email, :input_html => {:class => 'form-control'}, :label => false%>
+    	<div class="form-group text-center">
+    		<%= f.button :submit, t('.send'), class: "button-submit button-primary" %>
+    	</div>
+    <% end %>
+  </div>
+</div>

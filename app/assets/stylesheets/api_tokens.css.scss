@@ -1,0 +1,294 @@
+
+.api_tokens{
+  padding: 40px 20px 30px !important;
+  background: white;
+  .form_api{
+    max-width: 800px;
+    width: 90%;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 7px 7px 3px 3px;
+  }
+  .api_tokens_item2{
+    margin-top: 50px;
+  }
+  .panel-default{
+    border: none;
+    box-shadow: none;
+    padding-bottom: 10px;
+  }
+  .panel-heading {
+    background-color: #64b1ff;
+    border-color: #ddd;
+  }
+  .panel-title{
+    font-size: 23px;
+    padding: 9px 0px;
+    color: white;
+  }
+  .content_table{
+    padding: 0;
+    margin: 15px;
+    .row{
+      display: flex;
+      margin: 0px;
+      background: rgba(184, 184, 184, 0.14);
+      border-bottom: 1px solid rgba(86, 77, 95, 0.34);
+      padding: 10px 0;
+      .col-sm-6, .col-sm-9{
+        overflow-x: auto;
+        font-size: 12px;
+      }
+      .col-sm-3:last-child{
+        border-right: none;
+      }
+      .col-sm-3{
+        a:first-child{
+          margin-right: 5px;
+        }
+        a:last-child{
+          margin-left: 5px;
+        }
+      }
+    }
+    .no_token{
+      width: 100%;
+      display: block;
+    } 
+
+    .title{
+      font-weight: bold;
+      border-bottom: 3px solid #dddddd;
+    }
+  }
+  .top_content{
+    text-align: left;
+    a{
+      color: #03118a;
+    }
+    h3{
+      font-weight: 700;
+    }
+  }
+  .visible-xs{
+    .row{
+      display: block;
+      margin: 0px;
+      text-align: left;
+      padding: 10px 0;
+      .col-sm-3{
+        font-weight: bold;
+        padding: 0px;
+        float: left;
+        width: 25%;
+      }
+      .col-sm-9{
+        float: left;
+        width: 75%;
+      }
+      .col-sm-12
+      {
+        text-align: left;
+        clear: both;
+        a{
+          padding-right: 20px;
+        }
+      } 
+      .tool{
+        text-align: center;
+      }
+    }
+  }
+
+  .col-sm-12
+  {
+    width: 100%;
+  } 
+
+  @media screen and (max-width: 540px) {
+    .panel-title {
+      font-size: 18px;
+      padding: 6px 0px;
+    }
+    .top_content{
+      font-size: 13px;
+      h3 {
+        font-size: 17px;
+        font-weight: bold;
+      }
+    }
+    .button-primary{
+      font-size: 14px;
+    }
+    .visible-xs  .row{
+      .col-sm-3, .col-sm-9{
+        float: left;
+        width: 100%;
+        padding: 0;
+      }
+    }
+    .panel-default {
+      padding-bottom: 0;
+    }
+    .content_table {
+      margin: 15px 0 0 0;
+    }
+    .form_api{
+      padding: 0;
+      width: 100%;
+    }
+  }
+}
+
+#new_api_token{
+  padding: 10px 20px;
+  background: white;
+  .form-label label, h1{
+    font-size: 20px;
+    padding: 10px 0;
+    margin: 0;
+  }
+  .form-input {
+    min-width: 300px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    display: inline-block;
+  }
+  .form-group span.hint{
+    text-align: center;
+  }
+
+  @media screen and (max-width: 767px) {
+    .form-label label, h1{
+      font-size: 18px;
+    }
+    .form-label
+    {
+      width: 100%;
+    }
+    .form-input{
+      float: none;
+      min-width: auto;
+      width: 90%;
+    }
+  }
+
+  @media screen and (max-width: 395px) {
+    .form-input{
+      width: 100%;
+    }
+  }
+}
+.api_created{
+  padding: 20px;
+  background: white;
+  min-height: 400px;
+  .title{
+    padding: 10px;
+    font-size: 18px;
+    color: #a11f1f;
+  }
+  .input-group{
+    padding: 10px;
+  }
+  .form-control-static{
+    font-size: 12px;
+    overflow-x: auto;
+  }
+  @media screen and (max-width: 520px) {
+    padding: 20px 5px;
+    .title{
+      font-size: 15px;
+    }
+    .input-group{
+      display: block;
+      .form-control-static{
+        width: 100%;
+        margin: 5px 0;
+      }
+      .input-group-addon:first-child{
+        width: 100%;
+        margin: auto;
+        display: block;
+        background: none;
+        border: none;
+        font-weight: bold;
+        color: black;
+        font-size: 15px;
+      }
+      .token-data{
+        border: 1px solid #cccccc;
+        border-radius: 3px;
+        height: 34px;
+      }
+    }
+  }
+}
+.edit_api_token {
+  background: white;
+  .form-group {
+    display: inline-block;
+  }
+  .edit_content{
+    .api_token_label{
+      margin-top: 30px;
+    }
+    .form-control-static{
+      font-size: 12px;
+    }
+    .form-group {
+      width: 100%;
+      .form-label{
+        width: 30%;
+        float: left;
+        margin: 0; 
+        abbr{
+          display: none;
+        }
+      }
+      .form-input{
+        width: 70%;
+        float: left;
+      }
+      span{
+        clear: both;
+        float: right;
+        width: 70%;
+      }
+    }
+  }
+  .two-factor h1{
+    margin: 5px 0 10px;
+  }
+
+  @media screen and (max-width: 530px) {
+    .edit_content{
+      .form-group {
+        .form-label{
+          width: 100%;
+          float: none;
+          text-align: left;
+          color: black;
+        }
+        .form-input{
+          width: 100%;
+          float: none;
+        }
+        span{
+          float: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .edit_content{
+      .form-control-static{
+        font-size: 10px;
+        padding: 9px 0;
+      }
+    }
+  }
+}

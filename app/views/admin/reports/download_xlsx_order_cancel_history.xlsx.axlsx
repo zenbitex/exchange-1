@@ -1,0 +1,12 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+    wb.add_worksheet(name: "Order Cancel") do |sheet|
+      sheet.add_row ["メールアドレス", "取引所", "価格", "数量", "タイプ", "元金額", "登録日時"]
+      @orders_cancel.each do |order|
+        sheet.add_row [order.member.nil? ? "" : order.member.email, order.currency, order.price, order.volume, order.type, order.origin_locked, l(order.created_at, format: '%Y-%m-%d %H:%M:%S')]
+      end
+  end
+end

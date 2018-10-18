@@ -1,0 +1,120 @@
+# - id: kbrbtc
+#   code: 1
+#   base_unit: kbr
+#   quote_unit: btc
+#   fee_fixed: 0
+#   bid: {fee: 0, currency: btc, fixed: 8}
+#   ask: {fee: 0, currency: kbr, fixed: 0}
+#   limit_amount: 50
+#   limit_coin_trade: 50
+#   sort_order: 1
+#   price_precision: 7
+- id: xrpbtc
+  code: 2
+  base_unit: xrp
+  quote_unit: btc
+  fee_fixed: 0
+  bid: {fee: 0, currency: btc, fixed: 6}
+  ask: {fee: 0, currency: xrp, fixed: 4}
+  limit_amount: 50
+  limit_coin_trade: 50
+  sort_order: 1
+  price_precision: 7
+- id: bchbtc
+  code: 3
+  base_unit: bch
+  quote_unit: btc
+  fee_fixed: 0
+  bid: {fee: 0, currency: btc, fixed: 6}
+  ask: {fee: 0, currency: bch, fixed: 6}
+  limit_amount: 0.001
+  limit_coin_trade: 0.01
+  sort_order: 1
+  price_precision: 7
+- id: ethbtc
+  code: 4
+  base_unit: eth
+  quote_unit: btc
+  fee_fixed: 0
+  bid: {fee: 0, currency: btc, fixed: 6}
+  ask: {fee: 0, currency: eth, fixed: 6}
+  limit_amount: 0.001
+  limit_coin_trade: 0.01
+  sort_order: 1
+# - id: kbreth
+#   code: 5
+#   base_unit: kbr
+#   quote_unit: eth
+#   fee_fixed: 0
+#   bid: {fee: 0, currency: eth, fixed: 6}
+#   ask: {fee: 0, currency: kbr, fixed: 0}
+#   limit_amount: 50
+#   limit_coin_trade: 50
+#   sort_order: 1
+#   price_precision: 7
+# - id: kbrjpyt
+#   code: 6
+#   base_unit: kbr
+#   quote_unit: jpyt
+#   fee_fixed: 0
+#   bid: {fee: 0, currency: jpyt, fixed: 2}
+#   ask: {fee: 0, currency: kbr, fixed: 0}
+#   limit_amount: 100
+#   limit_coin_trade: 100
+#   sort_order: 1
+#   price_precision: 2
+- id: btcjpyt
+  code: 7
+  base_unit: btc
+  quote_unit: jpyt
+  fee_fixed: 0
+  bid: {fee: 0, currency: jpyt, fixed: 0}
+  ask: {fee: 0, currency: btc, fixed: 8}
+  limit_amount: 0.001
+  limit_coin_trade: 0.005
+  sort_order: 1
+  price_precision: 8
+- id: ethjpyt
+  code: 8
+  base_unit: eth
+  quote_unit: jpyt
+  fee_fixed: 0
+  bid: {fee: 0, currency: jpyt, fixed: 4}
+  ask: {fee: 0, currency: eth, fixed: 6}
+  limit_amount: 0.0015
+  limit_coin_trade: 0.01
+  sort_order: 1
+  price_precision: 6
+- id: etcjpyt
+  code: 9
+  base_unit: etc
+  quote_unit: jpyt
+  fee_fixed: 0
+  bid: {fee: 0, currency: jpyt, fixed: 4}
+  ask: {fee: 0, currency: etc, fixed: 6}
+  limit_amount: 0.0015
+  limit_coin_trade: 0.01
+  sort_order: 1
+  price_precision: 6
+- id: xrpjpyt
+  code: 10
+  base_unit: xrp
+  quote_unit: jpyt
+  fee_fixed: 0
+  bid: {fee: 0, currency: jpyt, fixed: 2}
+  ask: {fee: 0, currency: xrp, fixed: 2}
+  limit_amount: 50
+  limit_coin_trade: 50
+  sort_order: 1
+  price_precision: 2
+- id: btgbtc
+  code: 11
+  base_unit: btg
+  quote_unit: btc
+  fee_fixed: 0
+  bid: {fee: 0, currency: btc, fixed: 6}
+  ask: {fee: 0, currency: btg, fixed: 6}
+  limit_amount: 0.001
+  limit_coin_trade: 0.01
+  sort_order: 1
+  price_precision: 8

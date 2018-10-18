@@ -1,0 +1,22 @@
+.history-pages
+  .history-tab
+    = render 'tabs', active: :cloudsafe
+
+  .history-transaction#cloudsafe
+    .table-responsive
+      table.table.table-bordered.table-striped
+        thead: tr
+          th = t('.tradecode')
+          th = t('.amount')
+          th = t('.price')
+          th = t('.currency')
+          th = t('.status')
+          th = t('.timestamp')
+        - if @taocoin_trades.length != 0  
+          tbody.list
+            = render partial: 'cloudsafe', collection: @taocoin_trades
+      - if @taocoin_trades.length == 0
+        div.empty_history 
+          = t('.empty_taocoin_trades').html_safe
+      .pull-right
+        = paginate @taocoin_trades

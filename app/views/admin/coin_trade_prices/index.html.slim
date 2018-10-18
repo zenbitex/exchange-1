@@ -1,0 +1,20 @@
+.row
+  .h2.text-danger.text-center Please restart daemons after alter price or fee!.
+  .panel.panel-primary
+    .panel-heading
+      span = "Coin trade price"
+    .panel-body
+      = table_for(@prices, class: 'table table-condensed table-hover') do |t|
+        - t.column :market, class: 'col-xs-1' do |x|
+          = (x.currency + "/" + x.payment_type).upcase
+        - t.column :trade_type, class: 'col-xs-1'
+        - t.column :price, class: 'col-xs-1'
+        - t.column :fee, class: 'col-xs-1' do |x|
+          = x.fee.to_s + " %"
+        - t.column :activate_price, class: 'col-xs-1' do |x|
+          - if x.activate_price == true
+            = link_to "disable", admin_coin_trade_prices_activation_admin_price_path(x), class: 'btn btn-danger'
+          - elsif x.activate_price == false
+            = link_to "enable", admin_coin_trade_prices_activation_admin_price_path(x, enable: true), class: 'btn btn-success'
+        - t.column '', class: 'col-xs-1' do |x|
+          = link_to "edit", edit_admin_coin_trade_price_path(x), class: 'btn btn-warning'

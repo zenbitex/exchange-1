@@ -1,0 +1,53 @@
+<form class="bank-container form-default" >
+	<div class="text-center">
+		<h1 class="title-legend"><%= t(".title") %></h1>
+	</div>
+	<%= render "shared/flash" %>
+	<div class="account-content">
+		<ul>
+			<li>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<h3><%= t(".bank_name") %></h3>
+				</div>
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<h3><%= @bank_account.bank_name %></h3>
+				</div>
+			</li>
+			<li>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<h3><%= t(".bank_branch") %></h3>
+				</div>
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<h3> <%= @bank_account.bank_branch %> </h3>
+				</div>
+			</li>
+			<li>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<h3><%= t(".account_type") %></h3>
+				</div>
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<h3><%= @bank_account.account_type.text if @bank_account.account_type %></h3>
+				</div>
+			</li>
+			<li>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<h3><%= t(".account_number") %></h3>
+				</div>
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<h3><%= @bank_account.account_number%></h3>
+				</div>
+			</li>
+			<li>
+				<div class="col-md-5 col-sm-6 col-xs-12">
+					<h3><%= t(".owner") %></h3>
+				</div>
+				<div class="col-md-7 col-sm-6 col-xs-12">
+					<h3><%= @bank_account.owner %></h3>
+				</div>
+			</li>
+		</ul>
+		<div class="col-xs-12 text-center button-container">
+			<%= link_to t('.change'), edit_bank_accounts_path, class: 'btn button-primary' %>
+		</div>
+	</div>
+</form>

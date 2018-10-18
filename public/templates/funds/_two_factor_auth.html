@@ -1,0 +1,55 @@
+<div class="two-factor-auth-container form-group string required">
+  <div ng-if="email_and_app_activated()" class="gg-input">
+    <div class="col-sm-12 sms-and-app">
+      <div class="input-group two-factor-input" style="width:100%;">
+        <input class="two_factor_auth_type" name="two_factor[type]" type="hidden" value="sms" />
+        <input class="string required form-control" id="two_factor_otp" name="two_factor[otp]" placeholder='{{"auth.otp_placeholder" | t}}' />
+        <div class="input-group-btn send-code-button">
+          <button class="btn btn-primary" data-alt-name='{{"auth.send_code_alt" | t}}' data-orig-name='{{"auth.send_code" | t}}' name="commit" type="submit" value="send_code_mail">{{"auth.send_code" | t}}</button>
+        </div>
+        <div class="input-group-btn">
+          <button class="btn btn-default dropdown-toggle" data-toggle="dropdown" href="javascript:;">
+            <span class="switch-name">{{"auth.mail" | t}}</span>
+            <span class="caret" style="margin-left:5px;"></span>
+          </button>
+          <ul class="dropdown-menu">
+            <li><a data-type="app" href="javascript:;">{{"auth.google_app" | t}}</a></li>
+            <li><a data-type="sms" href="javascript:;">{{"auth.mail" | t}}</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <span class="hint help-block app col-sm-12 hide">{{"auth.hints.app" | t}}</span>
+    <span class="hint help-block sms col-sm-12">{{"auth.hints.mail" | t}}</span>
+    <div class="captcha-wrap col-xs-12"></div>
+  </div>
+
+  <div ng-if="app_activated()" class="gg-input">
+    <label class="string required col-sm-12" for="two_factor_otp">{{"auth.google_app" | t}}</label>
+    <div class="col-sm-12">
+      <div class="input-group" style="width:100%;">
+        <input class="two_factor_auth_type" name="two_factor[type]" type="hidden" value="app" />
+        <input class="string required form-control two_factor_otp1" id="two_factor_otp" name="two_factor[otp]" placeholder='{{"auth.otp_placeholder" | t}}' />
+        <!-- <div class="input-group-btn send-code-button"></div> -->
+      </div>
+    </div>
+    <span class="help-block app col-sm-12">{{"auth.hints.app" | t}}</span>
+    <div class="captcha-wrap col-sm-12"></div>
+  </div>
+
+  <div ng-if="only_email_activated()" class="gg-input">
+    <label class="string required col-sm-12" for="two_factor_otp">{{"auth.mail_guide" | t}}</label>
+    <div class="col-sm-12">
+      <div class="input-group" style="width:100%;">
+        <input class="two_factor_auth_type" name="two_factor[type]" type="hidden" value="sms" />
+        <input class="string required form-control" id="two_factor_otp" name="two_factor[otp]" placeholder='{{"auth.otp_placeholder" | t}}' />
+        <div class="input-group-btn send-code-button">
+          <button class="btn btn-primary" data-alt-name='{{"auth.send_code_alt" | t}}' data-orig-name='{{"auth.send_code" | t}}' name="commit" type="submit" value="send_code_mail">{{"auth.send_code" | t}}</button>
+        </div>
+      </div>
+    </div>
+    <span class="hint help-block sms col-sm-12">{{"auth.hints.mail" | t}}</span>
+    <div class="captcha-wrap col-sm-12"></div>
+  </div>
+
+</div>

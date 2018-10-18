@@ -1,0 +1,7 @@
+<%= t('.order_infomations', amount: @trade.amount, price: @trade.price, time: @trade.created_at) %>
+<%= t('.tradecode', tradecode: @trade.tradecode) %>
+<%= t('.address'), address: @trade.account.payment_address.address%>
+<%= if @trade.exchangerate 
+  t('.exchange_rate', exchange_rate: @trade.exchangerate)
+end %>
+<%= t('.end') %>

@@ -1,0 +1,47 @@
+<div class="contacts_us">
+	<h2>Contacts Us</h2>
+	<table class="table table-options">
+		<thead>
+			<tr>
+				<th class="id">ID</th>
+				<th class="from_email">From Email</th>
+				<th class="name">Name</th>
+				<th class="category">Category</th>
+				<th class="message">Message</th>
+				<th class="create_at">Created At</th>
+				<th class="check">Check</th>
+				<th class="Show"></th>
+				<th class="Reply"></th>
+			</tr>
+		</thead>
+		<tbody>	
+			<% @contacts_us.each do |c| %>
+				<tr class="tr-body">
+					<td class="id" name="id"><%= c.id %></td>
+					<td class="from_email"><%= c.from_email %></td>
+					<td class="name"><%= c.name %></td>
+					<td class="category"><%= c.category %></td>
+					<td class="message"><%= c.message %></td>
+					<td class="create_at"><%= c.created_at %></td>
+					<td class="check">
+							
+						<%= form_tag("/admin/contacts_us/rep_ok_ng", method: "post") do %>
+						  <%= text_field_tag(:id, c.id, hidden: true ) %>
+						  
+						  <% if c.check_reply == true %>
+						  	<%= submit_tag("OK", class: "btn-success") %>
+						  <% else %>
+						    <%= submit_tag("NG", class: "btn-danger") %> 	
+						  <% end %>
+
+						<% end %>
+
+					</td>
+					<td class="Show"><%= link_to "Show", admin_contacts_us_show_path(c) %></td>
+					<td class="Reply"><%= link_to "Reply", admin_contacts_us_create_send_email_path(c) %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		<%= paginate @contacts_us %>	
+	</table>
+</div>

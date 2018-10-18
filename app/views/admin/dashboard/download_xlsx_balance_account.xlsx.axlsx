@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "balance_account_jpy") do |sheet|
+    sheet.add_row ["ID", "NAME", "EMAIL","BALANCE", "LOCKED"]
+    @accounts_balance_jpy.each do |account|
+      sheet.add_row [account[:member_id], account[:name], account[:email], account[:balance], account[:locked]]
+    end
+  end
+
+end

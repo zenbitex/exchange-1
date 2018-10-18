@@ -1,0 +1,21 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "account_versions") do |sheet|
+    sheet.add_row ["member_id", "理由", "仮想通貨", "balance", "locked", "fee", "amount", "TYPE", "登録日時"]
+    @acc_versions.each do |v|
+      sheet.add_row [v.member_id,
+                    v.reason,
+                    v.currency,
+                    v.balance,
+                    v.locked,
+                    v.fee,
+                    v.amount,
+                    v.modifiable_type,
+                    v.created_at]
+    end
+  end
+end

@@ -1,0 +1,56 @@
+<div class="arbprofit-user">
+  <h1 class="color-primary"> Arb History</h1>
+    <div class="">
+      <table class="table">
+        <tbody>
+          <tr>
+            <td width="30%">Member ID</td>
+            <td>
+              <p class="td-text name"> <%= @user_profit[:member_id] %></p>
+            </td>
+          </tr>
+          <tr>
+            <td width="30%">Tao Amount</td>
+            <td>
+              <p class="td-text from_email"><%= @current_tao %></p>
+          </tr>
+          <tr>
+            <td width="30%">Profit percent</td>
+            <td>
+              <p class="td-text category"><%= @user_profit[:profit_percent].to_i%> %</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <table class="table table-options">
+        <thead>
+          <tr>
+            <th class="id">ID</th>
+            <th class="type">Type</th>
+            <th class="tao_amount">Amount</th>
+            <th class="created_at">Created At</th>
+            <th class="current_tao_arb">Current Tao</th>
+          </tr>
+        </thead>
+        <tbody> 
+          <% @history.each do |a| %>
+            <tr class="tr-body">
+              <td class="id"><%= a.id %></td>
+              <td class="type"><%= a.type_arb.upcase %></td>
+              <td class="tao_amount"><%= a.tao_amount %></td>
+              <td class="created_at"><%= a.created_at %></td>
+              <td class="current_tao_arb"><%= a.current_tao_arb %></td>
+            </tr>
+          <% end %>
+        </tbody>
+        <%= paginate @history %> 
+      </table>
+    </div>
+    <div class="text-left">
+      <a href="/admin/arbprofit"><button type="button" class="btn btn-primary">Back</button></a>
+    </div>
+  </div>
+
+</div>

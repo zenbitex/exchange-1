@@ -1,0 +1,39 @@
+<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" data-toggle="collapse"  data-parent="#accordion" href="#collapse1" aria-expanded="true" aria-controls="collapse1">
+      <h4 class="panel-title">
+          <%= t('.aff_link', {i: 1})%>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in %>" role="tabpanel">
+      <div class="panel-body">
+        <textarea id="link1" style="padding-right: 0;"><%= "https://#{ENV['URL_HOST']}/signup?ref=#{current_user.affiliate_code}" %>
+        </textarea>
+        <button type="button" class="btn btn-primary data-copy-clipboard" idata-clipboard-action="copy" data-clipboard-target="#link1">
+          <i class="fa fa-link" aria-hidden="true"> <%= t('.copy_link') %></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <% for i in 2..6 %>
+    <!-- <div class="panel panel-default">
+      <div class="panel-heading" role="tab" data-toggle="collapse"  data-parent="#accordion" href="#collapse<%=i%>" aria-expanded="true" aria-controls="collapse<%=i%>">
+        <h4 class="panel-title">
+            <%= t('.aff_link', {i: i})%>
+        </h4>
+      </div>
+      <div id="collapse<%=i%>" class="panel-collapse collapse <%= 'in' if (i==1) %>" role="tabpanel">
+        <div class="panel-body">
+          <a class="code-text" target="_blank" href="/affiliates/<%=i%>_bs_banner.png">
+            <img id="image_<%=i%>" src="/affiliates/<%=i%>_bs_banner.png" alt="The Leading Bitcoin and Cryptocurrency Exchange in Asia | Bitstation Bitcoin">
+          </a>
+          <textarea id="link<%= i %>" style="padding-right: 0;">&lt;a href=<%= "#{ENV['URL_HOST']}?ref=#{current_user.affiliate_code}" %> target="_blank"&gt;&lt;img src="<%="#{ENV['URL_HOST']}"%>affiliates/<%=i%>_bs_banner.png" alt="The Leading Bitcoin and Cryptocurrency Exchange in Asia | Bitstation"&gt;&lt;/a&gt;
+          </textarea>
+          <button type="button" class="btn btn-primary data-copy-clipboard" idata-clipboard-action="copy" data-clipboard-target="#link<%= i %>">
+            <i class="fa fa-link" aria-hidden="true"> <%= t('.copy_link') %></i>
+          </button>
+        </div>
+      </div>
+    </div> -->
+  <% end %>
+</div>

@@ -1,0 +1,13 @@
+tr
+  td data-th=t('.id') = orders.id
+  - if orders.kind == "bid"
+    td.text-red data-th=t('.type') = t ".#{orders.kind}"
+  - else
+    td.text-blue data-th=t('.type') = t ".#{orders.kind}"
+  td.text-color-custom data-th=t('.state') = t ".#{orders.state}"
+  td.text-color-custom data-th=t('.market') = orders.currency
+  td.text-color-custom data-th=t('.price') = orders.price
+  td.text-color-custom data-th=t('.volume') = orders.origin_volume
+  td.text-color-custom data-th=t('.average_price') = orders.avg_price
+  td.text-color-custom data-th=t('.fullfilled_volume') = orders.origin_volume - orders.volume
+  td.text-color-custom data-th=t('.timestamp') = orders.created_at

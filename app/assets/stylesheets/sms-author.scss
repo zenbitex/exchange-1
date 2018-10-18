@@ -1,0 +1,76 @@
+.sms-author-container {
+  text-align: right;
+  background: white;
+  .sms-author-button {
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    .s-btn-left {
+      text-align: right;
+      input {
+        max-width: 200px !important;
+        background:#2591fd;
+        border-radius:5px;
+      }
+    }
+    .s-btn-right {
+      text-align: left;
+      a {
+        max-width: 200px !important;
+        border-radius:5px;
+          background: gray ;
+        line-height: 40px;
+      }
+    }
+  }
+  .form-group{
+    margin-right: auto;
+    margin-left: auto;
+    .form-label{
+      width: 30%;
+      min-width: 120px;
+    }
+    .form-input{
+      width: 70%;
+      max-width: 400px;
+    }
+    label, select{
+      color: black;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    .form-group{
+      .form-label{
+        width: 22%;
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .form-group{
+      .form-label{
+        width: 140px;
+      }
+      .form-input{
+        width: calc(100% - 140px);
+      }
+      #sms_auth_country{
+        height: 38px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 590px) {
+    .form-group{
+      display: block;
+      .form-label{
+        width: 100%;
+        text-align: left;
+      }
+      .form-input{
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+}

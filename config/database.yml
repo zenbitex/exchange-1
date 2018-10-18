@@ -1,0 +1,31 @@
+development: &defaults
+  adapter: mysql2
+  encoding: utf8
+  database: bitrade_development
+  username: root
+  password: root
+  pool: 10
+  reconnect: true
+
+test:
+  <<: *defaults
+  database: bitrade_test
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  database: <%= ENV['DATABASE'] %>
+  username: <%= ENV['USERNAME'] %>
+  password: <%= ENV['PASSWORD'] %>
+  pool: 10
+  reconnect: true
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: bit_trading_production
+  username: bit_trading
+  password: bit-trading
+  reconnect: true
+  port: 3306
+  host: bit-trading

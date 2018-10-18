@@ -1,0 +1,38 @@
+<div class="edit-exchange-rate">
+	<%= form_for @buyoption, :url => admin_buy_option_path, :method => :PATCH do |f| %>
+
+	  <div class="field">
+	    <p><%= f.text_field :id, :hidden => true %></p>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :Taocoin %><br>
+	    <%= f.text_field :taocoin, class: 'form-control edit-taocoin' %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.text_field :currency, :hidden => true, :class => "currency" %>
+	  </div>
+
+	  <div class="field">
+	    <%= f.label :amount %> <b class="currenc"></b><br>
+	    <%= f.text_field :amount, class: 'form-control edit-amount', :required => true %>
+	  </div>
+
+	  <div class="actions">
+	    <%= f.submit 'Update Rate', :class => 'btn btn-primary' %>
+	  </div>
+	<% end %>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+		x = $('.currency').val();
+		if(x == 1) {
+			$('.currenc').text("JPY")
+		} else {
+			$('.currenc').text("BITCOIN")
+		}
+	});
+</script>
+

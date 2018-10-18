@@ -1,0 +1,23 @@
+.history-pages
+  .history-tab
+    = render 'tabs', active: :trade
+
+  .history-transaction#trades
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @trades.empty?)
+          th = t('.side')
+          th = t('.created_at')
+          th = t('.base_currency')
+          th = t('.base_amount')
+          th = t('.quote_currency')
+          th = t('.quote_amount')
+          th = t('.price')        
+        - if @trades.length != 0           
+          tbody.list 
+            = render partial: 'trades', collection: @trades
+      - if @trades.length == 0
+        div.empty_history 
+          = t('.empty_trades').html_safe
+      .pull-right
+        = paginate @trades

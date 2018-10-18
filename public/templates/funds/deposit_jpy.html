@@ -1,0 +1,98 @@
+<div class="funds-right-content-pink fund_jpy" ng-controller="DepositsController as DepositsCtrl">
+  <h2 class="funds-right-titlepink">{{"funds.deposit_jpy.title" | t}}</h2>
+  <div class="funds-right-contents">
+    <div class="help-block">
+      <span ng-bind-html='trans("funds.deposit_jpy.user_id", {id:current_user.sn_code})'></span>
+      <br>
+      <span class="part-title"><i class="fa fa-paper-plane-o"></i> {{ "funds.deposit_jpy.title_note" | t }}</span>
+      <br>
+      <a ng-href="settings" class="pandding-note-content">{{ "funds.deposit_jpy.desc_item_1" | t }}</a>
+      <span class="custom-padding-a"><a ng-href="bank_accounts/new" class="pandding-note-content">{{ "funds.deposit_jpy.desc_item_1_2" | t }}</a></span>
+      <span>{{ "funds.deposit_jpy.desc_item_1_1" | t }}</span>
+      <br>
+      <span class="part-title"><i class="fa fa-paper-plane-o"></i> {{ "funds.deposit_jpy.title_info_user" | t }}</span>
+    </div>
+
+    <div class="bank_infor">
+      <table class="table table table-jpy">
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.bank_name" | t }}</td>
+          <td>{{ "funds.deposit_jpy.content.bank_name" | t }}</td>
+        </tr>
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.branch" | t }}</td>
+          <td>{{ "funds.deposit_jpy.content.branch" | t }}</td>
+        </tr>
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.account_kind" | t }}</td>
+          <td>{{ "funds.deposit_jpy.content.account_kind" | t }}</td>
+        </tr>
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.account_number" | t }}</td>
+          <td>{{ "funds.deposit_jpy.content.account_number" | t }}</td>
+        </tr>
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.company_name" | t }}</td>
+          <td>{{ "funds.deposit_jpy.content.company_name" | t }}</td>
+        </tr>
+        <tr>
+          <td>{{ "funds.deposit_jpy.label.transfer_name" | t }}</td>
+          <td class="color-name">
+            <div ng-if="current_user.display_name"><span ng-bind-html='trans("funds.deposit_jpy.user_info", {id:current_user.sn_code, name:current_user.display_name})'></span></div>
+            <div ng-if="!current_user.display_name"><span ng-bind-html='trans("funds.deposit_jpy.user_info_not_name", {id:current_user.sn_code})'></span></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <span class="part-title"><i class="fa fa-paper-plane-o"></i> {{ "funds.deposit_jpy.title_note_2" | t }}</span>
+    <div class="panding-note">
+      <b>{{ "funds.deposit_jpy.note_1" | t }}</b>
+      <br>
+      <b>{{ "funds.deposit_jpy.note_2" | t }}</b>
+      <div class="pandding-note-content">
+        <span>{{ "funds.deposit_jpy.note_2_content" | t }}</span>
+        <span>{{ "funds.deposit_jpy.note_2b_content" | t }}</span>
+      </div>
+      <b>{{ "funds.deposit_jpy.note_3" | t }}</b>
+      <div class="pandding-note-content">
+        <span> {{ "funds.deposit_jpy.note_3_content" | t }}</span>
+        <a href="deposit_infomation" target="link"> {{ "funds.deposit_jpy.note_3_link" | t }}</a>
+        <span> {{ "funds.deposit_jpy.note_4_content" | t }}</span>
+        <br>
+        <span> {{ "funds.deposit_jpy.note_5_content" | t }}</span>
+      </div>
+    </div>
+
+    <br>
+    <h2 class="funds-history-title">{{ "funds.deposit_history.title" | t }}</h2>
+    <div class="table-responsive">
+      <table class="table table-history" ng-controller="DepositHistoryController as dhCtrl">
+        <tr>
+          <th>{{ "funds.deposit_history.identification" | t }}</th>
+          <th>{{ "funds.deposit_history.time" | t }}</th>
+          <th>{{ "funds.deposit_history.amount" | t }}</th>
+          <th>{{ "funds.deposit_history.state_and_action" | t }}</th>
+        </tr>
+        <tr class="deposit_item" ng-class="{ 'new-row':dhCtrl.newRecord(deposit) }" ng-repeat="deposit in dhCtrl.deposits | orderBy:predicate">
+          <td><span class="outlined-label">{{deposit.id}}</span></td>
+          <td>{{deposit.created_at | date:'yyyy-MM-dd HH:mm' }}</td>
+          <td>{{deposit.amount}}</td>
+          <td>{{"funds.deposit_history." + deposit.aasm_state | t}}
+            <span ng-if="dhCtrl.canCancel(deposit.aasm_state)">/
+              <a ng-click="dhCtrl.cancelDeposit(deposit); $event.preventDefault()" href="#" class="cancel_link">{{ "funds.deposit_history.cancel" | t }}</a>
+            </span>
+          </td>
+        </tr>
+        <tr ng-show="dhCtrl.canCancel(deposit.aasm_state)"><td colspan="6"><span class="help-block text-center">{{ "funds.deposit_history.no_data" | t }}</span></td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(".btn-deposit , .btn-withdraw").click(function() {
+  $("html, body").animate({ scrollTop: 430 }, 600);
+    return false;
+});
+</script>

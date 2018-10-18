@@ -1,0 +1,16 @@
+<% if history.present? %>
+  <% history.each do |t| %>
+    <tr>
+      <th class="text-info"><%= t.id %></th>
+      <th class="text-info"><%= link_to "member #{t.member_id}", admin_member_path(object_member t.member_id) %></th>
+      <th class="text-info"><%= get_name t.member_id %></th>
+      <td class="text-info"><%= count_people_intro t.member_id %></td>
+      <td class="text-info"><%= t.bonus %></td>
+      <th>
+        <%= link_to admin_affiliate_path(t) do %>
+        <i class="btn btn-primary glyphicon fa fa-eye" aria-hidden="true"></i>
+      <% end %>
+      </th>
+    </tr>
+  <% end %>
+<% end %>

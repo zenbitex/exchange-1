@@ -1,0 +1,26 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "arb_profit") do |sheet|
+    sheet.add_row ["ID", "メール", "BTCアドレス", "XRPアドレス"]
+    @members.each do |member|
+      address = member.payment_addresses
+      btc_address = nil
+      xrp_address = nil
+      address.each do |value|
+        case value[:currency]
+          when 2
+            btc_address = value[:address] if btc_address.nil?
+          when 5
+            xrp_address = value[:address] if xrp_address.nil?
+        end
+        break if btc_address && xrp_address
+      end
+      sheet.add_row [member[:id], member[:email], btc_address, xrp_address] if btc_address || xrp_address
+    end
+  end
+
+end

@@ -1,0 +1,14 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      span = "手数料報告"
+    .panel-body
+      .form-group.col-sm-6
+        label for="date_start" = "開始日付："
+        input.form-control type="date" name="start" id="date_start" required=""
+      .form-group.col-sm-6
+        label for="date_end" = "終了日付："
+        input.form-control type="date" name="end" id="date_end" required=""
+      .form-group
+        br
+        = link_to "手数料ダウンロード", admin_download_xlsx_fee_path(format: :xlsx), class: "btn btn-primary btn-download-fee"

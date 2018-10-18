@@ -1,0 +1,6 @@
+admin:
+  affiliate:
+    page: 20
+  user_balance:
+    page: 200
+list_settings: {withdraw: "Withdraw", login: "Login"}

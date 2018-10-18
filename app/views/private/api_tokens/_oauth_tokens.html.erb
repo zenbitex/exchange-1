@@ -1,0 +1,79 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">
+      <%=  t('.panel_title') %> 
+    </h2>
+  </div>
+  <div class="panel-body">
+    <div class="top_content">
+      <h3>
+        <%=  t('.title') %> 
+      </h3>
+      <div class="text-ignore">
+        <%=  t('.intro') %> 
+      </div>
+      <p>
+        <%= link_to t('.oauth'), '/documents/oauth', target: '_blank' %>
+      </p>
+    </div>
+    <!--  <%#=link_to t('.create'), new_api_token_path, class: 'btn button-primary' %> -->
+  </div>
+
+  <div class="content_table">
+    <% if @oauth_access_tokens.empty? %>
+      <div class="row title">
+        <div class="col-sm-3"><%= t('.oauth_app_name') %></div>
+        <div class="col-sm-3"><%= t('.oauth_app_expire') %></div>
+        <div class="col-sm-4"><%= t('.oauth_app_scope') %></div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> 
+          <%= t('.no_token') %>
+        </div>
+      </div>
+    <% else %>
+      <div class="hidden-xs">
+        <div class="row title">
+          <div class="col-sm-3"><%= t('.oauth_app_name') %></div>
+          <div class="col-sm-3"><%= t('.oauth_app_expire') %></div>
+          <div class="col-sm-4"><%= t('.oauth_app_scope') %></div>
+          <div class="col-sm-2"></div>
+        </div>
+      </div>
+      <% @oauth_access_tokens.each do |token| %> 
+        <div class="hidden-xs">
+          <div class="row">
+            <div class="col-sm-3"><%= token.application.name %></div>
+            <div class="col-sm-3"><%= token.send(:expired_time) %></div>
+            <div class="col-sm-4"><%= token.scopes.to_s %></div>
+            <div class="col-sm-2">
+              <%= link_to t('.unbind'), unbind_api_token_path(token.application), method: :delete, data: {confirm: t('.unbind-confirm')} %> 
+            </div>
+          </div>
+        </div>
+
+        <div class="visible-xs">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-sm-3"><%= t('.oauth_app_name') %></div>
+              <div class="col-sm-9"><%= token.application.name %></div>
+            </div>
+            <div class="col-sm-12">
+              <div class="col-sm-3"><%= t('.oauth_app_expire') %></div>
+              <div class="col-sm-9"><%= token.send(:expired_time) %></div>
+            </div>
+
+            <div class="col-sm-12">
+              <div class="col-sm-3"><%= t('.oauth_app_scope') %></div>
+              <div class="col-sm-9"><%= token.scopes.to_s %></div>
+            </div>
+            <div class="col-sm-12 tool">
+              <%= link_to t('.unbind'), unbind_api_token_path(token.application), method: :delete, data: {confirm: t('.unbind-confirm')} %> 
+            </div>
+          </div>
+        </div>
+      <% end -%>
+    <% end -%>
+  </div>
+</div>

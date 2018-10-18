@@ -1,0 +1,39 @@
+<div class="fees">
+	<%= link_to 'Add', new_admin_flag_path, class: :'btn btn-primary' %>
+	
+	<form method="post" class="form-flag">
+		<table class="table">	
+			<thead>
+				<tr>
+					<td>Flag name</td>
+					<td>Value</td>
+					<td>View/Change</td>
+				</tr>
+			</thead>
+
+			<tbody>
+				<% @flags.each do |f| %>
+					
+						<tr>
+
+							<td class="flag-name">
+								<%= f.flag_name %>
+							</td>
+							<td class="flag-value">
+								<% if f.value %>
+									<%= f.value %>
+								<% else %>
+									0
+								<% end %>
+								</td>
+							<td>
+								<button type="button" value="On" class="on-flag">ON</button> 
+								<button type="button" value="Off" class="off-flag">OFF</button>
+							</td>
+						</tr>
+					
+				<% end %>
+			</tbody>
+		</table>
+	</form>
+</div>

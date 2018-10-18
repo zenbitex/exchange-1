@@ -1,0 +1,15 @@
+= table_for(banks, class: 'table table-condensed table-hover', model: Withdraws::Bank) do |t|
+  - t.column :id, class: 'col-xs-2'
+  - t.column :currency_obj_key_text, class: 'col-xs-2'
+  - t.column :member_name, class: 'col-xs-3' do |x|
+		= link_to x.member_name, admin_id_document_path(member_id_to_id_document_id(x.member_id)), target: '_blank'
+  - t.column :fund_source, class: 'col-xs-6' do |x|
+    - if x.fund_extra == ""
+      span #{bank_code_to_name x.fund_extra}
+    - else 
+      span #{bank_code_to_name x.fund_extra} # #{x.fund_uid}
+  - t.column :amount, class: 'col-xs-3' do |x|
+    code.text-info = x.amount
+  - t.column :created_at, class: 'col-xs-3'
+  - t.column :state_and_action, class: 'col-xs-3' do |x|
+    = link_to t(".bank_withdraw_view"), url_for([:admin, x]), target: '_blank', class: "btn btn-primary"

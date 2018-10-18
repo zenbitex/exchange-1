@@ -1,0 +1,202 @@
+doctype html
+html lang="ja"
+  head
+    = stylesheet_link_tag :admin, media: "all"
+    = javascript_include_tag :admin
+    meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" /
+    = csrf_meta_tags
+    = include_gon
+
+
+  body id='#{body_id}' class="admin-wrapper"
+    nav#top-menu.navbar.navbar-inverse.menu-admin role="navigation"
+      .container.menu-admin-container
+        ul.nav.navbar-nav.lang
+          li = link_to t('actions.back'), main_app.root_path
+          li = render partial: 'shared/header_lang_sel'
+
+        ul.nav.navbar-nav.lang
+          - if can? :manage, CoinTradePrice
+            li class = check_active('dashboard')
+              = link_to t('header.dashboard'), main_app.admin_dashboard_path
+
+          - if can? :manage, CoinTradePrice
+            li class = check_active('manage_servers')
+              = link_to t('admin_header.manage_servers'), admin_manage_servers_path
+
+          - if can? :manage, ColdWallet
+            li class = check_active(ColdWallet)
+              = link_to t('admin_header.cold_wallet'), admin_cold_wallets_path
+
+          - if can? :manage, Document
+            li class = check_active(Document)
+              = link_to t(".menus.items.operating.documents"), admin_documents_path
+
+          - if can? :manage, IdDocument
+            li class = check_active('id_documents')
+              = link_to t('admin_header.id_documents'), admin_id_documents_path
+
+          /- if can? :read, Proof
+            li class = check_active(Proof)
+              = link_to t(".menus.items.operating.proofs"), admin_proofs_path
+
+          - if can? :menu, Deposit
+            li.dropdown class = check_active('deposits')
+              = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                span = t('admin_header.deposits')
+                span.caret
+              ul.dropdown-menu
+                - DepositChannel.all.sort.each do |c|
+                  - if can? :manage, c.kls
+                    li = link_to c.title_text, [:admin, c.kls]
+
+                - if can? :manage, DepositInfomation
+                  li
+                    = link_to t('admin_header.deposit_informations'), admin_deposit_infomations_path
+
+          - if can? :menu, Withdraw
+            li.dropdown class = check_active('withdraws')
+              = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                span = t('admin_header.withdraws')
+                span.caret
+              ul.dropdown-menu
+                - WithdrawChannel.all.each do |c|
+                  - if can? :manage, c.kls
+                    li = link_to c.title_text, [:admin, c.kls]
+
+          - if can? :manage, Member
+            li class = check_active('members')
+              = link_to t(".menus.sections.members"), admin_members_path
+
+          - if can? :manage, Ticket
+            li class = check_active('tickets')
+              = link_to t(".menus.items.operating.tickets"), admin_tickets_path
+
+          - if can? :manage, Authentication
+            li.dropdown class = check_active('statistic')
+              = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                span = t('admin_header.statistics')
+                span.caret
+              ul.dropdown-menu
+                - if can? :stat, Member
+                  li class = check_active(Member)
+                    = link_to Member.model_name.human, admin_statistic_members_path
+
+                - if can? :manage, Authentication
+                    li
+                      = link_to t("Cloud Sale"), admin_statistic_cloud_sale_index_path
+
+                - if can? :manage, Trade
+                    li
+                      = link_to t("Trade"), admin_statistic_trades_path
+
+          // menu cloud-safe
+          - if can? :manage, FeeTrade
+            li.dropdown class = check_active('cloud-safe')
+                = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                    span = t('admin_header.cloudsafe')
+                    span.caret
+                ul.dropdown-menu
+                  - if can? :manage, BuyOptions
+                    li
+                      = link_to t("Buy Options"), admin_buy_options_path
+
+                  - if can? :manage, ExchangeRates
+                    li
+                      = link_to t("Exchange Rate"), admin_exchangerates_path
+
+                  - if can? :manage, TaocoinTrades
+                    li
+                      = link_to t("Bank Trades"), admin_banktrades_path
+
+                  - if can? :manage, TaocoinTrades
+                    li
+                      = link_to t("Bitcoin Trades"), admin_btctrades_path
+
+                  - if can? :manage, TaocoinTrades
+                    li
+                      = link_to t("Paypal Trades"), admin_paypaltrades_path
+
+          // fee
+          - if can? :manage, FeeTrade
+            li class = check_active('fee_trade')
+              li class = check_active('fee_trades')
+                = link_to t("fee"), admin_fee_trades_path
+
+          // flags
+          - if can? :manage, Flags
+            li class = check_active('flags')
+              = link_to t("flags"), admin_flags_path
+
+          // arbs history
+          - if can? :manage, Authentication
+            li.dropdown class = check_active('arbs_history')
+                = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                    span = t('admin_header.arb')
+                    span.caret
+                ul.dropdown-menu
+                  - if can? :manage, ArbHistory
+                    li
+                      = link_to t("Arb 履歴"), admin_arbs_history_index_path
+                  - if can? :manage, ArbProfit
+                    li
+                      = link_to t("Arb 利益"), admin_arbprofit_path
+
+          //Contacts us
+          - if can? :manage, Contact
+            li.dropdown class = check_active('contacts_us')
+                = link_to 'javascript:;', class: 'dropdown-toggle', 'data-toggle' => 'dropdown' do
+                    span = t('admin_header.send_mail')
+                    span.caret
+                ul.dropdown-menu
+                    li
+                      = link_to t("admin_header.contacts_us"), admin_contacts_us_path
+                    li
+                      = link_to t("admin_header.to_all"), admin_contacts_us_to_all_new_path
+
+          //Send to general address
+          - if can? :manage, FeeTrade
+            li class = check_active('send_to_general_address')
+              = link_to t("Send to General Address"), admin_send_to_general_address_index_path
+
+          / - if can? :manage, CoinTradePrice
+          /   li class = check_active('coin_trade_price')
+          /     = link_to "販売場の設定", admin_coin_trade_prices_path
+
+          //Referrer list
+          - if can? :manage, Authentication
+            li class = check_active('referrer')
+              = link_to "紹介のリスト", admin_referrer_path
+
+          //User balance
+          - if can? :manage, Authentication
+            li class = check_active('user_balance')
+              = link_to "ユーザー残高", admin_user_balance_path
+
+          //Referral Diagram
+          - if can? :manage, Authentication
+            li class = check_active('referral')
+              = link_to "Referral Diagram", admin_referral_diagram_path
+
+          //Affiliate
+          / - if can? :manage, Affiliate
+          /   li class = check_active('Affiliate')
+          /     = link_to "アフィリエイト", admin_affiliates_path
+          //Coin Trades history
+          / - if can? :manage, Authentication
+          /   li class = check_active('coin_trades')
+          /     = link_to "販売場", admin_coin_trades_path
+          - if can? :manage, Authentication
+            li class = check_active('reports')
+              = link_to "EXCELダウンロード", admin_reports_path
+          /- if can? :manage, Authentication
+            li class = check_active('admin_send_coin')
+              = link_to "コインを送る", admin_admin_send_coin_index_path
+          //statistic
+          - if can? :manage, Authentication
+            li class = check_active('admin_count_orders')
+              = link_to "統計", admin_count_orders_path
+
+    .container.content-admin
+      = render 'shared/flash'
+      = yield

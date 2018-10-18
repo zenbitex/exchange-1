@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>We're sorry, but something went wrong (502)</title>
+  <link href="/assets/application.css?body=1" media="all" rel="stylesheet">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  <style type="text/css">
+    .error-content{
+      text-align: center;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .error-content h1{
+      font-size: 140px;
+      color: #ff2600;
+      font-family: 'Ubuntu Mono', cursive;
+      text-shadow: 3px 3px 3px hsl(206, 15%, 40%);
+      margin-bottom: 30px;
+    }
+    .error-content h3{
+      font-size: 50px;
+      color: #861001;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .error-content p{
+      font-size: 40px;
+      line-height: 35px;
+      color: #bd5b0c;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+    .error-content a{
+      text-decoration: underline !important;
+      color: #70bf41;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
+      .bitirade-home-wrapper .bitirade-topheader{
+         padding: 0 20px;
+      }<p id="menu_text">メニュー</p>
+      .error-content h1{
+        font-size: 80px;
+      }
+      .error-content h3{
+        font-size: 30px;
+      }
+      .error-content p{
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+  <body>
+    <!-- This file lives in public/404.html -->
+    <div class="bitirade-home-wrapper">
+      <div class="bitirade-topheader">
+        <div class="pull-left">
+          <a href="/"><h2 class="color-primary">ビットステーション</h2></a>
+        </div>
+      </div>
+      <section class="bititrade-help">
+        <a href="#" class="bit-help-message"><img src="/message.png" alt="help"></a>
+        <a href="#" class="bit-help-question"><img src="/question.png" alt="question"></a>
+      </section>
+      <div class="bititrade-content">
+        <div class="container">
+          <div class="error-content">
+            <h1>502 Error</h1>
+            <h3>We're sorry, but something went wrong.</h3>
+            <p>Maybe you tried to change something you didn't have access to.</p>
+            <a href="/">Return Home</a>
+          </div>
+        </div>
+      </div>
+      <section class="button-menu">
+        <a href="#"><img src="/menu-button.png" alt="Menu" title="Menu"></a>
+				$
+      </section>
+      <footer class="bitirade-footer">
+      </footer>
+      <script src="/assets/jquery.js?body=1"></script>
+      <script type="text/javascript">
+        $(".bitirade-home-wrapper .bititrade-content").css("min-height",$(window).height() - 360 );
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+table#table_accounts.table style="margin:0px"
+  tbody
+    - @accounts.each do |account|
+      tr class='#{account.currency}'
+        td.account-symbol.col-xs-3.text-center
+          img.currency-image src="/icon-#{account.currency}.png" alt="#{account.currency_obj.code_text}"
+          br
+          span = account.currency_obj.code_text
+        td.account-balance.col-xs-18.text-right
+          span.amount data-title='#{t('.amount')}' = (account.amount - account.locked)
+          br
+          span.locked data-title='#{t('.locked')}' = account.locked

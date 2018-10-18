@@ -1,0 +1,70 @@
+#activation-form{
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  background: #ffffff;
+  overflow: hidden;
+  margin-bottom: 535px;
+  margin-top: 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 7px 7px 3px 3px;
+  font-family: HiraginoSans-W6;
+
+  h2{
+    background: #64b1ff;
+    padding: 15px 0;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: 0px;
+  }
+  .activation-article {
+    background-color: #ffffff;
+    height: 200px;
+    padding: 10px;
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .activation-article-group {
+    margin: 10px 0;
+    height: 66px;
+    font-size: 17px;
+  }
+
+  .activation-article-text {
+    text-align: left;
+    line-height: 26px;
+    font-size: 13px;
+    margin-bottom: 0;
+    display: inline-block;
+  }
+  .col-sm-6{
+    float: left;
+    padding: 0;
+    width: 50%;
+  }
+  .btn{
+    width: 120px;
+    font-size: 13px;
+    min-width: auto;
+    padding: 8px 10px;
+  }
+
+  @media screen and (min-width: 500px) {
+    h2{
+      font-size: 24px;
+      padding: 24px;
+    }
+    .activation-article-text {
+      font-size: 16px;
+    }
+    .btn{
+      min-width: 150px;
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+
+}

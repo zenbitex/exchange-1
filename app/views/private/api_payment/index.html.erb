@@ -1,0 +1,50 @@
+<div class="api_payment_form">
+  <h4 class="page-title"><%= t('.payment_system') %></h1>
+  <div class="api_key">
+    <%= render "shared/flash" %>
+    <% if @api_payment %>
+      <div class="key">
+        <div class="col">
+          <div class = "col-sm-3">
+            access key: 
+          </div> 
+          <div class = "col-sm-9">
+            <%= @api_payment.access_key %>
+          </div> 
+        </div>
+        <div class="col">
+          <div class = "col-sm-3">
+            secret key: 
+          </div> 
+          <div class = "col-sm-9">
+            <%= @api_payment.secret_key %>
+          </div> 
+        </div>
+        <div class="col">
+          <div class = "col-sm-3">
+            is lock: 
+          </div> 
+          <div class = "col-sm-9">
+            <%= @api_payment.is_lock %>
+          </div> 
+        </div>
+      </div>
+    <% else %>
+      <%= simple_form_for :api_payment, url: create_api_payment_path, method: :post do |f| %>
+        <div class="form-group text-center">
+          <%= f.button :submit, t('.create_key'), :class => "btn button-primary" %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="payment_history">
+    <h4 class="history_title"><%= t('.payment_history') %></h1>
+    <table>
+      
+    </table>
+  </div>
+</div>
+
+
+

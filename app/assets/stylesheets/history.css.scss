@@ -1,0 +1,144 @@
+.history-pages{
+  font-size: 12px;
+  .title{
+    padding: 20px 0;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .nav-history{
+    display: inline-block;
+    border-bottom: 2px solid #c6c2c2;
+    li{
+      font-size: 13px;
+      float: none;
+      display: inline-block;
+      a{
+        margin-bottom: -2px;
+      }
+      i{
+        margin-right: 10px;
+      }
+    }
+    .active{
+      a{
+        background: transparent;
+        border-radius: 0;
+        border-bottom: 2px solid #b46700;
+        color: #b46700;
+      }
+    }
+  }
+  .history-transaction{
+    min-height: 500px;
+    background: white;
+    margin-top: 20px;
+  }
+  table{
+    background: #f2f2f2;
+    margin-bottom: 0px;
+    tbody{
+      > tr:nth-of-type(odd) {
+        background-color: white;
+        td:first-child{
+          min-width: 110px;
+        }
+      }
+    } 
+    thead th{
+      text-align: center;
+      line-height: 35px;
+      white-space: nowrap;
+    }
+  }
+  .empty_history{
+    padding: 15px 0;
+  }
+
+  .customize_table {
+    min-width: 300px;
+    overflow: hidden;
+    th {
+      display: none; 
+    }
+    tbody tr:last-child{
+      td{
+        border-bottom: 1px solid #dddddd;
+      }
+    }
+    td {
+      display: block; 
+      text-align: left;
+      &:before {
+        content: attr(data-th)": "; 
+        font-weight: bold;
+        display: inline-block;
+        color: #044988;
+      }
+    }
+    .empty{
+      th {
+        display: table-cell; 
+      }
+    }
+  }
+ 
+ 
+  @media screen and (min-width: 300px)
+  {
+    .table-responsive table tbody tr td{
+      white-space: pre-wrap;
+      &:last-child{
+        border-right: 1px solid #dddddd;
+      }
+      &:first-child {
+        border-left: 1px solid #dddddd;
+      }
+    }
+  }
+
+  @media screen and (min-width: 375px) {
+    .title{
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 576px) { 
+    .customize_table{
+      th, td {
+        display: table-cell;
+        padding: 1em; 
+      }
+      td:before{
+        display: none;
+      } 
+    }
+    .title{
+      font-size: 20px;
+    }
+    .nav-history li{
+      font-size: 15px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    font-size: 13px;
+    .nav-history li{
+      font-size: 16px;
+    }
+  }
+
+  @media (min-width: 992px) { 
+    font-size: 14px;
+    .title{
+      font-size: 22px;
+    }
+    .nav-history li{
+      font-size: 17px;
+    }
+  }
+}
+
+#signup_history{
+  margin-top: 0px;
+}
+

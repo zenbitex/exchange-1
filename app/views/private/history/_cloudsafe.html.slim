@@ -1,0 +1,12 @@
+tr
+  td = cloudsafe.tradecode
+  td = cloudsafe.amount
+  td = cloudsafe.price
+  td = cloudsafe.currency.upcase
+  - if cloudsafe.status_id == 0
+  	td = t('.wait')
+  - elsif cloudsafe.status_id == 1
+  	td = t('.done')
+  - elsif cloudsafe.status_id == 2
+  	td = t('.cancel')
+  td = cloudsafe.created_at

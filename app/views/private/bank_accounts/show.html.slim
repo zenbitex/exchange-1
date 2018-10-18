@@ -1,0 +1,21 @@
+.show-bank-account
+	h3 = t(".title")
+	table.table
+		tbody
+			tr
+				td = t(".bank_name")
+				td = @bank_account.bank_name
+			tr
+				td = t(".bank_branch")
+				td = @bank_account.bank_branch
+			tr
+				td = t(".account_type")
+				td = @bank_account.account_type.text
+			tr
+				td = t(".account_number")
+				td = @bank_account.account_number
+			tr
+				td = t(".owner")
+				td = @bank_account.owner
+	.text-right
+		= link_to t('.change'), edit_bank_account_path, class: 'btn btn-default'

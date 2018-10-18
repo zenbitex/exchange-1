@@ -1,0 +1,13 @@
+.two-factor-auth-container.form-default
+  .form-group.string.required
+    - if app_activated && sms_activated
+      - if is_admin?
+        = render partial: 'shared/two_factor_app'
+      - else
+        = render partial: 'shared/two_factor_app_and_sms'
+
+    - elsif app_activated
+      = render partial: 'shared/two_factor_app'
+
+    - elsif sms_activated
+      = render partial: 'shared/two_factor_sms'

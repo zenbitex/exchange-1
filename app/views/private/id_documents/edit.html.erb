@@ -1,0 +1,39 @@
+<%= render "shared/menu_settings" %>
+
+<div class="id-document-container form-default">
+  <input hidden="" id="assm_state" value=<%= @id_document.aasm_state %>/>
+  <input hidden="" id="foreign_state" value=<%= @id_document.foreign %>/>
+  <input hidden="" id="is_empty" data="<%= true if @id_document.errors.messages[:is_empty] %>"/>
+  <h1 class="title-header"><%= t('.header_personal_information') %></h1>
+  <h3 class="note-3">
+    <%= t('.nav_select_text') %>
+  </h3>
+  <div id="id_document_select">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a href="#user" data-toggle="tab" id="user_tab">
+          <%= t('.nav_header_user') %>
+        </a>
+      </li>
+      <li>
+        <a href="#staff" data-toggle="tab" id="staff_tab">
+          <%= t('.nav_header_staff') %>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+  <div class="tab-content">
+    <%= render "user" %>
+    <%= render "staff" %>
+  </div>
+  <div id="user_type" hidden="" data="<%= @id_document.user_type %>">
+  </div>
+  <div hidden="">
+    <% if id_document_image = Asset.where(:attachable_id => @id_document.id) %>
+      <% id_document_image.each do |asset| %>
+        <%= id_document_image(asset) %>
+      <% end %>
+    <% end -%>
+  </div>
+</div>

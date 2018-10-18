@@ -1,0 +1,36 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @bank.sn)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @bank, "出金申請日時"
+            span.fa.fa-copy data-clipboard-text='#{@bank.member.name}' = @bank.created_at
+          = item_for @bank, :aasm_state_text
+          hr.split
+			    = item_for t('.id'),@bank.member do
+					  span.fa.fa-copy data-clipboard-text='#{@bank.member.name}' = @bank.member.id
+          = item_for t('.name'),@bank.member do
+					  span.fa.fa-copy data-clipboard-text='#{@bank.member.name}' = @bank.member.name
+          = item_for t('.bank_name'), @bank.bank_account do
+            span.fa.fa-copy data-clipboard-text='#{@bank.bank_account}' = @bank.bank_account.bank_name
+          = item_for t('.bank_branch'), @bank.bank_account do
+            span.fa.fa-copy data-clipboard-text='#{@bank.bank_account}' = @bank.bank_account.bank_branch
+          = item_for t('.bank_type'), @bank.bank_account do
+            span.fa.fa-copy data-clipboard-text='#{@bank.bank_account}' = @bank.bank_account.account_type
+          = item_for t('.bank_account'), @bank.bank_account do
+            span.fa.fa-copy data-clipboard-text='#{@bank.bank_account}' = @bank.bank_account.account_number
+          hr.split
+          = item_for @bank, :amount do
+            span.fa.fa-copy data-clipboard-text='#{@bank.amount}' = @bank.amount
+          ul.list-inline.pull-right
+            - if @bank.may_success_jpy?
+              li
+                = link_to t('.withdraw_process'), url_for([:admin, @bank]), class: 'btn btn-success', method: 'PATCH', confirm: t('.succeed_confirm')
+            - if @bank.may_reject?
+              li
+                = link_to t('.withdraw_reject'), url_for([:admin, @bank]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+  .col-xs-12
+    /= render partial: 'shared/admin/member', locals: {member: @bank.member}
+    = render partial: 'shared/admin/account', locals: {account: @bank.account}

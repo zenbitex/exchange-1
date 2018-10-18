@@ -1,0 +1,211 @@
+$(document).ready(function() {
+	$('.exc-1').hide();
+	$('.exc-2').hide();
+	$('.error-exc .blank').hide();
+	$('.error-exc .than').hide();
+	$('.error-exc .is-int').hide();
+	$('.error-sl span').hide();
+	$('.amount-account-not-enough').hide();
+	$('.amount-admin-not-enough').hide();
+	//$('.total-error').hide();
+	$('.save-error').hide();
+	$('.success').hide();
+
+	var amount = $('#taocoin_exchange_amount').val();
+	var form_data, total, rate_exc, amount, currency;
+
+
+	$('#taocoin_exchange_currency').on('change', function() {
+		$('.amount-account-not-enough').hide();
+		$('.amount-admin-not-enough').hide();
+		//$('.total-error').hide();
+		$('.save-error').hide();
+		$('.success').hide();
+
+		if ($('#taocoin_exchange_currency').val() == 1) {
+			$('.exc-1').show();
+			$('.exc-2').hide();
+			$('.error-sl span').hide();
+			rate_exc = $('.exc-1 .col-xs-14').html();
+			
+		} else if($('#taocoin_exchange_currency').val() == 2) {
+			$('.exc-2').show();
+			$('.exc-1').hide();
+			$('.error-sl span').hide();
+			rate_exc = $('.exc-2 .col-xs-14').html();
+		} 
+
+		if($('#taocoin_exchange_currency').val() == 1) {
+			total =  Math.floor(rate_exc*amount);
+		}
+
+		if($('#taocoin_exchange_currency').val() == 2) {
+			total =  Math.floor(parseFloat(rate_exc)*amount*100000)/100000;
+		}
+		// amount = $('#taocoin_exchange_amount').val();
+		$('#taocoin_exchange_total').val(total);
+		
+	});
+	
+	$('#taocoin_exchange_amount').on('input', function(){
+		$('.amount-account-not-enough').hide();
+		$('.amount-admin-not-enough').hide();
+		//$('.total-error').hide();
+		$('.save-error').hide();
+		$('.error-exc .success').hide();
+		amount = $('#taocoin_exchange_amount').val();
+
+		if($('#taocoin_exchange_currency').val() == '') {
+			$('.error-sl span').show();
+			return 0;
+		}
+
+		if($('#taocoin_exchange_currency').val() == 1) {
+			total =  Math.floor(rate_exc*amount);
+		}
+
+		if($('#taocoin_exchange_currency').val() == 2) {
+			total =  Math.floor(parseFloat(rate_exc)*amount*100000)/100000;
+		}
+		
+		$('#taocoin_exchange_total').val(total);
+	});
+
+	function isInteger(value) {
+	    return /^\+?(0|[1-9]\d*)$/.test(value);
+	}
+
+	$('.btn-tao-exchange').click(function(event){
+		event.preventDefault();
+		$('.amount-account-not-enough').hide();
+		$('.amount-admin-not-enough').hide();
+		//$('.total-error').hide();
+		$('.save-error').hide();
+		$('.success').hide();
+		
+
+		currency = $('#taocoin_exchange_currency').val();
+		
+		if( amount == '') {
+			$('.error-exc .blank').show();
+			$('.error-exc .than').hide();
+
+			if(currency == '') {
+				$('.error-sl span').show();
+				return 0 ;
+			} else {
+				$('.error-sl span').hide();
+			}
+			return 0;
+		} else if(amount < 150) {
+			$('.error-exc .blank').hide();
+			$('.error-exc .than').show();
+			if(currency == '') {
+				$('.error-sl span').show();
+				return 0 ;
+			} else {
+				$('.error-sl span').hide();
+				return true;
+			}
+			return 0;
+		} else {
+			if(currency == '') {
+				$('.error-sl span').show();
+				return 0 ;
+			} else {
+				$('.error-sl span').hide();
+				$('.error-exc .blank').hide();
+				$('.error-exc .than').hide();
+			}
+		}
+
+		$('.error-exc .blank').hide();
+		$('.error-exc .than').hide();
+		$('.error-sl span').hide();
+
+		if (isInteger(amount) == false) { 
+			$('.error-exc .is-int').show();
+			return 0 ;
+		} 
+
+		$('.error-exc .is-int').hide();
+
+		$('.form-exc-details').addClass('select');
+		if (currency == 1){
+			$('.curency-detail').html("JPY");
+		}
+		else if (currency == 2){
+			$('.curency-detail').html("BTC");
+		}
+	    $('.amount-detail').html(amount);
+	    $('.total-detail').html(total);
+
+    form_data = {
+			'currency': currency,
+			'amount': amount,
+			'total': total,
+		}
+
+		$('.form-exc-details').show();
+
+	}); 
+
+	$('.send-exchange').click(function(event){
+		event.preventDefault();
+		excute_exchange(form_data);
+		return true;
+	});
+
+	$('.cancel-exchange').click(function(event){
+		event.preventDefault();
+		$('.form-exc-details').removeClass('select');
+		$('#taocoin_exchange_amount').val('');
+		$('#taocoin_exchange_total').val('');
+		$('.curency-detail').html('');
+        $('.amount-detail').html('');
+        $('.total-detail').html('');
+        $('#taocoin_exchange_currency').val('');
+        return false;
+	});
+
+
+	function excute_exchange(data){
+      $.ajax({
+        url: '/taocoin_exchange/create',
+        type: 'POST',
+        dataType: 'json',
+        data: {data_text: data},
+        beforeSend: function() {
+            $('.form-exc-details').hide();
+        },
+        success: function(response) {
+        	window.location = "/funds";
+          if(response){
+              //$('#new_taocoin_exchange').hide();
+           //    if (response.status == 200) {
+		        	// 	$('.success').show();
+		        	// 	//return 0;
+		        	// }
+		        	$('.success').show();
+
+          }
+        },
+
+        error: function (error) {
+        	if (error.status == 301) {
+        		$('.amount-account-not-enough').show();
+        		return 0;
+        	}
+        	if (error.status == 302) {
+        		$('.amount-admin-not-enough').show();
+        		return 0;
+        	}
+        	if (error.status == 300) {
+        		$('.save-error').show();
+        		return 0;
+        	}
+        }
+     });    
+  }
+
+});

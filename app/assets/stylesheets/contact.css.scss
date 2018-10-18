@@ -1,0 +1,121 @@
+.contact_screen{
+
+  .contact-use{
+    text-align: left;
+    color: black;
+    padding: 20px 20px 30px;
+    background: white;
+    max-width: 1000px;
+    margin: 50px auto;
+    h1{
+      padding-top: 10px;
+      margin-bottom: 10px;    
+    }
+    .form-control{
+      background: rgba(247, 252, 243, 0.2);
+    }
+    .form-error{
+      display: none;
+      padding-top: 5px;
+    }
+    textarea{
+      height: 150px;
+    }
+    .contact_input{
+      padding-top: 10px;
+      max-width: 650px;
+      margin: auto;
+    }
+    .color-star{
+      color: red;
+    }
+  }
+  .confirm-contact{
+    display: none;
+    .content_form{
+      max-width: 650px;
+      margin: auto;
+    }
+    .content_confirm{
+      border: 1px solid rgba(119, 70, 94, 0.26);
+      margin-bottom: 20px;
+      .row{
+        > div{
+          padding: 10px;
+          margin: 0 15px;
+          word-wrap: break-word;
+        }
+        .col-sm-4{
+          font-weight: bold;
+          padding-bottom: 2px;
+          &:after{
+            content: ":";
+          }
+        }
+        .col-sm-8{
+          padding-top: 0;
+          border-bottom: 1px solid rgba(119, 70, 94, 0.26);
+        }
+        &:last-child .col-sm-8{
+          border: none;
+        }
+      }
+    }
+    .btn{
+      width: 100px;
+      min-width: auto;
+      line-height: 18px;
+      font-size: 16px;
+      height: 40px;
+      margin-top: 0px;
+    }
+  }
+
+  @media screen and (min-width: 451px) {
+    #create_form{
+      padding: 0px;
+    }
+  }
+
+  @media screen and (min-width: 550px) {
+    .confirm-contact{
+      .content_confirm{
+        .row{
+          border-bottom: 1px solid rgba(119, 70, 94, 0.26);
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          > div{
+            float: left;
+            margin: 0;
+            padding: 0 0 0 10px;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+          }
+          .col-sm-4{
+            width: 25%;
+            &:after{
+              content: "";
+            }
+          } 
+          .col-sm-8{
+            width: 75%;
+            border-left: 1px solid rgba(119, 70, 94, 0.26);
+            border-bottom: none;
+          }
+          &:last-child{
+            border: none;
+            .col-sm-8{
+              border-left: 1px solid rgba(119, 70, 94, 0.26);
+            }
+          }
+        }
+      }
+      .btn{
+        width: 150px;
+      }
+    }
+  }
+}

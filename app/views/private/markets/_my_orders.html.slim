@@ -1,0 +1,51 @@
+javascript:
+  function triggerPopup(e){
+    e.stopPropagation();    
+    $(e.target).trigger('order::show_popupmenu', {clientX: $(e.target).position().left, clientY: $(e.target).position().top});
+  }
+
+#my_orders_wrapper
+  div#myorder_menu_wrapper ng-controller="MyOrdersController"
+    ul#myorder_menu.dropdown-menu.noselect
+      li ng-click='removeOrder()'
+        a
+          i.fa.fa-trash
+          span = t('.clear_this')
+
+      li ng-click=('removeOrders("' + clear_market_order_bids_path(market_id: current_market.id) + '", "' + t(".confirm_clear_bids") + '")')
+        a
+          i.fa.fa-trash
+          span = t('.clear_bids')
+
+      li ng-click=('removeOrders("' + clear_market_order_asks_path(market_id: current_market.id) + '", "' + t(".confirm_clear_asks") + '")')
+        a
+          i.fa.fa-trash
+          span = t('.clear_asks')
+
+      li ng-click=('removeOrders("' + clear_market_orders_path(market_id: current_market.id) + '", "' + t(".confirm_clear_asks") + '")')
+        a
+          i.fa.fa-trash
+          span = t('.clear_all')
+
+  / div == "#{t('.open_menu_hint')}"
+
+  div#my_orders
+    div.information
+      div.empty-row = t('.no_open_orders')    
+    table.table.mk_tb
+      thead: tr
+        th.text-center
+        th.text-center
+          span #{t('.time_order')}
+        th.text-center
+          span #{t('.state')}
+        th.text-center
+          span #{t('.price_order')}
+        th.text-center
+          span #{t('.volumn')}
+        th.text-center
+          span #{t('.total')}
+        th.text-center
+          span #{t('.number_remain')}
+
+      tbody

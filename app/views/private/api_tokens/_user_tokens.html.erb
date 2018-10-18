@@ -1,0 +1,75 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h2 class="panel-title">
+      <%=  guide_panel_title %> 
+    </h2>
+  </div>
+  <div class="panel-body">
+    <div class="top_content">
+      <h3>
+        <%=  guide_title %> 
+      </h3>
+      <div class="text-ignore">
+        <%=  guide_intro %> 
+      </div>
+      <p>
+        <%= link_to t('.http'), '/documents/api_v2', target: '_blank' %>
+      </p>
+      <p>
+        <%= link_to t('.websocket'), '/documents/websocket_api', target: '_blank' %>
+      </p>
+    </div>
+    <%= link_to t('.create'), new_api_token_path, class: 'btn button-primary' %>
+  </div>
+  <div class="content_table">
+    <% if @tokens.empty? %>
+      <div class="row title">
+        <div class="col-sm-4"><%= APIToken.human_attribute_name('label') %></div>
+        <div class="col-sm-6"><%= APIToken.human_attribute_name('access_key') %></div>
+        <div class="col-sm-2"></div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12"> 
+          <%= t('.no_token') %>
+        </div>
+      </div>
+    <% else %>
+      <div class="hidden-xs">
+        <div class="row title">
+          <div class="col-sm-3"><%= APIToken.human_attribute_name('label') %></div>
+          <div class="col-sm-6"><%= APIToken.human_attribute_name('access_key') %></div>
+          <div class="col-sm-3"></div>
+        </div>
+      </div>
+      <% @tokens.each do |token| %> 
+        <div class="hidden-xs">
+          <div class="row">
+            <div class="col-sm-3"><%= token.label %></div>
+            <div class="col-sm-6"><%= token.access_key %></div>
+            <div class="col-sm-3">
+              <%= link_to t('.edit'), edit_api_token_path(token) %> 
+              <%= link_to t('.destroy'), api_token_path(token), method: :delete, data: {confirm: t('.destroy-confirm')} %> 
+            </div>
+          </div>
+        </div>
+
+        <div class="visible-xs">
+          <div class="row">
+            <div class="col-sm-12">
+              <div class="col-sm-3"><%= APIToken.human_attribute_name('label') %></div>
+              <div class="col-sm-9"><%= token.label %></div>
+            </div>
+            <div class="col-sm-12">
+              <div class="col-sm-3"><%= APIToken.human_attribute_name('access_key') %></div>
+              <div class="col-sm-9"><%= token.access_key %></div>
+            </div>
+            <div class="col-sm-12 tool">
+              <%= link_to t('.edit'), edit_api_token_path(token) %> 
+              <%= link_to t('.destroy'), api_token_path(token), method: :delete, data: {confirm: t('.destroy-confirm')} %> 
+            </div>
+          </div>
+        </div>
+      <% end -%>
+    <% end -%>
+  </div>
+</div>

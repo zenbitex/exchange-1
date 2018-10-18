@@ -1,0 +1,104 @@
+
+<div class="bitirade-footer">
+  <section class="section-top container">
+    <div class="pull-left">
+      <div class="support">
+        <h3 class="title">
+          <%= t(".support") %>
+        </h3>
+        <ul>
+          <li>
+            <a href="<%= contacts_path %>">
+              <%= t(".contact") %>
+            </a>
+          </li>
+         <!--  <li>
+            <a href="#">
+              FAQ
+            </a>
+          </li> -->
+        </ul>
+        <div class="block">
+          <!-- <div class="contact">
+            <img src="/footer/icon_contact.png">
+            <span>050-2018-2325</span>
+          </div> -->
+          <div class="time-open">
+            <img src="/footer/icon_time_open.png">
+            <span>10:00 - 19:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pull-right">
+      <div class="about">
+        <h3 class="title">
+          <%= t(".about") %>
+        </h3>
+        <ul>
+          <li>
+            <a href="#">
+              <%= t(".fee") %>
+            </a>
+          </li>
+         <!--  <li>
+            <a href="/faqs_create_account">
+              <%= t(".account_class") %>
+            </a>
+          </li> -->
+          <li>
+            <!-- <a href="/term_of_use">
+              <%= t(".term_of_use") %>
+            </a> -->
+          </li>
+        </ul>
+      </div>
+      <div class="company">
+        <h3 class="title">
+          <%= t(".company") %>
+        </h3>
+        <ul>
+          <li>
+            <a href="/company_about">
+              <%= t(".about_company") %>
+            </a>
+          </li>
+          <!-- <li>
+            <a href="#" target="blank_">
+              <%= t(".jobs") %>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="blank_">
+              <%= t(".blog") %>
+            </a>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="language_footer">
+    <ul >
+      <li <%= "class=active" if language_current.to_s == "ja" %> >
+        <a data='ja' class="select_language">
+          日本語
+        </a>
+      </li>
+      <li <%= "class=active" if language_current.to_s == "en" %> >
+        <a data='en' class="select_language">
+          English
+        </a>
+      </li>
+      <li <%= "class=active" if language_current.to_s == "zh-CN" %> >
+        <a data='zh-CN' class="select_language">
+          中文（简体）
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <section class="copy-right">
+    © Copyright 2017 Bit-Trading Solo Co., LDT, Inc. All Rights Reserved
+  </section>
+</div>

@@ -1,0 +1,37 @@
+<div class="contact-use">
+    <h1 class="color-primary"> Contacts details</h1>
+    <div class="">
+    <table class="table">
+      <tbody>
+        <tr>
+          <td width="30%">Name</td>
+          <td>
+            <p class="td-text name"> <%= @contact_us.name %></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="30%"> Email</td>
+          <td>
+            <p class="td-text from_email"> <%= @contact_us.from_email %></p>
+        </tr>
+        <tr>
+          <td width="30%">Category</td>
+          <td>
+            <p class="td-text category"><%= @contact_us.category%></p>
+          </td>
+        </tr>
+        <tr>
+          <td width="30%">Message</td>
+          <td >
+            <p class="td-textarea message"><%= @contact_us.message %></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="text-left">
+      <a href="/admin/contacts_us"><button type="button" class="btn btn-primary">Back</button></a>
+    </div>
+  </div>
+
+</div>

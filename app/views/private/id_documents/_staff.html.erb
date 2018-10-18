@@ -1,0 +1,208 @@
+<div class="tab-pane " id="staff">
+  <%= simple_form_for @id_document, :html => {class: 'form-id-document-staff'} do |f| %>
+    <div class="id-document-company part">
+      <h2 class="title-header">
+        <%= t('private.id_documents.edit.title.company_infor') %>
+      </h2>
+      <%= f.input :company_name, label: t('private.id_documents.edit.company_name').html_safe, hint: false, placeholder: t('private.id_documents.edit.placeholder.company_name').html_safe, required: @id_document.company_name.nil? %>
+      <%= f.input :company_country, as: :country, selected: @id_document.company_country.nil? ? @country : @id_document.company_country, label: t('private.id_documents.edit.country').html_safe, required: @id_document.company_country.nil? %>
+      <%= f.input :company_zipcode, label: t('private.id_documents.edit.zipcode').html_safe, placeholder: t('private.id_documents.edit.placeholder.zipcode').html_safe, required: @id_document.company_zipcode.nil? %>
+      <%= f.input :company_city, label: t('private.id_documents.edit.city').html_safe, placeholder: t('private.id_documents.edit.placeholder.city').html_safe, required: @id_document.company_city.nil? %>
+      <%= f.input :company_address, label: t('private.id_documents.edit.address').html_safe, placeholder: t('private.id_documents.edit.placeholder.address').html_safe, required: @id_document.company_address.nil? %>
+      <%= f.input :company_job_content, label: t('private.id_documents.edit.company_job_content').html_safe, placeholder: t('private.id_documents.edit.placeholder.company_job_content').html_safe, required: @id_document.company_job_content.nil? %>
+      <%= f.input :company_trade_purpose, label: t('private.id_documents.edit.trade_purpose').html_safe, prompt: t('actions.select'), required: @id_document.company_trade_purpose.nil? %>
+    </div>
+
+    <div class="id-document-manager part">
+      <h2 class="title-header">
+        <%= t('private.id_documents.edit.title.manager_infor') %>
+      </h2>
+      <%=f.input :manager_name, label: t('private.id_documents.edit.name').html_safe, hint: false, placeholder: t('private.id_documents.edit.placeholder.name').html_safe, required: @id_document.manager_name.nil? %>
+      <%= f.input :manager_position, label: t('private.id_documents.edit.position').html_safe, required: @id_document.manager_position.nil? %>
+      <div class="birth_date">
+        <%= f.input :manager_birth_date, as: :date, label: t('private.id_documents.edit.birth_date').html_safe, start_year: 1900, end_year: Date.today.year - 12, order: [:year, :month, :day], required: @id_document.manager_position.nil? %>
+      </div>
+      <%= f.input :manager_country, as: :country, selected: @id_document.manager_country.nil? ? @country : @id_document.manager_country, label: t('private.id_documents.edit.country').html_safe, required: @id_document.manager_country.nil? %>
+      <%= f.input :manager_zipcode, label: t('private.id_documents.edit.zipcode').html_safe, placeholder: t('private.id_documents.edit.placeholder.zipcode').html_safe, required: @id_document.manager_zipcode.nil? %>
+      <%= f.input :manager_city, label: t('private.id_documents.edit.city').html_safe, placeholder: t('private.id_documents.edit.placeholder.city').html_safe, required: @id_document.manager_city.nil? %>
+      <%= f.input :manager_address, label: t('private.id_documents.edit.address').html_safe, placeholder: t('private.id_documents.edit.placeholder.address').html_safe, required: @id_document.manager_address.nil? %>
+      <div class="input-foreign radio">
+        <div class="form-label foreign-label">
+          <%= t('private.id_documents.edit.foreign').html_safe %>
+          <div class="input-foreign radio manager_foreign">
+            <%= f.input :manager_foreign, wrapper: :block_checkbox_and_radio, as: :radio_buttons, label: false, required: @id_document.manager_foreign.nil? %>
+          </div>
+        </div>
+      </div>
+      <div class="input-foreign radio">
+        <div class="form-label foreign-label">
+          <%= t('private.id_documents.edit.manager_role').html_safe %>
+          <div class="input-foreign radio manager_role">
+            <%= f.input :manager_role, wrapper: :block_checkbox_and_radio, as: :radio_buttons, label: false, required: @id_document.manager_foreign.nil?  %>
+          </div>
+        </div>
+      </div>
+    </div>    
+
+    <div class="id-document-represent part">
+      <h2 class="title-header">
+        <%= t('private.id_documents.edit.title.represent_infor') %>
+      </h2>
+      <%= f.input :type_role, label: t('private.id_documents.edit.type_role').html_safe, prompt: t('actions.select'), required: @id_document.type_role.nil? %>
+      <%=f.input :name, label: t('private.id_documents.edit.name').html_safe, hint: false, placeholder: t('private.id_documents.edit.placeholder.name').html_safe, required: @id_document.name.nil? %>
+      <%= f.input :position, label: t('private.id_documents.edit.position').html_safe, required: @id_document.position.nil? %>
+      <div class="birth_date">
+        <%= f.input :birth_date, as: :date, label: t('private.id_documents.edit.birth_date').html_safe, start_year: 1900, end_year: Date.today.year - 12, order: [:year, :month, :day], required: @id_document.position.nil? %>
+      </div>
+      <%= f.input :country, as: :country, selected: @id_document.country.nil? ? @country : @id_document.country, label: t('private.id_documents.edit.country').html_safe, required: @id_document.country.nil? %>
+      <%= f.input :zipcode, label: t('private.id_documents.edit.zipcode').html_safe, placeholder: t('private.id_documents.edit.placeholder.zipcode').html_safe, required: @id_document.zipcode.nil? %>
+      <%= f.input :city, label: t('private.id_documents.edit.city').html_safe, placeholder: t('private.id_documents.edit.placeholder.city').html_safe, required: @id_document.city.nil? %>
+      <%= f.input :address, label: t('private.id_documents.edit.address').html_safe, placeholder: t('private.id_documents.edit.placeholder.address').html_safe, required: @id_document.address.nil? %>
+      <div class="input-foreign radio">
+        <div class="form-label foreign-label">
+          <%= t('private.id_documents.edit.foreign').html_safe %>
+          <div class="input-foreign foreign">
+            <%= f.input :foreign, wrapper: :block_checkbox_and_radio, as: :radio_buttons, label: false %>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="id-document-upload part">
+      <h2 class="title-header">
+        <%= t('private.id_documents.edit.title.document_infor') %>
+      </h2>
+      <div class="col-xs-12">
+        <%= f.simple_fields_for :id_document_infor, @id_document.id_document_infor || @id_document.build_id_document_infor do |p| %>
+          <div class="document_infor">
+            <div class="document_part">
+              <%= t('private.id_documents.edit.title.document_certificate') %>
+            </div>
+            <div class="input-document-photo">
+              <div class="group-img-upload col-xs-6">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_1') %>
+                </h3>
+                <div class="gallery file1">
+                  <%= p.input :file1, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+
+              <div class="group-img-upload col-xs-6">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_2') %>
+                </h3>
+                <div class="gallery file2">
+                  <%= p.input :file2, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <%= f.simple_fields_for :id_document_file, @id_document.id_document_file || @id_document.build_id_document_file do |p| %>
+          <div class="document_file">
+            <div class="document_part">
+              <%= t('private.id_documents.edit.title.document_represent') %>
+            </div>
+            <div class="id_document_type">
+              <%=  f.input :id_document_type, :input_html => {:class => 'select-upload-type'}, label: t('private.id_documents.edit.id_document_type').html_safe, prompt: t('actions.select'), required: @id_document.id_document_type.nil? %>
+            </div>
+            <div class="clearfix"></div>
+            <div class="input-document-photo">
+              <div class="group-img-upload col-xs-6 image_upload1">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_1') %>
+                </h3>
+                <div class="gallery file1">
+                  <%= p.input :file1, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+              <div class="group-img-upload col-xs-6 image_upload2">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_2') %>
+                </h3>
+                <div class="gallery file2">
+                  <%= p.input :file2, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+
+              <div class="group-img-upload col-xs-6 image_upload3">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_3') %>
+                </h3>
+                <div class="gallery file3">
+                  <%= p.input :file3, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+
+              <div class="group-img-upload col-xs-6 image_upload4">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_4') %>
+                </h3>
+                <div class="gallery file4">
+                  <%= p.input :file4, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <%= f.simple_fields_for :id_document_trade, @id_document.id_document_trade || @id_document.build_id_document_trade do |p| %>
+          <div class="document_trade">
+            <div class="document_part">
+              <%= t('private.id_documents.edit.title.document_trade') %>
+            </div>
+            <div class="document_explain">
+              <%= t('private.id_documents.edit.document_explain').html_safe %>
+            </div>
+            <div class="input-document-photo">
+              <div class="group-img-upload">
+                <h3>
+                  <%= t('private.id_documents.edit.label.staff_upload_1') %>
+                </h3>
+                <div class="gallery file1">
+                  <%= p.input :file1, as: :file, label: false %>
+                </div>
+                <span class="btn-file-upload">
+                  <%= t('private.id_documents.edit.label.upload') %>
+                </span>
+              </div>
+            </div>
+            <div class="document_note">
+              <%= t('private.id_documents.edit.document_note').html_safe %>
+            </div>
+          </div>
+        <% end %>
+
+
+      </div>
+    </div>
+    <% unless @id_document.aasm_state == 'verified' && @id_document.foreign %>
+      <div class = "id-document-button">
+        <div hidden="">
+          <%= f.input :user_type, :input_html => {value: 1} %>
+        </div>
+        <%= f.button :submit, value: t('private.id_documents.edit.submit'), :class => 'button-primary bt-staff-action need_foreign document_submit'%>
+      </div>
+    <% end %>
+  <% end %>
+</div>

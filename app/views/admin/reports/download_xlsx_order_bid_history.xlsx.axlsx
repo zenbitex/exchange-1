@@ -1,0 +1,13 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "order_bid_history") do |sheet|
+    sheet.add_row ["取引", "メンバー ID", "価格", "数量", "元数量", "状況", "ロックされた", "元ロックされた", "受信された資金", "作成"]
+    @orders.each do |order|
+      sheet.add_row [order.currency.upcase, order.member_id, order.price.to_f, order.volume.to_f, order.origin_volume.to_f, order.state.upcase, order.locked.to_f, order.origin_locked.to_f, order.funds_received.to_f, order.created_at]
+    end
+  end
+end

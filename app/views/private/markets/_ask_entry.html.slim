@@ -1,0 +1,30 @@
+#ask_entry
+  = form_for [market, order], :remote => true do |f|
+    = f.hidden_field :ord_type
+
+    .input-group.price        
+      label.input-group-addon.text-center = t('.price')
+      = f.text_field :price, step: 'any' ,type: 'number', class: 'form-control', "ng-model" => "sellingPrice"
+      span.hint-currency = t(market.bid['currency'], scope: 'market.currency')
+
+    .input-group.amount
+      label.input-group-addon.text-center = t('.amount')
+      = f.text_field :origin_volume, step: 'any' ,type: 'number', class: 'form-control', "ng-readonly" =>"sellingPrice==''", "ng-model" => "sellingAmount"
+      span.hint-currency = t(market.ask['currency'], scope: 'market.currency')
+
+    .input-group.total
+      label.input-group-addon.text-center = t('.total')
+      = f.text_field :total, class: 'form-control', "ng-model" => "sellingTotal", "readonly" =>"readonly"
+      span.hint-currency = t(market.bid['currency'], scope: 'market.currency')
+
+    .input-group.fee
+      label.input-group-addon.text-center = t('.fee')
+      = f.text_field :fee, class: 'form-control', "readonly" =>"readonly", value: "{{sellingFee}}"
+      span.hint-currency = t(market.bid['currency'], scope: 'market.currency')
+    button.btn.btn-danger.sell_order ng-click="confirmOrder()" = t('.sell', currency: t(market.ask['currency'], scope: 'market.currency'))
+    span.order_status.label.label-info.status-info.hide-out
+    span.order_status.label.label-success.status-success.hide-out
+    span.order_status.label.label-danger.status-danger.hide-out
+      / = render partial: 'balance', locals: {currency: t(market.ask['currency'], scope: 'market.currency')}
+      
+        / div.col-md-6.col-sm-6.col-xs-6.button-holder

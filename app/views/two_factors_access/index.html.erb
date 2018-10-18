@@ -1,0 +1,12 @@
+<div class="container col-md-6 col-md-offset-3" id="two_factors_access">
+  <h3><%= t('.title') %></h3>
+  <div class="">
+    <p id="help_text"> <%= t('.help_text')%> </p>
+    <%= form_tag(two_factors_access_verify_path, method: :post) do %>
+      <div class="form-group">
+        <input type="text" class="form-control" name="otp" placeholder="<%= t('.code_placeholder') %>">
+      </div>
+      <button type="submit" class="btn btn-primary"><%= t('.send') %></button>
+    <% end %>
+  </div>
+</div>

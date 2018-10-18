@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+  @all_market.each do |market|
+    wb.add_worksheet(name: "#{market.id.upcase}") do |sheet|
+      sheet.add_row ["取引", "売りメンバーID", "買いメンバーID", "価格", "数量", "作成"]
+      @trades.where(currency: market.code).each do |trade|
+        sheet.add_row [trade.currency.upcase, trade.ask_member_id, trade.bid_member_id, trade.price.to_f, trade.volume.to_f, trade.created_at]
+      end
+    end
+  end
+end

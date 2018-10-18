@@ -1,0 +1,176 @@
+$(document).ready(function(){
+
+  function calc_money(){
+    amount = parseInt($("#money").val());
+    if (isNaN(amount))
+      money = 0;
+    else
+      money = amount / parseFloat($("#price_buy").text());
+
+    if (isNaN(money))
+      money = 0;
+
+    fixed = get_fixed();
+    $("#amount").text(money.toFixed(fixed));
+  }
+
+  var update_price = function(data) {
+    price_setup = $("ul li.active").attr("data-setup");
+    if (price_setup == "true")
+      return;
+    price = data["buy_order_price"];
+    if (price == undefined)
+      price = $("ul li.active").attr("data-price");
+    fee = parseFloat($("#buy_coin_form").attr("data-fee"));
+    price = parseFloat(price) / (1 - fee);
+    $("#price_buy").text(price.toFixed(2));
+    calc_money();
+  };
+
+  function init_price(){
+    $("#price_buy").text($("ul li.active").attr("data-price"));
+    $("#coin_type").text($("ul li.active").attr("data-type"));
+    calc_money();
+  }
+
+  function get_fixed(){
+    return parseInt($("ul li.active").attr("data-fixed"));
+  }
+
+  init_price();
+
+  var market_channel = window.pusher.subscribe("kraken-price");
+  market_channel.bind('btcjpy', update_price);
+
+  $(".list_coin ul li").click(function(){
+    $(this).parent().find(".active").removeClass("active");
+    $(this).addClass("active");
+    market = $(this).attr("data");
+    market_channel.unbind("btcjpy", update_price);
+    market_channel.unbind("xrpjpy", update_price);
+    market_channel = window.pusher.subscribe("kraken-price");
+    market_channel.bind(market, update_price);
+    init_price();
+  });
+
+  $("#money").on('change paste keyup click', function(){
+    calc_money();
+  });
+
+  var locale = I18n.locale
+  if (locale == "zh-CN")
+    locale = "zh"
+  var handler = StripeCheckout.configure({
+    key: $("#btn_buy_coin").attr("data"),
+    locale: locale,
+    currency: "JPY",
+    token: function(token, args){
+      $("#loading").show();
+      $("#buy_coin_form input").prop('disabled', true);
+      $.ajax({
+        type: "POST",
+        url: $('#buy_coin_form').attr("action"),
+        data: {
+          id_buy: id_buy,
+          token_id: token.id,
+        },
+        success: function(data)
+        {
+          $("#buy_coin_form input").prop('disabled', false);
+          $("#loading").hide();
+          if (data["status"] != undefined)
+          {
+            message(".alert-danger", data["message"]);
+          }
+          else
+          {
+            var time = new Date(data.time);
+            var month = time.getMonth()+1;
+            var day = time.getDate();
+            var date = time.getFullYear() +  "-" + (month < 10 ? '0' : '') + month + "-" + (day < 10 ? '0' : '') + day;
+            var hour = time.toString().match(/\d{2}:\d{2}:\d{2}/)[0];
+            time  = date + " " + hour;
+            fixed = get_fixed();
+
+            var rows = $("<tr>");
+            rows.attr("style", "background: rgba(153, 51, 51, 0.17);");
+            rows.append("<td>" + data.coin +  "</td>");
+            rows.append("<td>" + data.price +  "</td>");
+            rows.append("<td>" + data.amount.toFixed(fixed) +  "</td>");
+            rows.append("<td>" + time +  "</td>");
+            $("#history tbody tr:first").before(rows);
+            message(".alert-success", data["message"]);
+            $("#money").val("");
+            calc_money();
+          }
+        },
+        error: function (request, status, error)
+        {
+          $("#buy_coin_form input").prop('disabled', false);
+          $("#loading").hide();
+          message(".alert-danger", error);
+        }
+      });
+    }
+  });
+  $("#btn_buy_coin").click(function(e){
+    $(".alert").hide();
+    min_amount = 1000;
+    money = parseInt($("#money").val());
+    if (money >= min_amount)
+    {
+      $("#loading").show();
+      $("#buy_coin_form input").prop('disabled', true);
+      $.ajax({
+        type: "POST",
+        url: "/buy_coin/save_data",
+        data: {
+          money: money,
+          market: $("ul li.active").attr("data"),
+        },
+        success: function(data)
+        {
+          $("#buy_coin_form input").prop('disabled', false);
+          $("#loading").hide();
+          if (data["id_buy"] != undefined)
+          {
+            id_buy = data["id_buy"];
+            handler.open({
+              name: I18n.t("buy_coin.action_title"),
+              image: $("li.active img").attr("src"),
+              amount: money,
+            });
+          }
+          else {
+            message(".alert-danger", data["message"]);
+          }
+
+        },
+        error: function (request, status, error)
+        {
+          $("#buy_coin_form input").prop('disabled', false);
+          $("#loading").hide();
+          message(".alert-danger", error);
+        }
+      });
+
+    }
+    else {
+      message(".alert-danger", I18n.t("buy_coin.min_amount", {min_amount: min_amount}));
+    }
+    e.preventDefault();
+  });
+
+  function message(tag_name, message)
+  {
+    message_tag =  $(tag_name);
+    message_tag.text(message);
+    window.scrollTo(0, 0);
+    message_tag.fadeIn();
+  }
+
+  window.addEventListener('popstate', function() {
+    handler.close();
+  });
+
+});

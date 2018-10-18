@@ -1,0 +1,670 @@
+<%= render 'shared/header' %>
+<%= javascript_include_tag "faq" %>
+<div class="faq_content">
+  <!-- slide 71-72 -->
+  <div class="faq_container">
+    <div class="input-group search_text">
+      <input type="text" class="form-control" id="s_text" placeholder="キーワードを入力してください">
+      <span class="input-group-btn">
+        <button class="btn btn-search btn-primary" type="button" id="faq-search"><i class="fa fa-search fa-fw"></i> 検索</button>
+      </span>
+    </div>
+    <div class="faq-content faq-content1 faq-category faq-search-text">
+      <h2 class="faq-cat-title">カテゴリーから探す</h2>
+      <div class="clearfix"></div>
+      <div class="list_item"> 
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-bit-trade"><b>ビットステーションの使い方</b></a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-security"><b>セキュリティ</b></a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-coin-list"><b>コインリスト</b></a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-chart"><b>チャート </b></a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-fee-list"><b>手数料一覧</b></a>
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <a href="#cat-setting"><b>その他</b></a>
+        </div>
+        <!-- <div class="col-sm-6 col-xs-12">
+          <a href="#cat-acount"><b>アカウントクラスについて</b></a>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="faq-content faq-content2 faq-search-text">
+      <h2 class="faq-cat-title">よくある質問</h2>
+      <div class="faq-cat-2list faq-category">
+        <div class="list_item">
+          <div class="col-sm-6 col-xs-12">
+            <div class="item bg-cat-1">
+              <div class="item-title">
+                <a href="<%= faqs_create_account_path %>"><b>アカウントの作成について</b></a>
+              </div>
+              <ul>
+                <li>アカウントの作成方法 </li>
+                <li>アカウントの作成に費用はかかりますか</li>
+                <li>日本国外から口座を作成したい</li>
+              </ul>
+            </div>
+
+            <div class="item bg-cat-2">
+              <div class="item-title">
+                <a href="<%= faqs_pass_login_path %>"><b>ログイン・パスワード関連事項について</b></a>
+              </div>
+              <ul>
+                <li>パスワードを間違って入力し、口座が凍結された </li>
+                <li>パスワードを変更したい</li>
+                <li>パスワードを忘れた</li>
+                <li>ログインできない</li>
+                <li>SMSが届かない</li>
+              </ul>
+            </div>
+
+            <div class="item bg-cat-2">
+              <div class="item-title">
+                <a href="<%= faqs_recived_send_coin_path %>"><b>仮想通貨の受取・送付について</b></a>
+              </div>
+              <ul>
+                <li>ビットステーションで購入した仮想通貨を外部に送付したい </li>
+                <li>仮想通貨を外部から受け取りたい</li>
+                <li>手続きをしたのに、通貨の送付が反映されない</li>
+                <li>送付を取り消したい</li>
+                <li>受取・預入が反映されない </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-xs-12">
+            <div class="item bg-cat-1">
+              <div class="item-title">
+                <a href="<%= faqs_change_info_register_path %>"><b>ご登録情報の変更について</b></a>
+              </div>
+              <ul>
+                <li>メールアドレスを変更したい </li>
+                <li>銀行口座情報を変更したい</li>
+              </ul>
+            </div>
+
+            <div class="item bg-cat-3">
+              <div class="item-title">
+                <a href="<%= faqs_deposit_withdraw_coin_path %>"><b>入出金について</b></a>
+              </div>
+              <ul>
+                <li>入出金方法を教えてください</li>
+                <li>入金が反映されません</li>
+                <li>登録銀行と異なる銀行から入金できますか</li>
+                <li>第三者の名義で入金できますか</li>
+                <li>出金額に制限はありますか</li>
+                <li>登録した銀行口座とは別の銀行に出金できますか</li>
+                <li>入金が反映されるのにどれくらい時間がかかりますか </li>
+                <li>日本円を引き出したい</li>
+              </ul>
+            </div>
+
+            <div class="item bg-cat-1">
+              <div class="item-title">
+                <a href="<%= faqs_trades_path %>"><b>仮想通貨の取引について </b></a>
+              </div>
+              <ul>
+                <li>仮想通貨を購入したい</li>
+                <li>購入したのに残高に示されない</li>
+                <li>売買時間内なのに販売価格が正常に表示されない</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contacts">
+        <a href="/contacts">問題が解決しない場合はこちら</a>
+      </div>
+    </div>
+  </div>
+  <!-- !slide 71-72 -->
+
+  <!-- slide 73 -->
+  <div class="faq_type_coin faq-search-text" id="cat-coin-list">
+    <h2 class="faq-cat-title">コインリスト</h2>
+    <div class="faq-typecoin-content">
+      <h4 class="title">ビットステーションで使える仮想通貨は以下の通りです。</h4>
+      <ul>
+        <li>
+          <div class="col-sm-4 col-xs-12">
+            <div class="coin">
+              <img src="/icon-btc.png" alt="bitcoin">
+              <h3>ビットコイン </h3>
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-12">
+            <p>ビットコインはサトシ・ナカモトという人物によって投稿された論文に基づき、2009年に運用が開始された。<br>
+            ビットコインを表す表記は<strong>BTC、XBT</strong>がある。
+            </p>
+          </div>
+        </li>
+
+        <li>
+          <div class="col-sm-4 col-xs-12">
+            <div class="coin">
+              <img src="/icon-xrp.png" alt="xrp">
+              <h3>リップル</h3>
+            </div>
+          </div>
+          <div class="col-sm-8 col-xs-12">
+            <p>リップルの仕組みは、ビットコインの欠点を補った暗号通貨として注目されています。<br>
+            リップルがビットコインと大きく違う点は、単一のオンライン通貨ではないということです。<br>
+            1リップルの料金を支払えば、ドル、ユーロ、円、さらにビットコインでさえ、金銭を送受できる。<br>
+            1,000億リップルが流通した後は、新たな<strong> Ripple </strong>は作られない。
+            </p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+  <!-- !slide 73 -->
+
+  <!-- slide 74 -->
+  <div class="faq_fee_list faq-search-text" id="cat-fee-list">
+    <h2 class="faq-cat-title">手数料一覧</h2>
+    <div class="faq-free-list-content">
+      <h4 class="title">手数料は予告なく変更になることがあります。</h4>
+      <div class="col-xs-12">
+        <ul>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>アカウント作成手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>無料</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>アカウント維持手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>無料</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>アービトラージご利用手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>無料</span>
+            </div>
+          </li>
+        </ul>
+        <!-- <ul>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>ビットコイン売買手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>％</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>タオコイン売買手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>％</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>イーサリアム売買手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>％</span>
+            </div>
+          </li>
+        </ul> -->
+        <ul>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>ビットコイン送付手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>0.0005 BTC</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>タオコイン送付手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>0.0005 BTC</span>
+            </div>
+          </li>
+          <!-- <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>イーサリアム送付手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>％</span>
+            </div>
+          </li> -->
+        </ul>
+        <!-- <ul>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>クイック入金手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>000円（税込）/ 件</span>
+            </div>
+          </li>
+          <li>
+            <div class="col-md-5 col-sm-6 col-xs-12">
+              <span>コインを使う 出品手数料</span>
+            </div>
+            <div class="col-md-7 col-sm-6 col-xs-12">
+              <span>&nbsp;</span>
+            </div>
+          </li>
+        </ul> -->
+      </div>
+    </div>
+  </div>
+  <!-- !slide 74 -->
+  <!-- slide 75-new -->
+  <div class="faq_fee_list faq-search-text" id="cat-fee-list2">
+    <h2 class="faq-cat-title">売買手数料</h2>
+    <div class="faq-free-list-content">
+      <div class="col-xs-12">
+        <div class="table-responsive table-number-buyer">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="th-1">取引量</th>
+                <th class="th-2">ビットコイン</th>
+                <th class="th-3">タオコイン</th>
+                <th class="th-4">リップル</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-1">10 万円未満</td>
+                <!-- <td class="td-2">0.15％</td> -->
+                <td class="td-3" colspan="3">0.15％</td>
+                <!-- <td class="td-4">0.15％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">10 万円～20 万円未満</td>
+                <!-- <td class="td-2">0.14％</td> -->
+                <td class="td-3" colspan="3">0.14％</td>
+                <!-- <td class="td-4">0.14％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">20 万円～50 万円未満</td>
+                <!-- <td class="td-2">0.13％</td> -->
+                <td class="td-3" colspan="3">0.13％</td>
+                <!-- <td class="td-4">0.13％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">50 万円～100 万円未満</td>
+                <!-- <td class="td-2">0.12％</td> -->
+                <td class="td-3" colspan="3">0.12％</td>
+                <!-- <td class="td-4">0.12％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">100 万円～200 万円未満</td>
+                <!-- <td class="td-2">0.11％</td> -->
+                <td class="td-3" colspan="3">0.11％</td>
+                <!-- <td class="td-4">0.11％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">200 万円～500 万円未満</td>
+                <!-- <td class="td-2">0.10％</td> -->
+                <td class="td-3" colspan="3">0.10％</td>
+                <!-- <td class="td-4">0.10％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">500 万円～1,000 万円未満</td>
+                <!-- <td class="td-2">0.09％</td> -->
+                <td class="td-3" colspan="3">0.09％</td>
+                <!-- <td class="td-4">0.09％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">1,000 万円～2,000 万円未満</td>
+                <!-- <td class="td-2">0.07％</td> -->
+                <td class="td-3" colspan="3">0.07％</td>
+                <!-- <td class="td-4">0.07％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">2,000 万円～5,000 万円未満</td>
+                <!-- <td class="td-2">0.05％</td> -->
+                <td class="td-3" colspan="3">0.05％</td>
+                <!-- <td class="td-4">0.05％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">5,000 万円～1 億円未満</td>
+                <!-- <td class="td-2">0.03％</td> -->
+                <td class="td-3" colspan="3">0.03％</td>
+                <!-- <td class="td-4">0.03％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">1 億円～5 億円未満</td>
+                <!-- <td class="td-2">0.02％</td> -->
+                <td class="td-3" colspan="3">0.02％</td>
+                <!-- <td class="td-4">0.02％</td> -->
+              </tr>
+              <tr>
+                <td class="td-1">5 億円以上</td>
+                <!-- <td class="td-2">0.01％</td> -->
+                <td class="td-3" colspan="3">0.01％</td>
+                <!-- <td class="td-4">0.01％</td> -->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- !slide 75-new -->
+
+  <!-- slide 76-new -->
+<!--   <div class="faq-free-list faq-search-text" id="cat-free-list">
+    <h2 class="faq-cat-title">日本円出金手数料</h2>
+    <div class="faq-free-list-content">
+      <div class="col-xs-12">
+        <div class="table-responsive table-withdrawal-fee">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th class="th-1">&nbsp;</th>
+                <th class="th-2">出金額が 3 万円未満 の場合</th>
+                <th class="th-3">出金額が 3 万円以上 の場合</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="td-1">◯◯銀行の場合</td>
+                <td class="td-2">000円（税込）</td>
+                <td class="td-3">000円（税込）</td>
+              </tr>
+              <tr>
+                <td class="td-1">◯◯銀行の場合</td>
+                <td class="td-2">000円（税込）</td>
+                <td class="td-3">000円（税込）</td>
+              </tr>
+              <tr>
+                <td class="td-1">◯◯銀行の場合</td>
+                <td class="td-2">000円（税込）</td>
+                <td class="td-3">000円（税込）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!-- !slide 76-new -->
+
+  <!-- slide 75-78 -->
+  <div class="faq-chart faq-search-text" id="cat-chart">
+    <h2 class="faq-cat-title">チャート</h2>
+    <div class="faq-chart-content faq-chart-1">
+      <div class="text-left">
+        <a href="#" class="part_title">チャートの種類</a>
+      </div>
+      <div class="clearfix"></div>
+      <div class="chart-container">
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="chart-title">止め足</h3>
+          <img src="/chart-left.jpg" alt="chart">
+        </div>
+        <div class="col-sm-6 col-xs-12">
+          <h3 class="chart-title">ローソク足</h3>
+          <img src="/chart-right.jpg" alt="chart">
+        </div>
+        <div class="space"></div>
+        <div class="clearfix"></div>
+        <div class="col-xs-12 text-left"><p class="chart-text">ビットステーションで使えるチャートは止め足とローソク足の2種類です。</p></div>
+      </div>
+    </div>
+    <div class="space"></div>
+    <div class="faq-chart-content faq-chart-2">
+      <h3 class="chart-title">止め足とは</h3>
+      <p class="chart-text">最終値（日足ではその日の終値、週足では週末の終値）を書き、それをつないだ単なる折れ線グラフです。</p>
+    </div>
+    <div class="space"></div>
+    <div class="faq-chart-content faq-chart-3">
+      <h3 class="chart-title">ローソク足とは</h3>
+      <p class="chart-text">仮想通貨の動きをローソクに似た図形で表していることからこう呼ばれています。<br>
+      ローソク足1本で1日の始値、終値、高値、安値がわかります。</p>
+
+      <div class="col-xs-12 faq-chart-3-1">
+        <img src="/chart-2.png" alt="chart">
+      </div>
+
+      <div class="col-sm-6 col-xs-12 faq-chart-3-2">
+        <img src="/chart-3.png" alt="chart">
+      </div>
+      <div class="col-sm-6 col-xs-12 faq-chart-3-3">
+        <ul>
+          <li><span>いくらで始まり</span><strong style="color: #ff2600;">『始値』</strong></li>
+          <li><span>いくらで終わったか</span><strong style="color: #0433ff;">『終値』</strong></li>
+          <li><span>一番上がった価値は</span><strong style="color: #ff2f92;">『高値』</strong></li>
+          <li><span>一番下がった価値は</span><strong style="color: #0096ff;">『安値』</strong></li>
+        </ul>
+      </div>
+
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="faq-chart-content faq-chart-4">
+      <div class="text-left">
+        <a href="#" class="part_title">いつ買い時か</a>
+      </div>
+
+      <h3 class="chart-title">移動平均線を見る</h3>
+      <p class="chart-text">移動平均線は、一定期間の終値の平均値をつなぎ合わせて線にしたものです。下図の青い線が移動平均線です。</p>
+
+      <div class="col-xs-12">
+        <img src="/chart-4.jpg" alt="chart">
+      </div>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="faq-chart-content faq-chart-5">
+      <h3 class="chart-title">買い注文</h3>
+      <p class="chart-text">買う値段を指定して注文できます。</p>
+      <p class="text-red chart-text">130,000円の指値で１BTCの買い注文の予約できる。</p>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="faq-chart-content faq-chart-6">
+      <h3 class="chart-title">売り注文</h3>
+      <p class="chart-text text-green">140,000円の指値で１BTCの売り注文の予約できる。</p>
+      <p class="chart-text">仮想通貨の価値が自分が指定した金額にならない限りは約定（取引が成立すること）しません。</p>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="faq-chart-content faq-chart-7">
+      <h3 class="chart-title">全国の相場の動きを見る</h3>
+      <p class="chart-text">このように全国の仮想通貨の平均を見て決めることもできます。<br>
+      サイトはこちら → http://coinmarketcap.com/#JPY</p>
+      <div class="col-xs-12">
+        <img src="/chart-5.jpg" alt="chart">
+      </div>
+    </div>
+  </div>
+
+  <!-- slide 95 -->
+
+  <div name="other" class="faq-qa faq-search-text faq-infor">
+    <h2 class="faq-cat-title" id="cat-setting">その他</h2>
+
+    <div class="accordion">
+      <!--  -->
+      <div class="accordion-toggle">
+        <strong class="icon-q">Q</strong>
+        <h3>APIのアクセス回数に制限はありますか？</h3>
+      </div>
+      <div class="accordion-content">
+        <strong class="icon-a">A</strong>
+        <div class="answer-content">
+          <ul>
+            <li>
+            APIのアクセス回数に制限は設けておりません。
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--  -->
+      <div class="faq-line"></div>
+      <!--  -->
+      <!--  -->
+      <div class="accordion-toggle" id="other_2">
+        <strong class="icon-q">Q</strong>
+        <h3>外国の重要な公人とは何ですか</h3>
+      </div>
+      <div class="accordion-content">
+        <strong class="icon-a">A</strong>
+        <div class="answer-content">
+          <ul>
+            <li>
+              外国の重要な公人とは、外国の重要な公的地位にある者、外国の重要な公的地位にあった者、これらの家族及び実質的支配者がこれらのものである法人を指します。<br>
+              2016年10月施行の「犯罪収益移転防止法」改正に伴い「外国の重要な公人」との取引に際し、厳格な取引時確認が必要になります。外国の重要な公的地位にある者は以下のとおりです。<br>
+              （1）国家元首<br>
+              （2）我が国における内閣総理大臣その他の国務大臣及び副大臣に相当する職<br>
+              （3）我が国における衆議院議長、衆議院副議長、参議院議長又は参議院副議長に相当する職<br>
+              （4）我が国における最高裁判所の裁判官に相当する職<br>
+              （5）我が国における特命全権大使・特命全権公使、特派大使、政府代表又は全権委員に相当する職<br>
+              （6）我が国における統合幕僚長、統合幕僚副長、陸上幕僚長、陸上幕僚副長、海上幕僚長、海上幕僚副長、航空幕僚長又は航空幕僚副長に相当する職<br>
+              （7）中央銀行の役員<br>
+              （8）予算について国会の議決を経、又は承認を受けなければならない法人の役員<br>
+              上記に掲げる方の家族（配偶者（事実婚を含みます）、父母、子、兄弟姉妹、並びにこれらの者以外の配偶者の父母および子）<br>
+              （下記の図参照）
+              <div class="img-faq">
+                <%= image_tag('/faq-img.png') %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="faq-line"></div>
+      <div class="accordion-toggle" id="manager">
+        <strong class="icon-q">Q</strong>
+        <h3>実質的支配者に関しまして</h3>
+      </div>
+      <div class="accordion-content">
+        <strong class="icon-a">A</strong>
+        <div class="answer-content">
+          <ul>
+            <li>
+              （１）議決権の25％超を直接又は間接的に保有する自然人<br>
+              （２）出資、融資、取引その他の関係を通じて貴社の事業活動に支配的な影響力を有する自然人<br>
+              （３）貴社の代表者 <br>
+              <br>
+              実質的支配者は、(1)議決権の25%超を直接又は間接的に保有する自然人であり、 (1)がいなければ(2)  出資、融資、取引その他の関係を通じて貴社の事業活動に支配的な影響力を有する自然人であり、(2)がいなければ(3) 貴社の代表者と判断します。<br>
+               <br>
+              また、(1)の場合については、当該自然人が貴社の事業経営を実質的に支配する意思若しくは能力を有していないことが明らかな場合<br>
+              又は他の自然人が議決権の総数の50％を超える議決権を直接若しくは間接的に有しているときは、実質的支配者に該当しません。<br>
+               <br>
+              下記チャートをご参考ください。<br>
+
+              <br>
+              ステップ１
+              <div class="img-faq">
+                <%= image_tag('/manager_step1.png') %>
+              </div>
+              ステップ2
+              <div class="img-faq">
+                <%= image_tag('/manager_step2.png') %>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="faq-line"></div>
+      <!--  -->
+    </div>
+  </div>
+
+  <!-- about account level -->
+  <!-- <div class="faq-acount faq-search-text" id="cat-acount">
+    <h2 class="faq-cat-title">アカウントクラスについて</h2>
+    <div class="faq-account-content">
+      <ul class="nav nav-tabs">
+        <li class="active" id="tab1"><a data-toggle="tab" href="#tab-content1">レベル1</a></li>
+        <li id="tab2"><a data-toggle="tab" href="#tab-content2">レベル2</a></li>
+        <li id="tab3"><a data-toggle="tab" href="#tab-content3">レベル3</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="tab-content1" class="tab-pane fade in active">
+          <h2 class="text-big">レベル1 条件</h2>
+          <p class="text-small"><b>メールアドレス承認済み</b></p>
+          <br>
+          <h2 class="text-big">レベル1でできること</h2>
+          <div class="list_item"><i class="fa fa-check" aria-hidden="true"></i><p>他ウォレットからコイン預入</p></div>
+          <div class="list_item"><i class="fa fa-check" aria-hidden="true"></i><p>アービトラージポット預入・引出</p></div>
+        </div>
+        <div id="tab-content2" class="tab-pane fade">
+          <h2 class="text-big">レベル2 条件</h2>
+          <p class="text-small">メールアドレス承認済み<br><b>氏名<br>携帯電話認証<br>誕生日<br>住所<br>本人確認書類アップロード<br>職業<br>重要な公人の確認<br>取引目的</b></p>
+          <br>
+          <h2 class="text-big">レベル2でできること</h2>
+          <div class="list_item"><i class="fa fa-check" aria-hidden="true"></i><p>他ウォレットからコイン預入・送付</p></div>
+          <div class="list_item"><i class="fa fa-check" aria-hidden="true"></i><p>アービトラージポット預入・引出</p></div>
+          <div class="list_item">  <i class="fa fa-check" aria-hidden="true"></i><p><b>1日5万円以内の取引</b></p></div>
+          <div class="list_item">  <i class="fa fa-check" aria-hidden="true"></i><p><b>月25万円以内の取引</b></p></div>
+        </div>
+        <div id="tab-content3" class="tab-pane fade">
+          <h2 class="text-big">レベル3条件</h2>
+          <p class="text-small">
+            メールアドレス承認済み<br>
+            氏名<br>
+            誕生日<br>
+            住所<br>
+            本人確認書類アップロード<br>
+            携帯電話認証<br>
+            職業<br>
+            重要な公人の確認<br>
+            取引目的<br>
+            <b>書留の受け取り</b></p>
+          <br>
+          <h2 class="text-big">レベル3でできること</h2>
+          <div class="list_item">  <i class="fa fa-check" aria-hidden="true"></i><p>他ウォレットからコイン預入・送付</p></div>
+          <div class="list_item">  <i class="fa fa-check" aria-hidden="true"></i><p>アービトラージポット預入・引出</p></div>
+          <div class="list_item">  <i class="fa fa-check" aria-hidden="true"></i><p><b>取引量制限無し</b></p></div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+<script>
+
+$('#faq-search').click(function(){
+  $('.faq-search-text').hide();
+  var txt = $('#s_text').val();
+  $('.faq-search-text:contains("'+txt+'")').show();
+
+});
+
+$(function() {
+  $('#s_text').change(function() {
+    $('.faq-search-text').hide();
+    var txt = $('#s_text').val();
+    $('.faq-search-text:contains("'+txt+'")').show();
+  });
+});
+
+</script>
+
+</div>

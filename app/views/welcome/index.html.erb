@@ -1,0 +1,227 @@
+<%= render 'shared/header' %>
+<div class="home-page">
+  <!-- head -->
+  <div class="bititrade-head">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="left">
+            <h1>
+              <%= t(".exchange_name") %>
+            </h2>
+            <h3>
+              <%= t(".public_content") %>
+            </h3>
+            <a href="/markets/xrpbtc">
+              <span class="title"><%= t(".price") %></span>
+              <span class="price">
+                <%= @price.to_s + t(".yen") %>
+              </span>
+            </a>
+            <div class="buy-coin">
+              <div class="buy-coin-item">
+                <span><%= t(".price_bid") %></span>
+                <a href="/markets/btcjpyt"><%= @sell %></a>
+              </div>
+              <div class="buy-coin-item">
+                <span><%= t(".price_ask") %></span>
+                <a  href="/markets/btcjpyt"><%= @buy %></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="right">
+            <%= simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f| %>
+              <div class="form-title">Login</div>
+              <div class="form-content">
+
+                <div class="form-group">
+                  <figure><%= image_tag "/home-page/icon-mail.png" %></figure>
+                  <%= f.input :email, :input_html => {:name => 'auth_key', :autofocus => 'true', :id => "email"},
+                    label: false, placeholder: t('simple_form.placeholders.session.email') %>
+                </div>
+
+                <div class="form-group">
+                  <figure><%= image_tag "/home-page/icon-lock.png" %></figure>
+                  <%= f.input :password, :as => 'password', :input_html => {:name => 'password', :id => 'password'},
+                    label: false, placeholder: t('simple_form.placeholders.session.password'), hint: false %>
+                </div>
+
+                <div class="form-group">
+                  <figure><%= image_tag "/home-page/icon_google_auth.png" %></figure>
+                  <%= f.input :two_factor, :as => 'password', :input_html => {:name => 'two_factor', type: 'text'},
+                    label: false, placeholder: t('simple_form.placeholders.session.label_two_factor'), hint: false %>
+                </div>
+
+              <!--   <div class="social">
+                  <a href=""><img src="/home-page/icon-facebook.png" class="icon-facebook"></a>
+                  <a href=""><img src="/home-page/icon-google.png" class="icon-google"></a>
+                </div> -->
+
+                <div class="text-center">
+                  <%= f.button :submit, t('header.signin'), :class => "btn btn-default btn-login" %>
+                </div>
+              </div>
+            <% end %>
+            <img src="/home-page/bg-exchange-rate.png" class="bg-right">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content container">
+    <!-- facebook/twitter -->
+    <div class="bititrade-facebook-twitter">
+      <div class="title_part">
+          <figure><img src="/home-page/icon-ft.png"></figure>
+          <span>Facebook - Twitter</span>
+      </div>
+      <div class="facebook-twitter">
+        <div class="col-sm-6">
+          <div class="content_form facebook">
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="content_form twitter">
+            <a class="twitter-timeline" data-height="490" data-lang= "<%= @twitter_language %>" href="https://twitter.com/teamkubera" style="background: none;">
+              Tweets by Bit-itrades
+            </a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8">
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- new -->
+    <div class="bititrade-news">
+      <div class="wrap">
+        <div class="title_part">
+          <figure><img src="/home-page/icon-news.png"></figure>
+          <span>
+            <%= t(".news") %>
+          </span>
+        </div>
+
+        <div class="list-post">
+          <div class="post-item">
+            <div class="date">2017-12-29</div>
+            <div class="des">
+              <a href = "https://prtimes.jp/main/html/rd/p/000000003.000029685.html" target = "_blank">
+                Kuberaコインがアーケードゲームと提携
+              </a>
+            </div>
+          </div>
+          <div class="post-item">
+            <div class="date">2017-11-02</div>
+            <div class="des">
+              <a href = "https://www.vientianemai.net/khao/16451.html" target = "_blank">
+                クベーラコインをラオス政府が国の宝くじなどのプラットフォームとして導入・開発していくことなりました。
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-11-02</div>
+            <div class="des">
+              <a href = "https://news.bitcoin.com/pr-kubera-innovative-gaming-platform-powered-by-ethereum-blockchain/" target = "_blank">
+                Kubera – Innovative Gaming Platform Powered by Ethereum Blockchain.
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-11-01</div>
+            <div class="des">
+              <a href = "http://bitcoinist.com/kubera-innovative-gaming-platform-powered-by-ethereum-blockchain/" target = "_blank">
+                Kubera is an innovative platform for playing online games with a cryptocurrency.
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-10-24</div>
+            <div class="des">
+              <a href = "https://www.worldcoinindex.com/ico/calendar/kubera" target = "_blank">
+                Innovative p2p gaming platform powered by Ethereum blockchain.
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-10-23</div>
+            <div class="des">
+              <a href = "https://icobench.com/ico/kubera" target = "_blank">
+                Kubera: Gaming platform.
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-10-21</div>
+            <div class="des">
+              <a href = "https://www.cryptocoinsnews.com/kubera-innovative-gaming-platform-powered-ethereum-blockchain/" target = "_blank">
+                Kubera: innovative gaming platform powered by Ethereum blockchain.
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-10-19</div>
+            <div class="des">
+              <a href = "http://www.icocountdown.com/#illdy_project-820" target = "_blank">
+                Kubera ICO countdown
+              </a>
+            </div>
+          </div>
+
+          <div class="post-item">
+            <div class="date">2017-10-18</div>
+            <div class="des">
+              <a href = "https://www.coinspeaker.com/ico/project/kubera/" target = "_blank">
+                Kubera overview
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= stylesheet_link_tag("owl-carousel") %>
+<script type="text/javascript">
+    /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
+    var facebook_width = $(".facebook").width();
+    // var iframe = '<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fkuberaplatform&tabs=timeline&width=0&height=0&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="0" height="0" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+
+    var iframe = '<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FKubera-coin-2053199494966673%2F&tabs=timeline&width=' + facebook_width + '&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="' + facebook_width + '" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>';
+    $(".facebook").append(iframe);
+</script>
+
+<!-- config slide small -->
+<script type="text/javascript">
+$('.owl-carousel').owlCarousel({
+    margin:10,
+    loop:true,
+    autoWidth:true,
+    autoHeight:true,
+    autoPlay : 3000,
+    autoplayHoverPause: true,
+    items: 1,
+    responsive: true,
+    itemsDesktop: [1199,1],
+    itemsDesktopSmall: [979,1],
+    itemsTablet: [768,1],
+    itemsMobile: [479,1]
+});
+</script>

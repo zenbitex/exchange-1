@@ -1,0 +1,10 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      span = "Edit coin trade price ##{@price.id}"
+    .panel-body
+      .col-xs-6
+        = simple_form_for @price, :url => admin_coin_trade_price_path do |f|
+          = f.input :price
+          = f.input :fee
+          = f.button :submit, value: "Submit", :class => 'btn btn-primary'

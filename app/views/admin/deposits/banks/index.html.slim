@@ -1,0 +1,9 @@
+.btn-created-deposit style="margin-bottom: 20px;"
+  = link_to t(".deposit"), new_admin_deposits_bank_path, class: 'btn btn-default'
+.panel.panel-primary
+  .panel-heading = t('.available')
+  = render partial: 'table', locals: {banks: @available_banks}
+
+.panel.panel-success
+  .panel-heading = t('.oneday')
+  = render partial: 'table', locals: {banks: @allday_banks}

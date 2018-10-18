@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "price_report") do |sheet|
+    sheet.add_row ["日付", "btcjpy", "taojpy","taobtc", "taoxrp", "xrpjpy", "xrpbtc", "bchjpy", "bchbtc", "bchxrp"]
+    @prices.each do |price|
+      sheet.add_row [price[:date], price[:price][0], price[:price][1], price[:price][2], price[:price][3], price[:price][4], price[:price][5], price[:price][6], price[:price][7], price[:price][8]]
+    end
+  end
+
+end

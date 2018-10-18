@@ -1,0 +1,369 @@
+@import "bourbon";
+
+@import 'vars/bootstrap';
+
+@import 'bootstrap';
+@import 'bootstrap-switch.min';
+
+@import "bootstrap-wysihtml5/core-b3";
+@import "bootstrap-wysihtml5/wysiwyg-color";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import 'vars/basic';
+@import 'vars/custom';
+@import 'pages/main';
+
+.show_qrcode {
+  display: none;
+}
+
+.admin-wrapper{
+  #search_term{
+    width: 100%;
+  }
+  text{
+    display: block;
+    text-align: center;
+  }
+}
+
+.panel-body-summary {
+  padding-top: 38px;
+  padding-bottom: 38px;
+}
+
+.show {
+  display: block !important;
+}
+
+.dl-horizontal dt {
+  width: 120px;
+}
+
+.dl-horizontal dd {
+  margin-left: 140px;
+}
+
+body { padding-top: 80px; }
+
+b.caret {
+  margin-left: 5px;
+}
+
+.panel {
+  .table td:first-of-type, .table th:first-of-type {
+    padding-left: 14px;
+  }
+}
+
+span.detail-item, span.detail-section { display: block; }
+
+span.detail-item {
+  & > i.fa {
+    &:before {
+      margin-right: 5px;
+    }
+  }
+
+  margin-bottom: 4px;
+  text-align: right;
+
+  &:before {
+    float: left;
+    width: 100px;
+    margin-right: 10px;
+    text-align: right;
+    content: attr(data-title)':';
+    font-size: 16px !important;
+  }
+}
+
+span.detail-section {
+  margin-left: 10px;
+  margin-top: 30px;
+
+  &:first-of-type {
+    margin-top: 0px;
+  }
+
+  & + hr {
+    margin-top: 2px;
+    border-top: 1px solid rgb(50, 150, 146);
+    border-bottom: 1px solid rgb(206, 207, 186);
+  }
+}
+
+.editor {
+  min-height: 300px;
+  padding: 15px;
+  margin-top: 8px;
+  border: 1px solid lightgray;
+}
+
+.panel-footer {
+  ul.pagination {
+    margin: 0px;
+  }
+}
+
+.unread {
+  background: #f2f2f2;
+}
+
+[data-title] {
+  &:before {
+    .text-ignore {
+      font-size: 16px;
+      display: block;
+      content: attr(data-title);
+    }
+  }
+}
+
+.nav > li > a {
+  padding: 15px 8px !important;
+}
+
+.table-options {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+
+.field {
+  margin-bottom: 10px;
+}
+
+.list-trade {
+  h2 {
+    text-align: center;
+  }
+
+  #trade_status_id {
+    margin: 20px 0;
+    height: 40px;
+
+  }
+
+  .table {
+    width: 100%;
+    border: 1px solid #ccc;
+    .tr-header {
+      background: #364450;
+      span {
+        color: #fff;
+      }
+    }
+
+    .tr-header {
+      line-height: 3;
+    }
+
+    .t-content {
+      line-height: 2;
+    }
+
+    .tr-header,
+    .t-content,
+    .btc-content {
+      width: 100%;
+      display: inline-block;
+      //height: 40px;
+
+
+      span {
+        display: inline-block;
+        text-align: center;
+
+        &.id {
+          width: 30px;
+        }
+        &.email {
+          width: 230px;
+        }
+        &.tradecode {
+          width: 120px;
+        }
+        &.address {
+          width: 300px;
+        }
+        &.amount {
+          width: 60px;
+        }
+        &.rate {
+          width: 130px;
+        }
+        &.price {
+          width: 100px;
+        }
+        &.change {
+          width: 100px;
+        }
+
+
+      }
+    }
+
+    .tr-body {
+      height: 30px;
+      &:nth-child(odd) {
+        background: #cacaca;
+      }
+    }
+
+    tr {
+      td {
+        text-align: center;
+      }
+    }
+  }
+
+
+}
+
+.trade-detail {
+  padding: 20px 60px;
+  position: relative;
+  h2 {
+    text-align: center;
+  }
+
+  .btn-top {
+    position: absolute;
+      top: 41px;
+      right: 30px;
+  }
+
+  #qrcode {
+    position: absolute;
+      top: 102px;
+      right: 154px;
+  }
+}
+
+.notice {
+  color: red;
+}
+
+.on-flag {
+  background: gray;
+  color: #fff;
+  &.active {
+    background: blue !important;
+  }
+}
+
+.off-flag {
+  background: gray;
+  color: #fff;
+  &.active {
+    background: blue !important;
+  }
+}
+
+.admin-wrapper {
+  padding-top: 30px;
+  .menu-admin {
+    width: 15%;
+    display: block;
+    float: left;
+    margin-left: 10px;
+
+    .menu-admin-container {
+      width: 100%;
+
+      .navbar-nav {
+        li {
+          float: none;
+        }
+      }
+
+      .lang {
+        width: 100%;
+      }
+    }
+  }
+
+  .content-admin {
+    width: 83%;
+    float: right;
+    margin-right: 10px;
+    display: block;
+  }
+}
+
+.admin-id-document {
+  .level {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1400px) {
+  .admin-wrapper .menu-admin {
+      margin-left: 0;
+  }
+
+  .admin-wrapper .content-admin {
+    width: 82.5%;
+  }
+}
+
+#deposit_amount {
+	display:inline;
+}
+
+.admin-trades {
+  width: 100% !important;
+  .col-xs-10 {
+    input {
+      width: 48.7%;
+      display: inline-block;
+    }
+
+    .btn {
+      display: table;
+      width: auto;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.pretty th .current {
+  padding-right: 21px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url(/up_arrow.svg);
+}
+
+.pretty th .desc {
+  background-image: url(/down_arrow.svg);
+}
+
+.pretty th .no-sort {
+  background-image: url(/up-down-arrow.jpg);
+}
+
+.color-message {
+  color: red;
+}
+
+.btn-download-fee {
+  margin-top: 5px;
+}
+
+#statistic {
+  .bid {
+    color: #72be49;
+  }
+
+  .ask {
+    color: #fd7f7c;
+  }
+
+  .transaction {
+    color: #93461a;
+  }
+}

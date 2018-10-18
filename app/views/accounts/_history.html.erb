@@ -1,0 +1,39 @@
+<div id="history" class="col-xs-12">
+  <h2 class="title-header"><%= t('.header')%></h2>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>
+            <%= image_tag "/time.png", class: "time" %>
+            <%= t(".time") %>
+          </th>
+          <th>
+            <%= image_tag "/amount.png" %>
+            <%= t(".amount") %>
+          </th>
+          <th>
+            <%= image_tag "/reason.png" %>
+            <%= t(".reason") %>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <% account_versions.each do |account| %>
+          <tr>
+            <td>
+              <%= account.created_at %>
+            </td>
+            <td><%= account.amount.to_f %></td>
+            <td><%= account.reason.humanize %></td>
+          </tr>
+        <% end %>
+
+        <% if account_versions.blank? %>
+          <tr><td colspan="6" class="account-balance"><%= t(".blank")%></td></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class"text-center"><%= paginate @account_versions %></div>
+</div>

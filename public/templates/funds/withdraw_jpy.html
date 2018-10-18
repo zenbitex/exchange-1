@@ -1,0 +1,160 @@
+<div class="funds-right-content-green fund_jpy form-default">
+  <h2 class="funds-right-titlegreen">{{"funds.withdraw_jpy.title" | t}}</h2>
+  <div class="funds-right-contents">
+    <div class="withdraw_infor_general">
+      <div class="help-block">
+        <span>{{ "funds.withdraw_jpy.intro_item_1" | t }}</span>
+        <br>
+        <span>{{ "funds.withdraw_jpy.intro_item_2" | t }}</span>
+        <br>
+        <span class="color-fund" ng-bind-html='trans("funds.withdraw_jpy.intro_item_3", {})'></span>
+        <br>
+        <span class="color-fund" ng-bind-html='trans("funds.withdraw_jpy.intro_item_4", {})'></span>
+      </div>
+
+      <div class="text-center fee_table">
+        <div class="fee_withdraw">
+          <span>{{ "funds.withdraw_jpy.fee_name" | t }}</span>
+          <span>{{ "funds.withdraw_jpy.three_man_less" | t }}:  {{fee_list[0]}} {{ "funds.withdraw_jpy.yen" | t }}</span>
+          <span>{{ "funds.withdraw_jpy.three_man_greater" | t }}: {{fee_list[1]}} {{ "funds.withdraw_jpy.yen" | t }}</span>
+        </div>
+      </div>
+    </div>
+    <form id="jpy_withdraws" name="withdraw_form" class="form form-horizontal" ng-controller="WithdrawsController as withdrawsCtrl" ng-submit="withdrawsCtrl.createWithdraw(currency)">
+
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label class="optional control-label">{{"funds.withdraw_jpy.bank_account" | t}}</label>
+        </div>
+      </div>
+      <div ng-if="bank_account === null">
+        <div class="text-center">
+          <a href="/bank_accounts/new" class="button-primary text-center">{{"funds.withdraw_jpy.bank_account_register" | t}}</a>
+        </div>
+      </div>
+      <div ng-if="bank_account !== null">
+        <div class="text-center bank_infor" >
+          <table class="table table-jpy">
+            <tr>
+              <td>{{ "funds.withdraw_jpy.bank_name" | t }}</td>
+              <td>{{bank_account.bank_name}}</td>
+            </tr>
+            <tr>
+              <td>{{ "funds.withdraw_jpy.bank_branch" | t }}</td>
+              <td>{{bank_account.bank_branch}}</td>
+            </tr>
+            <tr>
+              <td>{{ "funds.withdraw_jpy.account_type" | t }}</td>
+              <td ng-if="bank_account.account_type == 'current_bank_account'">{{"bank_account.current_bank_account" | t}}</td>
+              <td ng-if="bank_account.account_type == 'ordinary_bank_account'">{{"bank_account.ordinary_bank_account" | t}}</td>
+            </tr>
+            <tr>
+              <td>{{ "funds.withdraw_jpy.account_number" | t }}</td>
+              <td>{{bank_account.account_number}}</td>
+            </tr>
+            <tr>
+              <td>{{ "funds.withdraw_jpy.owner" | t }}</td>
+              <td>{{bank_account.owner}}</td>
+            </tr>
+          </table>
+        </div>
+        <div class="text-center">
+          <a href="/bank_accounts/edit?back_page=/funds$/withdraws/jpy" class="button-primary text-center">{{"funds.withdraw_jpy.bank_account_edit" | t}}</a>
+        </div>
+      </div>
+
+      <div class="withdraw_infor">
+        <div class="form-group">
+          <div class="col-sm-6">
+            <label class="optional control-label">{{"funds.withdraw_jpy.balance" | t}}</label>
+          </div>
+          <div class="col-sm-12">
+            <p class="form-control-static"><span class="currency-balance" id="withdraw_balance">{{balance}}</span> JPY </p>
+          </div>
+        </div>
+
+        <div class="form-group required">
+          <div class="col-sm-6">
+            <label class="decimal required control-label" for="withdraw_sum">{{"funds.withdraw_jpy.withdraw_amount" | t}}</label>
+          </div>
+          <div class="col-sm-12">
+            <div class="input-group">
+              <input ng-change="parseInteger()" class="numeric decimal required form-control" id="withdraw_sum" min="100" name="withdraw[sum]" step="any"　value="0.0" ng-model="withdrawsCtrl.withdraw.sum" convert-mb-to-ascii>
+              <div class="input-group-btn">
+                <button ng-click="withdrawsCtrl.withdrawAll()" class="btn btn-info" id="withdraw_all_btn" type="button">
+                  {{"funds.withdraw_jpy.withdraw_all" | t}}
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-6">
+            <label>{{"funds.withdraw_jpy.fee" | t}}</label>
+          </div>
+          <div class="col-sm-12">
+            <p><span id="fee_val">{{fee}} </span>JPY</p>
+          </div>
+        </div>
+
+        <div class="form-group total">
+          <div class="col-sm-6">
+            <label>{{"funds.withdraw_jpy.total" | t}}</label>
+          </div>
+          <div class="col-sm-12">
+            <span id="total_withdraw">{{ count_sum() }}</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="col-sm-6">
+            <label> {{"funds.withdraw_jpy.remain" | t}}</label>
+          </div>
+          <div class="col-sm-12">
+            <p>
+              <span id="jpy_remain"> {{ count_remain() }} </span>
+            </p>
+          </div>
+        </div>
+        <ng-include src="'/templates/funds/_two_factor_auth.html'"></ng-include>
+
+        <div>
+          <div class="form-submit text-center">
+            <input  id="withdraw_submit" class="button-primary" data-loading-text="Creating..." name="commit" type="submit" value='{{ "jpy_submit" | t }}'>
+          </div>
+        </div>
+      </div>
+
+    </form>
+
+    <br>
+    <h2 class="panel-title">{{ "funds.withdraw_history.title" | t }}</h2>
+    <div class="table-responsive history_withdraw">
+      <table class="table withdraw-history" ng-controller="WithdrawHistoryController as wdCtrl">
+        <tr>
+          <th>{{ "funds.withdraw_history.number" | t }}</th>
+          <th>{{ "funds.withdraw_history.withdraw_time" | t }}</th>
+          <th>{{ "funds.withdraw_history.withdraw_account" | t }}</th>
+          <th>{{ "funds.withdraw_history.withdraw_amount" | t }}</th>
+          <th>{{ "funds.withdraw_history.fee" | t }}</th>
+          <th>{{ "funds.withdraw_history.state_and_action" | t }}</th>
+        </tr>
+        <tr ng-repeat="withdraw in wdCtrl.withdraws | orderBy:predicate">
+          <td>{{withdraw.id}}</td>
+          <td>{{withdraw.created_at | date:'yyyy-MM-dd HH:mm'}}</td>
+          <td>{{withdraw.fund_extra}} @ {{withdraw.fund_uid}}</td>
+          <td>{{withdraw.amount}}</td>
+          <td>{{withdraw.fee}}</td>
+          <td>{{"funds.withdraw_history." + withdraw.aasm_state | t}}
+            <span ng-if="wdCtrl.canCancel(withdraw.aasm_state)">/
+              <a ng-click="wdCtrl.cancelWithdraw(withdraw); $event.preventDefault()" href="#" class="cancel_link">{{ "funds.withdraw_history.cancel" | t }}</a>
+            </span>
+          </td>
+        </tr>
+        <tr ng-if="wdCtrl.noWithdraw()"><td colspan="6"><span class="help-block text-center">{{"funds.withdraw_history.no_data" | t}}</span></td></tr>
+      </table>
+    </div>
+  </div>
+</div>

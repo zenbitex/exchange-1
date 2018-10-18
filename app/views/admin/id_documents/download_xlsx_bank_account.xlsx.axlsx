@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "banks_account") do |sheet|
+    sheet.add_row ["ID", "名前", "銀行名","銀行名", "口座種類", "銀行口座番号", "口座名義人"]
+    @banks.each do |bank|
+      sheet.add_row [bank.member_id, bank.member.nil? ? "なし" : bank.member.name, bank.bank_name, bank.bank_branch, bank.account_type.nil? ? "なし" : bank.account_type.text, bank.account_number, bank.owner]
+    end
+  end
+
+end

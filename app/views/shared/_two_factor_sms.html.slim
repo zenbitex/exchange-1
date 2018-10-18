@@ -1,0 +1,11 @@
+h1.title-header = t('two_factors.auth.sms')
+.col-xs-12
+  .two-factor-input.form-group
+	.input-group.input-send-code
+	  input.two_factor_auth_type type="hidden" name="two_factor[type]" value="sms"
+      input.string.required.form-control id="two_factor_otp" name="two_factor[otp]" placeholder=t('two_factors.auth.otp_placeholder')
+      span.input-group-btn
+	     button.btn.btn-info.send-code-button type='submit' name="commit" value="send_code" data-orig-name=t('two_factors.auth.send_code') data-alt-name=t('two_factors.auth.send_code_alt') = t('two_factors.auth.send_code')
+
+  span.hint.sms = t('two_factors.auth.hints.sms')
+  .captcha-wrap

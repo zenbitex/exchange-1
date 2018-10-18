@@ -1,0 +1,35 @@
+<div class="container">
+  <div id="register_form" class="login_register_form">
+    <h1 class="title-header"><%= t('header.signup') %></h1>
+    <%= simple_form_for @identity, :url => '/auth/identity/register' do |f| %>
+      <!-- <div class="form-group text-center register-button" id="signin_oauth">
+        <div class="btn_facebook_twitter">
+          <div class="col-sm-6 facebook">
+            <%= link_to "/auth/facebook", :class => "btn-block btn-lg btn-social btn-facebook" do %>
+              <span class="fa fa-facebook"></span><%= t("header.signup_facebook") %>
+            <% end %>
+          </div>
+          <div class="col-sm-6 twitter">
+            <%= link_to "/auth/twitter", :class => "btn-block btn-lg btn-social btn-twitter" do %>
+              <span class="fa fa-twitter"></span><%= t("header.signup_twitter") %>
+            <% end %>
+          </div>
+        </div>
+      </div> -->
+      <%= f.input :email, :input_html => {:name => 'email', :autofocus => 'true', :class => 'form-control'}, placeholder: t('simple_form.placeholders.session.email'), label: false %>
+      <%= f.input :password, :input_html => {:name => 'password', :class => 'form-control'}, label: false, hint: false, placeholder: t('simple_form.placeholders.session.password'), :hint => t('.password_number') %>
+      <%= f.input :password_confirmation, :input_html => {:name => 'password_confirmation'}, label: false, placeholder: t('activerecord.attributes.identity.password_confirmation') %>
+      <%#=  f.input :referrer_member_id, :input_html => {:name => 'referrer_code', type: "number", style: "-webkit-appearance: none;", value: @referrer_code}, label: false, placeholder: t('activerecord.attributes.identity.referrer_code') %>
+      <div class="form-group text-center term-link">
+        <div class="term_content">
+          <p><%= t('.check_term').html_safe%></p>
+          <input id="check_term" name="check_term" type="checkbox" tabindex="5" value="Checked" class="check-first" onchange="document.getElementsByClassName('btn-sigup').disabled = !this.checked;">
+        </div>
+      </div>
+
+      <div class="form-group text-center register-button">
+        <%= f.button :submit, t('header.signup'), :class => 'button-primary btn-sigup',:disabled => 'true' %>
+      </div>
+      <% end %>
+  </div>
+</div>

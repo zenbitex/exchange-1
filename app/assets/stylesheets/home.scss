@@ -1,0 +1,487 @@
+.home-page {
+  .bititrade-head {
+    background: #2591fd;
+    background-size: cover;
+    color: #fff;
+    padding-bottom: 70px;
+    @media screen and (max-width: 991px) {
+      padding-bottom: 80px;
+    }
+    @media screen and (max-width: 767px) {
+      padding-bottom: 60px;
+    }
+    @media screen and (max-width: 480px) {
+      padding-bottom: 40px;
+    }
+    .left {
+      padding: 85px 0 35px;
+      max-width: 385px;
+      width: 100%;
+      margin: auto;
+      overflow: hidden;
+      @media screen and (max-width: 991px) {
+        max-width: 100%;
+        padding: 50px 15px 36px;
+      }
+      @media screen and (max-width: 767px) {
+        margin-top: 35px;
+      }
+      @media screen and (max-width: 600px) {
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 20px 20px 30px;
+      }
+      @media screen and (max-width: 375px) {
+        margin-top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+      h1 {
+        font-size: 38px;
+        color:#fff;
+        text-align: left;
+        @media screen and (max-width: 991px) {
+          text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 24px;
+          line-height: 36px;
+          margin-bottom: 15px;
+        }
+        @media screen and (max-width: 480px) {
+          line-height: 30px;
+          margin-bottom: 10px;
+        }
+      }
+      h3 {
+        font-size:30px;
+        color:#fff;
+        text-align:justify;
+        line-height: 40px;
+        margin-top: 10px;
+        margin-bottom: 35px;
+        @media screen and (max-width: 991px) {
+          text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+          font-size: 20px;
+          line-height: 28px;
+          margin-bottom: 5px;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: 16px;
+          line-height: 22px;
+          margin-bottom: 5px;
+        }
+      }
+      a {
+        background:#4edf7b;
+        border-radius:3px;
+        width:100%;
+        height:44px;
+        display: table;
+        @media screen and (max-width: 767px) {
+            margin: 30px 0;
+        }
+        @media screen and (max-width: 480px) {
+            height: 40px;
+            margin: 20px 0;
+        }
+        span.title {
+          font-size:18px;
+          color:#fff;
+          padding-left: 10px;
+          display: table-cell;
+          vertical-align: middle;
+          text-align: center;
+          @media screen and (max-width: 767px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 13px;
+          }
+          @media screen and (max-width: 375px) {
+            font-size: 12px;
+          }
+        }
+        span.price {
+          font-size:22px;
+          color:#f4ff5c;
+          padding-right: 35px;
+          text-align: center;
+          display: table-cell;
+          vertical-align: middle;
+          @media screen and (max-width: 767px) {
+            font-size: 20px;
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 16px;
+          }
+        }
+      }
+      .buy-coin {
+        margin-top: 45px;
+        text-align: center;
+        @media screen and (max-width: 991px) {
+          display: table;
+          margin: 45px auto 0;
+        }
+        @media screen and (max-width: 600px) {
+          margin: 28px auto 0;
+        }
+        .buy-coin-item {
+          opacity:0.92;
+          background:#fff;
+          font-weight: 700;
+          border-radius:3px;
+          width:185px;
+          height:89px;
+          float: left;
+          text-align: center;
+          a{
+            background: white;
+            font-size: 18px;
+          }
+          @media screen and (max-width: 767px) {
+            height: 80px;
+            width: 160px; 
+            a{
+              font-size: 15px;
+            }
+          }
+          @media screen and (max-width: 480px) {
+            width: 140px;
+            height: 70px;
+          }
+          @media screen and (max-width: 375px) {
+            width: 130px;
+            height: 65px;
+            a{
+              font-size: 13px;
+            }
+          }
+          span:first-child {
+            font-size:18px;
+            color:#666;
+            margin: 10px 0 8px;
+            display: block;
+            @media screen and (max-width: 767px) {
+              font-size:16px;
+            }
+            @media screen and (max-width: 480px) {
+              font-size: 14px;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 12px;
+            }
+          }
+          span:last-child {
+            font-size:24px;
+            color:#2591fd;
+            @media screen and (max-width: 767px) {
+              font-size:20px;
+            }
+            @media screen and (max-width: 480px) {
+              font-size: 16px;
+            }
+            @media screen and (max-width: 375px) {
+              font-size: 15px;
+            }
+          }
+        }
+        .buy-coin-item:last-child {
+          float: right;
+          @media screen and (max-width: 991px) {
+            float: left;
+            margin-left: 20px;
+          }
+        }
+      }
+    }
+    .right {
+      position: relative;
+      @media screen and (max-width: 991px) {
+        padding: 0 15px;
+      }
+      @media screen and (max-width: 600px) {
+        padding: 0 50px;
+      }
+      @media screen and (max-width: 480px) {
+        padding: 0 5px;
+      }
+      form {
+        max-width: 362px;
+        margin: 60px auto 0;
+        position: relative;
+        z-index: 1;
+        @media screen and (max-width: 991px) {
+          margin-left: 0;
+          margin-top: 35px;
+        }
+        @media screen and (max-width: 600px) {
+          max-width: 100%;
+          margin-top: 20px;
+        }
+        @media screen and (max-width: 480px) {
+          margin-top: 5px;
+        }
+        .form-title {
+          background: #3e3e3e;
+          box-shadow: 6px 17px 12px 0 rgba(208,206,206,0.50);
+          border-radius: 3px;
+          height: 80px;
+          width: 100%;
+          font-size: 27px;
+          color: #fff;
+          text-align: center;
+          line-height: 80px;
+          position: relative;
+          z-index: 1;
+          @media screen and (max-width: 767px) {
+            font-size: 24px;
+          }
+          @media screen and (max-width: 480px) {
+            font-size: 20px;
+            height: 60px;
+            line-height: 60px;
+          }
+          @media screen and (max-width: 320px) {
+            height: 50px;
+            line-height: 50px;
+          }
+        }
+        .form-content {
+          background: #fff;
+          padding: 40px 15px 30px;
+          @media screen and (max-width: 480px) {
+            padding: 24px 15px;
+          }
+          .social {
+            margin: 48px 0 20px;
+            text-align: center;
+            @media screen and (max-width: 480px) {
+              margin-top: 30px;
+              img {
+                width: 117px;
+              }
+            }
+            .icon-google {
+              margin-left: 10px;
+            }
+          }
+          .form-group {
+            display: table;
+            width: 100%;
+            margin-bottom: 20px;
+            margin-right: unset !important;
+            margin-left: unset !important;
+            @media screen and (max-width: 480px) {
+              margin-bottom: 15px;
+            }
+            .form-group {
+              margin-bottom: 0;
+            }
+            figure {
+              background: #ffffff;
+              box-shadow: -12px 5px 10px 0 #f6f2f2, 4px 6px 16px 0 rgba(208,206,206,0.50);
+              border-radius: 3px;
+              width: 50px;
+              height: 50px;
+              display: table-cell;
+              vertical-align: middle;
+              text-align: center;
+              line-height: 3.5;
+              border: 1px solid rgba(0, 0, 0, 0.08);
+              @media screen and (max-width: 320px) {
+                width: 40px;
+                height: 40px;
+              }
+              img {
+                @media screen and (max-width: 320px) {
+                  width: 28px;
+                }
+              }
+            }
+            div {
+              width: 100%;
+              .form-input {
+                padding-top: 5px;
+                padding-left: 15px;
+                input {
+                  background:#dedede;
+                  border-radius:3px;
+                  height:36px;
+                  font-size:16px;
+                  color:#545353;
+                }
+              }
+            }
+          }
+          .btn-login {
+            background:#16c49c;
+            box-shadow:-12px 5px 12px 0 #f6f2f2, 6px 5px 16px 0 rgba(185,184,184,0.50);
+            border-radius:3px;
+            width:100%;
+            height:48px;
+            font-size:18px;
+            color:#ffffff;
+            margin: 40px 0 15px;
+            line-height: 28px;
+            @media screen and (max-width: 480px) {
+              font-size: 15px;
+              margin: 20px 0 10px;
+              height: 40px;
+              line-height: 26px;
+            }
+            @media screen and (max-width: 360px) {
+              height: 36px;
+              line-height: 20px;
+            }
+          }
+          span {
+            font-size:15px;
+            color:#2b303b;
+            text-align:center;
+          }
+        }
+      }
+      .bg-right {
+        position: absolute;
+        top: 180px;
+        right: -20%;
+        @media screen and (max-width: 1349px) {
+          right: -12%;
+        }
+        @media screen and (max-width: 991px) {
+          right: 0;
+        }
+        @media screen and (max-width: 600px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .content{
+    text-align: center;
+    .title_part{
+      clear: both;
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 30px;
+      img{
+        width: 60px;
+      }
+    }
+    .col-sm-6{
+      margin: 0;
+      padding: 0;
+      font-size: 16px;
+      &:first-child{
+        text-align: right;
+        padding-right: 10px;
+      }
+      &:last-child{
+        text-align: left;
+        padding-left: 10px;
+      }
+    }
+    .content_form{
+      display: inline-block;
+      max-width: 500px;
+      margin: 20px 10px;
+      width: 100%;
+    }
+    .list-post{
+      margin-bottom: 20px;
+      .post-item{
+        display: table;
+        height: 80px;
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+        > div{
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .date{
+          background: #2591fd;
+          min-width: 150px;
+          font-weight: bold;
+          color: white;
+        }
+        .des{
+          text-align: left;
+          padding: 5px 10px;
+          background: white;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .content{
+      .col-sm-6{
+         &:first-child, &:last-child{
+          text-align: center;
+          padding: 0;
+        }
+      }
+      .content_form{
+        margin: 10px auto;
+      }
+      .title_part{
+        font-size: 25px;
+        img{
+          width: 50px;
+        }
+      }
+      .list-post .post-item{
+        font-size: 15px;
+      }
+    }
+     .bititrade-head .right form .form-content
+    {
+      span{
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 454px) {
+    .bititrade-head .right form .form-content
+    {
+      .form-group{
+        figure{
+          height: 40px;
+          width: 40px;
+          line-height: 0;
+        }
+        img{
+          width: 25px;
+          height: 25px;
+        }
+        div .form-input{
+          padding-top: 1px;
+          input{
+            font-size: 14px;
+          }
+        }
+      }
+      span{
+        font-size: 12px;
+      }
+    }
+    .content{
+      .title_part{
+        font-size: 20px;
+        img{
+          width: 40px;
+        }
+      }
+      .list-post .post-item{
+        font-size: 13px;
+      }
+    }
+  }
+}

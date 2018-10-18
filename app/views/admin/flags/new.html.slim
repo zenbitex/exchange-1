@@ -1,0 +1,7 @@
+- if flash[:error]
+    h3.error
+    = flash[:error]
+= simple_form_for @flag, :url => admin_flags_path , :class => 'form-add-flag' do |f|
+  = f.input :flag_name, required: true, label: t('.Flag Name'), input_html: { class: 'slider round' }
+  / = f.input :value, required: true, label: t('.Value'), input_html: { class: 'slider round' }
+  = f.button :submit, value: 'create' ,class: "btn btn-default btn-lg pull-right"

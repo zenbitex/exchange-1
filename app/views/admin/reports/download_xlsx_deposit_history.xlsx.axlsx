@@ -1,0 +1,15 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+  @all_currency.each do |currency|
+    wb.add_worksheet(name: "#{currency.code.upcase}") do |sheet|
+      sheet.add_row ["ユーザーID", "メール", "数量", "手数料", "トランザクションID", "日付"]
+      @all_deposit.where(currency: currency.id).includes(:member).each do |deposit|
+        sheet.add_row [deposit.member_id, deposit.member.email, deposit.amount, deposit.fee, deposit.txid, deposit.updated_at]
+      end
+    end
+  end
+
+end

@@ -1,0 +1,49 @@
+
+.form-exc-error
+	.amount-account-not-enough.error
+		h4 = t('private.taocoin_exchange.new.tao_exchange.errors.amount_not_enough')
+	.amount-admin-not-enough.error
+		h4 = t('private.taocoin_exchange.new.tao_exchange.errors.amount_admin_not_enough')
+	.save-error.error
+		h4 = t('private.taocoin_exchange.new.tao_exchange.errors.wrong')
+	.success
+		h4 = t('.tao_exchange.success')
+
+= simple_form_for (@taocoin_exchange), :input_html => {:class => 'form-tao-exchange'}, :url => taocoin_exchange_path do |f|
+	- @rate.each do |r|
+		div class=('form-group exc-'+r.id.to_s)
+			.col-xs-8.text-right
+				label = t('.tao_exchange.rate')
+
+			.col-xs-14
+				= r.rate
+	= f.input :currency, :collection => @rate, :value_method => :id, :label_method => :custom_currency, prompt: t('actions.select'), :label => t('private.taocoin_exchange.new.tao_exchange.currency')
+	.error-sl
+	  span class="error" = t('private.taocoin_exchange.new.tao_exchange.errors.choice')
+	h4.exchange-rate
+	= f.input :amount, label: t('private.taocoin_exchange.new.tao_exchange.amount')
+	.error-exc
+		span class="error blank" = t('private.taocoin_exchange.new.tao_exchange.errors.amount_blank')
+		span class="error than" = t('private.taocoin_exchange.new.tao_exchange.errors.amount_than')
+		span class="error is-int" = t('private.taocoin_exchange.new.tao_exchange.errors.whole_number')
+	= f.input :total, :readonly => true, :label => t('private.taocoin_exchange.new.tao_exchange.total')
+	= f.button :submit, :class => "btn btn-default pull-right btn-tao-exchange", value: t('private.taocoin_exchange.new.tao_exchange.exchange')
+
+.form-exc-details
+	table.table
+		tbody
+			tr
+				td = t('private.taocoin_exchange.new.tao_exchange.currency')
+				td.curency-detail
+
+			tr
+				td = t('private.taocoin_exchange.new.tao_exchange.amount')
+				td.amount-detail
+
+			tr
+				td = t('.tao_exchange.total')
+				td.total-detail
+ 
+	.text-right
+		a.send-exchange.btn.btn-primary = t('private.taocoin_exchange.new.tao_exchange.submit')
+		a.cancel-exchange.btn.btn-warning = t('private.taocoin_exchange.new.tao_exchange.cancel')

@@ -1,0 +1,55 @@
+#kline_chart {
+  .panel-body { padding: 0; }
+}
+
+.navbar-default {
+    //background-color: #039bd3 !important;
+    border-color: #29333c;
+}
+
+.btn-primary,
+.btn-default {
+    color: white;
+    background-color: #039bd3 !important;
+    border-color: #fff !important;
+
+    &:hover {
+    	background-color: #BBDEFB !important;
+    }
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #dce775 !important;
+
+    &:hover {
+    	color: #81C784 !important;
+    }
+}
+
+.navbar-default .navbar-brand {
+    color: #fff !important;
+}
+
+#welcome-index {
+    .logo {
+        margin: 100px 0;
+    }
+
+    header.navbar-static-top {
+      overflow: initial !important;
+    }
+}
+
+.btn-custom {
+  background: transparent !important;
+  margin: 20px 0;
+  border-color: blue;
+  color: #039bd3 !important;
+  border-color: #039bd3 !important;
+
+  &:hover {
+    border-color: #fff !important;
+    color: #fff !important; 
+    background: transparent !important;
+  }
+}

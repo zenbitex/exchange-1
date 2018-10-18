@@ -1,0 +1,29 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "arb_profit_by_month") do |sheet|
+    sheet.add_row ["ID", "メール", "名前", "タイプ", "タオの量", "現在のタオARB", "日付"]
+    @profit.each do |profit|
+      sheet.add_row [profit.member_id,
+                    profit.member.email,
+                    profit.member.name.nil? ? 'なし' : profit.member.name,
+                    profit.type_arb,
+                    profit.tao_amount,
+                    profit.current_tao_arb,
+                    profit.created_at.strftime("%H:%M:%S %d/%m/%Y")]
+    end
+  end
+
+  wb.add_worksheet(name: "profitByMember") do |sheet|
+    sheet.add_row ["ID", "メール","利益"]
+    @member_with_profit.map do |key, value|
+      sheet.add_row [key.id,
+                    key.email,
+                    value]
+    end
+  end
+
+end

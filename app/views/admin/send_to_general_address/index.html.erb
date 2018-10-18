@@ -1,0 +1,37 @@
+<div id="sendcoin_to_general_address_screen">
+    <div class="sendcoin-use" id="sendcoin_to_general_address">
+      <h1 class="color-primary"> Send Coin to General Address </h1>
+      <%= form_tag admin_send_to_general_address_new_path, method: "post" do %>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td width="20%"><%= label_tag(:Currency, "Currency:") %> <span>※</span></td>
+            <td><%= select_tag :currency, options_for_select(@currency, @currency[0]) %></td>
+          </tr>
+          <tr>
+            <td width="20%"><%= label_tag(:from_address, "From Adress:") %> <span>※</span></td>
+            <td><%= text_field_tag :from_address, nil, placeholder: "Enter from Address", size: "30" %></td>
+          </tr>
+          <tr>
+            <td width="20%"><%= label_tag(:to_address, "To Address:") %> <span>※</span></td>
+            <td><%= text_field_tag :to_address, nil, placeholder: "Enter to Address", size: "30" %></td>
+          </tr>
+          <tr>
+            <td width="20%"><%= label_tag(:amount, "Amount:") %> <span>※</span></td>
+            <td><%= text_field_tag :amount, nil, placeholder: "Enter Amount" %></td>
+          </tr>
+          <tr>
+            <td width="20%"></td>
+            <td>
+              <div class="btn-submit-reply">
+                <%= submit_tag "Send Coin", class: 'btn btn-default'%>
+                <a href="/admin"><button type="button" class="btn btn-primary">Back</button></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <% end %>
+    </div>
+</div>

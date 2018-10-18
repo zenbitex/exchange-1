@@ -1,0 +1,11 @@
+<%= t('.order_infomations', amount: @trade.amount, price: @trade.price, time: @trade.created_at) %>
+<%= t('.tradecode', tradecode: @trade.tradecode) %>
+<%= t('.account', account: @trade.account.member.email) %>
+<%= if @trade.exchangerate
+	t('.exchange_rate', exchange_rate: @trade.exchangerate)
+end
+if @trade.status_id == 2
+	t('.reject')
+else
+	t('.end')
+end %>

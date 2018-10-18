@@ -1,0 +1,246 @@
+@import 'settings';
+
+.main_background {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0 auto;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+  .header {
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    font-family: Helvetica, Arial, Sans-serif;
+    position: absolute;
+    height: 55px;
+    width: 100%;
+    text-transform: uppercase;
+    min-width: 1000px;
+
+    ul.logo {
+      position: absolute;
+      left: 20px;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 10px;
+      color: white;
+    }
+
+    ul.navigation {
+      position: absolute;
+      right: 30px;
+      top: -2px;
+
+      li {
+        float: left;
+        display: inline-block;
+        list-style-type: none;
+        color: white;
+        margin-right: 10px;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        width: 70px;
+        text-align: center;
+
+        a {
+          text-decoration: none;
+          color: white;
+          &:hover {
+            background-color: inherit;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      #login {
+        // background-color: rgb(207, 90, 53);
+      }
+      #logout {
+        // background-color: rgb(40, 155, 11);
+      }
+
+      #signup {
+        background-color: rgb(40, 155, 11);
+      }
+    }
+  }
+
+  .main {
+    min-height: 400px;
+
+    .main-panel {
+      width: 300px;
+      padding: 25px;
+      margin: 0 auto;
+      position: relative;
+      top: 75px;
+      text-align: center;
+      background: white;
+      border-radius: 10px;
+      border: 1px solid lightblue;
+      box-shadow: 0px 0px 10px 5px lightblue;
+
+      h2 {
+        margin: 0 0 20px 0;
+      }
+
+      input {
+        width: 70%;
+        border-radius: 5px;
+        line-height: 30px;
+        outline: none;
+        font-size: 15px;
+        border: 1px solid lightgray;
+        text-indent: 10px;
+      }
+
+      .submit_button {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+#screenchat-ctrl {
+  background-color: #fff;
+  position: absolute;
+  top: 50px;
+  width: 100%;
+  bottom: 0;
+  overflow: auto;
+}
+
+#screenchat-list-container {
+  overflow-y: scroll;
+  background-color: #fff;
+  position: absolute;
+  height: 575px;
+  width: 300px;
+  top: 100px;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  ul {
+    margin: 0px;
+    list-style: none;
+    padding: 0px;
+    li {
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+    }
+  }
+  h3 {
+    font-size: 14px;
+    small {
+      font-size: 12px;
+      color: #ccc;
+      font-weight: normal;
+    }
+    &.active {
+      color: $blue;
+    }
+  }
+}
+
+#screenchat-view-container {
+
+  background-color: #fff;
+  height: 600px;
+
+  @media screen and (max-width: 385px) {
+    width: 100vw !important;
+    #output {
+      height: 380px;
+    }
+  }
+
+  min-height: 300px;
+  max-height: 600px;
+  padding: 5px 25px;
+  h2 {
+    text-align: center;
+    color: #861001;
+    font-size: 40px;
+    margin-bottom: 30px;
+    padding: 10px 0;
+    border-bottom: 1px dotted #ccc;
+    text-transform: uppercase;
+  }
+
+  #date {
+    float: right;
+  }
+
+  #content {
+    display: block !important;
+  }
+
+  #output {
+    ul {
+      >li:nth-child(odd) {
+        background: #fafafa;
+        p {
+          background: transparent;
+          border: none;
+          box-shadow: 0;
+        }
+      }
+    }
+  }
+}
+
+#room-selection {
+  background-color: #fff;
+  position: absolute;
+  height: auto;
+  width: 300px;
+  top: 50px;
+  left: 0;
+  bottom: 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-top: 15px;
+
+  span {
+    margin-left: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+  }
+
+  .add_room {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    padding: 6px 10px;
+  }
+
+  #name-chat-input {
+    position: absolute;
+    z-index: 9;
+    width: 120px;
+    height: 28px;
+    top: 15px;
+    right: -120px;
+    border-radius: 5px;
+    line-height: 30px;
+    outline: none;
+    font-size: 15px;
+    border: 2px solid lightblue;
+    text-indent: 10px;
+    opacity: 0;
+
+    -moz-transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  .movein {
+    right: 50px !important;
+    opacity: 1 !important;
+  }
+
+}

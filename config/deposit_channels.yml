@@ -1,0 +1,52 @@
+- id: 200
+  key: satoshi
+  currency: btc
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 400
+  key: bank
+  currency: jpy
+  sort_order: 2
+  bank_accounts:
+    -
+      bank: 'Techcombank'
+      branch: 'Your Bank Branch'
+      holder: 'Your Account Holder'
+      account: 'Your Account Number'
+- id: 800
+  key: ethereum
+  currency: eth
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 1000
+  key: ripple
+  currency: xrp
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 2000
+  key: ethereumclassic
+  currency: etc
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 3000
+  key: bitcoincash
+  currency: bch
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 4000
+  key: kuberacoin
+  currency: kbr
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3
+- id: 5000
+  key: bitcoingold
+  currency: btg
+  sort_order: 1
+  min_confirm: 1
+  max_confirm: 3

@@ -1,0 +1,12 @@
+= render 'shared/menu_settings'
+.two-factor-component = simple_form_for @google_auth, as: 'google_auth', url: two_factor_verify_path, method: :post do |f|
+
+  .two-factor-auth-container
+    .form-group.string.required
+      .google_auth-edit
+          = render partial: 'shared/two_factor_app'
+
+  = f.button :wrapped, t('.submit'), class: "button-primary"
+
+= content_for :guide do
+  p.text-warning = t('.warning')

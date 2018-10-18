@@ -1,0 +1,51 @@
+#tv_chart_container
+
+javascript:
+  function getParameterByName(name) {
+      name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+      return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+  
+  TradingView.onready(function(){
+    var widget = window.tvWidget = new TradingView.widget({
+      autosize: 'true',
+      symbol: gon.market.id,
+      interval: 'D',
+      container_id: "tv_chart_container",
+      timezone: 'Asia/Tokyo',
+      //	BEWARE: no trailing slash is expected in feed URL
+      datafeed: new Datafeeds.UDFCompatibleDatafeed(gon.api_url),
+      library_path: "charting_library/",
+      locale: getParameterByName('lang') || "ja",
+      //	Regression Trend-related functionality is not implemented yet, so it's hidden for a while      
+      disabled_features: ["use_localstorage_for_settings", "header_symbol_search", "header_settings", "header_compare", "header_saveload"],
+      //enabled_features: ["study_templates"],
+      charts_storage_url: 'http://saveload.tradingview.com',
+      charts_storage_api_version: "1.1",
+      client_id: 'tradingview.com',
+      style: '1',
+      toolbar_bg: '#26343c',
+      overrides: {
+        "paneProperties.background": "#122027",
+        "paneProperties.gridProperties.color": "#373d48",
+        "paneProperties.vertGridProperties.color": "#373d48",
+        "paneProperties.horzGridProperties.color": "#373d48",
+        "paneProperties.crossHairProperties.color": "#a8b0b5",
+        "paneProperties.legendProperties.showSeriesTitle": false
+      },
+      user_id: 'public_user_id',
+      favorites: {
+        chartTypes: ["Candles", "Line"]
+      }
+    });
+
+    // $("#change_ex").click(function(){
+    //   widget.setSymbol("vndvnd", "15", function(){
+    //   });
+    // });
+
+
+  });
+	

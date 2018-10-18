@@ -1,0 +1,67 @@
+<%= javascript_include_tag "header", "data-turbolinks-track" => true  %>
+<div class="bitirade-topheader">
+    <div class="pull-left">
+        <%= link_to root_path do%>
+            <img class = "logo-icon" src="/logo_main.png">
+        <% end %>
+
+    </div>
+    <div class="pull-right <%= 'user_login' if current_user %>">
+      <div class="menu_right">
+        <div class="button_market">
+          <a href="/markets/btcjpyt" class="btn btn-icon btn-exchange">
+            <i class="fa fa-exchange"></i>
+            <span>
+              <%= t(".market_menu") %>
+            </span>
+          </a>
+        </div>
+        <div class="menu_mini">
+          <div class="menu_select">
+            <li class="dropdown dropdown_languages">
+              <a class="dropdown-toggle" href="javascript:void(0)" data-toggle="dropdown">
+                <img src='<%= language_path %>' >
+              </a>
+
+              <ul id="languages" class="dropdown-menu">
+                <% I18n.available_locales.each do |lang| %>
+                  <li>
+                    <a data='<%= lang %>' class="select_language">
+                      <img src="/languages/<%= lang || I18n.locale%>.png" >
+                    </a>
+                  </li>
+                <% end %>
+              </ul>
+            </li>
+            <% if current_user %>
+              <div class="menu_toggle">
+                <i class="fa fa-bars fa-2x toggle-btn button-menu-sp" data-toggle="collapse" data-target="#menu-left"></i>
+                <a class="menu_link" href="/id_document"></a>
+              </div>
+            <% end -%>
+          </div>
+          <div class="menu_user">
+            <% if current_user %>
+              <div class="dropdown user_manage">
+                <%= render 'private/markets/settings' %>
+              </div>
+            <% else %>
+              <div class="signup_signin">
+                <a href="/signup">
+                  <span>
+                    <%= t(".signup") %>
+                  </span>
+                </a>
+                <a href="/signin">
+                  <span>
+                    <%= t(".signin") %>
+                  </span>
+                </a>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- top header -->

@@ -1,0 +1,48 @@
+<script type="text/javascript" src="/assets/angular-xeditable/js/xeditable.min.js"></script>
+<link rel="stylesheet" href="/assets/angular-xeditable/css/xeditable.min.css">
+<div class="main_background" id="front_page">
+  <div class="main">
+    <div ng-controller="ScreenchatsCtrl">
+      <!-- <div id="room-selection">
+        <span>Room</span>
+        <form id="new_room" ng-submit="create(screenchat)">
+          <input id="name-chat-input" type="text" placeholder="Chat name" ng-model="screenchat.name">
+        </form>
+          <div addroom="movein" class="btn add_room">+</div>
+      </div> -->
+      <!-- <div id="screenchat-list-container" sockchat>
+        <ul>
+          <li ng-repeat="screenchat in screenchats" ng-click="showScreenchat(screenchat)">
+            <h3 ng-class="{active: screenchat == selectedScreenchat}" clickchat="active">
+              {{screenchat.name}}
+            </h3>
+          </li>
+        </ul>
+      </div> -->
+
+      <div id="screenchat-view-container" sockchat>
+        <h2 class="name-room">{{selectedScreenchat.name}}</h2>
+        <div id="output">
+          <ul>
+            <li ng-repeat="chatmessage in chatmessages">
+              <div>{{chatmessage.owner.chat_name}}: </div>
+              <p id="date">{{chatmessage.message.created_at | date:"MM/dd  HH:mm"}}</p>
+              <p id="content">{{chatmessage.message.content}}</p>
+            </li>
+          </ul>
+        </div>
+        <form class="chat" formchat>
+          <input placeholder="Enter your text" class="form-control" autofocus>
+          <span class="input-group-btn">            
+            <button class="btn btn-primary submit">Send</button>
+          </span>
+        </form>
+
+        <div id="edit-name">
+          <span>Edit name: <a href="#" editable-text="user.name" onbeforesave="updateChatName($data)">{{ user.name }}</a></span>
+        </div>  
+
+      </div>
+    </div>
+  </div>
+</div>

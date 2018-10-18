@@ -1,0 +1,44 @@
+.document_info_verified {
+	button{
+		width: 122px;
+	}
+}
+
+.address_id_document {
+	button{
+		width: 122px;
+	}
+}
+
+.content-admin {
+    .row.updated_at {
+    	position: relative;
+    	margin-top: 10px;
+    	&:before {
+    		position: absolute;
+    		content: '';
+    		width: 500px;
+    		height: 1px;
+    		top: -34%;
+    		left: 50%;
+    		background: #333;
+    		margin-left: -250px;
+    		
+    	}
+    }
+
+    .row.detail_confirm {
+    	position: relative;
+    	margin-bottom: 10px;
+    	&:before {
+    		position: absolute;
+    		content: '';
+    		width: 500px;
+    		height: 1px;
+    		bottom: -10%;
+    		left: 50%;
+    		background: #333;
+    		margin-left: -250px;
+    	}
+    }
+}

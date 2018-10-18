@@ -1,0 +1,102 @@
+<script src="https://checkout.stripe.com/checkout.js"></script>
+<%= javascript_include_tag "buy_coin", "data-turbolinks-track" => true  %>
+<div class="row" id="buy_coin_content">
+  <div class="col-md-6" id="buy_coin">
+    <div class="alert alert-success">
+    </div>
+    <div class="alert alert-danger">
+    </div>
+    <div class="alert alert-info" id="loading">
+      <img src="/loading.gif">
+    </div>
+    <div class="panel panel-info" >
+       <div class="panel-heading">
+          <div class="panel-title"><%= t("buy_coin.title") %></div>
+       </div>
+       <div class="panel-body" >
+          <%=form_for "form_buy_coin", url: buy_coin_create_path, html: {id: "buy_coin_form", class: "form-horizontal", "data-fee" => @fee} do |f|%>
+             <div class="input-group list_coin">
+                <div class="title_part">
+                  <%= t("buy_coin.title_list_coin") %> 
+                </div>
+                <ul>
+                  <li class="active" data="btcjpy" data-price = "<%= @prices['btcjpy'] %>"  data-setup = "<%= @price_setup['btcjpy'] %>" data-type="BTC"  data-fixed="6">
+                    <img src="/icon-btc.png">
+                    <span>
+                      BTC
+                    </span>
+                    <span class="name_coin"></span>
+                  </li>
+                  <li data="xrpjpy" data-price = "<%= @prices['xrpjpy'] %>"  data-setup = "<%= @price_setup['xrpjpy'] %>" data-type="XRP" data-fixed="4">
+                    <img src="/icon-xrp.png">
+                    <span>
+                      XRP
+                    </span>
+                    <span class="name_coin"></span>
+                  </li>
+                </ul>                                       
+             </div>
+
+             <div class="row">
+                <div class="title_part">
+                  <%= t("buy_coin.title_input_money") %>
+                </div>
+                <div class="input_money">
+                  <%= f.text_field :money, id: "money", type: "number", class: "form-control", placeholder: t("buy_coin.money"), value: "" %>
+                  <span>
+                    <%= t("buy_coin.yen") %>
+                  </span>
+                </div>
+             </div>
+             <div class="row fee_and_price">
+                <%= t("buy_coin.price") %>
+                <span id="price_buy">0</span> 
+                <%= t("buy_coin.yen") %>
+             </div>
+             
+             <div class="row total_coin">
+                <div class="title_part">
+                  <%= t("buy_coin.title_confirm") %> 
+                </div>
+                <div class="sum_amount">
+                  <div class="col-md-4"><%= t("buy_coin.amount") %></div> 
+                  <div class="col-md-8"> <span id="amount">0</span> <span id="coin_type">BTC</span></div>
+                </div>
+             </div>
+        
+            <div class="form-group">
+                <div class="col-sm-12 controls btn_submit">
+                  <%= f.submit id: "btn_buy_coin", class: "btn btn-primary", value: t("buy_coin.buy"), data: Rails.configuration.stripe[:publishable_key]%>
+                </div>
+            </div> 
+          <%end%>
+      </div>
+    </div>
+    <div class="information">
+      <%= t('buy_coin.information').html_safe %> 
+    </div>
+  </div>
+  <div class="col-md-6" id="history">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th><%= t('buy_coin.history.coin') %></th>
+          <th><%= t('buy_coin.history.price') %></th>
+          <th><%= t('buy_coin.history.amount') %></th>
+          <th><%= t('buy_coin.history.time') %></th>
+        </tr>
+      </thead>
+      <tbody>  
+        <% @history_buy.each do |history_buy| %>
+          <tr>
+            <td><%= history_buy.market[0, 3].upcase %></td>
+            <td><%= history_buy.price %></td>
+            <td><%= history_buy.amount %></td>
+            <td><%= history_buy.created_at %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <%= paginate @history_buy %>  
+  </div>
+</div>

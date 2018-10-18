@@ -1,0 +1,56 @@
+<div class="container">
+  <div id="login_form" class="login_register_form">
+    <h4 class="title-header"><%= t('header.signin') %></h1>
+    <%= render "shared/flash" %>
+    <%= simple_form_for @identity, :url => '/auth/identity/callback', :method => :post do |f| %>
+      <div class="form-group text-center register-button" id="signin_oauth">
+        <div class="btn_facebook_twitter">
+          <div class="col-sm-6 facebook">
+            <%= link_to "/auth/facebook", :class => "btn-block btn-lg btn-social btn-facebook" do %>
+              <span class="fa fa-facebook"></span><%= t("header.signup_facebook") %>
+            <% end %>
+          </div>
+          <div class="col-sm-6 twitter">
+            <%= link_to "/auth/twitter", :class => "btn-block btn-lg btn-social btn-twitter" do %>
+              <span class="fa fa-twitter"></span><%= t("header.signup_twitter") %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <span class="fa-stack fa-lg input-group-addon">
+          <i class="fa fa-envelope fa-stack-2x"></i>
+        </span>
+        <%= f.input :email, :input_html => {:name => 'auth_key', :autofocus => 'true', :class => "form-control"},
+        label: false, placeholder: t('simple_form.placeholders.session.email') %>
+      </div>
+
+      <div class="input-group">
+        <span class="fa-stack fa-lg input-group-addon">
+          <i class="fa fa-unlock-alt fa-stack-2x"></i>
+        </span>
+        <%= f.input :password, :as => 'password', :input_html => {:name => 'password', :class => "form-control"},
+          label: false, placeholder: t('simple_form.placeholders.session.password'), hint: false %>
+      </div>
+
+      <div class="input-group">
+        <span class="fa-stack fa-lg input-group-addon">
+          <i class="fa fa-shield fa-stack-2x"></i>
+        </span>
+        <%= f.input :two_factor, :as => 'password', :input_html => {:name => 'two_factor',
+          :class => "form-control", type: 'text'}, label: false, placeholder: t('simple_form.placeholders.session.label_two_factor'), hint: false %>
+      </div>
+
+      <% if require_captcha? %>
+        <%= f.input :captcha, required: true, label: false, :input_html => { :class => "form-control"} do
+          show_simple_captcha
+        end %>
+      <% end %>
+      <%= link_to t('header.reset_password'), new_reset_password_path, :class => "color-second link-to-reset clearfix" %>
+      <div class="form-group text-center">
+        <%= f.button :submit, t('header.signin'), :class => "btn-signin button-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>

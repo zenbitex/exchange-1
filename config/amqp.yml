@@ -1,0 +1,132 @@
+connect:
+  host: 127.0.0.1
+  port: 5672
+
+exchange:
+  trade:
+    name: exchangepro.trade
+    type: headers
+  notification:
+    name: exchangepro.notification
+    type: direct
+  orderbook:
+    name: exchangepro.orderbook
+    type: fanout
+
+queue:
+  matching:
+    name: exchangepro.matching
+    durable: true
+  slave_book:
+    name: exchangepro.orderbook.slave
+    durable: true
+  new_trade:
+    name: exchangepro.trade.new
+    durable: true
+  order_processor:
+    name: exchangepro.order.processor
+    durable: true
+  market_ticker:
+    name: exchangepro.trade.market_ticker
+  pusher_market:
+    name: exchangepro.pusher.market
+  pusher_member:
+    name: exchangepro.pusher.member
+  withdraw_coin:
+    name: exchangepro.withdraw.coin
+  withdraw_ripple:
+    name: exchangepro.withdraw.ripple
+  withdraw_bitcoincash:
+    name: exchangepro.withdraw.bitcoincash
+  withdraw_eth:
+    name: exchangepro.withdraw.eth
+  withdraw_etc:
+    name: exchangepro.withdraw.etc
+  withdraw_kbr:
+    name: exchangepro.withdraw.kbr
+  deposit_coin:
+    name: exchangepro.deposit.coin
+  deposit_ripple:
+    name: exchangepro.deposit.ripple
+  deposit_bitcoincash:
+    name: exchangepro.deposit.bitcoincash
+  deposit_eth:
+    name: exchangepro.deposit.eth
+  deposit_etc:
+    name: exchangepro.deposit.etc
+  deposit_kbr:
+    name: exchangepro.deposit.kbr
+  send_kbr:
+    name: exchangepro.send.kbr
+    durable: true
+  deposit_coin_address:
+    name: exchangepro.deposit.coin.address
+    durable: true
+  email:
+    name: exchangepro.notification.email
+    durable: true
+  sms:
+    name: exchangepro.notification.sms
+    durable: true
+
+binding:
+  matching:
+    queue: matching
+    clean_start: true
+  slave_book:
+    queue: slave_book
+    exchange: orderbook
+  trade_executor:
+    queue: new_trade
+    manual_ack: true
+  order_processor:
+    queue: order_processor
+    manual_ack: true
+  market_ticker:
+    queue: market_ticker
+    exchange: trade
+  pusher_market:
+    queue: pusher_market
+    exchange: trade
+  pusher_member:
+    queue: pusher_member
+  withdraw_coin:
+    queue: withdraw_coin
+  withdraw_ripple:
+    queue: withdraw_ripple
+  withdraw_bitcoincash:
+    queue: withdraw_bitcoincash
+  withdraw_eth:
+    queue: withdraw_eth
+  withdraw_etc:
+    queue: withdraw_etc
+  withdraw_kbr:
+    queue: withdraw_kbr
+  deposit_coin:
+    queue: deposit_coin
+  deposit_ripple:
+    queue: deposit_ripple
+  deposit_bitcoincash:
+    queue: deposit_bitcoincash
+  deposit_eth:
+    queue: deposit_eth
+  deposit_etc:
+    queue: deposit_etc
+  deposit_kbr:
+    queue: deposit_kbr
+  deposit_coin_address:
+    queue: deposit_coin_address
+  send_kbr:
+    queue: send_kbr
+  email_notification:
+    queue: email
+    exchange: notification
+  sms_notification:
+    queue: sms
+    exchange: notification
+
+channel:
+  trade_executor:
+    prefetch: 5
+  order_processor:
+    prefetch: 5

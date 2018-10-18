@@ -1,0 +1,9 @@
+li.dropdown
+  a.dropdown-toggle data-toggle="dropdown"
+    span.noselect style="cursor: pointer" = @market.name
+    i.fa.fa-sort aria-hidden="true"
+  ul.dropdown-menu#drop_down_content
+    - @markets.each do |market|
+      li.market id="market-list-#{market.id}" class="quote-#{market.quote_unit}" data-market=market.id
+        = link_to market.name, market_path(market)
+p.text-lb = "#{t('.select-market')}"

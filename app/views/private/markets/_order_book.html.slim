@@ -1,0 +1,24 @@
+.effect
+#order_book
+  table#table_orders.mk_tb.table data-market=@market.name
+      thead
+          tr
+            th.volume.volumn-custom
+              span = t('.bid_amount')
+              span = @market.name.split('/')[0]
+            th.price.price-custom = @market.name
+            th.volume
+              span = t('.ask_amount')
+              span = @market.name.split('/')[0]
+      tbody        
+        tr ng-repeat="item in order_books"
+          td colspan=3 class='{{(item.id+1) == maxRow/2? "separator" : ""}}'
+            / div class=''
+            div id='flip_{{item.id}}'
+              div class='figure front {{ item.change==true ? "row_fade" : ""}}'
+                span
+                  | {{ item.isBid ? (item.volume <= 0 ? '' : (item.volume | number : precision_ask)) : '' }}
+                span class='{{item.isBid ? "bid_price": "ask_price"}}' ng-click="setBuySellPrice(item)"
+                  | {{item.price > 0 ? (item.price | number : precision_bid) : ''}}
+                span
+                  | {{ item.isBid ? '' : (item.volume <= 0 ? '' : (item.volume | number : precision_ask)) }}

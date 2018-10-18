@@ -1,0 +1,85 @@
+<div class="arbsprofit">
+  <div class="row">
+    <div class="col-md-12">
+      <h2>Arb Profit</h2>
+      <div>
+        <%= link_to "Update profit", admin_count_profit_path, class: "btn btn-primary", :data => {:confirm => 'Are you sure?'} %>
+      </div>
+      <h4>Share profit</h4>
+      <h4>ADMIN JPY:  <span class="label label-default"><%= @admin_jpy  %></span></h4>
+      <%= form_tag(admin_share_profit_path, method: 'post', :class => "form-inline") do %>
+        <div class="form-group">
+          <%= number_field_tag(:sum_profit, nil, :class => "form-control", placeholder: 'Enter number of profit') %>
+        </div>
+        <%= submit_tag 'Share!!!', :class => "btn btn-primary", :data => {:confirm => 'Are you sure?'} %>
+      <% end %>
+      <h4>Send profit</h4>
+      <%= link_to "Send profit", admin_send_profit_path, class: "btn btn-danger", :data => {:confirm => 'Are you sure?'} %>
+
+      <hr>
+
+      <div class="row">
+        <div class="col-md-6">
+        <%= form_tag(admin_arbprofit_path, method: "get") do %>
+          <div class="input-group">
+            <%= text_field_tag :search, params["search"], placeholder: "ID 又は 名前", class: "form-control" %>
+            <span class="input-group-btn"> <%= submit_tag("検索!", class: "btn btn-secondary") %> </span>
+          </div>
+        <% end %>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Arb配当履歴(月毎)</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input type="date" id="arb_date" class="form-control">
+          </div>
+          <%= link_to "ダウンロード XLSX", admin_download_xls_arb_profit_path(format: :xlsx), class: "btn btn-default", id: "arb_download"%>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Arb配当実績（毎月）と利益</div>
+        <div class="panel-body">
+          <div class="form-group">
+            <input type="date" id="arb_by_month_date" class="form-control">
+          </div>
+          <%= link_to "ダウンロード XLSX", admin_download_xls_arb_profit_by_month_path(format: :xlsx), class: "btn btn-default", id: "arb_by_month_download"%>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <table class="table table-options">
+    <thead>
+      <tr>
+        <th class="id">ID</th>
+        <th class="member_id">名前</th>
+        <th class="tao_profit">Tao Profit</th>
+        <th class="weight_profit">配当金額(円)</th>
+        <th class="profit_percent">パーセント</th>
+        <th class="create_at">日時</th>
+        <th class="show">Detail Profit for Member</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @arb_profit.each do |a| %>
+        <tr class="tr-body">
+          <td class="id"><%= a.member_id %></td>
+          <td class="member_id"><%= a.member.name %></td>
+          <td class="tao_profit"><%= a.tao_profit %></td>
+          <td class="weight_profit"><%= a.weight_profit %></td>
+          <td class="profit_percent"><%= a.profit_percent %></td>
+          <td class="create_at"><%= a.created_at %></td>
+          <td class="profit_percent"><%= link_to "詳細", admin_arbs_history_path(a.member_id), class: "btn btn-primary" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+    <%= paginate @arb_profit %>
+  </table>
+</div>

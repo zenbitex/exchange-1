@@ -1,0 +1,129 @@
+.mini-balance{
+  background-color: $table-color-background;
+  border-bottom: 3px solid #26343c;
+  padding: 12px;
+  p{
+    line-height: 1;
+    color: white;
+    opacity: 0.5;
+    .amount{
+      float: right;
+    }
+  }
+}
+//Switch buy sell form
+.switch-order-type{
+  background-color: $table-color-background;
+  display: flex;
+  padding: 15px 22px 12px 22px;
+  .btn{
+    background-color: transparent;
+    width: 100%;
+  }
+  .buy{
+    border: 2px solid #337ab7;
+    margin-right: 40px;
+  }
+  .buy:focus{
+    outline: 20px auto #337ab7;
+  }
+  .buy.active{
+    background: #337ab7;
+    border: none;
+  }
+  .sell{
+    border: 2px solid #d9534f;
+  }
+  .sell:focus{
+    outline: 20px auto #d9534f;
+  }
+  .sell.active{
+    background: #d9534f;
+    border: none;
+  }
+}
+.confirm_order{
+  position: absolute;
+  background: rgba(57, 80, 76, 0.76);
+  width: 100%;
+  height: 100%;
+  color: white;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  text-align: center;
+  .content{
+    margin: auto;
+    .message{
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    .btn{
+      width: 110px;
+      margin: 0 20px;
+    }
+  }
+}
+
+#ask_entry{
+  display: none;
+}
+
+#ask_entry, #bid_entry{
+  input[type=number] {-moz-appearance: textfield;}
+  ::-webkit-inner-spin-button { -webkit-appearance: none;}
+  ::-webkit-outer-spin-button { -webkit-appearance: none;}
+
+  background-color: $table-color-background;
+  padding: 22px;
+
+  .input-group{
+    margin-bottom: 10px;
+    .input-group-addon{
+      background-color: #7a7879;
+      border-color: #7a7879;
+      color: rgba(255, 255, 255, 0.71);
+    }
+    .form-control{
+      height: 1;
+      border-top-right-radius: 5px;
+      border-bottom-right-radius: 5px;
+      border: 2px solid #7a7879;
+      background-color: transparent;
+      padding-right: 35px;
+      text-align: right;
+      color: white;
+    }
+    span.hint-currency{
+      position: absolute;
+      top: 7px;
+      right: 4px;
+      color: $hint_color;
+      z-index: 101;
+    }
+  }
+  button{
+    width: 100%;
+  }
+}
+
+//RESPONSIVE
+@media screen and(min-width: 580px) {
+  #ask_entry, #bid_entry{
+    padding: 10px 5px;
+  }
+}
+@media screen and(min-width: 768px) {
+  #ask_entry, #bid_entry{
+    padding-bottom: 20px;
+  }
+}
+@media screen and(min-width: 1100px) {
+  #ask_entry, #bid_entry{
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}

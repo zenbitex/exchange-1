@@ -1,0 +1,14 @@
+.panel.panel-info
+  .panel-heading
+    span = t('.account_info')
+    span = " : "
+    span = account.currency_text
+  .panel-body
+    dl.dl-horizontal
+      = item_for '金額', account.amount
+      = item_for account, :locked
+      hr.split
+      = item_for account, :balance
+      - if account.currency_obj.coin?
+        = item_for t('.payment_address') do
+          = account.payment_address.address

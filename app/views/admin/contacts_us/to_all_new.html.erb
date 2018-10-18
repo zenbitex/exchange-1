@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-md-10 col-md-offset-3 ">
+    <h1 class="color-primary text-center"> 全員にメールを送ります </h1>
+    <hr>
+    <%= form_tag admin_contacts_us_to_all_path, method: "post" do %>
+      <div class="form-group">
+        <label for="slt">レベルの選択：</label>
+        <select class="form-control" id="slt" name="level">
+          <option selected value="0">全員</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="subject">件名</label>
+        <input type="text" class="form-control" id="title" name="subject" required>
+      </div>
+      <div class="form-group">
+        <label for="content">内容</label>
+        <textarea class="form-control" rows="15" id="content" name="content" required></textarea>
+      </div>
+      <a href="/admin/contacts_us" class="btn btn-primary">戻る</button></a>
+      <button type="submit" class="btn btn-default" onclick="return confirm('全員に送るのはよろしでしょうか？');" >送ります</button>
+    <% end %>
+  </div>
+</div>

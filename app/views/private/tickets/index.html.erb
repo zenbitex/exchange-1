@@ -1,0 +1,130 @@
+<div class="row" ng-app="ticket" ng-controller="ticketCtrl" id="ticket">
+  <div class="col-md-8" id="leftcontent">
+
+    <!-- INTRO text -->
+    <div class="intro" ng-show="!ticket" ng-cloak>
+      <h4><%= t(".intro") %></h4>
+      <a href="#" data-toggle="modal" data-target="#new_ticket_modal">チケット作成</a>
+    </div>
+
+    <!-- Conversation -->
+    <div class="conversation" ng-show="ticket" ng-cloak>
+      <div class="user_icon user_normal">
+        <div class="user_text">U</div>
+      </div>
+      <div class="commentbox">
+        <h2 id="ticket_title">{{ticket.title}}</h2>
+        <p class="time">{{ticket.created_at | date: "medium"}}</p>
+        <div class="content">
+          {{ticket.content}}
+        </div>
+      </div>
+    </div>
+
+    <div class="conversation" ng-repeat="c in comments">
+      <div class="user_icon" ng-class="{true: 'user_normal', false: 'user_admin'}[c.author_id == ticket.author_id]">
+        <div class="user_text" ng-show="c.author_id == ticket.author_id">U</div>
+        <div class="user_text" ng-show="c.author_id != ticket.author_id">A</div>
+      </div>
+      <div class="commentbox">
+        <p class="time">{{c.created_at | date: "medium" }}</p>
+        <p class="auth" ng-show="c.author_id != ticket.author_id">by 管理者</p>
+        <div class="content">
+          {{c.content}}
+        </div>
+      </div>
+    </div>
+
+    <div id="reply_form">
+      <form class="" ng-submit="reply()" ng-show="ticket">
+        <div class="form-group">
+          <input class="form-control" type="text" name="content" ng-model="replyContent" required>
+          <button type="submit" class="btn btn-primary" name="button">返事</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- List ticket -->
+  <div class="col-md-4" id="rightcontent">
+    <button id="new_ticket_btn"type="button" class="btn btn-primary" data-toggle="modal" data-target="#new_ticket_modal">チケット作成</button>
+    <ul class="nav nav-tabs">
+      <li class="active"><a data-toggle="tab" href="#open">オープン</a></li>
+      <li><a data-toggle="tab" href="#closed">クローズド</a></li>
+    </ul>
+    <div class="tab-content" id="ticket_list">
+      <div id="open" class="tab-pane fade in active">
+        <ul>
+            <li ng-repeat="t in tickets_open" ng-click="ticketShow(t.id)" ng-class="{'selected': t.id == ticket.id}">
+              <p class="title">{{ t.title }}</p>
+              <span class="new-tag label label-danger" ng-show="isUnreadList(t.id)">new</span>
+            </li>
+        </ul>
+      </div>
+      <div id="closed" class="tab-pane fade">
+        <ul>
+          <% @tickets_close.each do |t| %>
+            <li ng-click="ticketShow(<%= t.id%>)" ng-class="{'selected': <%= t.id %> == ticket.id}">
+              <%= t.title_for_display %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="new_ticket_modal" role="dialog">
+    <div class="modal-dialog">
+
+      <!-- Modal content-->
+      <form class="" ng-submit="addNewTicket()">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">新チケットを作成</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="ticket-title">チケットタイトル</label>
+              <input class="form-control" type="text" id="ticket-title" ng-model="ticketTitle" required>
+            </div>
+            <div class="form-group">
+              <label for="ticket-content">チケット内容</label>
+              <textarea class="form-control" rows="5" cols="80" type="text" id="ticket-content" ng-model="ticketContent" required></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary" >作成</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">キャンセル</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!--
+.col-xs-19
+  = close_open_toggle_link
+= link_to t('.new_ticket'), new_ticket_path, class: 'btn btn-default'
+br
+br
+
+ul.list-group
+  - @tickets.each do |t|
+    li class = (t.comments.unread_by(current_user).any? ? ["unread", "list-group-item"] : ["list-group-item"])
+      .row.row-middle
+        .col-xs-20
+          .row.row-middle
+            .col-xs-20
+              h4 = link_to t.title_for_display, ticket_path(t)
+          .row
+            .col-xs-16
+              p = t.content
+            .col-xs-8
+              i.fa.fa-clock-o.text-info
+              span = time_ago_in_words t.created_at -->

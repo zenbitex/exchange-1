@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+  
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "arb_profit") do |sheet|
+    sheet.add_row ["ID", "NAME", "JPY","TAO", "BTC", "XRP"]
+    @accounts.each do |account|
+      sheet.add_row [account[:member_id], account[:name], account[:jpy], account[:tao], account[:btc], account[:xrp]]
+    end
+  end
+
+end

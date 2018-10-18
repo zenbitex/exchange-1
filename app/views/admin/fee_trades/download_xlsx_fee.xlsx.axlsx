@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "fee") do |sheet|
+    sheet.add_row ["日付", "btcjpy", "taojpy", "taobtc", "taoxrp", "xrpjpy", "xrpbtc", "bchjpy", "bchbtc", "bchxrp"]
+    @export_fee.each do |fee|
+      sheet.add_row [l(fee[:date], format: '%Y-%m-%d'), fee[:sum][0], fee[:sum][1], fee[:sum][2], fee[:sum][3], fee[:sum][4], fee[:sum][5], fee[:sum][6], fee[:sum][7], fee[:sum][8]]
+    end
+  end
+
+end

@@ -1,0 +1,10 @@
+= simple_form_for @bank_account do |f|
+	h3 = t('.title')
+	= f.input :bank_name, label: t('.bank_name'), required: false
+	= f.input :bank_branch, label: t('.bank_branch'), required: false
+	= f.input :account_type, as: :select, prompt: t('actions.select'), label: t('.account_type'), required: false
+	= f.input :account_number, label: t('.account_number'), required: false
+	= f.input :owner, label: t('.owner'), required: false, hint: t('.hint').html_safe
+	.text-right
+		= link_to t('.cancel'), settings_path, :class => "btn btn-info"
+		= f.button :submit, t('.update'), :class => "btn btn-default"

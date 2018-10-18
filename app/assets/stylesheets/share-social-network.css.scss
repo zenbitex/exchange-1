@@ -1,0 +1,45 @@
+.social-share-button {
+  opacity: 0 !important;
+}
+
+.social-icons div img {
+  margin-right: 5px;
+  max-width: 40px;
+}
+
+#share_line {
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  left: 5px;
+  bottom: 0px;
+}
+
+#share_fb {
+  position: absolute;
+  left: 55px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+#share_tw {
+  position: absolute;
+  left: 105px;
+  bottom: 0px;
+  cursor: pointer;
+}
+
+#share_fb img {
+  border-radius: 10px;
+}
+
+#share_tw img {
+  border-radius: 10px;
+}
+
+#share_line div {
+  display: none;
+  border-radius: 10px;
+}

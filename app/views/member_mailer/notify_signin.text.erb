@@ -1,0 +1,8 @@
+<%=
+if @member.id_document.name
+	t(".header", name: @member.id_document.name) 
+else
+	t(".header_no_name") 
+end
+%>
+<%= t(".content")%>

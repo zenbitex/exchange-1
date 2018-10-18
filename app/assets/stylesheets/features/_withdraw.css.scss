@@ -1,0 +1,57 @@
+
+#btc_withdraw {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  input{
+    height: 40px;
+  }
+
+  .widhdraw-btn{
+    display: flex;
+    width: 100%;
+  }
+
+  a#add_manage, label{
+    float: left;
+    margin-bottom: 5px;
+  }
+  label{
+    font-weight: 700;
+  }
+  #amount{
+    display: inline-block;
+  }
+  small{
+    float: left;
+  }
+  #withdraw_all_btn{
+    background-color: $btn_color;
+    color: white;
+  }
+  .input-group-btn > button{
+    height: 40px;
+    width: 105px;
+  }
+  .google-auth{
+    margin-top: 35px;
+  }
+}
+
+//RESPONSIVE
+@media screen and (min-width: 500px) {
+  #btc_withdraw {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 600px) {
+  #btc_withdraw {
+    width: 500px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  #btc_withdraw {
+    width: 600px;
+  }
+}

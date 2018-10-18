@@ -1,0 +1,39 @@
+<div class="address">
+  <div id="label_address">
+    <label for="">{{'funds.deposit_coin.address' | t}}</label>
+  </div>
+  <div id="address_container">
+    <div class="address_input">
+      <div class="form-control form-control-static" id="deposit_address_f">
+        <p id="add_text">{{account.deposit_address}}</p>
+      </div>
+      <div class="input-group-addon data-copy-clipboard" id="copy_deposit_address" idata-clipboard-action="copy" data-clipboard-target="#add_text">
+        <i class="fa fa-files-o"></i>
+        <span class="i-tooltip">Click to copy</span>
+      </div>
+      <div class="input-group-addon new-add">
+        <span class="countdown hint" style="display:none;">...</span>
+        <a id="new_address" ng-click="genAddress(deposit_channel.resource_name); $event.preventDefault()" href="#"> {{"funds.deposit_coin.new_address" | t}}</a>
+      </div>
+    </div>
+
+    <!-- On SP -->
+    <a id="new_address" ng-click="genAddress(deposit_channel.resource_name); $event.preventDefault()" href="#"> {{"funds.deposit_coin.new_address" | t}}</a>
+
+
+  </div>
+</div>
+
+<script>
+	$('.data-copy-clipboard').click(function() {
+		$('.i-tooltip').html("Copied");
+		$('.i-tooltip').addClass('copied');
+		$(this).addClass("active");
+	})
+
+	$('.data-copy-clipboard').mouseleave(function(){
+		$('.i-tooltip').html("Click To Copy");
+		$('.i-tooltip').removeClass('copied');
+		$(this).removeClass("active");
+	})
+</script>

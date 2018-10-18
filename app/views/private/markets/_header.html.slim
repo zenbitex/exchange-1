@@ -1,0 +1,110 @@
+javascript:
+  $(document).on('ready', function(){
+    $(document).on('shown.bs.collapse', function(e) {
+      $('#account_summary_toggle').dropdown('toggle', 'open');
+    });
+  });
+
+nav.navbar.navbar-default#desktop-menu
+  .container-fluid
+    .navbar-header
+      a.navbar-brand href=root_path
+        img.logo-icon-exchange src="/logo_main.png"
+    .ul.nav.navbar-nav.mk_list
+      = render partial: 'market_list'
+    .ul.nav.navbar-nav
+      p.navbar-text
+        span data-title="#{t('.vol')}"
+          span.vol
+        span = "#{t('.vol')}"
+      p.navbar-text
+        span data-title='#{t('.high')}'
+          span.high
+        span = "#{t('.high')}"
+      p.navbar-text
+        span data-title='#{t('.low')}'
+          span.low
+        span = "#{t('.low')}"  
+      p.navbar-text
+        span data-title='#{t('.change')}'
+          span.change
+        span = "#{t('.change')}"
+    ul.nav.navbar-nav.navbar-right
+      - if current_user
+          li.dropdown
+            a.dropdown-toggle href="#" data-toggle="dropdown"
+              span.icon-user
+                i.fa.fa-user
+              b.caret
+            ul.dropdown-menu#drop_down_content
+              li
+                a href=settings_path = current_user.email
+              - if is_admin?
+                li
+                  a href=admin_dashboard_path = t('header.admin')
+              li
+                a href=funds_path target='_blank' = t('.funds')
+              li
+                a href=order_history_path target='_blank' = t('.history')
+              li
+                a href=signout_path = t('.signout')
+      - else
+          li
+            a.btn.btn-default.btn-signin href=signin_path = t('.login')
+          li
+            a.btn.btn-default.btn-signup href=signup_path = t('.signup')
+nav.navbar.navbar-default#mobile-menu
+  .container-fluid
+    .navbar-header
+      a.navbar-brand href=root_path
+        img.logo-icon-exchange src="/logo_main.png"
+    ul.nav.navbar-nav.mk_list
+      = render partial: 'market_list'
+    - if current_user
+        ul.nav.navbar-nav.user_menu
+          li.dropdown
+            a.dropdown-toggle href="#" data-toggle="dropdown"
+              span.icon-user
+                i.fa.fa-user
+              b.caret
+            ul.dropdown-menu#drop_down_content
+              li
+                a href=settings_path = current_user.email
+              - if is_admin?
+                li
+                  a href=admin_dashboard_path = t('header.admin')
+              li
+                a href=funds_path target='_blank' = t('.funds')
+              li
+                a href=order_history_path target='_blank' = t('.history')
+              li
+                a href=signout_path = t('.signout')
+    - else
+        ul.nav.navbar-nav.login
+          li
+            a.btn.btn-default.btn-signin href=signin_path = t('.login')
+  .row#main-info
+    .col-xs-3
+      span data-title="#{t('.vol')}"
+        span.vol
+      span = "#{t('.vol')}"
+    .col-xs-3
+      span data-title='#{t('.high')}'
+        span.high
+      span = "#{t('.high')}"
+    .col-xs-3
+      span data-title='#{t('.low')}'
+        span.low
+      span = "#{t('.low')}"
+    .col-xs-3  
+      span data-title='#{t('.change')}'
+        span.change
+      span = "#{t('.change')}"
+    / #navbar.navbar-collapse.user-button
+    /   ul.nav.navbar-nav.navbar-right.custom-header-market
+        / = render partial: 'account_balance_header'
+        / - if current_user
+          / = render partial: 'settings'
+          / = render partial: 'account_balance'
+        / = render partial: 'language'
+        

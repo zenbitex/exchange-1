@@ -1,0 +1,9 @@
+.image_tag
+  h2.title = t('.title_history')
+ul.nav.nav-pills.nav-history role='tablist'
+  - tabs.each do |name, args|
+    - css_class = name == active ? 'active' : ''
+    li class=css_class 
+      a href=args[1]
+        i.fa class=args[2]
+        = t(args[0])

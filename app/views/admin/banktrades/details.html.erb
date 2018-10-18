@@ -1,0 +1,20 @@
+<div class="t-content">
+	<% if @trades.count > 0 %>
+		<% @trades.each do |t| %>
+			<div class="tr-body">
+				<span class="id"><%= t.id %></span>
+				<span class="email"><%= t.account.member.email %></span>
+				<span class="tradecode"><%= t.tradecode %></span>
+				<span class="amount"><%= t.amount %></span>
+				<span class="rate"><%= t.exchangerate %></span>
+				<span class="price"><%= t.price %></span>
+				<span class="change"><%= link_to "View/Change", admin_banktrade_path(t) %></span>
+			</div>
+		<% end %>
+	<% else %>
+		<div>
+			<span>Not found</span>
+		</div>
+	<% end %>
+	<%= paginate @trades %>
+</div>

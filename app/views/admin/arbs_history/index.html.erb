@@ -1,0 +1,26 @@
+<div class="arbshistory">
+	<h2>Arb History</h2>
+	<table class="table table-options">
+		<thead>
+			<tr>
+				<th class="id">ID</th>
+				<th class="member_id">MemberID</th>
+				<th class="type_arb">Type</th>
+				<th class="tao_amount">TAO Amount</th>
+				<th class="create_at">Created At</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<% @arbs_history.each do |a| %>
+				<tr class="tr-body">
+					<td class="id"><%= a.id %></td>
+					<td class="member_id"><%= a.member_id %></td>
+					<td class="type_arb"><%= a.type_arb.upcase %></td>
+					<td class="tao_amount"><%= a.tao_amount %></td>
+					<td class="create_at"><%= a.created_at %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		<%= paginate @arbs_history %>	
+	</table>
+</div>

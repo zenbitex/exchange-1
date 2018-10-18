@@ -1,0 +1,15 @@
+javascript:
+	function changeLanguage(lang){
+	  //-- get anchor tag
+	  var href = String(window.location.href);
+	  var anchor = href.indexOf("#") >=0 ? href.substring(href.indexOf("#")) : "";
+	  window.location="?lang=" + lang + anchor;
+	}
+
+li#language.dropdown
+  a.dropdown-toggle.icon-market href="#" data-toggle="dropdown"
+    img class="lang-icon" src='#{language_path}'
+    b.caret
+  ul.dropdown-menu.language-menu
+    - I18n.available_locales.each do |lang|
+      li: a onClick='changeLanguage("#{lang}")': img class="lang-icon" src="/languages/#{lang || I18n.locale}.png"

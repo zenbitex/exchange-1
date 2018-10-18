@@ -1,0 +1,87 @@
+<div class="fees">
+  <%= render 'form' %>
+  <%= link_to 'Add', new_admin_fee_trade_path, class: :'btn btn-primary' %>
+  <table class="table">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>コイン名</td>
+        <td>手数料</td>
+        <td>手数料タイプ</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% i = 1 %>
+      <% @fees.each do |f| %>
+        <tr>
+          <td><%= i %></td>
+          <td>
+            <% if f.currency == 2 %>
+              BTC
+            <% elsif f.currency == 3 %>
+              TAOCOIN
+            <% elsif f.currency == 4 %>
+              ETH
+            <% elsif f.currency == 5 %>
+              XRP
+            <% end %>
+          </td>
+          <td><%= f.amount %></td>
+          <td><%= f.fee_type %></td>
+          <td><%= link_to 'Edit', edit_admin_fee_trade_path(f) %></td>
+        </tr>
+        <% i=i+1 %>
+      <% end %>
+    </thead>
+  </table>
+  <div >
+    <div class="message">
+      <%= flash[:success] %>
+    </div>
+    <div style="padding-bottom: 20px; font-size: 20px;">
+      <%= t('.credit_setup_price') %>
+    </div>
+    <%= form_for @credit_price, :url => admin_credit_price_path do |f| %>
+      <div class="row">
+        <span style="margin-right: 20px">
+          <%= t('.market') %>
+        </span>
+        <%= f.select :market, @market_type, class: "selectpicker"%>
+      </div>
+      <div class="enable row">
+        <span style="margin-right: 20px">
+          <%= t('.enable') %>
+        </span>
+        <%= f.check_box :enable, :checked => "checked"  %>
+      </div>
+      <div class="row" style="max-width: 300px;">
+      <span style="margin-right: 20px">
+        <%= t('.price') %>
+      </span>
+      <%= f.text_field :price, type: "number" ,required: "" %>
+      </div>
+      <%= f.button :submit, value: 'Setup price' ,class: "btn btn-default" %>
+    <% end -%>
+  </div>
+</div>
+<script type="text/javascript">
+  $(".message").fadeIn(500);
+</script>
+<style type="text/css">
+  input[type="checkbox"]{
+    width: auto;
+    height: auto;
+    font-size: 30px;
+    transform: scale(1.5);
+    margin-left: 0px;
+  }
+  .row{
+    width: 100%;
+    margin: 10px 0;
+  }
+  .message{
+    color: #4CAF50;
+    font-size:25px;
+    padding-bottom: 20px;
+  }
+</style>

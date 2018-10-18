@@ -1,0 +1,3265 @@
+# encoding: utf-8
+#
+# Never edit this file. It will be overwritten when translations are pulled from Transifex.
+#
+
+zh-CN:
+  wait_activation:
+    header: 电子邮件地址认证
+    resend: 重发
+    back: 到顶部
+    sent: 电子邮件地址认证发送到 <span>%{email}</span>
+    click: 要开始，请点击发送邮件的链接。
+  accounts:
+    index:
+      header: 帐号
+      id: 用户ID
+      total: 总资产
+    account_balance:
+      currency: 货币
+      account_balance: 余额
+      amount: 金额
+      lock: 锁
+      available: 可用余额
+      withdraw: 提现
+      deposit: 充值
+      rate: 率
+      total: 总计
+      convert_to_yen: 估计值
+    current_rate:
+      header: 当前rart
+    level:
+      header: 级别
+      email_verifi: 已通过电子邮件地址
+      account_phone_verifi: 账户确认和手机认证
+      post_card: 接收挂号邮件
+    history:
+      header: 奖金
+      amount: 的金额
+      reason: 原因
+      time: 时间
+      blank: 没有横幅历史
+  securities:
+    update:
+      successfull: 成功更新
+      failed: 更新失败
+      update_failed: 为了打开此功能，需要进行两步验证。
+    edit:
+      submit: 保存
+      header: 安全
+      email_withdraw: 汇款时发送邮件
+      email_login: 登录时发送邮件
+      two_factor_withdraw: 发送钱时使用两步验证
+      two_factor_login: 登录时使用两步验证
+  two_factors_access:
+    index:
+      title: 2段階認証
+      help_text: ログインには2段階認証のパスコードが必要です。
+      send: 送信
+      otp_wrong: コードが間違えました。もう一度やってください！
+      code_placeholder: 6ー桁のパスコード
+  buy_coin:
+    title: 用信用卡购买硬币
+    title_list_coin: 1.请选择硬币类型
+    title_input_money: 2.输入金额并购买硬币
+    title_confirm: 3.订单确认数量
+    price: 价格
+    yen: 円
+    amount: 数量
+    money: 金钱
+    buy: 买硬币
+    server_busy: 服务器繁忙
+    max_amount: 现在你最多只能买%{amount}。
+    amount_zero: 这是目前不在服务区。请等待！
+    order_fail: 交易错误或交易过期。 请再次购买
+    paymement_finish: 付款完成
+    paymement_error: 交易发生错误。
+    history:
+      coin: 硬币
+      price: 价格
+      amount: 金额
+      time: 时间
+    information: • 付款日期是天石滴根据信用卡公司的员工新条款的名文拍摄。
+                <br> • 详情请参阅可用的规范。
+                <br> • 您购买的取消后，退款不被接受。
+  bit_station: 站位
+  id_documents:
+    invalid_zipcode: 请为123或1234-1234形式
+    invalid_birthdate: 日期是错误的。
+    invalid_job_type: 请选择职业
+    invalid_trade_purpose: 请选择交易目的
+    blank_name: 名称不能为空
+    blank_job_type: 请选择职业
+    blank_zipcode: 邮政编码不能为空
+    blank_trade_purpose: 请选择交易目的
+    blank_city: 城市不能为空
+    blank_address: 地址不能为空
+    blank_foreign: 请选择一个外国人
+    blank_id_document_type: 请选择文档类型
+  contacts:
+    new:
+      title: 联系我们
+      name: 名称
+      email: 电子邮件地址
+      category_select: 类别
+      content: 内容
+      button_confirm: 确认
+      button_back: 返回
+      button_send: 发送
+      error:
+        name_blank: 请输入你的名字
+        email_blank: 请输入您的电子邮件地址
+        category_blank: 请选择一个类别
+        content_blank: 请输入内容
+        email: 電子郵件是一個錯誤。請重試。
+      category_type1: 有關更改您的註冊信息
+      category_type2: 有關創建帳戶信息
+      category_type3: 關於支付
+      category_type4: 對於虛擬貨幣的交易
+      category_type5: 用於接收，發送的虛擬貨幣
+      category_type6: 關於ICO（雲售）
+      category_type7: 否則
+    create:
+      notice:
+        fails: 未發送的消息。
+        ok: 謝謝你的消息。我們將盡快與您聯繫！
+        sorry: 查询将被接受最多一天三次。
+  welcome:
+    index:
+      exchange_name: Bit-trading
+      public_content: 这是亚洲最简单的交易虚拟货币交易。
+      logo_content: 易于使用的交换
+      menu_mini:
+        chart: 图表
+        help: 帮助
+        logout: 注销
+        login: 登录
+        account: 帐户
+        signup: 注册
+      menu: Menu
+      price_ask: 购买比特币（円）
+      price_bid: 出售比特币（円）
+      price: 价格（BTC/JPY）
+      tao_price: 价格（TAO/JPY）
+      balance_btc: 平衡（BTC）
+      balance_jpy: 平衡（JPY）
+      balance_tao: 平衡（TAO）
+      balance_xrp: 平衡（XRP）
+      jpy: 円
+      btc: BTC
+      tao: TAO
+      xrp: XRP
+      yen: 円
+      slide_title: 让我们操作我自己的资产
+      what_is_tao_toin: 陶币和套利·荚
+      arbitrage_pot_service: 套利罐服务
+      service-1: 可在世界
+      service-2: 它可以用于购物
+      service-3:
+        心灵的平静<br>
+        安全
+      service-4:
+        自动增加你的资产<br>
+        自动系统
+      news: 新闻
+      phone:
+        title: 联系我们
+        content: Bit station 客户支持中心
+      arb: 套利锅
+      exchange: 交易所
+      fund: 钱包
+      history: 订单历史
+      account: 帐户
+      term_of_service: 服务条款
+      sendcoin: 发送硬币
+      contact: 联系我们
+      logout: 登出
+      back: 背部
+    success_message:
+      title: 发送邮件成功
+      message: 我发了一封邮件。
+      content-1: 当您收到电子邮件登录信息
+      content-2: 其中所述密码的方式
+      content-3: 请重新设置。
+      back: 返回首页
+  activerecord:
+    models:
+      api_tokens: API Token
+      trade: 交易
+      order: 挂单
+      order_bid: 买入
+      order_ask: 卖出
+      document: 文档
+      withdraw: 提现
+      deposit: 充值
+      payment_transaction: 充值
+      id_document: 实名认证
+      statistic/orders_grid: 指令统计
+      statistic/trades_grid: 交易统计
+      statistic/members_grid: 用户统计
+      statistic/deposits_grid: 充值统计
+      statistic/withdraws_grid: 提现统计
+      admin/deposits_grid: 充值管理
+      admin/withdraws_grid: 提现管理
+      deposits/bank: 银行转账
+      withdraws/bank: 银行转账
+      withdraws/satoshi: 银行转账
+      withdraws/taocoin: 银行转账
+      withdraws/ripple: 银行转账
+      withdraws/bitcoincash: 银行转账
+    attributes:
+      api_token:
+        access_key: Access Key
+        trusted_ip_list: IP白名单
+        ip_whitelist: IP白名单
+        label: 标签
+        actions: 操作
+      identity:
+        email: 邮箱地址
+        password: 新密码
+        password_confirmation: 确认密码
+        referrer_code: 引荐来源代码
+      document:
+        zh_cn_body: 中文内容
+        zh_cn_title: 中文标题
+        zh_cn_desc: 中文描述
+        zh_cn_keywords: 中文关键字
+        en_body: 英文内容
+        en_title: 英文标题
+        en_desc: 英文描述
+        en_keywords: 英文关键字
+        key: 索引键
+        is_auth: 是否登录查阅
+      fund_source:
+        address: 提现地址
+        category: 提现方式
+        label: 标签
+      account:
+        currency: 币种
+        currency_text: 币种
+        balance_and_locked: 余额 / 冻结
+        balance: 余额
+        locked: 冻结
+      deposit:
+        state: 状态
+        tx_id: TxID
+        member_id: 用户 ID
+        created_at: 提交时间
+        address: 地址
+        amount: 充值金额
+        done_at: 完成时间
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: 创建时间
+        done_at: 完成时间
+        sum: 总金额
+        fee: 手续费
+        currency: 币种
+        amount: 提现金额
+        address: 地址
+        state: 状态
+        state_text: 状态
+        tx_id: TxID
+        fund_source_id: 提现地址
+        detail: 详情
+      account_version:
+        id: 编号
+        locked: 冻结
+        amount: 金额
+        balance: 余额
+        reason: 原因
+        reason_text: 原因
+        modifiable_id: 相关编号
+        modifiable_type: 关联
+        created_at: 创建日期
+        in: 收入
+        out: 支出
+        fee: 手续费
+      token/reset_password:
+        email: 邮箱地址
+        member: 会员
+      trade:
+        bid: 买入
+        ask: 卖出
+        fee: 手续费
+        price: 成交价
+        volume: 成交量
+        category: 买/卖
+        order: 订单
+      order:
+        bid: 买入
+        ask: 卖出
+        price: 价格
+        total: 总价
+        volume: 数量
+        origin_volume: 数量
+        sum: 总价
+        category: 买/卖
+        kind: 类别
+        at: 时间
+        id: 编号
+        state: 状态
+        operation: 操作
+      payment_transaction:
+        at: 时间
+        txid: 交易编号
+        amount: 金额
+        confirmations: 确认数
+        state: 状态
+        state_done: 完成
+        state_wait: 等待
+      member:
+        id: 编号
+        name: 真实姓名
+        display_name: 论坛昵称
+        email: 邮件地址
+        created_at: 注册时间
+        sn: 个人识别码
+        id_document_number: 身份证号码
+        tag_list: 标签
+        activated: 激活成功
+        activated?: "邮件激活"
+        id_document_verified?: "实名认证"
+        two_factor_activated?: "二次验证"
+        phone_number: 手机号码
+      two_factor/sms:
+        country: 国家
+        phone_number: 手机号码
+        otp: 验证码
+        country_error: 请选择一个国家
+        phone_error: 请单字节邮政编码进入
+      withdraws/bank:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_source: 提现银行
+        fund_extra: 银行
+        fund_extra_text: 提现银行
+        fund_uid: 提现银行账户
+        sum: 提现金额
+        fee: 手续费
+        amount: 提现金额
+        remark: 备注
+        created_at: 时间
+      deposits/bank:
+        created_at: 时间
+        holder: 持卡人姓名
+        fund_extra: 转账银行
+        fund_uid: 转账账号
+        member_sn: 个人识别码
+        member_name: 开户户名
+        amount: 充值金额
+        sn: 转账备注（必填）
+        state_and_action: 状态 / 操作
+        label: 标签
+        fund_source: 充值账号
+      deposits/satoshi:
+        created_at: 时间
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/taocoin:
+        created_at: 时间
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/ripple:
+        created_at: 时间
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      deposits/bitcoincash:
+        created_at: 时间
+        txid: 交易哈希
+        amount: 充值数量
+        confirmations: 确认数
+        aasm_state_text: 状态
+      withdraws/satoshi:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/taocoin:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/ripple:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+      withdraws/bitcoincash:
+        id: 提现编号
+        member_name: 用户
+        currency_obj_key_text: 币种
+        state_and_actions: 状态/操作
+        fund_extra_text: 提现标签
+        fund_extrat: Label
+        fund_source: 提现标签/地址
+        fund_uid: 提现地址
+        created_at: 时间
+        sum: 数量
+        amount: 金额
+        remark: 备注
+        fee: 手续费
+    errors:
+      models:
+        coin_trade:
+          min_amount: 最低数量将从%{min}%{currency}
+          user_insufficient: '%{currency}您的帐户资金不足'
+        coin_trade_bid:
+          suspect_price: 发生购买硬币错误！请重试！
+          admin_insufficient: 服务器帐号资金不足，请稍后再试
+          invalid_amount: Amount不是数字
+        coin_trade_ask:
+          suspect_price: 卖硬币发生错误！请重试！
+          admin_insufficient: 服务器帐号资金不足，请稍后再试
+          invalid_amount: Amount不是数字
+          cannot_sell_tao: 不能卖TAOCOIN
+        order_bid:
+          attributes:
+            sum:
+              expensive: 账户余额不足
+            price:
+              range: 请指定适当的价格
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: 账户余额不足
+            price:
+              range: 请指定适当的价格
+        account:
+          attributes:
+            balance:
+              less: 您的账户余额不足
+        token/reset_password:
+          attributes:
+            base:
+              too_soon: 访问过于频繁，请稍后再试。
+            email:
+              not-member: 请输入有效的邮箱地址。
+              match: 登录邮件地址错误。
+            password:
+              invalid: 密码格式错误
+            member:
+              blank: 不存在
+        activation:
+          attributes:
+            base:
+              too_soon: 距离上次给您发送激活邮件还未超过5分钟
+        fund_source:
+          attributes:
+            address:
+              satoshi_ismine: 为系统所有，请使用您所拥有的提现地址进行绑定。
+              satoshi_invalid: 格式无效，请填写正确的比特币提现地址。
+              taocoin_ismine: 为系统所有，请使用您所拥有的提现地址进行绑定。
+              taocoin_invalid: 格式无效，请填写正确的比特币提现地址。
+              ripple_ismine: 为系统所有，请使用您所拥有的提现地址进行绑定。
+              ripple_invalid: 格式无效，请填写正确的比特币提现地址。
+        withdraw:
+          account_balance_is_poor: 账户余额不足，请核对。
+          attributes:
+            password:
+              match: 密码不匹配
+            amount:
+              poor: 热钱包金额不足
+              bank_min: 小于 5000.00
+        withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/taocoin:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/ripple:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        withdraws/bitcoincash:
+          attributes:
+            fund_uid:
+              blank: 请输入您的提现地址。
+              invalid: 无效的提现地址，请核对。
+              ismine: 提现地址为系统所有，请更换其他地址。
+        two_factor:
+          attributes:
+            otp:
+              invalid: 密码有误，请重新输入。
+        application:
+          attributes:
+            redirect_uri:
+              fragment_present: cannot contain a fragment.
+              invalid_uri: must be a valid URI.
+              relative_uri: must be an absolute URI.
+        cold_wallet:
+          currency_balance_is_poor: Hot wallet is insufficient funds
+          insufficient_funds: Hot wallet is insufficient funds
+      messages:
+        invalid_email: 无效的邮件地址
+        undef: 未知错误原因
+        less: 余额不足
+        verify: 验证失败
+        strength: 无效的密码强度
+        password: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+        orders:
+          price: 价格限额 %{l} ~ %{h}
+          sum: 挂单总限额 %{l} ~ %{h}
+          precision: 最低精度为 %{p}
+  banks:
+    mufg: Mitsubishi UFJ Trust and Banking
+    smbc: SMBC Trust Bank (Sumitomo Mitsui Banking Corporation)
+    mzh: Mizuho Trust & Banking Co., Ltd (Mizuho FG)
+    nmrt: Nomura Trust and Banking
+    jpp: Japan Post Bank
+  market:
+    exchange: 交易所
+    currency:
+      btc: BTC
+      jpy: JPY
+      doge: DOGE
+      pts: PTS
+      ltc: LTC
+      tao: TAO
+      xrp: XRP
+      bch: BCH
+  currency:
+    satoshi:
+      key: BTC
+      code: BTC
+      name: 比特币
+      format: '0,0.0000'
+    bitsharesx:
+      key: BTS
+      code: BTSX
+      name: 比特股
+      format: '0,0.0000'
+    renminbi:
+      key: JPY
+      code: JPY
+      name: 人民币
+      format: '0,0.00'
+    dogecoin:
+      key: DOG
+      code: DOGE
+      name: 狗狗币
+      format: '0,0.0000'
+    protoshare:
+      key: PTS
+      code: PTS
+      name: 原型股
+      format: '0,0.0000'
+    taocoin:
+      key: TAOCOIN
+      code: TAOCOIN
+      name: Taocoin
+      format: '0,0.0000'
+    ethereum:
+      key: ETH
+      code: ETH
+      name: Ethereum
+      format: '0,0.0000'
+    ripple:
+      key: XRP
+      code: XRP
+      name: Ripple
+      format: '0,0.0000'
+    bitcoincash:
+      key: BCH
+      code: BCH
+      name: Bitcoin Cash
+      format: '0,0.0000'
+  datagrid:
+    empty: 没有任何数据查询结果
+    filters:
+      date:
+        range_separator: " - "
+      datetime:
+        range_separator: " - "
+    form:
+      submit: 查询
+    admin_deposits_grid:
+      columns:
+        sn: 充值编号
+        created_at: 时间
+        channel_key_text: 通道
+        fund_extra_text: 资金来源
+        fund_uid: 资金账户
+        txid: 交易
+        amount: 金额
+        fee: 手续费
+        currency_text: 币种
+        aasm_state_text: 状态
+        member_name: 会员
+    bank_deposits_grid:
+      columns:
+        sn: 充值编号
+        created_at: 充值时间
+        channel_key_text: 充值方式
+        fund_extra_text: 开户行
+        fund_uid: 充值账户
+        amount: 充值金额
+        fee: 手续费
+        aasm_state_text: 状态
+    coin_deposits_grid:
+      columns:
+        sn: 充值编号
+        txid: 交易编号
+        created_at: 提交时间
+        amount: 充值金额
+        aasm_state_text: 状态
+        confirmations: 确认数
+    withdraws_grid:
+      columns:
+        sn: SN
+        name: 姓名
+        currency_text: 币种
+        amount: 实到金额
+        fee: 手续费
+        created_at: 提现时间
+        done_at: 完成时间
+        state_text: 状态
+    members_grid:
+      columns:
+        sn: 识别码
+        email: 邮件地址
+        created_at: 注册时间
+        actions: 操作
+    account_versions_grid:
+      columns:
+        created_at: 时间
+        currency_text: 账户
+        balance: 余额变更
+        in: 收入
+        out: 支出
+        amount: 结余
+        reason_text: 理由
+        modifiable_type: 业务
+        fee: 手续费
+      filters:
+        reason: 分类
+        currency: 币种
+    statistic_members_grid:
+      columns:
+        sn: 识别码
+        id: 编号
+        email: 邮件地址
+        created_at: 注册时间
+        activated: 激活
+        detail: 详情
+        action: 操作
+      filters:
+        sn: 识别码
+        activated: 是否激活
+        created_at: 注册时间
+        email: 邮件地址
+    statistic_orders_grid:
+      columns:
+        id: 编号
+        price: 价格
+        volume: 成交量/挂单量
+        created_at: 挂单时间
+        state_text: 状态
+        member_id: 用户
+      filters:
+        state: 状态
+        currency: 币种对
+        created_at: 时间
+        type: 买入/卖出
+    statistic_trades_grid:
+      columns:
+        id: 编号
+        price: 成交价
+        volume: 成交量
+        strike_amount: 合计
+        created_at: 时间
+        fee: 费
+      filters:
+        currency: 币种对
+        created_at: 时间
+    statistic_deposits_grid:
+      columns:
+        member: 用户
+        tx_id: 交易号
+        amount: 金额
+        currency: 币种
+        created_at: 时间
+        state_text: 状态
+      filters:
+        currency: 币种
+        state: 状态
+        created_at: 时间
+    statistic_withdraws_grid:
+      columns:
+        member: 用户
+        address: 支付地址
+        amount: 金额
+        currency: 币种
+        created_at: 时间
+        state_text: 状态
+      filters:
+        state: 状态
+        created_at: 时间
+  deposit_channel:
+    bank:
+      key: 银行转账
+      title: 银行转账充值
+      intro: 通过银行转账的方式，从您的银行账户充值人民币到您的貔貅账户。
+      latency: 10 分钟到账
+      transfer: 人工处理
+      go: 立即充值
+    satoshi:
+      key: 块链
+      title: 比特币充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出比特币到我们为您提供的充值地址。
+      latency: 10 分钟到账
+      transfer: 自动
+      go: 立即充值
+    taocoin:
+      key: 块链
+      title: TAO币充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出比特币到我们为您提供的充值地址。
+      latency: 10 分钟到账
+      transfer: 自动
+      go: 立即充值
+    ripple:
+      key: 块链
+      title: XRP币充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出比特币到我们为您提供的充值地址。
+      latency: 10 分钟到账
+      transfer: 自动
+      go: 立即充值
+    bitcoincash:
+      key: 块链
+      title: 比特币充值
+      intro: 从本地钱包客户端或任意在线钱包客户端转出比特币到我们为您提供的充值地址。
+      latency: 10 分钟到账
+      transfer: 自动
+      go: 立即充值
+  deposits/bank:
+    aasm_state:
+      submitting: 已提交
+      cancelled: 已撤销
+      submitted: 受理中
+      accepted: 充值成功
+      rejected: 已驳回
+      checked: 充值成功
+      warning: 异常
+  private:
+    affiliates:
+      link:
+        aff_link: Bit-Trading Solo 会员链接%{i}
+        copy_link: 复制链接
+      index:
+        help-text: 通过位站，而不是仅仅介绍，你可以得到日元。请参阅<a href="/affiliate">Bit-Trading Solo加盟</a>了解详情。
+        target_text: 支付在10000帐户成就的时间
+        affiliate_program: 关联企业
+        affiliate_status: 加盟进度
+        people: "是谁在你的会员出版物注册人数:"
+        summary: "介绍奖励:"
+        rewards: 您的会员奖励表
+        rewards_condition: 条件
+        verify_account_lvl2: 帐户级别2成绩
+        verify_account_lvl3: 帐户级别3成绩
+        order_account: 0.1以上往来
+        total: 全部实现并
+        reward_history: 您的会员奖励表历史
+        member_id: 会员ID
+        email: E-mail地址
+        level: 一级
+        order_btc: 订单
+    coin_trade_bids:
+      index:
+        title: 买硬币
+        history: 购买历史
+      create:
+        successful: 买硬币成功
+        no_price: 没有价格
+    coin_trade_asks:
+      index:
+        title: 卖硬币
+        history: 销售历史
+      create:
+        successful: 卖硬币成功
+        no_price: 没有价格
+    coin_trades:
+      load_history:
+        buy: 购入
+        sell: 売却
+      index:
+        title: 贩売场
+        history: 历史
+      buy_create:
+        successful: 购买硬币全成！!
+        no_price: 价无货
+      sell_create:
+        not_sell_tao:  不能卖TAOCOIN请稍后再试！
+        successful: 硬币供应已完成！
+        no_price: 价无货
+      buy_form:
+        jpy: JPY
+        btc: BTC
+        xrp: XRP
+        buy_price: 买价
+        amount: 量
+        total_price: 总
+        btn_buy: 购买
+        btn_sell: 卖
+        buy_coin: 用信用卡购买
+        error_over: "最高数量将从%{max}%{currency}"
+        min_amount: "的最小数量将从%{min}%{currency}"
+      sell_form:
+        jpy: JPY
+        btc: BTC
+        xrp: XRP
+        sell_price: 售价
+        amount: 量
+        total_price: 总
+        btn_buy: 购买
+        btn_sell: 卖
+        error_over: "最高数量将从%{max}%{currency}"
+        min_amount: "的最小数量将从%{min}%{currency}"
+      history_trade_bid_ask:
+        load_more: 进一步阅读
+        type: 类型
+        currency: 货币
+        payment_type: 付款币种
+        price: 价格
+        amount: 数量
+        total_price: 金额
+        trade_time: 时间
+    deposit_infomations:
+      new:
+        header: 提交存款信息
+        hint: 如果您的存款没有您的用户ID或您的存款未完成，请提交您的存款信息。
+        bank: 银行存款
+        label:
+          company_name: 贸易
+          bank_name: 银行名
+          branch: 银行支行
+          account_number: 帐号
+          account_kind: 帐户类型
+          account_name: 帐户持有人
+        content:
+          company_name: The Bank of Nagoya
+          bank_name: The Bank of Nagoya
+          branch: Head Office Sales Dept. (101)
+          account_number: 3937838
+          account_kind: Normal
+          account_name: Bit station
+        date_deposit: 日期
+        payer_name: 付款人姓名
+        user_id: 用户ID
+        holder_payer: 山田达罗
+        amount: 量
+        memo: 备忘录
+        submit: 提交
+      create:
+        successfull: 您的存款信息已发送给管理员
+        failed: 您的存款有问题，请稍后再试
+    arbs:
+      index:
+        title: 套利
+        tao_amount: 拥有TAO
+        jpy_amount: 日元
+        datetime: 天数
+        days: 天
+        withdraw: 撤回
+        deposit: 存款
+        profit: 你最后一个月的利润
+        insufficient_fund: 我没有足够的TAO的。
+        deposit_successful: 我沉积在TAO。
+        withdraw_successful: 它提请TAO！
+        error:
+          tao_amount_too_small: 请的100个或更多数量TAO。
+          tao_amount_integer: 输入的数量必须是一个整数
+        white_paper: 白皮书细节
+      update:
+        invalid_amount: 数量是无效的。
+        insufficient_fund: 我没有足够的TAO的。
+        deposit_successful: 我沉积在TAO。
+        withdraw_successful: 它提请TAO！
+        tao_amount_integer: 输入的数量必须是一个整数
+      create:
+        invalid_amount: 数量是无效的。
+        insufficient_fund: 我没有足够的TAO的。
+        deposit_successful: 我沉积在TAO。
+        withdraw_successful: 它提请TAO！
+    deposits:
+      satoshis:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      taocoins:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      ripples:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+      banks:
+        destroy:
+          notice: 撤销充值请求成功。
+        create:
+          notice: 您的充值订单提交成功，请按照提示继续完成您的转账操作。
+          submit: 提交
+        new:
+          fund_source: 充值账号
+          manage_fund_source: 管理充值账号
+          submit: 提交
+        edit:
+          bank: 收款银行
+          branch: 收款开户行
+          hodler: 收款账号
+          account: 收款账号
+      bitcoincashes:
+        gen_address:
+          require_transaction: 当前地址没有使用过之前不能生成新地址
+    fund_sources:
+      index:
+        manage_coin_address: 管理 %{name} 地址
+        manage_bank_account: 管理银行账号
+        guide_intro_coin: 通过增加%{name}提现地址，以便每次提现时快速选择。
+        guide_intro_bank: 通过增加提现银行账号，以便每次提现时快速选择。
+        new: 新建
+        currency: 币种
+        bank: 银行
+        label: 标签
+        account: 账号
+        address: 地址
+        action: 操作
+        delete: 移除
+        are_you_sure: 确定移除以保存的地址?
+      new:
+        selector: 银行
+        uid: 账号
+        label: 标签
+        label_placeholder: 任意填写
+        address: 地址
+        extra_hint: 若您的开户银行不再列表中，请联系客服
+    history:
+      tabs:
+        title_history: 历史
+      transaction:
+        Deposit: 充值
+        Withdraw: 提现
+      account:
+        buy: 买入
+        sell: 卖出
+        filter_by_type: 查询类型
+        account_history: 存款/提款历史
+        type: 类型
+        timestamp: 时间
+        fee: 手续费
+        currency: 货币
+        amount: 金额
+        txid: 交易哈希
+        empty_transactions: 没有任何存款/取款历史
+      orders:
+        order_history: 委托记录
+        id: ID
+        type: 类型
+        state: 状态
+        market: 货币对
+        price: 委托价
+        volume: 委托数量
+        average_price: 平均成交价
+        fullfilled_volume: 成交数量
+        timestamp: 委托时间
+        empty_orders: 没有任何订单历史
+      order:
+        ask: 卖出
+        bid: 买入
+        wait: 待成交
+        cancel: 已取消
+        done: 已成交
+      trades:
+        trade_history: 成交记录
+        side: 类型
+        created_at: 时间
+        base_currency: 基准货币
+        base_amount: 数量
+        quote_currency: 报价货币
+        quote_amount: 数量
+        price: 成交价
+        empty_trades: 没有任何贸易记录录音
+      trade:
+        sell: 卖出
+        buy: 买入
+      cloudsafe:
+        tradecode: 商法
+        amount: 金额
+        price: 价格
+        status: 状态
+        wait: 等候
+        done: 它已完成
+        cancel: 它已被取消
+        currency: 货币
+        timestamp: 时间
+        empty_taocoin_trades: 没有任何云安全的贸易史
+      sendcoin:
+        from: 投币发件人
+        to: 钱币给我的目的地
+        amount: 金额
+        currency: 货币
+        timestamp: 时间
+        empty_sendcoins: 没有任何发送硬币历史
+      signup_history:
+        title: 登录历史
+        login_time: 时间登录
+        ip: IP
+        local_system: 浏览器
+        deposit: 付款
+        withdraw: 提款
+        empty_signup_histories: 没有任何注册历史
+      arb_history:
+        member_id: 会员ID
+        type: 类型
+        tao_amount: TAO金额
+        timestamp: 创建于
+        deposit: 付款
+        withdraw: 提款
+        empty_arb_histories: 没有任何arb历史
+      receivecoin:
+        from: 投币发件人
+        to: 钱币给我的目的地
+        amount: 金额
+        currency: 货币
+        timestamp: 时间
+        empty_receivecoins: 没有收到硬币历史
+    trade:
+      trades:
+        orders:
+          title: 挂单记录
+        trades:
+          title: 交易记录
+        charges:
+          title: 充值记录
+      orders:
+        index:
+          done: 已成交
+          cancel: 撤单
+          confirm: '确定要进行撤单 #%{id} 吗？'
+        destroy:
+          'true': "#%{id} 撤单成功"
+          'false': "#%{id} 撤单失败"
+    withdraws:
+      update:
+        request_accepted: 提现申请提交成功
+      destroy:
+        request_canceled: 提现申请已撤销
+      index:
+        fee: 手续费
+        total: 总计
+        withdraw_history: 提现历史记录
+      create:
+        address_same: 请不要寄存地址！
+        address_error: 发送地址的格式不正确！
+        address_hotwallet: 请在“硬币传输”屏幕上使用此发送地址，因为它位于位站内！
+        success: '%{currency}是汇款申请书!'
+        two_factors_error: 核准代码是错误的。
+        insufficient_fund: 账户余额不足
+        invalid_captcha: 无效captcha
+        bank_account: 退出前必须先注册银行账户
+        active_phone_number: 请验证您的电话号码
+        limit_tao_withdraw: 的金额，请以值大于10。
+        limit_amount_withdraw: 您的地址必须有至少20 XRP
+        limit_amount_withdraw_kbr: 汇款数量最低为1000
+        limit_amount_withdraw_eth: 汇款数量最低为0.1
+        limit_amount_withdraw_btc: 汇款数量最低为0.005
+        error_withdraw_address: 汇款地址无效。
+        limit_amount_active_account: 汇款地址未经确认，请汇出20XRP以上。
+        missing_destination_tag: 目的地址是必需的标签。
+        dont_have_destination_tag: 目的地址是不需要标签。
+      banks:
+        update:
+          notice: 银行转账提现申请已提交，我们将尽快为您处理。
+          alert_two_factor: 电话号码验证失败
+        destroy:
+          notice: 银行转账提现申请已撤销，冻结金额已退回到您的账户中。
+        new:
+          fund_source: 提现账号
+          manage_fund_source: 管理提现账号
+          submit: 提交
+          allin: 全部提取
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      satoshis:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 电话号码验证失败
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      taocoins:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 电话号码验证失败
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      ripples:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 电话号码验证失败
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+      bitcoincashes:
+        destroy:
+          notice: 提现申请已被撤销，冻结余额已返还到您的账户
+        update:
+          notice: 提现申请成功，我们会尽快处理您的请求
+          alert_two_factor: 电话号码验证失败
+        new:
+          submit: 提交
+          allin: 全部提取
+          fund_source_label: 标签
+          manage_fund_source: 管理提现地址
+        create:
+          notice: 您的提现请求提交成功，请按照提示继续完成您的转账操作。
+    tickets:
+      index:
+        new_ticket: 新建服务单
+      new:
+        intro: 如果您有任何问题，意见或建议需要和我们沟通，请给我们建立一个服务单，我们会尽快回复您。
+      ticket_create_succ: 服务单创建成功。
+      ticket_create_fail: 服务单创建失败, 请稍候再试。
+      comment_succ: 回复成功。
+      cooment_fail: 服务单创建失败, 请稍候再试。
+      me: 我
+      supporter: 客服
+      close: 关闭服务单
+      close_succ: 服务单已关闭
+      close_confirm: 您确定要关闭这个服务单吗？
+      title_content_both_blank: 标题和描述至少要填写一个哦！
+      from: 来自
+      view_closed_tickets: 查看已结束的服务单
+      view_open_tickets: 查看未结束的服务单
+    account_versions:
+      index:
+        description: 每一笔交易、每一分钱收入都是有据可查，巨细无遗的。
+    api_tokens:
+      user_tokens:
+        no_token: 没有API密钥
+        edit: 编辑
+        destroy: 删除
+        destroy-confirm: 密钥删除之后无法找回，您确认要继续吗？
+        create: 创建新密钥
+        http: HTTP API 文档
+        websocket: Websocket API 文档
+        more: '更多API信息请查看Github上的API章节：'
+      oauth_tokens:
+        panel_title: 应用绑定
+        title: 已绑定的第三方应用
+        oauth: OAuth认证接口文档
+        intro: 管理所有您绑定过的第三方应用。
+        no_token: 没有绑定第三方应用
+        unbind: 解除绑定
+        unbind-confirm: 您确认要解除绑定吗？
+        oauth_app_name: 应用名称
+        oauth_app_expire: 授权自动过期时间
+        oauth_app_scope: 授权范围
+      unbind:
+        success: 绑定已成功解除。
+        failed: 解除绑定失败。
+      new:
+        label_hint: 标签可以帮助记忆密钥的用途，可选
+      create:
+        alert_two_factor: 电话号码验证失败
+        failed: 很抱歉，密钥创建失败, 请再几分钟后重试或联系管理员。
+        desc: 请将以下Access Key和Secret Key复制粘贴到安全的地方保存。该页面关闭之后Secret Key不会再显示。
+        access_key: 访问密钥
+        secret_key: 密钥
+      edit:
+        access_key_hint: 创建时间 %{created_at}
+        label_hint: 标签可以帮助记忆密钥的用途，可选
+        ip_whitelist_hint: IP地址以逗号分隔，留空表示任何IP都可使用该密钥
+      update:
+        alert_two_factor: 电话号码验证失败
+        success: 保存成功。
+        failed: 保存失败, 请再几分钟后重试或联系管理员。
+      destroy:
+        success: 密钥已删除。
+        failed: 密钥删除失败。
+    assets:
+      index:
+        liability-proof: 资产证明
+        btc-assets: BTC资产清单
+        jpy-assets: JPY资产清单
+        tao-assets: TAO资产清单
+      liability_tabs:
+        verify-btc: 验证我的BTC资产
+        verify-jpy: 验证我的JPY资产
+        btc-assets-total: '交易所BTC总资产：'
+        jpy-assets-total: '交易所JPY总资产：'
+        tao-assets-total: '交易所TAO总资产：'
+        xrp-assets-total: '交易所XRP总资产：'
+      liability_proof:
+        title: 资产证明
+        intro: 我们将银行账户，比特币钱包地址，以及用户存款总额公开以便用户时刻了解我们的资产状况；我们提供的数字证明能证明我们提供的存款总额数据是真实的。我们通过技术手段来保证您的资金处于随时能够提取的状态。
+        how-to-verify: 如何验证交易所具备偿付能力？
+        how-to-verify-uri: https://Bit-Trading Solo.jp/documents/liability_proof
+      liability_data:
+        liability-proof-generating: 用户资产证明正在生成中，请30分钟后再来。
+        root-json: 交易所总资产验证代码
+        partial-tree: '我的%{currency}资产：'
+        get-partial-tree: 获取我的资产验证代码
+        timestamp: 当前操作仅针对您在%{time}的资产验证。
+        go-verify: 去验证
+      btc_assets:
+        title: BTC资产清单
+        intro: 查看交易所全部BTC资产清单
+        total: BTC总资产
+        address: 钱包地址
+      tao_assets:
+        title: TAO资产清单
+        intro: 查看交易所全部TAO资产清单
+        total: TAO总资产
+        address: 钱包地址
+      xrp_assets:
+        title: XRP资产清单
+        intro: 查看交易所全部XRP资产清单
+        total: XRP总资产
+        address: 钱包地址
+      jpy_assets:
+        title: JPY资产清单
+        intro: 查看交易所全部JPY资产清单
+        total: JPY总资产
+        description: " <p>每位登录貔貅的用户可通过查询貔貅唯一开户银行余额监督我们的服务。</p> <p>开户银行： %{bank}</p> <p>开户帐号： %{address}</p> <p>查询密码： %{password}</p> <p>查询电话： %{tel}</p>"
+      partial_tree:
+        success: '获取成功！验证数据生成时间为：%{timestamp}'
+    funds:
+      show:
+        account_history: 账户历史记录
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        bch_format: '0.00000000'
+        reason:
+          jpy:
+            strike_add: 成交卖出
+            strike_sub: 成交买入
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          btc:
+            strike_add: 成交买入
+            strike_sub: 成交卖出
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          tao:
+            strike_add: 成交买入
+            strike_sub: 成交卖出
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          xrp:
+            strike_add: 成交买入
+            strike_sub: 成交卖出
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+          bch:
+            strike_add: 成交买入
+            strike_sub: 成交卖出
+            deposit: 充值
+            withdraw: 提现
+            fix: 系统修正
+        ref:
+          system: 系统
+          default: 默认
+    id_documents:
+      edit:
+        header_personal_information: 您的身份信息登记
+        header_id_card: 鉴定提交
+        warning: ※一方是一定要请注册
+        hint_upload:
+          表面与驾驶证和外国人登记证的情况下，背，<br>
+          请提交页面的传播有在护照的情况下的面部照片。
+        hint_label_1: 驾驶执照和居留卡
+        hint_label_2: 护照和居留
+        hint_label_3: 我的电话卡
+        hint_content_1: (前侧.后侧)
+        hint_content_2: 页面的脸部照片<br>与外交部标记部长页面<br>地址描述页面
+        hint_content_3: 仅限表面（请勿在背面上传）
+        required: 需要
+        nav_header_user: 用户
+        nav_header_staff: 员工
+        nav_select_text: 请选择个人或公司
+        nav_content_select_text: 全名，请在相同的符号输入的个人身份证明文件
+        state: 验证状态
+        state_unverified: 未验证
+        state_verifying: 验证中（5天左右需要工作日）
+        state_verified: 已验证
+        title:
+          company_infor: 基本信息
+          manager_infor: 经理信息
+          represent_infor: 代表/人交易信息
+          document_infor: 身份验证文件
+          document_certificate: ①请附注册事项证明。
+          document_represent: ②请附上代表或交易代表身份确认文件的副本。
+          document_trade: ③请附上证明您有交易权限的文件。
+        document_explain: 在交易人员输入信息时，请向交易人员提交代理信函。
+                          <br> 在输入代表信息时，以身份确认书提交的注册事项证明。
+                          <br> 我们将确认您有交易权限，因此在此提交是不必要的。
+        document_note: 通过挂号邮件转移与营业部或总部相关的文件。我们会将其作为不必要的邮件发送。
+                        <br> 我们将以与上述相同的方式向您发送交易相关文件，以确认代表/交易人员的身份。
+        company_name: 公司名称
+        company_address: 公司地址
+        company_job_content: 业务内容
+        position: 职位
+        name: 真实姓名
+        birth_date: 生日
+        address: 地址
+        city: 城市
+        country: 国家
+        job_type: 職業
+        trade_purpose: 交易目的
+        zipcode: 邮编
+        id_document_type: 证件类型
+        id_document_number: 证件号码
+        id_document_file: 证件照片
+        id_bill_type: 账单类型
+        id_bill_file: 账单照片
+        cell_phone: 手机号
+        fixed_phone: 固定电话号码
+        foreign: 关于重要的外国公众人物<abbr>※</abbr> 请参考这里的<a href="/faqs">这里</a>中的海外重要的公众人物的描述
+        manager_role: 请选择公司的角色。公司角色的细节可以读到<a href="/faqs#other&id=manager">这里</a>。
+        type_role: 代表
+        submit: 信息更新
+        placeholder:
+          name: Yamada Taro
+          address: 1-2 Monzencho, Naka-ku Nagoya-shi, Aichi Prefecture 123 - 456
+          zipcode: 123-456
+          city: Aichi Prefecture
+          company_name: ABC公司
+          company_job_content: 电子
+          position: 董事
+        label:
+          user_upload_1: 前
+          user_upload_2: 后
+          upload: 上传文件
+          staff_upload_1: 文件照片(1)
+          staff_upload_2: 文件照片(2)
+          staff_upload_3: 文件照片(3)
+          staff_upload_4: 文件照片(4)
+          span_upload_1: 帐户存折的封面的副本在公司的名称
+          span_upload_2: 在发布后六个月内的注册表副本等
+          span_upload_3: 交易主任（相当于主管）个人执照或护照等与照片
+        error:
+          type: "仅允许使用扩展名为jpg，jpeg，gif，png或pdf的图像文件"
+          size: 此文件超过允许的最大文件大小（5 MB）
+      update:
+        notice: 实名认证信息已成功提交。
+    bank_accounts:
+      new:
+        title: 帐户信息注册
+        bank_name: 银行名称
+        bank_branch: 分支名
+        account_type: 帐户类型
+        account_number: 帐号
+        owner: 帐户持有人（片假名）
+        update: 寄存器
+        cancel: 取消
+        hint: '*在日本邮政银行的情况下：<br>请登记收款账户从结果其他金融机构转移。'
+      edit:
+        title: 帐户信息注册
+        bank_name: 银行名称
+        bank_branch: 分支名
+        account_type: 帐户类型
+        account_number: 帐号
+        owner: 帐户持有人（片假名）
+        update: 注册
+        cancel: 取消
+        hint: '*在日本邮政银行的情况下：<br>请登记收款账户从结果其他金融机构转移。'
+      create:
+        notice: 它被提交账户信息
+      update:
+        notice: 它被提交账户信息
+      show:
+        title: 帐户信息注册
+        bank_name: 银行名称
+        bank_branch: 分支名
+        account_type: 帐户类型
+        account_number: 帐号
+        owner: 帐户持有人（片假名）
+        change: 变化
+    sendcoin:
+      new:
+        free_fee_send: 您可以在Bit-trading钱包之间免费发送加密货币。
+        history_hint: '**列出邮件发硬币'
+        manage_email: 地址管理
+        manage_title: 电子邮件地址管理
+        label_name: 标签
+        email_address: 电子邮件地址
+        select_action: 选择
+        add_address: 添加
+        balance: 余额
+        jpy_label: 日圆
+        yen: 日元
+        currency: 币种
+        email: 邮箱地址
+        submit: 提交
+        amount: 数量
+        send: 发送
+        amount_is_int: 数量是一个整数。
+        amount_small: 量必须大于0
+        next: 下一个
+        cancel: 坎贝尔
+        email_not_valid: 无效的邮件地址
+        safety_instruction: 您应启用全部 <b>安全设置</b><i class='fa fa-bolt'></i>，以保障帐户及资金安全。
+        notice: 发送硬币后不能取消。
+        confirm_delete: 你确定要删除电子邮件吗？
+      create:
+        successful: 它已发送
+        cannot_send: 不要发送
+        insufficient_fund: 不充足的资金
+        email_not_valid: 无效的邮件地址
+        error_confirm_address: 确认您的地址首先送货
+        round_amout: 金额无效。小数点后最多只能有三位数字。
+      add_or_delete_email:
+        email_exists: 电子邮件地址已存在
+        email_not_valid: 无效的邮件地址
+
+    markets:
+      balance:
+        available: 可用
+      show:
+        need_login: 請先登錄!
+        price_too_low: 价格太低
+        price_too_high: 价格太高
+        error: 委托失败
+        success: 委托成功
+        amount_min: 量必须大于%{min} %{currency}。
+        analysis_panel: 分析面板
+        help_panel: 帮助面板
+        done: 成交
+        cancel: 撤单
+        confirm_message: 你确定提交订单吗？
+        cancel_confirm: 确认撤销此单吗？
+        confirm: 确认
+        ask_order: '卖 ##sn#'
+        bid_order: '买 ##sn#'
+        my_active_order: <v>有</v><v>效</v><v>委</v><v>单</v>
+        my_done_order: <v>成</v><v>交</v><v>委</v><v>单</v>
+        trades: <v>委</v><v>单</v><v>成</v><v>交</v>
+        chat: 聊天频道
+        insufficient_funds: 没有足够的％{currency}
+      market_list:
+        select-market: 取引所選択
+        title: 钱包平衡
+        all: 全部交易对
+        all_html: "<i class='fa fa-check'></i><span>全部交易对</span>"
+        jpy_html: "<i class='fa fa-check'></i><span>JPY交易对</span>"
+        btc_html: "<i class='fa fa-check'></i><span>BTC交易对</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH交易对</span>"
+        tao_html: "<i class='fa fa-check'></i><span>TAO交易对</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP交易对</span>"
+        price: 最新价
+        change: "24h涨跌"
+      range_switch:
+        switch_1: 1m
+        switch_5: 5m
+        switch_15: 15m
+        switch_30: 30m
+        switch_60: 1h
+        switch_120: 2h
+        switch_240: 4h
+        switch_360: 6h
+        switch_720: 12h
+        switch_1440: 1d
+        switch_4320: 3d
+        switch_10080: 1w
+      depths:
+        price: 价格
+        amount: 数量
+        buy: 买入
+        sell: 卖出
+        ask_orders: 卖出
+        bid_orders: 买入
+      ticker:
+        last: 最新成交价
+        ask: 卖一价
+        bid: 买一价
+      account_balance:
+        title: 账户余额
+        available: 可用 %{currency}
+
+      ask_entry:
+        current_balance: 平衡
+        sell: 卖出
+        buy: 买入
+        price: 价格
+        last_price: 最新价格
+        amount: 数量
+        total: 金额
+        fee: 费用
+
+      bid_entry:
+        current_balance: 平衡
+        action: 买入
+        price: 价格
+        last_price: 最新价格
+        amount: 数量
+        total: 金额
+        fee: 费用
+
+      place_order:
+        price_high: 高
+        price_low: 低
+        full_bid: 满
+        full_ask: 空
+      order_book:
+        title: 市场实时委单记录
+        volume: 数量
+        price: 价格
+        amount: 总价
+        bid_amount: 出价金额
+        ask_amount: 问金额
+        total: 总
+        bid_total: 买入 总
+        ask_total: 卖出总
+        ask: 卖出
+        bid: 买入
+        fade_toggle_depth: 市场深度
+      trade_state:
+        new: 未成交
+        partial: 部分成交
+      market_trades:
+        title_trades: 交易历史
+        all: 所有成交
+        my: 我的成交
+        all_html: "<i class='fa fa-check'></i><span>所有成交</span>"
+        my_html: "<i class='fa fa-check'></i><span>我的成交</span>"
+        time: 成交时间
+        price: 成交价
+        volume: 成交量
+      header:
+        bit_station: 站位
+        network: 连接状态
+        vol: 24小时 成交量
+        high: 最高
+        low: 最低
+        change: 涨跌
+      footer:
+        arb: 套利锅
+        exchange: 交易所
+        fund: 钱包
+        history: 订单历史
+        account: 帐户
+        term_of_service: 服务条款
+        sendcoin: 发送硬币
+        contact: 联系我们
+        logout: 登出
+        back: 背部
+      settings:
+        sound: 音效
+        notification: 通知
+        funds: "资金管理"
+        signout: "安全退出"
+        settings: "账户设置"
+        history: "历史记录"
+      account_summary:
+        account: 账号
+        amount: 总计
+        locked: 冻结
+        view_all_accounts: "查看全部账户"
+        hide_all_accounts: "隐藏其他账户"
+      my_orders:
+        open_menu_hint: '点击 <span class="glyphicon glyphicon-pencil"></span> 要取消'
+        orders_wait: 挂单纪录
+        orders_done: 已完成订单
+        orders_cancel: 最新撤销
+        no_open_orders: 当前没有未完成委托
+
+        clear_this: 清除这个
+        clear_bids: 清除所有出价
+        clear_asks: 清除所有问题
+        clear_all: 清除所有
+        admin_clear_all: 清除所有 (admin)
+        confirm_clear_all: 清除所有订单？
+        confirm_clear_bids: 清除所有出价单？
+        confirm_clear_asks: 清除所有询问单？
+        confirm_clear_order: 清除这个订单？
+        cancel: 取消
+        time_order: 日期和时间
+        state: 买和卖
+        price_order: 价格
+        volumn: 注文数量
+        total: 日圆
+        number_remain: 约定済数量
+
+        price: 委单价
+        volume: 委单量
+        amount: 总价
+        time: 创建时间
+      mask:
+        warning: 请<a class=text-up href='/signup'>登录</a>购买和出售。
+      klime_chart:
+        title: K线图
+      global:
+        global_orders_title: 十档盘口
+        global_trades_title: 成交记录
+      chat:
+        title: 聊天频道
+    settings:
+      success: 设置成功！
+      failure: 无效动态密码，设置失败。请重试。
+      index:
+        affiliate: 首先，请确认您的帐户。
+        referrer_link: 您的会员链接在这里
+        safety_instruction: 您应启用全部 <b>安全设置</b><i class='fa fa-bolt'></i>，以保障帐户及资金安全。
+        reset_password: 重置登录密码
+        reauthenticate: 身份验证
+        activated: 邮件已经发送至您的邮箱，请您尽快进入您的邮箱进行验证，如未收到请点击再次发送。
+        auth-activated: 请您验证邮箱地址，否则将无法进行任何操作。
+        auth-verified: 请您提交实名认证，否则将无法进行任何操作。
+        upgrade_account: 请升级您的帐号
+        user_id: "用户ID: <span>%{user_id}</span>"
+        account_class: '帐户类: <a href="/faqs?level=%{account_class}#cat-acount">%{account_class}级</a>'
+        level0: 班派电子邮件，确认升级1级
+        email:
+          title: 邮箱验证
+          required: (需要)
+          description: 您的邮箱还未经过验证，点击“发送邮件”按钮，完成验证。
+          description-activated: 您的邮箱已验证通过，请牢记并保护好此邮箱地址，这是您作为登录的唯一账户。
+          resend: 再次发送
+          activated: 已绑定
+          go: 设置
+        phone_number:
+          title: 手机绑定
+          required: (需要)
+          description: 绑定手机号码，让您的资金更安全，您可以即时收到在网站操作的动态提醒并及时监控账号安全。
+          go: 设置
+          verified: 已验证
+          hint: "绑定号码 %{hint}"
+        two_factor_auth:
+          title: 两步验证
+          description: 两步验证为您的帐户额外添加了一层保护。
+          enable: 设置
+          disable: 解除
+        verification:
+          manual_link: <a href="/manual/private_descript.pdf" class="tutorial-link"> 如何注册，请点击这里。</a>
+          title: 实名认证
+          required: (需要)
+          description: 为配合国家相关法令条例，请您正确输入信息，进行身份认证，身份认证未完成将不能在网站进行任何操作。
+          verifying: 检查
+          unverified: 设置
+          verified: 已验证
+        asset_passwords:
+          title: 资金密码
+          description: 在您提现时，需要资金密码进行验证，强烈建议您不要使用和登录密码同样的密码！
+          go: 设置
+        passwords:
+          title: 登录密码
+          description: 此密码仅限作网站登录使用，请您牢记。
+          go: 修改
+          set: 设置
+        api_tokens:
+          title: API密钥
+          description: 您可以创建和管理API令牌。当您注册一个API的道理，你就可以与其他系统协同工作。
+          go: 设置
+        bank_accounts:
+          title: 银行账户
+          description: 你可以注册银行账户。请登记，如果不注册银行账户信息不能现金存款和取款。
+          go: 修改银行账户
+          set: 设置
+        weibo:
+          title: 绑定微博
+          description: 绑定微博后您可以通过微博进行登录, 而无需每次都输入账号密码.
+          bound_desc: 此账号已经与 %{nickname} 绑定
+          bind: 绑定
+          unbind: 解除绑定
+    otps:
+      new:
+        step_1: 第一步
+        step_2: 第二步
+        step_3: 第三步
+        or: 或
+        download_app: 下载并打开Google Authenticator应用到您的智能手机上。
+        scan_qr_code: 用手机扫瞄二维码
+        enter_passphrase: 将以下密文手动输入到手机验证器中
+        enter_passcode: 填入手机显示的动态密码以激活两步验证
+    shared:
+      balances:
+        locked: 冻结
+        balance: 余额
+        available: 可用
+        title: "%{icon} %{c} 账户"
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        tao_format: '0.00000000'
+        xrp_format: '0.00000000'
+        bch_format: '0.00000000'
+        total: 总额合计
+  guides:
+    private:
+      settings:
+        panel: 用户设置
+        index:
+          intro: 管理并修改您的个人资料及绑定信息。
+      api_tokens:
+        panel: API密钥
+        index:
+          title: 我的API密钥
+          intro: 我们为您提供了功能完备，高性能的自动化交易API，通过API您能够得到当前市场行情，建立买单卖单，查询自己的委托及成交记录，查询账户余额及个人信息。
+        new:
+          title: 创建新密钥
+        create:
+          title: 创建新密钥
+        edit:
+          title: 设置API密钥
+        update:
+          title: 设置API密钥
+      tickets:
+        panel: 服务单
+      fund_sources:
+        panel: 充值提现账号管理
+        index:
+          title: 充值提现账号管理
+          intro: 通过增加充值提现账号，以便每次充值提现时快速选择。
+      id_documents:
+        panel: 实名认证
+        new:
+          title: 提交实名认证信息
+          intro: 为配合国家相关法令条例，请您正确输入信息，进行身份认证，身份认证未完成将不能在网站进行任何操作。
+    panels:
+      balance: 用户账户信息
+    verify:
+      google_auths:
+        panel: 两步验证
+        edit:
+          title: 解除两步验证
+          intro: 若您换了新手机，您可以先解除旧手机的两步验证，接触后再用新手机进行两步验证的设置。
+      sms_auths:
+        panel: 绑定手机号码
+    reset_passwords:
+      panel: 登录密码
+      new:
+        title: 重置登录密码
+        intro: 请您输入您创建账户时的邮箱地址，输入验证码提交后，进入邮箱，根据提示重置密码。
+      create:
+        title: 重置登录密码
+        intro: 请您输入您创建账户时的邮箱地址，输入验证码提交后，进入邮箱，根据提示重置密码。
+      edit:
+        title: 设置登录密码
+      update:
+        title: 设置登录密码
+    sessions:
+      panel: 登录
+      new:
+        title: 登录我的账户
+        intro: 现在登录，以便您开始交易，随时关注交易动态。
+      failure:
+        title: 登录我的账户
+        intro: 现在登录，以便您开始交易，随时关注交易动态。
+    identities:
+      panel: 创建账户
+      new:
+        title: 创建我的账户
+        intro:
+      edit:
+        panel: 我的账户
+        title: 修改密码
+    two_factors:
+      panel: 两步验证
+  simple_form:
+    placeholders:
+      deposit:
+        bank:
+          amount: 最低金额100円
+      session:
+        email: 邮箱地址
+        password: 密码
+        label_two_factor: 两个因素（选项）
+      identity:
+        email: 例如：youremail@example.com
+        password: 请设置登录密码
+        password_confirmation: 确认密码
+        edit:
+          password: 请设置新密码
+      document:
+        key: 文章连接URL键值
+        title: 文章标题
+      fund_source:
+        label: 真实姓名
+        address: 地址
+      order_bid:
+        origin_volume: 买入数量
+        sum: 总成交金额
+      order_ask:
+        origin_volume: 卖出数量
+        sum: 总成交金额
+      reset_password:
+        email: 电子邮件
+        password: 请设置登录密码
+        password_confirmation: 确认密码
+      withdraw:
+        bank:
+          sum: 最低金额100円，单笔限额5万円
+        satoshi:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        taocoin:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        ripple:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+        bitcoincash:
+          sum: 最低 0.001
+          fund_extra: 填写常用标签（可选）
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+          member_name: "<span class='text-danger'>充值银行账户姓名必须与您的实名认证姓名一致</span>"
+          sn: "<span class='text-danger'>请您务必在银行转账操作备注中填写数字: <b>%{sn}</b>，否则我们无法快速处理您的订单。</span>"
+      two_factor:
+        otp_secret: 建议您备份好二维码图片或者密文，以免手机意外丢失后给您带来不便。
+        otp: 您的验证器每三十秒会重新生成新密码，请及时输入。
+      identity:
+        password: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+      reset_password:
+        password: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+      id_document:
+        name: 请填写与您证件上一致的姓名。
+      withdraw:
+        bank:
+          member_name: "<span class='text-danger'>提现银行账户姓名必须与您的实名认证姓名一致</span>"
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+          fund_extra: 若您的开户银行不再列表中，请联系客服
+        satoshi:
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+        taocoin:
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+        ripple:
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+        bitcoincash:
+          sum: "<a target='_balance' href='#'>资费说明</a>"
+    creating: Creating...
+    updating: Updating...
+    buttons:
+      or: or
+      cancel: 取消
+    'yes': '是'
+    'no': '否'
+    required:
+      text: 必须的
+      mark: "※"
+    error_notification:
+      default_message: '请检查以下问题:'
+    labels:
+      defaults:
+        title: 标题
+      google_auth:
+        uri: 二维码
+        otp_secret: 密文
+        otp: 验证器上的密码
+      fund_source:
+        label: 开户行 / 标签
+        address: 银行卡号 / 地址
+        category: 选择提现种类
+      session:
+        email: 登录邮箱
+        password: 登录密码
+        captcha: 验证码
+      identity:
+        email: 登录邮箱
+        old_password: 旧密码
+        password: 新密码
+        password_confirmation: 确认密码
+      reset_password:
+        password: 新密码
+      ticket:
+        content: 详细描述
+      withdraw:
+        bank:
+          fund_extra: 开户行
+          sum: 提取金额
+          account_balance: 可用金额
+          member_name: 账户名
+        satoshi:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        taocoin:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        ripple:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+        bitcoincash:
+          fee: 手续费
+          sum: 提取金额
+          fund_uid: 提现地址
+          fund_extra: 提现标签
+          account_balance: 可用金额
+          member_name: 账户名
+  admin:
+    contacts_us:
+      create_send_email:
+        subject_reply: "[Bit-Trading Solo] Reply your question"
+        from_email: From Email
+    deposits:
+      banks:
+        new:
+          code: 码※
+          amount: 量※
+          btn_next: 下一个
+        confirm_deposit_yen:
+          bank_account_empty: 该会员没有银行账户
+          member_not_found: 没有找到会员
+        index:
+          oneday: 二十四小时内充值订单
+          available: 全部未完成充值订单
+        show:
+          alert: 未发现外部充值账单，无法处理充值。
+          notice: 此账目已经充值成功，请手工记录。
+          deposit: 充值请求
+          accept: 充值
+          target_deposit: 外部充值
+          confirm: 确认给用户进行充值吗？
+        update:
+          blank_txid: Txid 不能为空
+        create:
+          member_not_found: 没有找到会员
+          notice: 存款成功
+      satoshis:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 立即充值
+          accept_confirm: 确定立刻确认此充值？
+      taocoins:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 立即充值
+          accept_confirm: 确定立刻确认此充值？
+      ripples:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 立即充值
+          accept_confirm: 确定立刻确认此充值？
+      bitcoincashes:
+        update:
+          notice: 此笔充值已经成功到账。
+        index:
+          accept: 立即充值
+          accept_confirm: 确定立刻确认此充值？
+    tickets:
+      view: 查看
+      close: 关闭服务单
+      comments_count: 回复数量
+      replies: 回复
+      open_tickets: 未结束服务单
+      closed_tickets: 已结束服务单
+    members:
+      index:
+        search: 搜索
+        members: 用户列表
+        email: 邮箱地址
+        id: ID
+        name: 姓名
+        phone: 手机号码
+        wallet_address: 钱包地址
+        level1: 1级
+        level2: 2级
+        level3: 3级
+        please_select_level: 请选择一个级别
+        please_select_info: 请选择搜索条件
+        please_select_order: 请选择
+        new_update: 新订单的变化
+        new_create: 新创建顺序
+        old_create: 创造的旧秩序
+      show:
+        member_title: 用户信息
+        actions_title: 操作
+        accounts_title: 账户信息
+        account_versions_title: 账户记录
+    id_documents:
+      index:
+        search: 搜索
+        email: 电子邮件
+        name: 名
+        id_document: 身份证件
+        id: ID
+        level1: 1级
+        level2: 2级
+        level3: 3级
+        please_select_level: 请选择一个级别
+        please_select_info: 请选择搜索条件
+        please_select_order: 请选择
+        new_update: 新订单的变化
+        new_create: 新创建顺序
+        old_create: 创造的旧秩序
+      show:
+        verified_phone: 手机核准
+        approve: 认证
+        reject: 拒绝
+        accept_address: 地址批准
+        name: 名称
+        birth_day: 生日
+        address: 地址
+        city: 城市
+        country: 国家
+        job_type: 职业
+        trading_purpose: 交易目的
+        zipcode: ZIP
+        email: 电子邮件
+        verified_phone: 手机核准
+        id_document_type: 类型的文件
+        created_at: 注册日期
+        updated_at: 信息更新日期和时间
+        detail_confirm: 确认细节
+        email_verified: 电子邮件认证
+        document_info_verified: 认证（输入项目和个人身份证明文件）
+        verified_phone: 电话号码验证
+        foreign: 它并不适用于外国重要公众人物
+        address_accepted: 地址认证（注册邮件到达）
+        level: 一级
+        select: 选择要拒绝的理由
+        reject_address: 地址审批取消
+        submit_send_mail: 提交
+    dashboard:
+      index:
+        accounts_title: 账户汇总
+        daemons_title: 系统汇总
+    documents:
+      index:
+        new: 新建文档
+    statistic:
+      filter: 筛选
+      summary: 总结
+      click-to-expand: 点击展开
+      members:
+        show:
+          table: 用户数据结果
+      orders:
+        show:
+          avg: 挂单均价
+          sum: 挂单量
+          sum_strike: 被成交量
+          count: 挂单数
+      trades:
+        show:
+          count: 成交数
+          volume: 总量成交
+          amount: 总价成交
+          min_price: 最低成交价
+          max_price: 最高成交价
+          avg_price: 平均成交价
+          amount_fee: 总价手续费
+          volume_fee: 总量手续费
+      deposits:
+        show:
+          count: 总数
+          amount: 金额合计
+      withdraws:
+        show:
+          count: 总数
+          amount: 金额合计
+          fee: 手续费
+    withdraws:
+      banks:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 银行卡提现
+          empty: 无任何数据
+        update:
+          notice: The withdraw was successful
+      satoshis:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+      taocoins:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+      ripples:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+      bitcoincashes:
+        index:
+          one: 待处理提现订单
+          all: 二十四小时内订单
+          empty: 无任何数据
+        show:
+          process: 受理
+          succeed: 提现
+          reject: 驳回
+          succeed_confirm: 确定处理提现？
+          reject_confirm: 确定驳回提现？
+          withdraw: 比特币提现
+  deposits/satoshi:
+    aasm_state:
+      submitted: 受理中
+      accepted: 充值成功
+      checked: 充值成功
+      warning: 异常
+  deposits/taocoin:
+    aasm_state:
+      submitted: 受理中
+      accepted: 充值成功
+      checked: 充值成功
+      warning: 异常
+  deposits/ripple:
+    aasm_state:
+      submitted: 受理中
+      accepted: 充值成功
+      checked: 充值成功
+      warning: 异常
+  deposits/bitcoincash:
+    aasm_state:
+      submitted: 受理中
+      accepted: 充值成功
+      checked: 充值成功
+      warning: 异常
+  doorkeeper:
+    scopes:
+      profile: 读取您的基本账户信息(如姓名, 邮件地址)和账户余额
+      history: 读取您的挂单和成交记录
+      trade: 代表您在Bit-Trading Solo上进行交易
+    authorizations:
+      new:
+        title: Bit-Trading Solo 第三方应用授权
+        authorize_html: 确定要授权 <strong class='text-info'>%{name}</strong> 使用您的账户吗？
+        scopes: '该应用将获得如下权限：'
+        authorize: 同意
+        deny: 拒绝
+    errors:
+      messages:
+        invalid_request: The request is missing a required parameter, includes an unsupported parameter value, or is otherwise malformed.
+        invalid_redirect_uri: The redirect uri included is not valid.
+        unauthorized_client: The client is not authorized to perform this request using this method.
+        access_denied: The resource owner or authorization server denied the request.
+        invalid_scope: The requested scope is invalid, unknown, or malformed.
+        server_error: The authorization server encountered an unexpected condition which prevented it from fulfilling the request.
+        temporarily_unavailable: The authorization server is currently unable to handle the request due to a temporary overloading or maintenance of the server.
+        credential_flow_not_configured: Resource Owner Password Credentials flow failed due to Doorkeeper.configure.resource_owner_from_credentials being unconfigured.
+        resource_owner_authenticator_not_configured: Resource Owner find failed due to Doorkeeper.configure.resource_owner_authenticator being unconfiged.
+        unsupported_response_type: The authorization server does not support this response type.
+        invalid_client: Client authentication failed due to unknown client, no client authentication included, or unsupported authentication method.
+        invalid_grant: The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client.
+        unsupported_grant_type: The authorization grant type is not supported by the authorization server.
+        invalid_resource_owner: The provided resource owner credentials are not valid, or resource owner cannot be found
+        invalid_token:
+          revoked: The access token was revoked
+          expired: The access token expired
+          unknown: The access token is invalid
+    flash:
+      applications:
+        create:
+          notice: Application created.
+        destroy:
+          notice: Application deleted.
+        update:
+          notice: Application updated.
+      authorized_applications:
+        destroy:
+          notice: Application revoked.
+  easy_table:
+    satoshi:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    taocoin:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    ripple:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    bank:
+      sn: SN
+      amount: 金额
+      created_at: 创建时间
+      fund_source: 账号
+      memo: Memo
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+    bitcoincash:
+      amount: 金额
+      txid: TxID
+      created_at: 创建时间
+      confirmations: 确认数
+      member_name: 用户
+      state_and_actions: 状态/操作
+      currency_obj_key_text: 币种
+  enumerize:
+    account_version:
+      reason:
+        fix: 系统修正
+        unknown: 未知
+        strike_add: 成交增加
+        strike_sub: 成交扣除
+        strike_fee: 手续费
+        strike_unlock: 成交解除冻结
+        order_cancel: 撤单
+        order_submit: 挂单
+        deposit: 充值
+        withdraw: 提现
+        withdraw_lock: 提现冻结
+        withdraw_unlock: 提现驳回
+    state:
+      done: 完成
+      wait: 等待
+      cancel: 取消
+    currency:
+      jpy: JPY
+      tao: TAOCOIN
+      btc: BTC
+      xrp: XRP
+      bch: BCH
+    order:
+      state:
+        done: 完全成交
+        wait: 等待成交
+        cancel: 撤销
+    deposit:
+      aasm_state:
+        submitted: 受理中
+        submitting: 待提交
+        accepted: 已到账
+        cancelled: 已撤销
+        rejected: 已驳回
+        checked: 已到账
+        warning: 异常
+    withdraw:
+      state:
+        submitting: 受理中
+        submitted: 已受理
+        rejected: 已驳回
+        accepted: 已受理
+        suspect: 异常
+        processing: 受理中
+        done: 完成
+        canceled: 已撤销
+    fund_source:
+      category:
+        satoshi: 比特币 - 网络转账
+        taocoin: TAO特币 - 网络转账
+        ripple: XRP特币 - 网络转账
+        bank: 人民币 - 银行转账
+        bitcoincash: BCH特币 - 网络转账
+    id_document:
+      id_document_type:
+        id_card: 居民卡（回表）
+        passport: 护照（外交事务的脸照片页部长标注页面，地址，描述页）+ 住宅
+        driver_license: 驾照（背表）
+        alien_registration_card: 外国人登记证书（反表）
+        juki_net_card: 脸照片重机网卡（背表）
+        my_number_card: 我的号码卡
+        health_insurance: 健康保险卡（前后）
+        seal_certificate: 印章证明书
+      id_bill_type:
+        bank_statement: 银行账单
+        tax_bill: 税单
+      job_type:
+        office_worker: 公司員工董事
+        employee: 公司職員
+        civil_servant: 政府官員
+        group_staff: 組織人員
+        doctor: 醫生和其他醫療機構系統
+        lawyer: 律師和會計師，稅務師
+        faculty: 教職員工
+        self_employed: 個體經營的
+        part_time_job: 兼職工人和臨時工和合同
+        house_job: 家庭主婦（家庭主夫）
+        student: 學生
+        unemployed: 失業的
+        other: 否則
+      trade_purpose:
+        purchase_virtual: 購買虛擬貨幣，匯款到國內外，因為結算等
+        trading_due_price: 由於通過虛擬貨幣的價格波動收益交易
+        diversified_investment: 為了開展多元化投資
+        investment_time: 對於中期和長期投資
+        other: 否則
+      company_trade_purpose:
+        purchase_virtual: 購買虛擬貨幣，匯款到國內外，因為結算等
+        trading_due_price: 由於通過虛擬貨幣的價格波動收益交易
+        diversified_investment: 為了開展多元化投資
+        investment_time: 對於中期和長期投資
+        other: 否則
+      foreign:
+        is_not: 我不是海外重要的公职人员或其亲戚
+        is: 我是海外重要的公职人员，或其亲属（即使是过去）
+      manager_foreign:
+        is_not: 我不是海外重要的公职人员或其亲戚
+        is: 我是海外重要的公职人员，或其亲属（即使是过去）
+      manager_role:
+        shareholder: 该人直接或间接持有超过25％的股票
+        partner: 通过投资，贷款，交易和其他关系对您的业务活动产生主要影响的人
+        representative: 公司代表
+      type_role:
+        representative: 代表
+        transaction_personnel: 交易人员
+    bank_account:
+      account_type:
+        current_bank_account: 经常账户
+        ordinary_bank_account: 普通存款
+  views:
+    pagination:
+      first: "<<"
+      last: '>>'
+      previous: "上一页"
+      next: 下一页
+      truncate: "..."
+  mailer:
+    dear_user: 您好,
+    signature_1: 貔貅团队
+    signature_2: The Bit-Trading Solo
+    please_contact: </br>如果此次登录不是您本人操作，请马上mailto:%{contact_mail}
+    footer: 此邮件由系统自动发出，请勿直接回复。 有问题请mailto:%{contact_mail}
+  arb_mailer:
+    send_profit:
+      subject: "[Bit-Trading Solo] Arb system notification"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        Please confirm Dividends for Arbitrage Pot service for Last month on your wallet on This month 25th.
+        Your monthly dividend is %{profit} yen.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  comment_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] 用户回复了服务单"
+      notification_content: 用户 %{email} 回复了服务单，详情请查看链接：
+    user_notification:
+      subject: "[Bit-Trading Solo] 您的服务单有了新的回复"
+      notification_content: '您的服务单有一条新的回复, 请在下方链接查看详情：'
+  deposit_mailer:
+    accepted:
+      subject: "[Bit-Trading Solo] Your deposit has been credited into your account"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        You have done sent %{amount} %{currency} into your wallet. Please check your wallet.
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  member_mailer:
+    notify_signin:
+      subject: "[Bit-Trading Solo] 您刚刚成功登录"
+      header: Welcome %{name}
+      header_no_name: Welcome customer
+      content: |
+        Thank you for using Bit-trade all the time.
+
+        You just logged in to Bit Trade.
+
+        If you do not remember, please contact us here.
+
+        Thank you for your continued support of Bit-trade.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Rapmatrade Co., Ltd.
+        For inquiries: http: // lapurema-trade.com/
+        〒460-0003
+        Aichi Prefecture Nagoya City Nishiki 3 - chome 23 - 18 New Sakae Building 5F
+        ------------------------------------------------------------------------------------
+    google_auth_activated:
+      subject: "[Bit-Trading Solo] 绑定谷歌两步验证"
+      google_auth_activated: 您已绑定谷歌两步验证。
+    google_auth_deactivated:
+      subject: "[Bit-Trading Solo] 重置谷歌两步验证"
+      google_auth_deactivated: 您已重置谷歌两步验证。
+    sms_auth_activated:
+      subject: "[Bit-Trading Solo] 绑定短信两步验证"
+      sms_auth_activated: 您已绑定短信两步验证。
+    sms_auth_deactivated:
+      subject: "[Bit-Trading Solo] 重置短信两步验证"
+      sms_auth_deactivated: 您已重置短信两步验证。
+    reset_password_done:
+      subject: "[Bit-Trading Solo] 密码修改成功"
+      successful: 您已成功修改密码。请妥善保管~
+    phone_number_verified:
+      subject: "[Bit-Trading Solo] 您已成功绑定手机"
+      verified: '您已成功绑定手机，号码为：%{phone_number}。'
+  system_mailer:
+    daily_stats:
+      member_stats: 新增用户
+      signup: 注册
+      activation: 激活
+      asset_stats: 资金变动
+      trade_stats: 交易变动
+      asset_value_change_total: 数字货币变动总计
+      trades_change_total: 交易数变动总计
+  ticket_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] 用户新建了服务单"
+      admin_notification_content: 用户 %{email} 新建了服务单，详情请查看链接：
+    author_notification:
+      subject: "[Bit-Trading Solo] 您的服务单提交成功"
+      thanks_for_submit_ticket: 感谢您的反馈。我们会尽快处理，并第一时间告知您相关进展。
+  token_mailer:
+    activation:
+      subject: "[Bit-Trading Solo] 帐号激活"
+      content: |
+        Thank you for registering for Bit-trade.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please click on the link below and active account to Bit-Trading Solo.
+        %{token_url}
+
+        Thank you for your continued support of Bit-trade.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Rapmatrade Co., Ltd.
+        For inquiries: http: // lapurema-trade.com/
+        〒460-0003
+        Aichi Prefecture Nagoya City Nishiki 3 - chome 23 - 18 New Sakae Building 5F
+
+        ------------------------------------------------------------------------------------
+    edit_email:
+      subject: "[Bit-Trading Solo] 帐号激活"
+      content: |
+        Please click on the link below and active account to Bit-Trading Solo.
+        %{token_url}
+
+        Thank you for your continued support of Bit-trade.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Rapmatrade Co., Ltd.
+        For inquiries: http: // lapurema-trade.com/
+        〒460-0003
+        Aichi Prefecture Nagoya City Nishiki 3 - chome 23 - 18 New Sakae Building 5F
+
+        ------------------------------------------------------------------------------------
+    reset_password:
+      subject: "[Bit-Trading Solo] 请重置您的密码"
+      hi: 您好
+      follow_the_link: '请使用下面的连接，在30分钟之内尝试重置您的登录密码：'
+    accepted:
+      subject: "[Bit-Trading Solo] Account verification is complete"
+      content: |
+        Thank you for using Bit-trade all the time.
+        Thank you for applying for account verification to Bit-trade.
+        By confirming that your confirmation has been completed and your account has been approved.
+
+        Since we completed the identity verification, we can use Wallet.
+
+        Thank you for your continued support of Bit-trade.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+
+        --------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    send_code:
+      subject: "[Bit-Trading Solo] Verify code"
+      content: 'Code: %{code}'
+  withdraw_mailer:
+    submitted:
+      subject: "[Bit-Trading Solo] Your withdraw is submitted"
+      content: |
+        Thank you for using Bit-Trading Solo all the time.
+
+        The request of your %{currency} withdrawal has been successfully submitted.
+
+        Withdraw Amount: %{amount}  %{currency}
+
+        We will process it as soon as possible
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    processing:
+      subject: "[Bit-Trading Solo] 您的提现状态更新"
+      content: 您的%{currency}提现请求正在处理中，谢谢您的耐心等待，如果您有任何问题，请及时与我们联系。
+    done:
+      subject: "[Bit-Trading Solo] Your withdraw is completed"
+      content: |
+        Thank you for using Bit-Trading Solo.
+        The request of your %{currency} withdrawal is complete.
+        Please check it out.
+        Contact us if you have any questions.
+
+        Thank you for your continued support of Bit-staton.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    withdraw_state:
+      subject: "[Bit-Trading Solo] 您的提现状态更新"
+      your_state: '您的提现状态：'
+  taocoin_mailer:
+    banks_taocoin_trades:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      address: "アドレス : %{address}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "あなたの講座にTAOCOINを振り込みしました。Bit-Trading Solo.jpにあなたのアカウントに蓄積されました詳細については、ログインしてください。"
+    reject_trades:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      address: "アドレス : %{address}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "ペイパルで取引が完了しないので、あなたの注文はBit-Trading Solo.jpによって拒否されました。"
+    bonus:
+      subject: "[Bit-Trading Solo]关于1000 TAOCOIN礼物的通知"
+      content: |
+        每个人都使用Bit-Trading Solo。
+
+        感谢您始终使用Bit-Trading Solo。
+
+        我现在正在进行一个运动。
+        1000TAOCOIN将交给完成等级达到3级的客户。
+
+        另外，我们会收到您发送的确认信息，以便我们收到您的时间。 请注意。
+
+        将来，谢谢Bit Station。
+    bonus_missing:
+      subject: "[ビットステーション] 友人紹介キャンペーンに関するお詫び"
+      content: |
+        いつも、ビットステーションをご利用いただきありがとうございます。
+
+        ご友人紹介キャンペーン1500TAOプレゼント企画において、
+        本来1500TAOをプレゼントする予定でしたが、こちらの手違いで現状1000TAOのみがお客様のウォレットに反映されている状況です。
+        お客様には、ご迷惑をおかけし申し訳ございません。本日中に残りのTAOをお送りいたします。
+
+        今後ともビットステーションをよろしくお願い致します。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo Co.,LTD
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+  trade_mailer:
+    btc_trade_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      payment: "%{btc_address}へBTCを振り込みお願いします"
+      end: "TAOCOINは早速Bit-Trading Solo.jpであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+    paypal_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "TAOCOINは早速Bit-Trading Solo.jpであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+    trade_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      reject: "ペイパルで取引が完了しないので、あなたの注文はBit-Trading Solo.jpによって拒否されました。"
+      end: "TAOCOINは早速Bit-Trading Solo.jpであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+  sendcoin_mailer:
+    sendcoin:
+      subject: "[Bit-Trading Solo] Send coin successful"
+      sendcoin_information: "You just sent %{amount} %{currency} to user %{destination}"
+    receivecoin:
+      subject: "[Bit-Trading Solo] Receive coin successful"
+      receivecoin_information: "You just received %{amount} %{currency} from user %{source}"
+  contact_mailer:
+    send_contact:
+      sendcontact_information: |
+        メール: %{email}
+        カテゴリー: %{category}
+        内容:
+          %{content}
+  view_on_github: 到 Github 上查看
+  slogan: 貔貅，将致力于成为世界级的交易软件。
+  tags:
+    vip: VIP
+    hero: 超级用户
+    admin: 管理员
+  trade:
+    markets: 市场
+    realtime_price:
+      title: 实时价格
+    account_balance:
+      title: 账户余额
+  gon:
+    ask: 卖出
+    bid: 买入
+    brand: Bit-Trading Solo交易所
+    notification:
+      title: Bit-Trading Solo交易所
+      enabled: 实时更新已开启。
+      new_trade: "您的%{kind}委托 #%{id} 以 %{price} %{quote_unit} 价格成交，%{kind} %{volume} %{base_unit}。"
+  back: 返回
+  invalid_password: 无效的登录密码
+  all: 全部
+  date:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%Y-%m-%d %H:%M"
+  time:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%Y-%m-%d %H:%M"
+  sms:
+    verification_code: '验证码为：%{code}，30分钟内有效。（提示：工作人员不会索要，切勿泄露！）【Bit-Trading Solo】'
+    password_changed: '%{email} 您好，您已成功修改账户密码，若非本人操作，您的账户可能存在被盗风险，请立即联系客服！【Bit-Trading Solo】'
+    deposit_done: '%{email} 您好，您于%{time}进行了（%{currency}）充值操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请及时联系我们！）【Bit-Trading Solo】'
+    withdraw_done: '%{email} 您好，您于%{time}进行了（%{currency}）提现操作，金额为%{amount}。最新余额为：%{balance}。（若非本人操作，请立即联系客服！）【Bit-Trading Solo】'
+  header:
+    facebook: Facebook
+    twitter: Twitter
+    signin_facebook: Facebook
+    signin_twitter: Twitter
+    signup_facebook: Facebook
+    signup_twitter: Twitter
+    name: Bit-Trading Solo
+    home: 首页
+    dashboard: 控制面板
+    admin: 后台管理
+    market: 交易大厅
+    settings: 账户
+    signin: 登录
+    signout: 安全退出
+    signup: 创建账户
+    logout: 注销
+    level_about: 关于帐户类
+    demo_screen: 演示屏幕
+    login_via_weibo: 微博登陆
+    funds: 我的资产
+    message_warning: "※注意：一旦执行，您将无法取消交易。"
+    getstart: 前往交易大厅
+    assets: 资产公开
+    history: 历史记录
+    order_history: 订购
+    trade_history: 贸易
+    account_history: 存款/取款
+    cloudsafe_history: Cloudsafe贸易
+    sendcoin_history: 发硬币
+    my_profile: 用户设置
+    tickets: 服务单
+    account_balance: 账户资产
+    back: 返回
+    total: 总额
+    deposit: 充值
+    withdraw: 提现
+    sendcoin: 汇款
+    termsofuse: 使用条款
+    reset_password: 忘记密码
+    link_register: 我们创建帐户
+    title_service: 伐木的服务
+    content1: 买与卖的交流
+    content2: 利用套利功能
+    content3: 货币是能够发送和接收
+    content4: 熟人推荐服务
+    receivecoin_history: 接收硬币
+    arb_history: ARB
+    password: 输入密码
+    password_note: 请输入您的密码以更改您的电子邮件地址
+    next: 下一个
+    cancel: 取消
+    email: 新邮件
+    email_note: 您可以更改新邮件地址的设置
+    update: 更新
+    send_mail: 发送到您的电子邮件的令牌。 请查看你的邮箱
+    error_email: 电子邮件是不正确的
+    email_exit: 电子邮件是退出
+    change_email: 更改电子邮件地址
+  admin_header:
+    deposits: 充值管理
+    withdraws: 提现管理
+    statistics: 数据统计
+    id_documents: 身份验证
+    cloudsafe: 云安全
+    cold_wallet: 冷钱包
+  footer:
+    menu:
+      arbitrage_pot: 套利锅
+      exchanges: 交流
+      wallet: 钱包
+      order_history: 订单历史
+      account: 帐户
+      terms_of_service: 服务条款
+      faq: 常问问题
+      coin_transmission: 硬币传输
+      contact_us: 联系我们
+      logout: 登出
+      back: 背部
+    about: 关于我们
+    privacy: 隐私条款
+    contact: 联系我们
+    price: 资费说明
+    liability_proof: 偿付能力验证
+  actions:
+    go: 立刻前往
+    submit: 提交
+    deposit: 立刻充值
+    select: 请选择
+    unlock: 解锁
+    confirm: 确认
+    back: 返回
+    block: 区块中查看地址
+    destroy: 删除
+    destroy_confirm: 您确定要删除此记录吗？
+    detail: 详情
+    publish: 发布
+    edit: 编辑
+    preview: 预览
+    close: 退出
+    cancel: 撤销
+    view: 查看
+    member: 查看用户
+    transact: 处理
+    reject: 驳回
+    clipboard:
+      click: 点击复制
+      done: 复制成功
+  chart:
+    open: 开盘价
+    high: 最高价
+    low: 最低价
+    close: 收盘价
+    price: 价格
+    volume: 成交量
+    candlestick: 'K线图'
+    line: '分时图'
+    minute: 分
+    hour: 小时
+    day: 日
+    week: 周
+    month: 月
+    year: 年
+    zoom: 缩放
+    ask: 买单
+    bid: 卖单
+    depth: 累计深度
+    depth_title: 市场深度
+  'yes': '是'
+  'no': '否'
+  simple_captcha:
+    label: 不区分大小写，如果看不清请刷新页面
+    placeholder: 请输入图片中的字符
+  helpers:
+    action:
+      view: 查看
+      customer_service: 联系客服
+    submit:
+      order_ask:
+        create: 卖出
+      order_bid:
+        create: 买入
+      document:
+        create: 创建文档
+        update: 更新文档
+        destroy: 删除文档
+      member:
+        update: 开通账户
+      identity:
+        save: 登录
+        create: 注册
+        destroy: 登出
+        verify: 验证
+        update: 修改
+      two_factor:
+        create: 验证
+        update: 激活
+      reset_two_factor:
+        create: 重置两步验证
+      reset_password:
+        update: 重置登录密码
+        create: 发送重置请求
+      fund_source:
+        create: 保存
+      deposit:
+        create: 充值
+      id_document:
+        create: 提交
+      withdraw:
+        create: 提交
+      ticket:
+        create: 提交
+  activations:
+    new:
+      notice: 邮件已经发送至您的邮箱，请您尽快进入您的邮箱进行验证，如未收到请点击再次发送。
+      verified: 您的邮箱已验证通过。
+      login_required: 本操作需要登录，请先登录
+      tip: 激活连接已经发送到 <span class='text-primary'>%{email}</span>
+      spam: 该邮件有可能出现在垃圾邮件中，请注意查看。
+    edit:
+      notice: 邮箱验证已经通过，请您完成其他安全设置。
+      alert: 验证链接已过期或无效。
+  activation_emails:
+    edit:
+      notice: 更改电子邮件成功
+      alert: 更改电子邮件失败
+  authentications:
+    emails:
+      new:
+        title: 设置邮箱
+        setup_email: 请设置您的邮箱, 否则将无法进行任何操作。
+        warning: 设置邮件后, 请查收您的收件箱并进行激活
+        email_address: 邮箱地址
+        save: 保存
+    weibo:
+      destroy:
+        last_auth_alert: 亲, 微博是您最后一种登录方式了, 解除了就没法登录了
+        unbind_success: 已经解除微博绑定
+    identities:
+      new:
+        title: 设置密码
+        save: 设置
+      create:
+        success: 密码设置成功
+  forum:
+    index:
+      notice:
+        display_name: 使用论坛前请设置一个昵称
+  identities:
+    new:
+      title: 账户注册
+      signin: 立即登录
+      password: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+      check_term: 本条款与条件同意
+      password_number: 字母数字6个或更多的字符，大写字母，每个包含小写字母
+    update:
+      auth-error: 請輸入密碼。
+      auth-same: 您输入的新密码与旧密码相同，请重新输入。
+      notice: 登录密码修改成功, 请重新登录。
+    edit:
+      old_password: 当前密码
+      new_password: 新密码
+      confirm_password: 新密码（确认）
+      change: 更改
+      hint: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+      reset_password: 更改密码
+    verify_password:
+      password_not_correct: 密码不正确
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: 用户管理
+          deposits: 充值通道
+          sites_statistics: 数据统计
+          operating: 运营管理
+        items:
+          operating:
+            proofs: 资产证明
+            deposits: 充值管理
+            documents: 文档管理
+            withdraws: 提现管理
+            tickets: 服务单管理
+          deposits:
+            currency: 法币充值
+    application:
+      close: 关闭
+    meta:
+      page_title: Bit-trading
+      page_description: Bit-Trading（ビットトレーディング）では、初めての方でも簡単に仮想通貨・ビットコインのお取引をすることができます。
+      page_keywords: Bit-trading
+  members:
+    edit:
+      name: 请输入您的电子邮件地址重置您的密码。
+  reset_passwords:
+    new:
+      title: 重设密码
+      sub-title: 确保密码
+      send: 寄送
+    create:
+      success: 重置密码邮件已经发送至您的邮箱，请根据邮件内容进行操作。如未收到邮件，请到“垃圾邮箱”里找一下哦~ 或重新发送请求。
+    edit:
+      title: 忘记密码
+      sub-title: 确认密码。
+      password: 请输入至少6位密码, 建议包含大写、小写字母与数字。
+      invalid: 无效的请求
+      submit: 重置登录密码
+      alert: 无效的重置链接。
+      send: 寄送
+      assword_empty: 密码不能清空
+      password_confirmation_empty: 密码确认无法清空
+      password_dont_match: 密码不匹配
+    update:
+      success: 登录密码已经重置，请妥善保管您的新密码。
+      invalid: 无效的请求
+  sessions:
+    new:
+      reset_password: 忘记密码
+    new_with_two_factor_auth:
+      title: 两步验证
+      reset_two_factor: 遗失两步验证
+    create_with_two_factor_auth:
+      session_expired: 操作超时，请重试。
+    create:
+      error: 您输入的密码和邮箱地址不正确，请重新输入。
+      error_login: 登录失败。
+      error_gg_auth: 请检查Google身份验证码。
+    failure:
+      account_locked: 密码错误次数过多，为保证您的帐户安全该帐户已被锁定。重置密码请点击“忘记密码”。
+      error: 您输入的密码和邮箱地址不正确，请重新输入。
+  shared:
+    menu:
+      security: 安全
+      my_account: 我的帐户
+      withdraw: 撤回
+      deposit: 存款
+      setting: 设置
+      history: 历史
+      send_coin: 发送硬币
+      bank_account: 银行帐户
+      withdraw_jpy: 撤回 JPY
+      deposit_jpy: 存款 JPY
+    menu_settings:
+      level1: 1级
+      level2: 2级
+      level3: 3级
+      email: 更改电子邮件
+      id_document: 帐户验证
+      phone: 电话号码
+      two_factors: Google 身份验证器
+      password: 密码
+      api: API令牌
+    footer:
+      support: 支持
+      about: 信息
+      company: 公司概况
+      contact: 联系方式
+      fee: 手续费
+      account_class: 帐户类别
+      term_of_use: 使用条款
+      about_company: 公司概要
+      jobs: 招聘信息
+      blog: 博客
+    admin:
+      member:
+        member_info: 用户信息
+        deactive_sms_two_factor: 短信两步验证
+        deactive_app_two_factor: 谷歌两步验证
+        inactive: 未激活
+        deactive: 取消
+        are_you_sure: 确认取消二次验证？
+      account:
+        account_info: 账户信息
+        payment_address: 充值地址
+    alert:
+      modern: 为了不影响交易体验，请使用更流行的浏览器进行交易，我们向您推荐 <a target='_blank' href='http://www.baidu.com/s?wd=Google+Chrome'>Google Chrome 浏览器</a>。
+      pusher_unavailable: 与服务器通讯异常，<a href='#' class='alert-link'>请刷新页面重试</a>。
+    header:
+      balance: 余额
+      market_menu: 市场
+      signin: 登录
+      signup: 注册
+
+    header_account_balance:
+      locked: 冻结
+    market:
+      ticker:
+        ask_price: 卖一
+        bid_price: 买一
+        high_price: 最高
+        low_price: 最低
+        volume: 成交量
+        latest_price: 最新价格
+    frame:
+      deposit_now: 马上去充值
+  two_factors:
+    index:
+      verify: 验证
+    update:
+      alert: 您输入的验证码错误，请重新输入!
+    auth:
+      please_active_two_factor: 请请先设置谷歌验证器。
+      submit: 确认
+      otp_placeholder: 6位数字密码
+      google_app: 谷歌身份验证器
+      sms: 短信的确认码电子邮件
+      send_code: 获取验证码
+      send_code_alt: COUNT秒后重新发送
+      hints:
+        app: 谷歌验证器每三十秒会重新生成新密码，请及时输入。
+        sms: 请点击“获取验证码”按纽，我们将会把验证码以短信的方式发到您的手机上。
+  verify:
+    google_auths:
+      edit:
+        submit: 确认解除
+        warning: '注：若您在使用过程中因安装程序丢失，导致无法继续使用两步认证，请您及时联系我们的在线客服。'
+      show:
+        step-1: 1. 下载并安装
+        step-2: 2. 用 Google Authenticator 应用扫瞄二维码或将以下密文手动添加到验证器中。
+        step-3: 3. 填入手机显示的动态密码以激活两步验证
+        or: 或
+        google_authenticator: 谷歌认证系统
+        otp_secret: 秘密钥匙
+        download-app: 根据您使用的手机系统类型，点击左侧快捷入口，下载并打开 Google Authenticator 应用到您的智能手机上。
+        guide-link: "具体操作方式可<a href='https://support.google.com/accounts/answer/1066447?hl=zh-Hans' target='_blank'>点击这里</a>。"
+        scan-qr-code: 2. 用 Google Authenticator 应用扫瞄二维码或将以下密文手动添加到验证器中。
+        enter-passcode: 填入手机显示的动态密码以激活两步验证
+        submit: 启用
+        cancel: 取消
+        ios: 苹果 iOS 系统
+        android: 谷歌安卓系统
+        blackbery: 黑莓系统
+        notice:
+          already_activated: 您已经成功设定了谷歌两部验证。
+          not_activated_yet: 您还未设定谷歌两部验证。
+          confirm_two_factor: 请先确认谷歌验证码。
+      confirm_two_factor:
+        submit: 确认
+      update:
+        alert: 您输入的验证器上的密码有误，请重新输入。
+        notice: 两步验证已成功绑定。
+        sms_two_factor_error: 您输入的短信验证码有误，请重新输入。
+      destroy:
+        alert: 您输入的验证器上的密码有误，请重新输入。
+        notice: 两步验证已成功解除。
+    sms_auths:
+      notice: 请先确认你的电话号码。
+      show:
+        title: 绑定手机号码
+        description: 绑定手机号码，让您的资金更安全，还可以快速找回密码，并即时收到您在网站操作的动态提醒和监控账号安全。
+        warning: 手机未绑定时，您将无法在网站操作提现以及账户密码找回。
+        phone_number: 请输入手机号码
+        send_code: 获取验证码
+        send_code_alt: COUNT秒后重新发送
+        input_otp: 请输入通过短信收到的六位验证码
+        hint_otp: 请输入一个接收到的消息中记载的六位认证码。
+        submit: 绑定手机号码
+        cancel: 消除
+        notice:
+          send_code_success: 手机短信验证码已发送。
+          otp_success: 手机短信验证码验证成功。
+          already_activated: 您的手机号码已绑定成功。
+        alert:
+          phone_number_error: 手机号码无效或错误
+  withdraw_channel:
+    bank:
+      key: 银行转账提现
+      title: 银行转账提现
+      intro: 银行转账方式提现，推荐大额用户使用
+      latency: 30 分钟到账
+      transfer: 人工处理
+      go: 立即提现
+    satoshi:
+      key: 块链
+      title: 比特币提现
+      intro: 将您在貔貅的比特币余额提取到您的钱包账户
+      latency: 30 分钟到账
+      transfer: 人工处理
+      go: 立即提现
+    taocoin:
+      key: 块链
+      title: TAO提现
+      intro: 将您在貔貅的比特币余额提取到您的钱包账户
+      latency: 30 分钟到账
+      transfer: 人工处理
+      go: 立即提现
+    ripple:
+      key: 块链
+      title: XRP提现
+      intro: 将您在貔貅的比特币余额提取到您的钱包账户
+      latency: 30 分钟到账
+      transfer: 人工处理
+      go: 立即提现
+    bitcoincash:
+      key: 块链
+      title: 比特币提现
+      intro: 将您在貔貅的比特币余额提取到您的钱包账户
+      latency: 30 分钟到账
+      transfer: 人工处理
+      go: 立即提现
+  withdraws:
+    invalid_address: 不合法. 无法提现到这个地址
+  withdraws/bank:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/satoshi:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/taocoin:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/ripple:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错
+  withdraws/bitcoincash:
+    aasm_state:
+      submitting: 待确认
+      submitted: 待校验
+      rejected: 已驳回
+      accepted: 已提交
+      suspect: 异常
+      processing: 受理中
+      done: 提现成功
+      almost_done: 发送中
+      canceled: 已撤销
+      failed: 提现出错

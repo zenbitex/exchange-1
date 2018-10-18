@@ -1,0 +1,26 @@
+= render "shared/menu_settings"
+#two_factor
+  h1.title-header = t('.google_authenticator')
+  = simple_form_for @google_auth, as: 'google_auth', html: {class: "form-default"}, url: verify_google_auth_path do |f|
+    .col-md-3.col-xs-12 = image_tag "google-preview.png", class: "google-app-image"
+    .two-factor-content.col-md-9.col-xs-12
+      h4 = t('.step-1')
+      .install-app
+        .icon
+          = link_to (image_tag "ios.png"), "https://itunes.apple.com/vn/app/google-authenticator/id388497605?mt=8",:target => "_blank"
+          = link_to (image_tag "google_play.png"), "https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en",:target => "_blank"
+
+      h4 = t('.step-2')
+      .col-md-12.col-sm-12.col-xs-12.no-padding#qr_code
+        = f.input :uri, label: false do
+          = qr_tag(@google_auth.uri)
+        div.google_auth_key
+          b = t(".otp_secret") + ": "
+          span = @google_auth.otp_secret
+
+      .clearfix
+      h4 = t('.step-3')
+      = f.input :otp, label: false
+
+      .form-group.text-center
+        = f.button :submit, t('.submit'), class: 'button-primary'

@@ -1,0 +1,711 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+$btn_color: #0096f7;
+.flash-messages{
+  display: none;
+}
+
+// FUNDS BODY HERE
+.funds-container{
+  max-width: 1000px;
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background: #fff;
+  color: #696969;
+  font-size: 16px;
+  padding-bottom: 30px;
+
+  .list-coin {
+    list-style: none;
+    display: table;
+    width: 100%;
+    padding-left: 0;
+    .list-coin-item {
+      display: table-cell;
+      border-bottom: 2px solid #dcdcdc;
+      a {
+        display: inline-block;
+        padding: 10px 0;
+        position: relative;
+        top: 2px;
+        img {
+          width: 37px;
+          margin-left: 20px;
+          margin-right: 20px;
+        }
+        span {
+          margin-left: 10px;
+          margin-right: 10px;
+        }
+      }
+    }
+    .list-coin-item.active {
+      a {
+        border-bottom: 2px solid #2591fd;
+      }
+    }
+  }
+
+  //balance lock
+  .account {
+    display: table;
+    margin: 5px auto 10px;
+    .balance {
+      text-align: left;
+      margin-bottom: 5px;
+    }
+    img {
+      width: 25px;
+      margin-right: 5px;
+    }
+  }
+
+  //DEPOSIT
+  .deposit-instruction{
+    margin-right: 14px;
+    margin-left: 14px;
+
+    .hint-text{
+      font-weight: 700;
+      text-align: left;
+      margin-bottom: 20px;
+    }
+
+    .qr-content{
+      display: inline-block;
+      width: 100%;
+      .qr-content-left{
+        margin-top: 60px;
+      }
+    }
+
+    // Address label + address text + new address btn
+    .address-content{
+      margin-bottom: 15px;
+      .address{
+        display: flex;
+      }
+      .new-add{
+        visibility: hidden;
+        background-color: #0096f7;
+        a {
+          line-height: 30px;
+          color: white !important;
+        }
+      }
+      #label_address{
+        width: 15%;
+        padding-left: 25px;
+        display: none;
+        line-height: 40px;
+      }
+      #address_container{
+        width: 100%;
+        .address_input{
+          padding-left: 20px;
+          height: 40px;
+          display: flex;
+          margin-bottom: 10px;
+        }
+      }
+
+      #deposit_address_f{
+        overflow: hidden;
+        height: 40px;
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        p{
+          text-align: left;
+          margin-top: 2px;
+        }
+      }
+      #copy_deposit_address{
+        width: 45px;
+        background-color: #0096f7;
+        border: none;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        background-position: center center;
+        i{
+          padding-top: 4px;
+          color: white;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .data-copy-clipboard {
+    position: relative;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+
+    .i-tooltip {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      margin-left: -50px;
+      display: none;
+      padding: 5px;
+      background: #000;
+      border-radius: 5px;
+      font-size: 15px;
+      z-index: 99999;
+      color: #fff;
+
+      &:before {
+        position: absolute;
+        content: '';
+        border: 5px solid transparent;
+        border-bottom: 5px solid #000;
+        top: -10px;
+        left: 50%;
+        margin-left: -2.5px;
+      }
+    }
+
+    &:hover {
+      background: #4D8FAC !important;
+      i {
+        color: #fff;
+      }
+      .i-tooltip {
+        top: 100%;
+        opacity: 1;
+        display: block;
+        color: #fff;
+        &.copied {
+          left: 100%;
+          position: absolute;
+        }
+      }
+    }
+    &.active {
+      background: #5D8CAE !important;
+      i {
+        color: #333;
+      }
+    }
+  }
+
+  // HISTORY
+  .history-title{
+    margin-top: 40px;
+    padding-left: 13px;
+    padding-right: 50px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+  }
+
+  #history{
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    table{
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      th{
+        font-size: 15px;
+        text-align: center;
+      }
+    }
+    .last-right{
+      border-right:1px solid #ddd;
+    }
+  }
+
+  .withdraw_error{
+    color: red;
+    display: block;
+  }
+  .captcha-wrap{
+    padding-left: 15px !important;
+    input{
+      border: 1px solid #bd5b0c;
+      color: black;
+      padding: 10px;
+      height: 40px;
+      border-radius: 10px;
+    }
+  }
+
+  .destination-tag {
+    width: 100%;
+    margin-top: 10px;
+    input {
+      border: 1px solid #bd5b0c;
+      border-radius: 10px !important;
+      height: 40px;
+    }
+  }
+  //JPY
+  .fund_jpy{
+    padding: 0 15px;
+    text-align: left;
+    font-size: 13px;
+    color: black;
+    h2{
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      color: #696969;
+    }
+    table {
+      tbody{
+        border: 1px solid #dddddd;
+        tr td:first-child{
+          font-weight: bold;
+        }
+      }
+    }
+    .de-id{
+      color: #e41919;
+      font-size: 14px;
+    }
+    .panding-note{
+      padding-left: 10px;
+      b{
+        font-weight: normal;
+        color: #873707;
+      }
+    }
+    .help-block{
+      color: black;
+    }
+    .part-title{
+      color: #525252;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    .bank_infor{
+      width: 100%;
+      text-align: center;
+      .table-jpy{
+        margin-left: auto;
+        margin-right: auto;
+        width: auto;
+        background: rgba(238, 238, 238, 0.47);
+        min-width: 100%;
+        tbody{
+          text-align: left;
+        }
+      }
+    }
+    .fa{
+      color: black;
+    }
+
+    .fee_withdraw{
+      display: inline-block;
+      background: #565656;
+      color: white;
+      margin: auto;
+      span{
+        padding: 8px 15px;
+        line-height: 20px;
+        width: 100%;
+        display: block;
+        &:first-child{
+          background: #000000;
+        }
+        &:last-child{
+          padding-top: 0px; 
+        }
+      }
+    }
+    .withdraw_infor_general .help-block{
+      display: inline-block;
+      float: left;
+      max-width: 600px;
+    }
+    .fee_table{
+      float: right;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    #jpy_withdraws{
+      clear: both;
+      padding: 0;
+    }
+    .button-primary {
+      margin: 0 auto 20px;
+    }
+    .withdraw_infor{
+      padding: 20px;
+      border: 2px dashed rgba(212, 194, 148, 0.36);
+      border-radius: 15px;
+      .total{
+        border-bottom: 1px solid rgba(29, 23, 23, 0.42);
+      }
+      .col-sm-6{
+        min-width: 165px;
+        label{
+          &:after{
+            content: ":";
+          }
+        }
+      }
+      .col-sm-12{
+        p{
+          font-size: 14px;
+          padding-top: 0;
+          font-weight: bold;
+          text-align: right;
+        }
+      }
+      #withdraw_all_btn{
+        max-width: 100px;
+        height: 39px;
+        margin: 0;
+      }
+      .form-group{
+        display: block;
+      }
+    }
+    .history_withdraw{
+      margin-top: 20px;
+    }
+    .two-factor-auth-container{
+      text-align: center;
+      .gg-input{
+        width: 100%;
+      }
+      label{
+        text-align: left;
+        font-weight: bold;
+        width: 100%;
+      }
+    }
+  }
+  .deposit_infomation{
+    text-align: left;
+    padding: 0 10px;
+    font-size: 13px;
+    color: black;
+    ul{
+      display: inline-block;
+      padding: 10px;
+      margin: 0;
+      font-size: 15px;
+      border: 2px dashed rgba(144, 105, 105, 0.27);
+      li{
+        text-align: left;
+        list-style: none;
+        clear: both;
+        .left{
+          float: left;
+          span{
+            &:after{
+              content: ":"
+            }
+          }
+        }
+        .right{
+          margin-left: 5px;
+          float: left;
+        }
+      }
+    } 
+    form{
+      .form-label{
+        width: 100%;
+        label{
+          width: 100%;
+        }
+        abbr{
+          color: red;
+        }
+      }
+      .form-input{
+        width: 100%;
+        select{
+          width: auto;
+          display: inline-block;
+        }
+      }
+    }
+
+    #new_deposit_infomation{
+      margin-top: 8px;
+    } 
+  }
+}
+
+//RESPONSIVE
+//500-600-700-900-1100
+@media screen and (min-width: 500px) {
+  .funds-container{
+    .account{
+      display: flex;
+      justify-content: center;
+      margin: 10px auto 15px;
+      .balance{
+        margin-right: 35px;
+      }
+    }
+
+    .list-coin {
+      .list-coin-item {
+        a {
+          img {
+            width: 40px;
+          }
+        }
+      }
+    }
+
+    .funds-wrapper{
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+
+    .deposit-instruction{
+      .address-content{
+        #address_container{
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+    .fund_jpy{
+      font-size: 14px;
+      h2{
+        font-size: 18px;
+      }
+      .part-title{
+        font-size: 16px;
+      }
+      .de-id{
+        font-size: 16px;
+      }
+      .fee_table{
+        width: auto;
+      }
+      .withdraw_infor{
+        .form-group{
+          display: flex;
+        }
+        .col-sm-6{
+          label{
+            &:after{
+              content: "";
+            }
+          }
+        }
+        .col-sm-12{
+          p{
+            font-size: 15px;
+            padding-top: 0;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .deposit_infomation{
+      font-size: 15px;
+      max-width: 650px;
+      margin: auto;
+      form{
+        font-size: 14px;
+        .form-label{
+          width: 35%;
+          float: left;
+          label{
+            font-size: 15px;
+            text-align: left;
+          }
+        }
+        .form-input{
+          width: 65%;
+          float: left;
+        }
+        .bank_infor{
+          width: 100%;
+        }
+      }
+      ul{
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .funds-container{
+    .list-coin {
+      .list-coin-item {
+        a {
+          padding: 15px 0;
+          img {
+            width: 45px;
+          }
+        }
+      }
+    }
+
+    .deposit-instruction{
+      .address-content{
+        .new-add{
+          visibility: visible;
+          width: 40%;
+          height: 40px;
+          border: none;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+        #label_address{
+          display: block;
+          padding-left: 5px;
+        }
+        #address_container{
+          width: 80%;
+          padding-left: 0px;
+          .address_input{
+            padding-left: 0px;
+          }
+        }
+        #address_container > #new_address{
+          display: none;
+        }
+        #copy_deposit_address{
+          width: 45px;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-right: 1px solid white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 678px) {
+  .funds-container{
+    .fund_jpy{
+      .withdraw_infor{
+        #withdraw_all_btn{
+          max-width: 130px;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .funds-container{
+    .account{
+      display: flex;
+      justify-content: center;
+      margin: 15px auto 20px;
+    }
+    .funds-wrapper{
+      padding-right: 50px;
+      padding-left: 50px;
+    }
+    .history-title{
+      padding-left: 30px;
+    }
+    #history{
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .funds-container{
+    .deposit-instruction{
+      .address-content{
+        #label_address{
+          width: 20%;
+          padding-left: 0px;
+        }
+        #address_container > .address_input{
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .funds-container{
+    padding-left: 55px;
+    padding-right: 55px;
+
+    .list-coin {
+      .list-coin-item {
+        a {
+          img {
+            width: 55px;
+          }
+        }
+      }
+    }
+    .funds-wrapper{
+      padding-right: 25px;
+      padding-left: 25px;
+    }
+    .deposit-instruction{
+      .address-content{
+        #address_container{
+          width: 80%;
+          padding-left: 0px;
+        }
+      }
+    }
+    .fund_jpy{
+      font-size: 15px;
+      h2{
+        font-size: 22px;
+      }
+      .part-title{
+        font-size: 17px;
+      }
+      .bank_infor .table-jpy{
+        min-width: 500px;
+        td{
+          line-height: 27px;
+        }
+      }
+      .de-id{
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .funds-container{
+    .address{
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .funds-container{
+    padding-left: 70px;
+    padding-right: 70px;
+    .deposit-instruction{
+      .address-content{
+        #address_container{
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}
+
+@import "features/withdraw"

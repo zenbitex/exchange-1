@@ -1,0 +1,30 @@
+<table class="table table-bordered table-hover">
+	<thead >
+		<tr id="bank_deposit">
+			<th><%= t('.code') %></th>
+			<th><%= t('.name') %></th>
+			<th><%= t('.amount') %></th>
+			<th><%= t('.state') %></th>
+			<th><%= t('.txid') %></th>
+			<th><%= t('.at') %></th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		<% banks.each do |f| %>
+		<tr>
+			<td class="col-xs-1"><%= f.member.sn_code %></td>
+			<td class="col-xs-2">
+				<a href="<%= admin_id_document_path(f.id)%>" target="_blank"> <%= f.member_name %> </a>
+			</td>
+			<td class="col-xs-2"><code class="text-info"><%= f.amount %> <%= f.currency %> </code></td>
+			<td class="col-xs-1"><span><%= f.aasm_state_text %></span></td>
+			<th class="col-xs-3"><%= f.txid %></th>
+			<td class="col-xs-3"><%= f.created_at %></td>
+			<td class="col-xs-1">
+				<a class="btn btn-primary" href="<%= admin_deposits_bank_path(f.id)%>" > <%= t("actions.view") %> </a>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>

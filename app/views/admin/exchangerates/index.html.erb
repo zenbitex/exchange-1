@@ -1,0 +1,26 @@
+<div class="exchangerates">
+	<h2>Exchange Rate</h2>
+	<table class="table table-options">
+		<thead>
+			<tr>
+				<th>STT</th>
+				<th>Currency</th>
+				<th>Exchange Rate</th>
+				<th>Change</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% i = 1 %>
+			<% @excrates.each do |e| %>
+				<tr>
+					<td><%= i %></td>
+					<td><%= e.currency %></td>
+					<td><%= e.rate %></td>
+					<td><%= link_to "Edit", edit_admin_exchangerate_path(e) %></td>
+					<% i+=1 %>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+

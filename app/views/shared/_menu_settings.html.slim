@@ -1,0 +1,46 @@
+/ .setting-level
+/   .level-item
+/     figure
+/       img src="/settings/artboard-#{(!current_user.account_class.nil? && current_user.account_class >= 1) ? "active" : "disable"}.png"
+/     span = t(".level1")
+/   .line
+/   .level-item
+/     figure
+/       img src="/settings/artboard-#{(!current_user.account_class.nil? && current_user.account_class >= 2) ? "active" : "disable"}.png"
+/     span = t(".level2")
+/   .line
+/   .level-item
+/     figure
+/       img src="/settings/artboard-#{(!current_user.account_class.nil? && current_user.account_class >= 3) ? "active" : "disable"}.png"
+/     span = t(".level3")
+ul.nav-settings
+
+  / li class=((params[:controller] == "private/id_documents" && params[:action] == "edit") ? "active" : "")
+  /   = link_to id_document_path do
+  /     = image_tag("/settings/acount.png")
+  /     span = t(".id_document")
+      
+  li class=((params[:controller] == "identities" && (params[:action] == "confirm_password" || params[:action] == "update_email")) ? "active" : "")
+    = link_to (current_user.activated? ? edit_authentications_email_path(current_user.id) : new_activation_path) do
+      = image_tag("/settings/email.png", class: 'email')
+      span = t(".email")
+
+  li class=((params[:controller] == "verify/sms_auths" && params[:action] == "show") ? "active" : "")
+    = link_to verify_sms_auth_path do
+      = image_tag("/settings/shape.png")
+      span = t(".phone")
+
+  li class=((params[:controller] == "verify/google_auths" && (params[:action] == "show" || params[:action] == "edit" || params[:action] == "confirm_two_factor") || params[:controller] == "two_factors") ? "active" : "")
+    = link_to (current_user.app_two_factor.activated? ? edit_verify_google_auth_path : verify_google_auth_path) do
+      = image_tag("/settings/verified-protection.png")
+      span = t(".two_factors")
+  li class=((params[:controller] == "identities" && (params[:action] == "edit" || params[:action] == "new")) ? "active" : "")
+    = link_to (current_user.identity ? edit_identity_path : new_authentications_identity_path) do
+      = image_tag("/settings/password.png", class: 'password')
+      span = t(".password")
+
+  li class=((params[:controller] == "private/api_tokens") ? "active" : "")
+    = link_to api_tokens_path do
+      = image_tag("/settings/token.png")
+      span = t(".api")
+= render 'shared/flash'

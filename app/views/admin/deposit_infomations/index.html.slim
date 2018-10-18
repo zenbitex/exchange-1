@@ -1,0 +1,58 @@
+.row
+  .panel.panel-primary
+    .panel-heading
+      span = t('.search')
+    .panel-body
+      = form_tag admin_deposit_infomations_path, method: :get do |f|
+        .col-xs-4 = select_tag :search_field, options_for_select([ \
+            ["Email", 'email'],                                \
+            ["Member Id",  'id'],                                 \
+            ["Payer name", 'name'],                         \
+          ], @search_field)
+        .col-xs-4 = text_field_tag :search_term, @search_term
+        .col-xs-4.col-xs-offset-1 = submit_tag "Search"
+.row
+  .panel.panel-primary
+    .panel-heading: span = "Deposit informations"
+    = table_for(@deposit_informations, class: 'table table-condensed table-hover') do |t|      
+      - t.column "ユーザー", class: 'col-md-1' do |x|
+        = x.member_id
+      - t.column "ユーザーID", class: 'col-md-1' do |x|
+        = x.user_id
+      - t.column "メール", class: 'col-md-2' do |x|
+        = link_to x.member.email, admin_member_path(x.member)
+      - t.column "申請者", class: 'col-md-1' do |x|
+        = x.payer_name
+      - t.column "金額", class: 'col-md-1' do |x|
+        = x.amount
+      - t.column "振込をした日付", class: 'col-md-1' do |x|
+        = x.date_deposit
+      - t.column "問い合わせを送信した日時", class: 'col-md-1' do |x|
+        = x.created_at
+      - t.column "メモ", class: 'col-md-2' do |x|
+        = x.memo
+      - t.column "状態", class: 'col-md-1' do |x|
+        = state(x.aasm_state)
+      / - t.column :name, class: 'col-xs-2' do |x|
+      /   = link_to x.name.to_s, admin_member_path(x.member)
+      / - t.column :email, class: 'col-xs-2' do |x|
+      /   = link_to x.member.email, admin_member_path(x.member)
+      / - t.column :id_document_type, t('.id_document_type'), class: 'col-xs-3' do |x|
+      /   = x.id_document_type.blank? ? t('.unknow') : t("enumerize.id_document_type.#{x.id_document_type}")
+      / - t.column :id_bill_type, t('.id_bill_type'), class: 'col-xs-3' do |x|
+      /   = x.id_bill_type.blank? ? t('.unknow') : t("enumerize.id_document.id_bill_type.#{x.id_bill_type}")
+      / - t.column :updated_at, t('.request_at'), class: 'col-xs-4'
+      / - t.column :verified, class: 'col-xs-1' do |x|
+      /   = yesno(x.verified?)
+      - t.column '', class: 'col-md-1' do |x|
+        - if x.may_approve?
+          .col-xs-12
+            = link_to admin_deposit_infomation_path(x, approve: 'true'), method: :patch, style: 'color: white;' do
+              button.btn.btn-primary = t('.approve')
+      - t.column ' ', class: 'col-md-1' do |x|
+        - if x.may_reject?
+          .col-xs-12
+            = link_to admin_deposit_infomation_path(x, reject: 'true'), method: :patch, style: 'color: white;' do
+              button.btn.btn-danger = t('.reject')
+
+    = paginate @deposit_informations

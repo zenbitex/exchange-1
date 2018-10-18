@@ -1,0 +1,134 @@
+
+#two_factor {
+  background: #fff !important;
+  text-align: center;
+  padding: 0 0 20px 0;
+  margin-bottom: 50px;
+  overflow: hidden;
+  h4 {
+    text-align: left;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 700;
+    color: #696969;
+    line-height: 20px;
+  }
+
+  .no-padding {
+    padding-left: 15px;
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .install-app .icon{
+    display: inline-block;
+    a{
+      width: 50%;
+      float: left;
+    }
+    img {
+      margin-right: 25px;
+      width: 160px;
+    }
+    a:last-child img  {
+      margin-right: 0;
+    }
+  }
+
+  .two-factor-content {
+    float: left;    
+    padding: 0px 0px 0px 5px;
+  }
+
+  .google-app-image {
+    width: 180px;
+    padding-top: 40px;
+  }
+  .google_auth_uri img
+  {
+    width: 150px;
+  }
+  .google_auth_key{
+    font-size: 16px;
+    color: black;
+    span {
+      color: #c8780c;
+    }
+  }
+  .form-group{
+    margin: 0;
+  }
+  .form-input{
+    width: 100%;
+    margin: auto;
+    min-width: 200px;
+    max-width: 350px;
+    text-align: center;
+  }
+  @media screen and (max-width: 991px) {
+    .google-app-image {
+      width: 150px;
+      padding-top: 0;
+    }
+    .install-app .icon img{
+      width: 130px;
+    }
+    h4{
+      font-size: 16px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .google_auth_key{
+      font-size: 13px;
+    }
+    .google-app-image {
+      width: 130px;
+    }
+    .install-app .icon img{
+      width: 100px;
+    }
+    h4{
+      font-size: 14px;
+    }
+  }
+}
+
+.two-factor-auth-container{
+  .form-group{
+    display: block;
+    margin: 0;
+    span.hint {
+      text-align: center;
+    }
+  }
+
+  .col-xs-12{
+    padding: 0;
+  }
+  .input-group{
+    min-width: 300px;
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    display: inline-block;
+  }
+  .two-factor{
+    width: 100%;
+  }
+  @media screen and (max-width: 395px) {
+    .input-group{
+      min-width: auto;
+      width: 100%;
+    }
+    .form-group span.hint {
+      text-align: left;
+    }
+  }
+}
+
+.two-factor-component {
+  background-color: #fff;
+  .button-primary {
+    margin-bottom: 50px;
+  }
+}

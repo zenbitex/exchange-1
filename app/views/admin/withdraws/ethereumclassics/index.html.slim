@@ -1,0 +1,11 @@
+- unless @one_ethereumclassics.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {ethereumclassics: @one_ethereumclassics}
+- unless @all_ethereumclassics.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {ethereumclassics: @all_ethereumclassics}
+
+- if @all_ethereumclassics.empty? and @one_ethereumclassics.empty?
+  h3.text-info.text-center = t('.empty')

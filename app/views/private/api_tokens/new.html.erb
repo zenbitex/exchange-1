@@ -1,0 +1,6 @@
+<%= render "shared/menu_settings" %>
+<%= simple_form_for @token, html: {class: "new_api_token"} do |f| %>
+  <%= f.input :label, hint: t('.label_hint') %>
+  <%= two_factor_tag(current_user) %>
+  <%= f.button :wrapped, t('actions.confirm'), class: "button-primary" %>
+<% end -%>

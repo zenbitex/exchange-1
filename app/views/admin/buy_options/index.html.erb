@@ -1,0 +1,39 @@
+<div class="list-trade">
+	<h2>Buy Options</h2>
+	<table class="table table-options">
+		<thead>
+			<tr>
+				<th class="id">ID</th>
+				<th class="email">Taocoin</th>
+				<th class="tradecode">Currency</th>
+				<th class="amount">Amount</th>
+				<th class="change">Change</th>
+			</tr>
+		</thead>
+		<tbody>	
+			<% @buyoptions.each do |t| %>
+				<tr class="tr-body">
+					<td class="id"><%= t.id %></td>
+					<td class="email"><%= t.taocoin %></td>
+					<% if t.currency == "1" %>
+						<td class="tradecode">
+							JPY
+						</td>
+					<% elsif t.currency == "2" %>
+						<td class="tradecode">
+							BTC
+						</td>
+					<% elsif t.currency == "3" %>
+						<td class="tradecode">
+							USD
+						</td>
+					<% end %>
+							
+					</td>
+					<td class="address"><%= t.amount %></td>
+					<td class="change"><%= link_to "Edit", edit_admin_buy_option_path(t) %></td>
+				</tr>
+			<% end %>
+		</tbody>	
+	</table>
+</div>

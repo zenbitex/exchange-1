@@ -1,0 +1,9 @@
+- if trades.market
+  tr
+    td data-th=t('.side') = t(".#{trade_side trades}")
+    td data-th=t('.created_at') = trades.created_at
+    td data-th=t('.base_currency') = trades.market.base_unit.upcase
+    td data-th=t('.base_amount') = trades.volume
+    td data-th=t('.quote_currency') = trades.market.quote_unit.upcase
+    td data-th=t('.quote_amount') = trades.volume*trades.price
+    td data-th=t('.price') = trades.price

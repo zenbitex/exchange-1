@@ -1,0 +1,287 @@
+$(document).ready(function() {
+  // clickable signup btn when check term
+  $('.btn-sigup').prop( "disabled", true );
+  $('.check-first').on('change', function() {
+    if (this.checked) {
+      $('.btn-sigup').prop( "disabled", false );
+    } else {
+      $('.btn-sigup').prop( "disabled", true );
+    }
+  });
+
+  $('.arb-error').hide();
+  $('.arb-error-amount').hide();
+
+  function isInteger(value) {
+      return /^\+?(0|[1-9]\d*)$/.test(value);
+  }
+
+  $('.deposit-arbs').click(function(event) {
+    event.preventDefault();
+    var amount = $('#arb_tao_amount').val();
+    if(amount < 100) {
+      $('.arb-error').show();
+      $('.arb-error-amount').hide();
+      return 0;
+    }
+
+    var is_int = isInteger(amount);
+      if(is_int == false) {
+        $('.arb-error-amount').show();
+        $('.arb-error').hide();
+
+          return false;
+      }
+
+    $('.form-arb').submit();
+  })
+
+  $('.amount-send-error').hide();
+  $('.email-send-error').hide();
+  $('.amount-send-tao').hide();
+  $('#coin-email').show();
+  var email_selected, email;
+
+  // if(email_selected != '') {
+  //  email_selected = $(".email-send-selected option:first").val();
+  //  $('.email-send-text').val(email_selected);
+  // } 
+
+  $('.email-send-selected').on('change', function() {
+    email_selected = $('.email-send-selected').val();
+    $('.email-send-error').hide();
+    if(email_selected != '') {
+      $('.email-send-text').val(email_selected);
+    } else {
+      $('.email-send-text').val('');
+    }
+  })
+
+  function remove_error_msg(){
+    $(".error").hide();
+  }
+
+  $('.btn-send-coin').click(function(event){
+    event.preventDefault();
+    remove_error_msg();
+    var s = $('#sendcoin_currency').val();
+    var current = $('#sendcoin_currency').find(":selected").text();
+    email = $('.email-send-text').val();
+    var amount = $('#sendcoin_amount').val();
+
+    if(email == '') {
+      $('.email-send-error').show();
+      return 0;
+    } else {
+      if(amount <= 0) {
+          $('.amount-send-error').show();
+          return 0;
+        }
+
+      if(s == 3){
+        var is_int = isInteger(amount);
+            if(is_int == false) {
+              $('.amount-send-error').hide();
+              $('.amount-send-tao').show();
+              return 0;
+            } 
+      }
+
+      if(!validateEmail(email) || email == '') {
+        $('.amount-send-error').hide();
+        $('.amount-send-tao').hide();
+        $('.email-send-error').show();
+        return 0;
+      } else {
+
+        $('.email-send-error').hide();
+        if(amount <= 0) {
+          $('.amount-send-error').show();
+          return 0;
+        }
+
+        if(s == 3){
+          var is_int = isInteger(amount);
+              if(is_int == false) {
+                $('.amount-send-error').hide();
+                $('.amount-send-tao').show();
+                return 0;
+              } 
+        }
+      }
+    }
+
+    $('.currency-send').html(current);
+    $('.email-send').html(email);
+    $('.amount-send').html(amount);
+
+    $('.sendcoin-details').show();
+    $('#new_sendcoin').hide();
+
+  });
+
+  $('.btn-next-send').click(function(event) {
+    event.preventDefault();
+    $('#new_sendcoin').submit();
+  });
+
+  $('.btn-close-send').click(function(event){
+    event.preventDefault();
+    $('.sendcoin-details').hide();
+    $('#new_sendcoin').show();
+    $('.sendcoin-details').hide();
+    $('.amount-send-error').hide();
+    $('.email-send-error').hide();
+  }); 
+
+  function validateEmail($email) {
+      var emailReg = /^[\w._-]+[+]?[\w._-]+@[\w.-]+\.[a-zA-Z]{2,6}$/;
+      return emailReg.test($email );
+  }
+
+  $('#coin-email .close_manage').click(function(){
+    $('#coin-email .overlay').fadeOut();
+  });
+  $('#manage_email').click(function(){
+    $('#coin-email .overlay').show();
+  });
+  $("#add_email").click(function(){
+    $(".message").hide();
+    label = $("#input_label").val();
+    email = $("#input_email").val();
+    if (label == "")
+    {
+      $("#input_label").focus();
+      return; 
+    }
+    if (email == "")
+    {
+      $("#input_email").focus();
+      return; 
+    }
+    if (!validateEmail(email))
+    {
+      $(".message").fadeIn();
+      $(".message").text(I18n.t("sendcoin.email_error"));
+      $("#input_email").focus();
+      return; 
+    }
+    $.ajax({
+      url: "add_or_delete_email",
+      data:{
+        email: email,
+        label: label,
+        sendcoin_action: "add_email"
+      },
+      success: function(data){
+        if (data["error"] == undefined)
+        {
+          email_list = $(".email_list");
+          li = $('<li class="li-2">');
+          li.append('<div class="visible-xs col-xs-12">' + $('.label_name').text() +  '</div>');
+          li.append('<div class="col-sm-4 col-xs-12">' + label +  '</div>');
+          li.append('<div class="visible-xs col-xs-12">' + $('.email_address').text() +  '</div>');
+          li.append('<div class="col-sm-6 col-xs-12">' + email +  '</div>');
+          li.append('<div class="visible-xs col-xs-12">' + $('.select_action').text() +  '</div>');
+          li.append('<div class="col-sm-2 col-xs-12"></div>');
+          div_action = $('<div class="col-sm-2 col-xs-12">');
+          select_radio = $('<input type="radio" class="select_email" data="' + email + '">');
+          delete_link = $('<a data="' + email + '" class="delete_email"><i class="fa fa-trash-o">&nbsp;</i></a>');
+          select_radio.click(function(){
+            select_email($(this));
+          });
+          delete_link.click(function(){
+            delete_email($(this));
+          });
+          div_action.append(select_radio);
+          div_action.append(delete_link);
+          li.append(div_action);
+          email_list.append(li);
+          option = new Option(email, email); 
+          $('#sendcoin_email').append($(option));
+          $("#input_label").val("");
+          $("#input_email").val("");
+        }
+        else 
+        {
+          $(".message").hide();
+          $(".message").fadeIn();
+          $(".message").text(data["error"]);
+          $("#input_email").focus();
+        }
+      }
+    });
+  });
+
+  $("#sendcoin_currency").change(function(){
+    coin_name = $("#sendcoin_currency").find(":selected").text();
+    $(".coin_icon").attr("src", "icon-" + coin_name.toLowerCase() + ".png");
+    $.ajax({
+      url: "sendcoin",
+      data:{
+        sendcoin_action: "change_coin", 
+        coin_name: coin_name,
+      },
+      success: function(data){
+        if (data["error"] == undefined)
+        {
+          $(".amount").text(data["amount"] + " " + coin_name);      
+          $(".amount").attr("price", data["price"]);   
+          calc_jpy();
+        }
+      }
+    });
+  });
+
+  $("#sendcoin_amount").on("keyup change paste cut", function(){
+    calc_jpy();
+  });
+
+  calc_jpy();
+
+  $('.delete_email').click(function(){
+    delete_email($(this));
+  });
+
+  function calc_jpy()
+  {
+    money = $("#sendcoin_amount").val();
+    price = $(".amount").attr("price");
+    $(".jpy_amount").text((money * price).toFixed(2));
+  }
+
+  function delete_email(element)
+  {
+    if (!confirm($(".confirm_delete").text())) {
+      return;
+    }
+    email = element.attr("data");
+    $.ajax({
+      url: "add_or_delete_email",
+      data:{
+        delete_email: email,
+      },
+      success: function(data){
+        if (data["error"] == undefined)
+        {
+          $('#sendcoin_email option[value="' + email + '"]').remove();
+          element.parents(".li-2").remove();
+        }
+      }
+    });
+  }
+
+  function select_email(element)
+  {
+    is_select = element.prop('checked');
+    $(".select_email").prop('checked', false);
+    element.prop('checked', is_select);
+    $("#sendcoin_email").val(element.attr("data"));
+    $('#coin-email .overlay').fadeOut();
+  }
+
+  $(".select_email").click(function(){
+    select_email($(this));
+  });
+
+});

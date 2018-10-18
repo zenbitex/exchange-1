@@ -1,0 +1,3877 @@
+ja:
+  wait_activation:
+    header: メールアドレス認証
+    resend: 再送信
+    back: トップへ
+    sent: "<span>%{email}</span> へ送信したメールアドレス認証。"
+    click: スタートする為に、メールを送信したリンクをクリックしてください。
+  accounts:
+    index:
+      header: アカウント
+      id: ユーザーID
+      total: 総資産
+    account_balance:
+      account_balance: 残高
+      currency: 通貨
+      amount: 金額
+      lock: ロック
+      available: ご利用可能残高
+      withdraw: 出金
+      deposit: 入金
+      total: 日本円換算
+      rate: 価格
+      convert_to_yen: 日本円換算
+    current_rate:
+      header: 現在の価格
+    level:
+      header: レベル
+      email_verifi: メールアドレス承認済み
+      account_phone_verifi: アカウント確認及び携帯電話認証
+      post_card: 書留の受け取り
+    history:
+      header: ボーナス
+      amount: 金額
+      reason: 理由
+      time: 時間
+      blank: ボーナス履歴がありません
+  securities:
+    update:
+      successfull: 更新に成功
+      failed: アップデートに失敗しました
+      update_failed: この機能をオンにする為に、２段階認証をお願い致します。
+    edit:
+      submit: 保存する
+      header: セキュリティ
+      email_withdraw: 送金する時にメールを送信する
+      email_login: ログインする時にメールを送信する
+      two_factor_withdraw: 送金する時に２段階認証を利用する
+      two_factor_login: ログインする時に２段階認証を利用する
+  two_factors_access:
+    index:
+      title: 2段階認証
+      help_text: ログインには2段階認証のパスコードが必要です。
+      send: 送信
+      otp_wrong: 認証コードが違います。もう一度お試しください！
+      code_placeholder: 6ー桁のパスコード
+  buy_coin:
+    title: クレジットカードで購入する
+    title_list_coin: 1.通貨を選択
+    title_input_money: 2.購入金額の設定
+    title_confirm: 3.数量を確認
+    price: 価格
+    yen: 円
+    amount: 数量
+    money: 金額
+    buy: 購入する
+    server_busy: サーバービジーエラー
+    max_amount: 今では最大%{amount}しか買えません。
+    amount_zero: 現在サービス停止中です。しばらくお待ちください。
+    order_fail: トランザクションエラーが発生しました、もう一度買ってください。
+    paymement_finish: 支払い完了
+    paymement_error: トランザクションエラーが発生しました。
+    history:
+      coin: 通貨
+      price: 価格
+      amount: 数量
+      time: 時間
+    information: • お支払い日は名クレジット会社員規約に基づく引き落とし日になります。
+                  <br>• 詳しくはご利用明細書をご覧ください。
+                  <br>• ご購入手続き後のキャンセル、　返金は承っておりません。
+  bit_station: Bit-Trading Solo
+  id_documents:
+    invalid_zipcode: 郵便番号の入力が間違えました.( '-' をふくめてください)
+    invalid_birthdate: 日付が間違えました。
+    invalid_job_type: 職業を選択してください
+    invalid_trade_purpose: 取引目的を選択してください
+    blank_name: 本名をご入力してください
+    blank_job_type: 職業を選択してください
+    blank_zipcode: 郵便番号をご入力してください
+    blank_trade_purpose: 取引目的を選択してください
+    blank_city: 都道府県をご入力してください
+    blank_address: 住所をご入力してください
+    blank_foreign: 海外を選択してください
+    blank_id_document_type: 書類タイプを選択してください
+  contacts:
+    new:
+      title: お問い合わせ
+      name: お名前
+      email: メールアドレス
+      category_select: カテゴリー選択
+      content: お問い合わせ内容
+      button_confirm: 確認する
+      button_back: 戻る
+      button_send: 送信
+      error:
+        name_blank: お名前を入力してください。
+        email_blank: メールを入力してください。
+        category_blank: カテゴリーを選択でください。
+        content_blank: 内容を入力してください。
+        email: メールが間違いました。もう一度入力してください。
+      category_type1: ご登録情報の変更について
+      category_type2: アカウントの作成について
+      category_type3: 入出金について
+      category_type4: 仮想通貨の取引について
+      category_type5: 仮想通貨の受取・送付について
+      category_type6: ICO(クラウドセール)についてその他
+      category_type7: その他
+    create:
+      notice:
+        fails: メッセージが送らないです。
+        ok: お問い合わせありがとうございます。メールの送信が完了しました。
+        sorry: お問い合わせは一日に三回までの受付となります。
+  welcome:
+    index:
+      exchange_name: ビットトレーディング
+      public_content: 初めての方でも簡単に仮想通貨・ビットコインのお取引をすることができます。
+      logo_content: 使いやすいを重視した取引所
+      menu_mini:
+        chart: チャート
+        help: ヘルプ
+        logout: ログアウト
+        login: ログイン
+        account: アカウント
+        signup: 新規登録
+      menu: メニュー
+      price_ask: ビットコイン購入(円)
+      price_bid: ビットコイン売却(円)
+      price: 価格(BTC/JPY)
+      tao_price: 価格(TAO/JPY)
+      balance_btc: 残高(BTC)
+      balance_jpy: 残高(JPY)
+      balance_tao: 残高(TAO)
+      yen: 円
+      jpy: 円
+      btc: BTC
+      tao: TAO
+      slide_title: 自分の資産を運用しよう
+      what_is_tao_toin: タオコインとアービトラージ・ポッド
+      arbitrage_pot_service: アービトラージポッド・サービスとは
+      service-1: 世界で使える
+      service-2: 買い物に使える
+      service-3:
+        安心の<br>
+        セキュリティー
+      service-4:
+        資産を自動で増やせる<br>
+        自動型システム
+      news: ニュース
+      phone:
+        title: お間い合わせはこちら
+        content: Bit-Trading Soloカスタマーサポートセンター <br> 受付時間 平日10:00-19:00
+      arb: アービトラージポット
+      exchange: 取引所
+      fund: ウォレット
+      history: 注文履歴
+      account: アカウント
+      term_of_service: 利用規約
+      sendcoin: コイン送信
+      contact: お問い合わせ
+      logout: ログアウト
+      back: バック
+    success_message:
+      title: 成功した
+      message: メールを送信しました。
+      content-1: メールを送信しました。
+      content-2: 新しいパスワードを再設定する為に、メールをチェックしてください。
+      content-3: 再設定してください。
+      back: トップへ
+  datetime:
+    distance_in_words:
+      half_a_minute: "30秒前後"
+      less_than_x_seconds:
+        one:   "1秒"
+        other: "%{count}秒"
+      x_seconds:
+        one:   "1秒"
+        other: "%{count}秒"
+      less_than_x_minutes:
+        one:   "1分"
+        other: "%{count}分"
+      x_minutes:
+        one:   "約1分"
+        other: "%{count}分"
+      about_x_hours:
+        one:   "約1時間"
+        other: "約%{count}時間"
+      x_days:
+        one:   "1日"
+        other: "%{count}日"
+      about_x_months:
+        one:   "約1ヶ月"
+        other: "約%{count}ヶ月"
+      x_months:
+        one:   "1ヶ月"
+        other: "%{count}ヶ月"
+      almost_x_years:
+        one:   "１年弱"
+        other: "%{count}年弱"
+      about_x_years:
+        one:   "約1年"
+        other: "約%{count}年"
+      over_x_years:
+        one:   "1年以上"
+        other: "%{count}年以上"
+  activerecord:
+    models:
+      api_tokens: API トークン
+      trade: 取引所
+      order: 注文
+      order_bid: BID商業
+      order_ask: ASK
+      document: 書類
+      withdraw: 出金
+      deposit: 入金
+      payment_transaction: 支払い
+      id_document: ID　書類
+      statistic/orders_grid: 注文統計
+      statistic/trades_grid: 商業統計
+      statistic/members_grid: メンバー統計
+      statistic/deposits_grid: 入金統計
+      statistic/withdraws_grid: 出金統計
+      admin/deposits_grid: 入金
+      admin/withdraws_grid: 出金
+      deposits/bank: 入金銀行
+      withdraws/bank: 出金銀行
+      withdraws/satoshi: 出金
+      withdraws/taocoin: 出金
+      withdraws/ethereum: 出金
+      withdraws/ripple: 出金
+      withdraws/bitcoincash: 出金
+    attributes:
+      api_token:
+        access_key: アクセスキー
+        trusted_ip_list: IP ホワイトリスト　
+        ip_whitelist: IP ホワイトリスト
+        label: ラベル
+        actions: 行動
+      identity:
+        email: メール
+        password: パスワード
+        password_confirmation: パスワード確認
+        referrer_code: 紹介コード
+      document:
+        zh_cn_body: 中国語コンテンツ
+        zh_cn_title: 中国語タイトル
+        zh_cn_desc: 中国語説明
+        zh_cn_keywords: 中国語キーワード
+        en_body: 英語コンテンツ
+        en_title: 英語タイトル
+        en_desc: 英語説明
+        en_keywords: キーワード英語
+        key: キー
+        is_auth: は認証
+      fund_source:
+        address: アドレス
+        category: カテゴリ
+        label: ラベル
+      account:
+        currency: 通貨
+        currency_text: 通貨
+        balance_and_locked: バランスしました / ロックししました
+        balance: 残高
+        locked: ロック
+      deposit:
+        state: 場所
+        tx_id: TxID
+        member_id: IDメンバー
+        created_at: で提出しました
+        address: アドレス
+        amount: 金額
+        done_at: 完了日付
+        sn: SN
+      withdraw:
+        id: ID
+        sn: SN
+        withdraw_id: ID
+        created_at: 日時
+        done_at: 完了日付
+        sum: 合計
+        fee: 料金
+        currency: 通貨
+        amount: 金額
+        address: アドレス
+        state: ステータス
+        state_text: ステータス
+        tx_id: TxID
+        fund_source_id: 出金アドレス
+        detail: 具体的
+      account_version:
+        id: ID
+        locked: フローズン
+        amount: 残高
+        balance: バランス
+        reason: 理由
+        reason_text: 理由
+        modifiable_id: IDリンク
+        modifiable_type: リンク
+        created_at: 日時
+        in: 収入
+        out: 支出
+        fee: 手数料
+      token/reset_password:
+        email: ログインメール
+        member: メンバー
+      trade:
+        bid: 購入
+        ask: 売却
+        fee: 料金
+        price: ストライキ価格
+        volume: ストライクボリューム
+        category: 購入/売却
+        order: 注文
+      order:
+        bid: 購入
+        ask: 売却
+        price: 価格
+        total: 合計
+        volume: 数量
+        origin_volume: 数量
+        sum: 合計
+        category: 購入/売却
+        kind: 書類
+        at: で
+        id: ID
+        state: 場所
+        operation: 運行
+      payment_transaction:
+        at: 日付時刻
+        txid: ID取引
+        amount: 金額
+        confirmations: 確認
+        state: ステータス
+        state_done: 完了
+        state_wait: 待つ
+      member:
+        id: ID
+        name: 本名
+        display_name: 表示名
+        email: メール
+        created_at: 登録日付
+        sn: SN
+        id_document_number: Id書類番号
+        tag_list: タッグ
+        activated: 有効化しました
+        activated?: "有効化しましたか?"
+        id_document_verified?: "Id書類を確認しましたか?"
+        two_factor_activated?: "携帯電話番号を設定しましたか？"
+        phone_number: 携帯電話番号
+      two_factor/sms:
+        country: 国
+        phone_number: 携帯電話番号
+        otp: 確認コード
+        country_error: 国を選択してください
+        phone_error: 電話番号が半角で入力してください。
+      withdraws/bank:
+        id: ID
+        member_name: メンバー
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_source: 銀行
+        fund_extra: 銀行
+        fund_extra_text: 銀行
+        fund_uid: 銀行アカウント
+        sum: 金額
+        fee: 料金
+        amount: 金額
+        remark: 注意
+        created_at: 日時
+      deposits/bank:
+        created_at: 日時
+        holder: ホルダー
+        fund_extra: 送信銀行
+        fund_uid: 送信者アカウント
+        member_sn: メンバー SN
+        member_name: 送信者名前
+        amount: 金額
+        sn: SN
+        state_and_action: ステータス/行動
+        label: ラベル
+        fund_source: 資金源
+      deposits/satoshi:
+        created_at: 日時
+        txid: 取引ID
+        amount: 金額
+        confirmations: 確認
+        aasm_state_text: ステータス
+      deposits/taocoin:
+        created_at: 日時
+        txid: 取引ID
+        amount: 金額
+        confirmations: 確認
+        aasm_state_text: ステータス
+      deposits/ethereum:
+        created_at: 日時
+        txid: 取引ID
+        amount: 金額
+        confirmations: 確認
+        aasm_state_text: ステータス
+      deposits/ripple:
+        created_at: 日時
+        txid: 取引ID
+        amount: 金額
+        confirmations: 確認
+        aasm_state_text: ステータス
+      withdraws/satoshi:
+        id: ID
+        member_name: 金額
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat:  出金ラベル
+        fund_source: 銀行
+        fund_uid: 金額
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+      withdraws/taocoin:
+        id: ID
+        member_name: アカウント
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat: 出金ラベル
+        fund_source: 銀行
+        fund_uid: アカウント
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+      withdraws/ethereum:
+        id: ID
+        member_name: アカウント
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat: 出金ラベル
+        fund_source: 銀行
+        fund_uid: アカウント
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+      withdraws/ripple:
+        id: ID
+        member_name: アカウント
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat: 出金ラベル
+        fund_source: 銀行
+        fund_uid: アカウント
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+      withdraws/ethereumclassic:
+        id: ID
+        member_name: アカウント
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat: 出金ラベル
+        fund_source: 銀行
+        fund_uid: アカウント
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+      withdraws/kuberacoin:
+        id: ID
+        member_name: アカウント
+        currency_obj_key_text: 通貨
+        state_and_actions: ステータス/行動
+        fund_extra_text: 出金ラベル
+        fund_extrat: 出金ラベル
+        fund_source: 銀行
+        fund_uid: アカウント
+        created_at: 日時
+        sum: 金額
+        amount: 金額
+        remark: 注意
+        fee: 料金
+    errors:
+      models:
+        coin_trade:
+          min_amount: 最低数量が%{min}%{currency}からになります
+          user_insufficient: '%{currency}の残高が足りません'
+        coin_trade_bid:
+          suspect_price: コインを購入出来ませんでした。もう一度やってください。
+          admin_insufficient: 現在サービス停止中です。しばらくお待ちください
+          invalid_amount: 数量は数値で入力してください
+        coin_trade_ask:
+          suspect_price: コインを売却出来ませんでした。もう一度やってください。
+          admin_insufficient: 現在サービス停止中です。しばらくお待ちください
+          invalid_amount: 数量は数値で入力してください
+          cannot_sell_tao: TAOCOINは売却できません
+        order_bid:
+          attributes:
+            sum:
+              expensive: 高アカウント
+            price:
+              range: 不正な価格帯
+        order_ask:
+          attributes:
+            origin_volume:
+              expensive: 高アカウント
+            price:
+              range: 不正な価格帯
+        account:
+          attributes:
+            balance:
+              less: 少ないバランス
+        identity:
+          attributes:
+            email:
+              invalid: 不正なメール
+              taken: お客様のアカウントはすでに登録済です。ログイン画面からお進みください
+              blank: メールをご入力してください。
+            password:
+              invalid: 不正なパスワード
+              blank: パスワードをご入力してください。
+              too_short: 6文字以上で入力してください。
+              too_long: 64文字以内で入力してください。
+            password_confirmation:
+              confirmation: 入力した新しいパスワードと一致しません, 再入力してください.
+              too_short: 6文字以上で入力してください。
+              too_long: 64文字以内で入力してください。
+              blank: 確認パスワードをご入力してください。
+        token/reset_password:
+          attributes:
+            base:
+              too_soon: 早くアクセスしました、後でアクセスしてください
+            email:
+              not-member: 不正なメール
+              match: 不正なサインしたメール
+            password:
+              invalid: 不正なパスワード
+            member:
+              blank: 存在しません!
+        activation:
+          attributes:
+            base:
+              too_soon: ５分前にメールアドレスに有効化したメールを送りました。
+        fund_source:
+          attributes:
+            address:
+              satoshi_ismine: 使用したアドレス
+              satoshi_invalid: 不正なアドレス
+              taocoin_ismine: 使用したアドレス
+              taocoin_invalid: 不正なアドレス
+              ethereum_ismine: 使用したアドレス
+              ethereum_invalid: 不正なアドレス
+              ripple_ismine: 使用したアドレス
+              ripple_invalid: 不正なアドレス
+        withdraw:
+          account_balance_is_poor: アカウントバランスは不十分です
+          attributes:
+            password:
+              match: 不正
+            amount:
+              poor: 不十分
+              bank_min: 5000.00以下
+        withdraws/satoshi:
+          attributes:
+            fund_uid:
+              blank: 出金アドレスを入力してください。
+              invalid: 不正な出金アドレス、レビューしてください。
+              ismine: 新しいアドレスを使用してください。
+        withdraws/taocoin:
+          attributes:
+            fund_uid:
+              blank: 出金アドレスを入力してください。
+              invalid: 不正な出金アドレス、レビューしてください。
+              ismine: 新しいアドレスを使用してください。
+        withdraws/ethereum:
+          attributes:
+            fund_uid:
+              blank:  出金アドレスを入力してください。　
+              invalid: 不正な出金アドレス、レビューしてください。
+              ismine: 新しいアドレスを使用してください。
+        withdraws/ripple:
+          attributes:
+            fund_uid:
+              blank:  出金アドレスを入力してください。　
+              invalid: 不正な出金アドレス、レビューしてください。
+              ismine: 新しいアドレスを使用してください。
+        two_factor:
+          attributes:
+            otp:
+              invalid: 不正なパスワード!再入力してください。
+        application:
+          attributes:
+            redirect_uri:
+              fragment_present: フラグメントを含むことはできません
+              invalid_uri: 正当なURIでなければなりません
+              relative_uri: 明白なURIでなければなりません
+        id_document:
+          attributes:
+            name:
+              blank: 本名をご入力してください
+            id_document_type:
+              blank: 書類タイプをご入力してください。
+            id_document_number:
+              blank: 書類番号をご入力してください。
+            id_bill_type:
+              blank: 住居の証明をご入力してください。
+            address:
+              blank: 住所をご入力してください
+        two_factor/sms:
+          attributes:
+            phone_number:
+              blank: 空欄にしないでください
+              invalid: 不正な電話番号
+            otp:
+              blank: 空欄にしないでください
+        cold_wallet:
+          currency_balance_is_poor: ホットウォレットの残高が足りません
+          insufficient_funds: ホットウォレットの残高が足りません
+      messages:
+        invalid_email: 不正なメールアドレス
+        undef: 不明な理由
+        less: 少ないバランス
+        verify: 確認エラ
+        strength: は強いパスワードが不正です
+        password: ６文字以上、大文字・小文字・数字をそれぞれ含む。
+        orders:
+          price: 限定価格 %{l} ~ %{h}
+          sum: 限定合計価格 %{l} ~ %{h}
+          precision: 最小精度 %{p}
+  banks:
+    mufg: 三菱UFJ信託銀行
+    smbc: SMBC信託銀行（三井住友銀行）
+    mzh: みずほ信託銀行（みずほFG）
+    nmrt: 野村信託銀行 （野村グループ）
+    jpp: ゆうちょ銀行
+  market:
+    exchange: 取引所
+    currency:
+      btc: btc
+      jpy: 円
+      jpyt: jpyt
+      doge: doge
+      pts: pts
+      ltc: ltc
+      tao: tao
+      eth: eth
+      xrp: xrp
+      bch: bch
+      kbr: kbr
+      btg: BTG
+  currency:
+    satoshi:
+      key: BTC
+      code: BTC
+      name: Bitcoin
+      format: '0,0.0000'
+    bitsharesx:
+      key: BTS
+      code: BTSX
+      name: BitsharesX
+      format: '0,0.0000'
+    renminbi:
+      key: JPY
+      code: JPY
+      name: Chinese Yuan
+      format: '0,0.00'
+    dogecoin:
+      key: DOG
+      code: DOGE
+      name: Dogecoin
+      format: '0,0.0000'
+    protoshare:
+      key: PTS
+      code: PTS
+      name: Protoshare
+      format: '0,0.0000'
+    taocoin:
+      key: TAOCOIN
+      code: TAOCOIN
+      name: Taocoin
+      format: '0,0.0000'
+    ethereum:
+      key: ETH
+      code: ETH
+      name: Ethereum
+      format: '0,0.0000'
+    ripple:
+      key: XRP
+      code: XRP
+      name: Ripple
+      format: '0,0.0000'
+    bitcoincash:
+      key: BCH
+      code: BCH
+      name: Bitcoin cash
+      format: '0,0.0000'
+    bitcoingold:
+      key: BTG
+      code: BTG
+      name: Bitcoin gold
+      format: '0,0.0000'
+    ethereumclassic:
+      key: ETC
+      code: ETC
+      name: Ethereum Classic
+      format: '0,0.0000'
+    kuberacoin:
+      key: KBR
+      code: KBR
+      name: Kubera Coin
+      format: '0,0.0000'
+  datagrid:
+    empty: データがありません
+    filters:
+      date:
+        range_separator: " - "
+      datetime:
+        range_separator: " - "
+    form:
+      submit: 検索
+    admin_deposits_grid:
+      columns:
+        sn: SN
+        created_at: で
+        channel_key_text: チャネル
+        fund_extra_text: エキストラ
+        fund_uid: UID
+        txid: TXID
+        amount: 金額
+        fee: 料金
+        currency_text: 通貨
+        aasm_state_text: ステータス
+        member_name: メンバー
+    bank_deposits_grid:
+      columns:
+        sn: SN
+        created_at: で
+        channel_key_text: カテゴリ
+        fund_extra_text: 銀行
+        fund_uid: 金額
+        amount: 金額
+        fee: 料金
+        aasm_state_text: ステータス
+    coin_deposits_grid:
+      columns:
+        sn: SN
+        txid: 取引ID
+        created_at: で
+        amount: 金額
+        aasm_state_text: ステータス
+        confirmations: 確認
+    withdraws_grid:
+      columns:
+        sn: SN
+        name: 名前
+        currency_text: 通貨
+        amount: 金額
+        fee: 料金
+        created_at: 日時
+        done_at: で完了しました
+        state_text: ステータス
+    members_grid:
+      columns:
+        sn: シリアル番号
+        email: メール
+        created_at: 日時
+        actions: 行動
+    account_versions_grid:
+      columns:
+        created_at: 日時
+        currency_text: 通貨
+        balance: バランス
+        in: 入
+        out: 出
+        amount: 金額
+        reason_text: 理由
+        modifiable_type: リック
+        fee: 料金
+      filters:
+        reason: 理由
+        currency: 通貨
+    statistic_members_grid:
+      columns:
+        sn: シリアル番号
+        id: ID
+        email: メール
+        created_at: 日時
+        activated: 有効化
+        detail: 詳細
+        action: 行動
+      filters:
+        sn: シリアル番号
+        activated: 有効化
+        created_at: 日時
+        email: メール
+    statistic_orders_grid:
+      columns:
+        id: シリアル番号
+        price: 価格
+        volume: 数量
+        created_at: 日時
+        state_text: ステータス
+        member_id: メンバー
+      filters:
+        state: ステータス
+        currency: 通貨
+        created_at: 日時
+        type: 売却/購入
+    statistic_trades_grid:
+      columns:
+        id: ID
+        price: 価格
+        volume: 数量
+        strike_amount: 価額
+        created_at: 日時
+        fee: 手数料
+      filters:
+        currency: 通貨
+        created_at: 日時
+    statistic_deposits_grid:
+      columns:
+        member: メンバー
+        tx_id: TxID
+        amount: 価額
+        currency: 通貨
+        created_at: 日時
+        state_text: ステータス
+      filters:
+        currency: 通貨
+        state: ステータス
+        created_at: 日時
+    statistic_withdraws_grid:
+      columns:
+        member: メンバー
+        address: アドレス
+        amount: 価額
+        currency: 通貨
+        created_at: 日時
+        state_text: ステータス
+      filters:
+        state: ステータス
+        created_at: 日時
+  deposit_channel:
+    bank:
+      key: 銀行トランスファー
+      title: 銀行振込作業
+      intro: 銀行トランスファー入金、大リチャージをお勧めします
+      latency: 10分
+      transfer: マニュアル
+      go: 入金
+    satoshi:
+      key: Block Chain
+      title: Bitcoin 入金
+      intro: ウァレットアドレスからBit-Trading Solonアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    taocoin:
+      key: Block Chain
+      title: Taocoin 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　Taocoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    ethereum:
+      key: Block Chain
+      title: Ethereum 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    ripple:
+      key: Block Chain
+      title: Ripple 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    bitcoincash:
+      key: Block Chain
+      title: Bitcoincash 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    bitcoingold:
+      key: Block Chain
+      title: Bitcoingold 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    ethereumclassic:
+      key: Block Chain
+      title: Ethereum Classic 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+    kuberacoin:
+      key: Block Chain
+      title: Kuberacoin 入金
+      intro: ウァレットアドレスからBit-Trading Soloアカウントまで　bitcoinを入金します
+      latency: 1 確認
+      transfer: マニュアル
+      go: 入金
+  deposits/bank:
+    aasm_state:
+      submitting: 処理中
+      cancelled: キャンセルしました
+      submitted: 申請済み
+      accepted: 完成済み
+      rejected: 拒否しました
+      checked: チェックしました
+      warning: 警告
+  private:
+    affiliates:
+      link:
+        aff_link: アフィリエイトリンク%{i}
+        copy_link: リンクコピー
+      index:
+        help-text: Bit-Trading をご紹介いただき、紹介された方が 0.1BTC 以上ご入金されると、500KBR の報酬が支払われます。
+        target_text: 10,000口座達成
+        affiliate_program: アフィリエイト
+        affiliate_status: アフィリエイト達成状況
+        people: "アフィリエイト登録人数:"
+        summary: "紹介報酬:"
+        rewards: アフィリエイト報酬ルール
+        rewards_condition: 条件
+        verify_account_lvl2: ご紹介していただき0.01BTCご入金
+        verify_account_lvl3: アカウントレベル3達成
+        order_account: 被紹介者の 0.1BTC 以上のご入金による報酬
+        user_invite_1000: 1,000 人紹介達成
+        user_invite_10000: 10,000 人紹介達成
+        total: すべて達成すると
+        reward_history: アフィリエイト報酬テーブルの履歴
+        member_id: メンバーID
+        email: メールアドレス
+        level: レベル
+        order_btc: 注文 BTC
+        created_at: 日付
+    coin_trade_bids:
+    coin_trades:
+      load_history:
+        buy: 購入
+        sell: 売却
+      index:
+        title: 販売所
+        history: 購入履歴
+      buy_form:
+        jpy: 円
+        btc: BTC
+        xrp: XRP
+        buy_price: 購入価格
+        total_price: 合計
+        btn_buy: 購入する
+        btn_sell: 売却する
+        buy_coin: クレジットカードで買う
+        amount: 数量
+        error_over: "注文最高金額は %{max}%{currency}です"
+        min_amount: "最低数量が%{min}%{currency}からになる"
+      sell_form:
+        jpy: 円
+        btc: BTC
+        xrp: XRP
+        sell_price: 売却価格
+        total_price: 合計
+        btn_buy: 購入する
+        btn_sell: 売却する
+        amount: 数量
+        error_over: "注文最高金額は %{max}%{currency} です"
+        min_amount: "最低数量が%{min}%{currency}からになる"
+      buy_create:
+        successful: コインを購入しました
+        no_price: 価格が有りません
+      sell_create:
+        not_sell_tao: タオコインを売却出来ませんでした。もう一度やってください。
+        successful: コインを売却しました
+        no_price: 価格が有りません
+      history_trade_bid_ask:
+        load_more: 更に読み込む
+        type: タイプ
+        buy: 購入
+        sell: 売却
+        currency: 通貨
+        payment_type: 支払通貨
+        price: 価格
+        amount: 数量
+        total_price: 金額
+        trade_time: 時間
+    deposit_infomations:
+      new:
+        header: 日本円入金のお問い合わせ
+        hint: Bit-Trading Soloに入金する際に振込人名義にIDを付け忘れた場合や、入金の反映が終わらないお客様は振込情報を送信してください。
+        bank: お振込先の銀行
+        label:
+          company_name: トレード
+          bank_name: 銀行名
+          branch: 支店名
+          account_number: 口座番号
+          account_kind: 口座種類
+          account_name: 口座名義
+        content:
+          company_name: 名古屋銀行
+          bank_name: 名古屋銀行
+          branch: 本店営業部(101)
+          account_number: 3937838
+          account_kind: 普通
+          account_name: Bit-Trading Solo（カ
+        date_deposit: お振込日
+        payer_name: お振込人名義
+        user_id: ユーザID
+        holder_payer: ヤマダ　ダロウ
+        amount: お振込金額
+        memo: 備考
+        submit: 送信
+      create:
+        successfull: 日本円入金のお問い合わせを送信しました。
+        failed: のついた項目は入力必須です。
+    arbs:
+      index:
+        title: アービトラージポット
+        tao_amount: 保有TAO
+        jpy_amount: 円
+        datetime: 権利日数
+        days: 日
+        withdraw: 引き出す
+        deposit: 預ける
+        profit: 先月の配当金
+        insufficient_fund: TAOが足りません。
+        deposit_successful: TAOを預けました。
+        withdraw_successful: TAOを引き出しました！
+        error:
+          tao_amount_too_small: 最低発注量は100TAOからです。
+          tao_amount_integer: 入力された数量は整数でなければなりません
+        white_paper: ホワイトペーパーの詳細
+      update:
+        invalid_amount: 数量が無効です。
+        insufficient_fund: TAOが足りません。
+        deposit_successful: TAOを預けました。
+        withdraw_successful: TAOを引き出しました！
+        tao_amount_integer: 入力された数量は整数でなければなりません
+      create:
+        invalid_amount: 数量が無効です。
+        insufficient_fund: TAOが足りません。
+        deposit_successful: TAOを預けました。
+        withdraw_successful: TAOを引き出しました！
+    deposits:
+      satoshis:
+        gen_address:
+          require_transaction: 新しいアドレスが使用されていなければ作成できません
+      taocoins:
+        gen_address:
+          require_transaction: 新しいアドレスが使用されていなければ作成できません
+      ethereums:
+        gen_address:
+          require_transaction: 新しいアドレスが使用されていなければ作成できません
+      ripples:
+        gen_address:
+          require_transaction: 新しいアドレスが使用されていなければ作成できません
+      banks:
+        destroy:
+          notice: 回収要求が成功しました
+        create:
+          notice: リチャージ要求を提出することが成功しました。　銀行トランスファーが成功するには、以下の情報を使用してください。
+          submit: 提出
+        new:
+          fund_source: 資金源を選びます
+          manage_fund_source: 資金源管理
+          submit: 提出
+        edit:
+          bank: 受信銀行
+          branch: 受信銀行支店
+          hodler: 受信者　
+          account: 受信アカウント
+    history:
+      tabs:
+        title_history: 履歴
+      transaction:
+        Deposit: 入金
+        Withdraw: 出金
+      account:
+        currency: 通貨
+        buy: 購入
+        sell: 売却
+        filter_by_type: タイプでフィルタリングします
+        account_history: 入金/出金履歴
+        type: タイプ
+        timestamp: 日付時刻
+        fee: 料金
+        currency: 通貨
+        amount: 金額
+        txid: Txid
+        empty_transactions: 入金/出金履歴がありません
+      orders:
+        order_history: 注文履歴
+        id: ID
+        type: 売買
+        state: 注文状況
+        market: 通貨ペア
+        price: プライス
+        volume: 出来高
+        average_price: 平均価格
+        fullfilled_volume: 約定履歴
+        timestamp: 日時
+        empty_orders: コイン送信履歴がありません
+      order:
+        ask: 売
+        bid: 買
+        wait: オープン
+        cancel: キャンセルしました
+        done: 完了しました
+      trades:
+        trade_history: 商業履歴
+        side: サイド
+        created_at: 時間
+        base_currency: 基本通貨
+        base_amount: 基本金額
+        quote_currency: 見積通貨
+        quote_amount: 見積金額
+        price: 価格
+        empty_trades: 取引履歴がありません
+      trade:
+        sell: 売却
+        buy: 購入
+      cloudsafe:
+        tradecode: 注文コード
+        amount: 金額
+        price: 価格
+        status: ステータス
+        wait: 注文中
+        done: 完了しました
+        cancel: キャンセルしました
+        currency: 通貨
+        timestamp: 日時
+        empty_taocoin_trades: クラウドセールの注文履歴がありません
+      sendcoin:
+        from: コイン送信者
+        to: コイン受信者
+        amount: 金額
+        currency: 通貨
+        timestamp: 日時
+        empty_sendcoins: コイン送信履歴がありません
+      signup_history:
+        title: ログイン履歴
+        login_time: ログイン日時
+        ip: IP
+        local_system: ブラウザ
+        empty_signup_histories: ログイン履歴がありません
+      arb_history:
+        member_id: メンバー ID
+        type: タイプ
+        tao_amount: TAO金額
+        timestamp: 作成日
+        deposit: 入金
+        withdraw: 出金
+        empty_arb_histories: ARB履歴がありません
+      receivecoin:
+        from: コイン送信者
+        to: コイン受信者
+        amount: 金額
+        currency: 通貨
+        timestamp: 日時
+        empty_receivecoins: コイン受信履歴がありません
+    trade:
+      trades:
+        orders:
+          title: 注文
+        trades:
+          title: 商業
+        charges:
+          title: チャージ
+      orders:
+        index:
+          done: 完了しました
+          cancel: キャンセルしました
+          confirm: '注文をキャンセルしたいですか #%{id}?'
+        destroy:
+          'true': "#%{id} 注文キャンセルが成功します"
+          'false': "#%{id}　注文キャンセルを拒否します"
+    withdraws:
+      update:
+        request_accepted: 出金要求を容認されました。
+      destroy:
+        request_canceled: 出金要求をキャンセルしました
+      index:
+        fee: 料金
+        total: 合計
+        withdraw_history: 出金履歴
+      create:
+        address_same: 送信アドレスが入金アドレスと一緒にしないでください！
+        address_error: 送信アドレスのフォーマットが間違えました！
+        address_hotwallet: この送信アドレスがBit-Trading Solo内ので、「コイン送信」画面に使ってください！
+        success: '%{currency}送金申請をしました!'
+        two_factors_error: 承認コードが間違えました。
+        insufficient_fund: アカウントバランスは不十分です
+        insufficient_balance_ethereum: Ethereum アカウントバランスは不十分です %{amount}
+        invalid_captcha: 無効なcaptcha
+        bank_account: お客様の銀行口座を登録しなければなりません
+        active_phone_number: 電話番号を設定してください
+        limit_tao_withdraw: 金額は10より大きい値にしてください。
+        limit_amount_withdraw: 最低でも20XRPがRippleアドレスに入っている必要があります
+        limit_amount_withdraw_kbr: 送金の数量最低は1000です
+        limit_amount_withdraw_eth: 送金の数量最低は0.1です
+        limit_amount_withdraw_btc: 送金の数量最低は0.005です
+        error_withdraw_address: 送金アドレスが見つかりませんでした。
+        limit_amount_active_account: 送金のアドレスは未確認するので、20XRP以上を送金してください。
+        missing_destination_tag: この宛先アドレスはタグが必要です。
+        dont_have_destination_tag: この宛先アドレスはタグが必要ないです。
+      banks:
+        update:
+          notice: 銀行で出金要求が提出されましたが、早めに処理します
+          alert_two_factor: 携帯電話認証がエラー
+        destroy:
+          notice: 銀行で出金要求がキャンセルされました,フローズン金額はアカウントに送り返します
+        new:
+          fund_source: 資金源を選びます
+          manage_fund_source: 資金源管理
+          submit: 提出します
+          allin: 全ー入
+        create:
+          notice: 出金要求を提出することが成功しました、銀行トランスファーが成功するには、以下の情報を使用してください。
+      satoshis:
+        destroy:
+          notice: 出金ことがキャンセルされました、フローズンバランスはアカウントに送り返します
+        update:
+          notice: 出金要求を提出することが成功しました、早めに処理します
+          alert_two_factor:  携帯電話認証がエラー
+        new:
+          submit: 提出
+          allin: 全ー入
+          fund_source_label: ラベル
+          manage_fund_source: 資金源管理
+        create:
+          notice: 出金要求を提出することが成功しました、銀行トランスファーが成功するには、以下の情報を使用してください。
+      taocoins:
+        destroy:
+          notice: 出金ことがキャンセルされました、フローズンバランスはアカウントに送り返します
+        update:
+          notice: 出金要求を提出することが成功しました、早めに処理します
+          alert_two_factor:  携帯電話認証がエラー
+        new:
+          submit: 提出
+          allin: 全ー入
+          fund_source_label: ラベル
+          manage_fund_source: 資金源管理
+        create:
+          notice: 出金要求を提出することが成功しました、銀行トランスファーが成功するには、以下の情報を使用してください。
+      ethereums:
+        destroy:
+          notice: 出金ことがキャンセルされました、フローズンバランスはアカウントに送り返します
+        update:
+          notice: 出金要求を提出することが成功しました、早めに処理します
+          alert_two_factor: 携帯電話認証がエラー
+        new:
+          submit: 提出
+          allin: 全ー入
+          fund_source_label: ラベル
+          manage_fund_source: 資金源管理
+        create:
+          notice: 出金要求を提出することが成功しました、銀行トランスファーが成功するには、以下の情報を使用してください。
+      ripples:
+        destroy:
+          notice: 出金ことがキャンセルされました、フローズンバランスはアカウントに送り返します
+        update:
+          notice: 出金要求を提出することが成功しました、早めに処理します
+          alert_two_factor: 携帯電話認証がエラー
+        new:
+          submit: 提出
+          allin: 全ー入
+          fund_source_label: ラベル
+          manage_fund_source: 資金源管理
+        create:
+          notice: 出金要求を提出することが成功しました、銀行トランスファーが成功するには、以下の情報を使用してください。
+    tickets:
+      index:
+        intro: 質問、不具合等があればこちら
+        new_ticket: 新しいお問い合わせ
+      new:
+        intro: 質問、不具合等があればこちら
+      ticket_create_succ: お問い合わせが完了致しました。返信が来るまで少々お待ちください。
+      ticket_create_fail: お問い合わせ作成が失敗しました、後で作成してください。
+      comment_succ: コメントが成功しました
+      cooment_fail: コメントが失敗しました、後でコメントしてください。
+      me: me
+      supporter: サポート
+      close: お問い合わせを閉じる
+      close_succ: チケット閉が成功しました
+      close_confirm: このお問い合わせを閉じますか？
+      title_content_both_blank: タイトルとコンテンツがなくてもいいです。
+      from: 送信先
+      view_closed_tickets: 閉じたお問い合わせを見ます
+      view_open_tickets: オープンお問い合わせを見ます
+    account_versions:
+      index:
+        description: Bit-Trading Soloで取引と収入金額、完全で明確に記録されました
+    api_tokens:
+      user_tokens:
+        no_token: APIトークンがありません
+        edit: 編集
+        destroy: 削除
+        destroy-confirm: 削除してよろしでしょうか？
+        create: 新規作成
+        http: HTTP API 書類
+        websocket: Websocket API 書類
+        more: '情報をよく知りるように、github:でAPIをチェックしてください'
+      oauth_tokens:
+        panel_title: 認証
+        title: 認可されたアプリケーション
+        oauth: OAuth 統合
+        intro: 認証したアプリケーション管理
+        no_token: アプリケーションがありません
+        unbind: 取り消す
+        unbind-confirm: 本気ですか？
+        oauth_app_name: 名前
+        oauth_app_expire: 期限まで
+        oauth_app_scope: スコープ
+      unbind:
+        success: 取り消す成功
+        failed: 取り消す失敗
+      new:
+        label_hint: ラベルを使用すると、トークンの使い方を覚えられます。随意でラベルを使用します。
+      create:
+        alert_two_factor:  携帯電話認証失敗
+        success: APIトークン作成が成功しました
+        failed: APIトークン作成が失敗しました。後で作成してください、又は管理者に連絡してください。
+        desc: 安全な所で以下のキーをコピー＆ペーストして、保存してください。機密キーは一度だけ表示します。
+        access_key: アクセスキー
+        secret_key: 秘密鍵
+      edit:
+        access_key_hint: 日時 %{created_at}
+        label_hint: ラベルを使用すると、トークンの使い方を覚えられます。随意でラベルを使用します。
+        ip_whitelist_hint: IPをコンマで区切る, このフィールドを空白のままにすると、すべてのIPが許可されます。.
+      update:
+        alert_two_factor: 携帯電話認証失敗
+        success: 保存が成功しました
+        failed: 保存トークンが失敗しました。後で保存してください、又は管理者に連絡してください
+      destroy:
+        success: トークンを取り消すことが成功しました
+        failed: トークンを取り消すことが失敗しました
+    assets:
+      index:
+        liability-proof: 信頼証明
+        btc-assets: BTC 資産
+        jpy-assets: JPY 資産
+        tao-assets: TAOCOIN 資産
+        eth-assets: ETH 資産
+        xrp-assets: XRP 資産
+      liability_tabs:
+        verify-btc: My BTC 資産確認
+        verify-jpy: My JPY 資産確認
+        verify-tao: My TAOCOIN 資産確認
+        verify-eth: My ETH 資産確認
+        verify-xrp: My XRP 資産確認
+        btc-assets-total: '交換の全てBTC資産: '
+        jpy-assets-total: '交換の全てJPY資産: '
+        tao-assets-total: '交換の全てTAOCOIN資産: '
+        eth-assets-total: '交換の全てETH資産: '
+        xrp-assets-total: '交換の全てXRP資産: '
+      liability_proof:
+        title: 信頼証明
+        intro: As an exchange, our liabilities refer to the sum of money (in both
+          crypto currencies and fiat currencies) that our users trust us with. On
+          this page, we present you our liabilities. We also provide you a way to
+          verify that your account balance is indeed part of our liabilities.
+        how-to-verify-uri: https:/Bit-Trading Solo.jp/documents/liability_proof
+      liability_data:
+        liability-proof-generating: 証明を処理していますが、３０分後に戻ってください
+        root-json: ルートノード
+        partial-tree: 'My %{currency} Assets: '
+        get-partial-tree: ツリーデータで一部分を取得します
+        timestamp: '%{time}に証明データを作成します'
+        go-verify: 正当
+      btc_assets:
+        title: BTC 資産
+        intro: BTC　資産のすべて交換は以下の
+        total: 全てBTC 資産
+        address: アドレス
+      tao_assets:
+        title: TAOCOIN 資産
+        intro: TAOCOIN 資産のすべて交換は以下の
+        total: 全てTAOCOIN 資産
+        address: アドレス
+      eth_assets:
+        title: ETH 資産
+        intro: ETH 資産のすべて交換は以下の
+        total: 全てETH 資産
+        address: アドレス
+      xrp_assets:
+        title: XRP 資産
+        intro: XRP 資産のすべて交換は以下の
+        total: 全てXRP 資産
+        address: アドレス
+      jpy_assets:
+        title: JPY 資産
+        intro: JPY 資産のすべて交換は以下の
+        total: 全てJPY 資産
+        description: " <p>監督のために、入金口座の残高を照会することができます:</p> <p>Bank: %{bank}</p> <p>Account： %{address}</p> <p>Inquiry
+          Password： %{password}</p> <p>Inquiry Tel.： %{tel}</p>"
+      partial_tree:
+        success: '成功!: %{timestamp}に証明データを作成します'
+    funds:
+      show:
+        account_history: アカウント履歴
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        tao_format: '0.00000000'
+        eth_format: '0.00000000'
+        xrp_format: '0.00000000'
+        bch_format: '0.00000000'
+        btg_format: '0.00000000'
+        reason:
+          jpy:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          btc:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          tao:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          eth:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          xrp:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          bch:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+          btg:
+            strike_add: プラス
+            strike_sub: マイナス
+            deposit: 入金
+            withdraw: 出金
+            fix: フィクス
+        ref:
+          system: システム
+          default: デフォルト
+    id_documents:
+      edit:
+        header_personal_information: ご本人情報登録
+        header_id_card: 身分証明書の提出
+        warning: ※個人か法人どちらか１つは必ず登録してください
+        hint_upload:
+          運転免許証と外国人登録証明書の場合は表面と裏面を、<br>
+          パスポートの場合は顔写真があるページの見開きを提出してください。
+        hint_label_1: 運転免許証と在留カード
+        hint_label_2: パスポートと住民票
+        hint_label_3: マイナンバーカード
+        hint_content_1: （表面・裏面）
+        hint_content_2: 顔写真入りのページ<br>外務大臣印のあるページ<br>住所記載ページ
+        hint_content_3: 表面のみ（裏面はアップロードしないでください）
+        required: 必須
+        nav_header_user: 個人
+        nav_header_staff: 法人
+        nav_select_text: 個人または法人 どちらかを選択してください
+        nav_content_select_text: 氏名は本人確認書類と同じ表記でご入力ください
+        state: 状況
+        state_unverified: 本人確認の登録お願いします。
+        state_verifying: 承認中 (約5日営業日かかります)
+        state_verified: 認証しました。
+        title:
+          company_infor: 基本情報
+          manager_infor: 実質的支配者情報
+          represent_infor: 代表者・取引担当者情報
+          document_infor: 本人確認書類の提出
+          document_certificate: ①登記事項証明書を添付してください。
+          document_represent: ②代表者または取引担当者の本人確認書類の写しを添付してください。
+          document_trade: ③取引権限を有することを証明する書類を添付してください。
+        document_explain: 取引担当者の情報を入力した場合、取引担当者に対する委任状を提出してください。
+                          <br>代表者の情報を入力した場合、本人確認書類として提出された登記事項証明書により
+                          <br>取引権限があることを確認いたしますので、こちらでの提出は不要です。
+        document_note: 事務所または本店等に宛てて取引関係文書を書留郵便等により転送不要郵便物等として送付いたします。
+                        <br>代表者・取引担当者の本人特定事項の確認として取引関係文書を上記と同様の方法により送付いたします。
+        company_name: 法人の名称
+        company_address: 本社/本店所在地
+        company_job_content: 事業内容
+        position: 役職
+        name: 氏名
+        birth_date: 生年月日
+        address: 住所
+        city: 都道府県
+        country: 国
+        job_type: ご職業
+        trade_purpose: お取引目的
+        zipcode: 郵便番号
+        id_document_type: 本人確認書類
+        id_document_number: 書類番号
+        id_document_file: 書類写真
+        id_bill_type: 住居の証明
+        id_bill_file: 住居の証明写真
+        cell_phone: 携帯電話番号
+        fixed_phone: 固定電話番号
+        foreign: 外国の重要な公人について <abbr>※</abbr> 外国の重要な公人についての説明は<a href="/faqs#other&id=other_2">こちら</a>をご参照ください
+        manager_role: 実質的支配者にあたるものを選択してください。 実質的支配者についての説明は<a href="/faqs#other&id=manager">こちら</a>をご参照ください。
+        type_role: 代表者
+        submit: 提出
+        placeholder:
+          name: 漢字
+          zipcode: 123-456
+          address: 名古屋市 中区 門前町 1-2 - 303号室- ABCビル
+          city: 愛知県
+          company_name: ABC株式会社
+          company_job_content: 電子
+          position: 社長
+        label:
+          user_upload_1: 表面
+          user_upload_2: 裏面
+          upload: ファイルをアップロードする
+          staff_upload_1: 書類写真(1)
+          staff_upload_2: 書類写真(2)
+          staff_upload_3: 書類写真(3)
+          staff_upload_4: 書類写真(4)
+          span_upload_1: 法人名義の口座通帳の表紙の写し
+          span_upload_2: 発行から6ヶ月以内の登記簿謄本等の写し
+          span_upload_3: 取引責任者（担当取締役相当）個人の免許証またはパスポート等で写真付のもの
+        error:
+          type: 拡張子がjpg、jpeg、gif、png、またはpdfの画像ファイルのみが許可されます
+          size: このファイルのサイズは５MBまでです
+      update:
+        notice: アカウント確認を提出しました
+    bank_accounts:
+      new:
+        title: 口座情報登録
+        bank_name: 銀行名
+        bank_branch: 支店名
+        account_type: 口座種類
+        account_number: 銀行口座番号
+        owner1: 口座名義人
+        owner2: (全角カタカナ)
+        update: 編集
+        cancel: キャンセル
+        hint: '* ゆうちょ銀行の場合：<br>他金融機関からの振込の受け取り口座を登録してください。'
+      edit:
+        title: 口座情報登録
+        bank_name: 銀行名
+        bank_branch: 支店名
+        account_type: 口座種類
+        account_number: 銀行口座番号
+        owner: 口座名義人<label>(全角カタカナ)</label>
+        update: 登録
+        cancel: キャンセル
+        hint: '* ゆうちょ銀行の場合：<br>他金融機関からの振込の受け取り口座を登録してください。'
+      create:
+        notice: 口座情報を提出しました
+      update:
+        notice: 口座情報を提出しました
+      show:
+        title: 口座情報
+        bank_name: 銀行名
+        bank_branch: 支店名
+        account_type: 口座種類
+        account_number: 銀行口座番号
+        owner: 口座名義人(全角カタカナ)
+        change: 変更する
+    sendcoin:
+      new:
+        free_fee_send: Bit-trading のウォレット間では手数料なしでコインの送信ができます。
+        history_hint: '**アドレス帳'
+        manage_email: アドレス管理
+        manage_title: メールアドレス管理
+        label_name: 名前
+        email_address: アドレス
+        select_action: 選択
+        add_address: 追加
+        balance: 残高
+        jpy_label: 日本円参考総額
+        yen: 円
+        currency: 通貨
+        email:  メールアドレス
+        submit: コイン送信
+        amount: 金額
+        send: 送信
+        amount_is_int: TAOCOIN数量が整数です
+        amount_small: 最低0から購入することが出来ます
+        next: 確認
+        cancel: キャンセル
+        email_not_valid: 有効なメールアドレスではありません
+        safety_instruction: ビットコインと個人情報を保護するため, 2ファクタ認証使用をお勧めします。
+        notice: 送信後のキャンセルはできません。
+        confirm_delete: メールを削除しますか？
+      create:
+        successful: 送信しました
+        cannot_send: 送信しません
+        insufficient_fund: 金額が足りません
+        email_not_valid: 有効なメールアドレスではありません
+        error_confirm_address: あなたの住所をsendcoinに最初に確認する
+        round_amout: 数量が小さいすぎです.最低0.001でください
+      add_or_delete_email:
+        email_exists: メールアドレスはすでに存在します
+        email_not_valid: 有効なメールアドレスではありません
+
+    markets:
+      balance:
+          available: 可用
+      show:
+        buy: 購入
+        sell: 売却
+        confirm_message: ご注文しませんか？
+        price_too_low: 価格が安すぎ
+        price_too_high: 価格が高すぎ
+        error: 失敗しました
+        need_login: ログインしてください！
+        amount_min: 最低数量が%{min} %{currency}からになります.
+        success: 成功しました
+        analysis_panel: 分析
+        help_panel: 手伝い
+        done: 完了
+        cancel: キャンセル
+        cancel_confirm: 注文したことをキャンセルしたいですか
+        confirm: 確認
+        ask_order: 'ASK ##sn#'
+        bid_order: 'BID ##sn#'
+        my_active_order: アクティブ
+        my_done_order: 完了しました
+        trades: 商業
+        chat: チャットチャンネル
+        insufficient_funds: '%{currency}が足りませんです。'
+      market_list:
+        select-market: 取引所選択
+        title: ウォレット残高
+        all: 全てマーケット
+        all_html: "<i class='fa fa-check'></i><span>全てマーケット</span>"
+        jpy_html: "<i class='fa fa-check'></i><span>JPY マーケット</span>"
+        btc_html: "<i class='fa fa-check'></i><span>BTC マーケット</span>"
+        bch_html: "<i class='fa fa-check'></i><span>BCH マーケット</span>"
+        btg_html: "<i class='fa fa-check'></i><span>BTG マーケット</span>"
+        tao_html: "<i class='fa fa-check'></i><span>TAOCOIN マーケット</span>"
+        eth_html: "<i class='fa fa-check'></i><span>ETH マーケット</span>"
+        xrp_html: "<i class='fa fa-check'></i><span>XRP マーケット</span>"
+        price: 価格
+        change: "24h %"
+      range_switch:
+        switch_1: 1m
+        switch_5: 5m
+        switch_15: 15m
+        switch_30: 30m
+        switch_60: 1h
+        switch_120: 2h
+        switch_240: 4h
+        switch_360: 6h
+        switch_720: 12h
+        switch_1440: 1d
+        switch_4320: 3d
+        switch_10080: 1w
+      depths:
+        price: 価格
+        amount: 金額
+        buy: 購入
+        sell: 売却
+        ask_orders: 売却
+        bid_orders: 購入
+      ticker:
+        last: 最後価格
+        ask: ASK
+        bid: BID
+      account_balance:
+        title: アカウントバランス
+        available: 存在 %{currency}
+
+      ask_entry:
+        current_balance: 残高
+        sell: 売却
+        buy: 購入
+        price: 価格
+        last_price: 最後価格
+        amount: 数量
+        total: 合計
+        fee: 手数料
+
+      bid_entry:
+        current_balance: 残高
+        action: 購入
+        price: 価格
+        last_price: 最後価格
+        amount: 数量
+        total: 合計
+        fee: 手数料
+        buy: 購入
+
+      place_order:
+        price_high: HIGH
+        price_low: LOW
+        full_bid: FULL
+        full_ask: EMPTY
+      order_book:
+        title: オーダーブック
+        volume: 数量
+        price: 価格
+        amount: 金額
+        bid_amount: 買い数量
+        ask_amount: 売り数量
+        bid_total: Bid 合計
+        ask_total: Ask 合計
+        ask: ASK
+        bid: BID
+        fade_toggle_depth: マーケットの深さ
+      trade_state:
+        new: 新しい
+        partial: 残り
+      market_trades:
+        title_trades: 約定履歴
+        all: 全
+        my: 私の
+        all_html: "<i class='fa fa-check'></i><span>全て</span>"
+        my_html: "<i class='fa fa-check'></i><span>私の</span>"
+        time: 時間
+        price: 価格
+        volume: 数量
+      header:
+        bit_station: Bit-Trading Solo
+        network: 接続状態
+        vol: 24h 数量
+        high: 高値
+        low: 安値
+        change: 変動
+        login: ログイン
+        signup: アカウント作成
+      footer:
+        arb: アービトラージポット
+        exchange: 取引所
+        fund: ウォレット
+        history: 注文履歴
+        account: アカウント
+        term_of_service: 利用規約
+        sendcoin: コイン送信
+        contact: お問い合わせ
+        logout: ログアウト
+        back: バック
+      settings:
+        sound: 音
+        notification: 通知
+        funds: "ウォレット"
+        signout: "サインアウト"
+        settings: "プロフィール"
+        history: "履歴"
+      account_summary:
+        amount: 金額
+        locked: フリーズ
+        account: アカウント
+        view_all_accounts: "すべて見る"
+        hide_all_accounts: "他を隠す"
+      my_orders:
+        open_menu_hint: '<span class="glyphicon glyphicon-pencil"></span> キャンセルする場合は、このアイコンをクリックしてください。'
+        orders_wait: 最新注文
+        orders_done: 完了した注文
+        orders_cancel: キャンセル注文
+        no_open_orders: 未約定の注文はありません。
+
+        clear_this: これをキャンセルする
+        clear_bids: 買い注文をすべてキャンセルする
+        clear_asks: 売り注文をすべてキャンセルする
+        clear_all: すべてキャンセルする
+        confirm_clear_all: すべての注文をクリアしますか？
+        confirm_clear_bids: すべての入札オーダーをクリアしますか？
+        confirm_clear_asks: すべての注文をクリアしますか？
+        confirm_clear_order: この注文をクリアしますか？
+        cancel: キャンセル
+        time_order: 日時
+        state: 売買
+        price_order: 価格
+        volumn: 注文数量
+        total: 日本円
+        number_remain: 約定済数量
+
+        price: 価格
+        volume: 数量
+        amount: 金額
+        time: 場所時間
+      mask:
+        warning: 売買するには<a class=text-up href='/signin'>ログイン</a>してください。
+      klime_chart:
+        title: キャンドルスティック チャート
+      global:
+        global_orders_title: ORDERS
+        global_trades_title: TRADES
+      chat:
+        title: チャットチャンネル
+    settings:
+      success: 設定は更新に成功しました
+      failure: 不正なパスワード、もう一度お試しください。
+      index:
+        affiliate: まず、アカウントを確認してください。
+        referrer_link: こちらはお客様の紹介リンクです
+        safety_instruction: コインと個人情報を保護するため, 2ファクタ認証使用をお勧めします。
+        reset_password: パスワードをリセットします
+        reauthenticate: 認証
+        activated: メールを送信いたしましたのでご確認ください。届いてない場合は「再送信」をクリックしてください。
+        auth-activated: まず、メールアドレスを確認してください。
+        auth-verified: まず、アカウントを確認してください。
+        upgrade_account: アカウントアップグレードしてください
+        user_id: "ユーザーID: <span>%{user_id}</span>"
+        account_class: "アカウント: <a href='/faqs?level=%{account_class}#cat-acount'>レベル%{account_class}</a>"
+        level0: メールを確認してから、お客様のアカウントはレベル１になります
+        email:
+          title: メールアドレス認証
+          required: (必須)
+          description: メール確認が完了していません。「再送信」をクリックしてください。
+          description-activated: メールアドレスの認証が完了しました。あなたのアカウントを確認するために必要なので忘れないようにしてください。
+          resend: 再送信
+          activated: 完了
+          go: 設定
+        phone_number:
+          title: 電話番号
+          required: (必須)
+          description: 電話番号を入力すると、アカウントがより安全になります。すぐにパスワードをリセットすることができ、2段階認証を追加できます。
+          go: 設定
+          verified: 完了
+          hint: "確認番号 %{hint}"
+        two_factor_auth:
+          title: ２段階認証
+          description: ２段階認証はあなたのアカウントにセキュリティを提供します
+          enable: 有効
+          disable: 無効
+        verification:
+          manual_link: <a href="/manual/private_descript.pdf" class="tutorial-link"> 登録方法はこちら</a>
+          title: アカウント確認
+          required: (必須)
+          description: パスワードとメールアドレス両方を使って、あなたのアカウントセキュリティを保護します。
+          verifying: 確認中
+          unverified: 提出
+          verified: 完了
+        asset_passwords:
+          title: アセットパスワード
+          description: 出金時、アセットパスワードが必要です。
+            アカウントのパスワードと同じアセットパスワードを使用しないことをお勧めします!
+          go: 設定
+        passwords:
+          title: パスワード
+          description: このパスワードはログインするために必要です。忘れないようにしてください。
+          go: 変更
+          set: 設定
+        api_tokens:
+          title: APIトークン
+          description: APIトークンの管理と作成ができます。 APIトークンを登録すると他のシステムと連携することができます。
+          go: 設定
+        bank_accounts:
+          title: 銀行口座の登録
+          description: 銀行口座の登録ができます。銀行口座情報を登録しないと現金の入出金ができないので登録してください。
+          go: 修正
+          set: 設定
+        weibo:
+          title: Weiboに接続
+          description: Weiboに接続した後、Weiboアカウントでログインします
+          bound_desc: これは%{nickname}に接続されました.
+          bind: 接続
+          unbind: ディスコネクト
+    otps:
+      new:
+        step_1: ステップ 1
+        step_2: ステップ 2
+        step_3: ステップ 3
+        or: 又は
+        download_app: スマートフォンに "Google Authenticator"アプリをインストールして開きます。
+        scan_qr_code: 以下のQRコードスキャン
+        enter_passphrase: 手動で以下のキーをアプリに入力してください
+        enter_passcode: Google認証システムアプリで生成されたパスコードを入力して送信してください。
+    shared:
+      balances:
+        locked: ロック
+        balance: 残高
+        available: 存在
+        title: "%{icon} %{c} アカウント"
+        jpy_format: '0.00'
+        btc_format: '0.00000000'
+        tao_format: '0.00000000'
+        eth_format: '0.00000000'
+        xrp_format: '0.00000000'
+        total: 合計
+  guides:
+    private:
+      settings:
+        panel: 設定
+        index:
+          intro: あなたのプロフィールを設定して、管理します。
+
+      api_tokens:
+        panel: API トークン
+        index:
+          title: マイトークン
+          intro: API トークンのリスト。空の「IP ホワイトリスト」では、どの IP でもトークンを使用することができます。
+        new:
+          title: APIトークン作成
+        create:
+          title: APIトークン作成
+        edit:
+          title: APIトークン編集
+        update:
+          title: APIトークン編集
+      tickets:
+        panel: お問い合わせ
+      id_documents:
+        panel: 本名認証
+        new:
+          title: 本名認証情報を提出します
+          intro: 国内法に基づき、身元確認が必要です。 続行するにはアカウントを確認してください。
+    panels:
+      balance: アカウント
+    verify:
+      google_auths:
+        panel: 2ファクタ認証
+        edit:
+          title: 無効な2ファクタ認証
+          intro: 新しい電話をお持ちの場合は、古い電話で2ファクタ認証を無効にし、新しい電話で2ファクタ認証を有効にすることができます。
+      sms_auths:
+        panel: 電話番号確認
+    reset_passwords:
+      panel: パスワード
+      new:
+        title: リセットパスワード
+        intro: アカウントで確認されたメールアドレスを入力し、送信する認証コードを入力してメールボックスにログインし、プロンプトに従ってパスワードをリセットしてください。
+      create:
+        title: リセットパスワード
+        intro: アカウントで確認されたメールアドレスを入力し、送信する認証コードを入力してメールボックスにログインし、プロンプトに従ってパスワードをリセットしてください。
+      edit:
+        title: セットパスワード
+      update:
+        title: セットパスワード
+    sessions:
+      panel: ログイン
+      new:
+        title: マイアカウントログイン
+        intro:
+      failure:
+        title: マイアカウントログイン
+        intro:
+    identities:
+      panel: アカウント作成
+      new:
+        title: マイアカウント作成
+        intro:
+      edit:
+        panel: マイアカウント
+        title: リセットパスワード
+    two_factors:
+      panel: 2ファクタ認証
+  simple_form:
+    placeholders:
+      deposit:
+        bank:
+          amount: 最小金額100
+      session:
+        email: メールアドレス
+        password: パスワード
+        label_two_factor: 2ファクタ認証
+      identity:
+        email: Example：youremail@example.com
+        password: ログインパスワード
+        password_confirmation: あなたのパスワードを確認します
+        edit:
+          password: パスワードを入力してください
+      document:
+        key: リンクURLキー書類
+        title: 書類タイトル
+      order_bid:
+        origin_volume: ボリュームを買う
+        sum: Sum
+      order_ask:
+        origin_volume: ボリュームを売る
+        sum: 総売上高
+      reset_password:
+        email: メールアドレス
+        password: ログインパスワードをセットしてください!
+        password_confirmation: あなたのパスワードを確認します
+      withdraw:
+        bank:
+          sum: 最小金額100
+        satoshi:
+          sum: 最小金額0.005
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)　
+        taocoin:
+          sum: 最小金額0.001
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)
+        ethereum:
+          sum: 最小金額0.001
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)
+        ripple:
+          sum: 最小金額0.001
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)
+        bitcoincash:
+          sum: 最小金額0.005
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)　
+        bitcoingold:
+          sum: 最小金額0.005
+          fund_extra: このアドレスのラベルを入力してください(オプショナル)　
+    hints:
+      deposit:
+        bank:
+          sum: "<a target='_balance' href='#'>Fee structure</a>"
+          member_name: "<span class='text-danger'>リチャージの銀行口座名は、あなたの本名認証と名前が一致していなければなりません</span>"
+          sn: "<span class='text-danger'>銀行振込のメッセージにSNをコピーしてください。そうしないと、早めにに注文を処理できません。</span>"
+      two_factor:
+        otp_secret: QRコードのイメージや暗号文をバックアップして、間違いのために誤って電話機を紛失しないようにすることをお勧めします
+        otp: バリデーターは30秒ごとに新しいパスワードを再生成し、タイムリーに入力してください
+      identity:
+        password: 6文字以上、大文字・小文字・数字をそれぞれ含む。
+      reset_password:
+        password: 6文字以上、大文字・小文字・数字をそれぞれ含む。
+      id_document:
+        name: あなたの資格情報と一致する名前を記入してください。
+      withdraw:
+        bank:
+          member_name: "<span class='text-danger'>出金口座名は、実名認証に使用された名前と一致する必要があります</span>"
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+          fund_extra: あなたの銀行がリストにない場合は、カスタマーサービスに連絡してください
+        satoshi:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+        taocoin:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+        ethereum:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+        ripple:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+        bitcoincash:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+        bitcoingold:
+          sum: "<a target='_balance' href='#'>料金ストラクチャー</a>"
+    creating: 作成中...
+    updating: 更新中...
+    buttons:
+      or: 又は
+      cancel: キャンセル
+    'yes': 'はい'
+    'no': 'いいえ'
+    required:
+      text: 必須
+      mark: "※"
+    error_notification:
+      default_message: '以下の問題を確認してください:'
+    labels:
+      defaults:
+        title: タイトル
+      google_auth:
+        uri: QR コード
+        otp_secret: 暗号文
+        otp: オーセンティケータのパスワード
+      fund_source:
+        label: ラベル
+        address: アドレス
+        category: カテゴリ
+      session:
+        email: メールアドレス
+        password: ログインパスワード
+        captcha: キャプチャ
+      identity:
+        email: メール
+        old_password: 古いパスワード
+        password: パスワード
+        password_confirmation: パスワードの確認
+      reset_password:
+        password: 新しいパスワード
+      ticket:
+        content: 本文
+      withdraw:
+        bank:
+          fund_extra: 銀行
+          sum: 金額
+          account_balance: アカウントバランス
+          member_name: 口座名義
+        satoshi:
+          fee: 手数料
+          sum: 金額
+          fund_uid: Bitcoinアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+        taocoin:
+          fee: 手数料
+          sum: 金額
+          fund_uid: Taocoinアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+        ethereum:
+          fee: 手数料
+          sum: 金額
+          fund_uid: Ethereumアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+        ripple:
+          fee: 手数料
+          sum: 金額
+          fund_uid: Rippleアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+        bitcoincash:
+          fee: 手数料
+          sum: 金額
+          fund_uid: BitcoinCashアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+        bitcoingold:
+          fee: 手数料
+          sum: 金額
+          fund_uid: BitcoinGoldアドレス
+          fund_extra: ラベル
+          account_balance: アカウントバランス
+          member_name: アカウント
+  admin:
+    deposit_infomations:
+      index:
+        approve: 承認
+        reject: 拒否
+    contacts_us:
+      to_all_new:
+        send: 送信
+        back: キャンセル
+        subject: 件名
+        content: 内容
+        to_all: 全員
+        confirm_ok: 送信するのはよろしいですか？
+        default_content: |
+
+
+
+          今後ともBit-Trading Soloをよろしくお願いします
+          ------------------------------------------------------------------------------------
+          Bit-Trading Solo株式会社
+          Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+          ------------------------------------------------------------------------------------
+      create_send_email:
+        subject_reply: "[Bit-Trading Solo] Reply your question"
+        from_email: From Email
+    deposits:
+      banks:
+        new:
+          code: コード※
+          amount: 金額※
+          btn_next: 次へ
+        confirm_deposit_yen:
+          member_not_found: メンバーが見つからない
+          bank_account_empty: このメンバーには銀行口座を持っていません
+          user_info: ユーザー情報
+          id: ID
+          name: 名前
+          account_info: 登録口座情報
+          bank_name: 銀行名
+          bank_branch: 支店名
+          account_type: 種類
+          account_number: 口座番号
+          code: コード
+          amount: 金額
+          check_list: チェック項目
+          check1: 振込名義人の氏名とユーザーの氏名が一致していることを確認しました。
+          check2: 振り込まれた口座が登録された口座と一致することを確認しました。
+          check3: 正しいコードを入力しました。
+          check4: 正しい金額を入力しました。
+          check5: 二人体制での二重チェックを行いました。
+          btn_send_to_wallet: ウォレットへ反映する
+          btn_cancel: キャンセ
+        index:
+          deposit: ユーザーのウォレットへ送金
+          oneday: 過去のリクエスト
+          available: すべての保留中のリクエスト
+        show:
+          alert: リチャージを見つけることができません。
+          notice: 振込成功しました。
+          deposit: 入金リクエスト
+          accept: 同意します
+          target_deposit: 対象預金
+          confirm: リチャージを確認しますか？
+        update:
+          blank_txid: TxIDは空白にできません
+        create:
+          member_not_found: メンバーが見つからない
+          notice: 入金に成功しました
+        table:
+          code: コード
+          sn: ID
+          at: 日付
+          currency: 通貨
+          name: 名前
+          amount: 金額
+          state: 状態
+          action: Action
+          txid: 受付番号
+      satoshis:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+      taocoins:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+      ethereums:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+      ripples:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+      bitcoincashes:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+      bitcoingolds:
+        update:
+          notice: 入金は成功しました。
+        index:
+          accept: 同意します
+          accept_confirm: リチャージを確認しますか？
+    tickets:
+      view: 表示
+      close: チケットを閉じる
+      comments_count: コメント数
+      replies: 返信
+      open_tickets: オープンチケット
+      closed_tickets: 閉じたチケット
+    members:
+      index:
+        search: 検索
+        members: メンバー
+        email: メール
+        id: ID
+        name: 名前
+        phone: 電話番号
+        wallet_address: ウォレットアドレス
+        level1: レベル１
+        level2: レベル２
+        level3: レベル３
+        please_select_level: レベルを選択してください
+        please_select_info: 検索条件を選択してください
+        please_select_order: 選択してください
+        new_update: 新し変更順
+        new_create: 新し作成順
+        old_create: 古い作成順
+      show:
+        member_title: ユーザー情報
+        actions_title: アクション
+        accounts_title: アカウント情報
+        account_versions_title: レコード
+    id_documents:
+      show:
+        approve: 本人認証
+        reject: 拒否する
+        accept_address: 住所承認
+        name: 名前
+        birth_day: 誕生日
+        address: 住所
+        city: 都道府県
+        country: 国
+        job_type: ご職業
+        trading_purpose: お取引目的
+        zipcode: 郵便番号
+        email: メール
+        verified_phone: 携帯電話承認
+        id_document_type: 書類の種類
+        created_at: 登録日時
+        updated_at: 情報更新日時
+        detail_confirm: 詳細を確認する
+        email_verified: メール認証
+        document_info_verified: 本人認証（入力項目・本人確認書類）
+        verified_phone: 電話番号認証
+        foreign: 外国な重要な公人にあてはまらない
+        address_accepted: 住所承認（書留到着）
+        level: レベル
+        select: 拒否理由を選択する
+        reject_address: 住所承認取消
+        submit_send_mail: 送信
+      index:
+        search: 検索
+        email: メール
+        name: 名前
+        id_document: ID　書類
+        id: ID
+        level: レベル
+        level0: レベルなし
+        level1: レベル１
+        level2: レベル２
+        level2_1: レベル２（書留未送付）
+        level2_2: レベル２（書留到着待ち）
+        level2_3: レベル２（送付済み：不在）
+        level2_4: レベル２（送付済み：住所違い）
+        level2_5: レベル２（その他）
+        level3: レベル３
+        postcard_type1: 書留を送る
+        postcard_type2: 書留到着待ちリストへ移動
+        postcard_type3: 不在リストへ移動
+        postcard_type4: 住所違いリストへ移動
+        postcard_type5: その他リストへ移動
+        select_postcard_type: ハガキタイプを選択してください
+        please_select_level: レベルを選択してください
+        please_select_info: 検索条件を選択してください
+        please_select_order: 選択してください
+        new_update: 新し変更順
+        new_create: 新し作成順
+        old_create: 古い作成順
+        request_at: 時間
+        id_document_type: 種類
+        verify_account: アカウント確認
+        mail_confirm: 本人認証
+      send_mail_reject:
+        reject_user: 拒否理由通知が送信されました。
+    dashboard:
+      index:
+        accounts_title: アカウント概要
+        daemons_title: システム概要
+    documents:
+      index:
+        new: 新しい書類
+    statistic:
+      filter: フィルタ
+      summary: 概要
+      click-to-expand: 広げる
+      members:
+        show:
+          table: 結果
+      orders:
+        show:
+          avg: 平均
+          sum: 注文ボリューム
+          sum_strike: ボリュームで
+          count: カウント
+      trades:
+        show:
+          count: トランザクション
+          volume: 数量
+          amount: 合計金額
+          min_price: 最低価格
+          max_price: 最大価格
+          avg_price: 平均価格
+          amount_fee: 取引手数料
+          volume_fee: 合計料金
+      deposits:
+        show:
+          count: 合計
+          amount: 合計金額
+      withdraws:
+        show:
+          count: 合計
+          amount: 合計金額
+          fee: 料金
+    withdraws:
+      banks:
+        table:
+          bank_withdraw_view: 出金処理をする
+        index:
+          one: 出金リクエスト（保留中）
+          all: 出金履歴
+          empty: データがありません
+        show:
+          withdraw_reject: 出金のリクエストを拒否する
+          withdraw_process: 出金処理を行う
+          name: 名前
+          bank_name: 銀行名
+          bank_branch: 支店名
+          bank_type: 種類
+          bank_account: 口座番号
+          process: 処理
+          succeed: 成功しました
+          reject: 拒否
+          succeed_confirm: プロセスを確認しますか？
+          reject_confirm: 拒否を確認しますか？
+          withdraw: 出金
+          empty: データがありません
+        update:
+          notice: ユーザーウォレットからの出金が完了しました。
+      satoshis:
+        index:
+          one: 引き出し保留中
+          all: ビットコイン出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      taocoins:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      ethereums:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      ripples:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      bitcoincashes:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      bitcoingolds:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      ethereumclassics:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+      kuberacoins:
+        index:
+          one: 引き出し保留中
+          all: 出金履歴
+          empty: データがありません
+        show:
+          process: 容認された
+          succeed: 出金
+          reject: 拒否
+          succeed_confirm: 出金ことをプロセスしますか?
+          reject_confirm: 出金ことを拒否しますか？
+          withdraw: 出金
+        update:
+          notice: 引き出すのは成功しました。
+  deposits/satoshi:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  deposits/taocoin:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  deposits/ethereum:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  deposits/ripple:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  deposits/bitcoincash:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  deposits/bitcoingold:
+    aasm_state:
+      submitted: 送信した
+      accepted: 容認された
+      checked: チェックした
+      warning: 警告
+  doorkeeper:
+    scopes:
+      profile: あなたの基本的なプロフィール読む（例えば:名前、電子メール）とアカウントバランス
+      history: 商業履歴読む
+      trade: 提出と注文キャンセル
+    authorizations:
+      new:
+        title: Bit-Trading Soloアプリケーション認証
+        authorize_html: 認証する <strong class='text-info'>%{name}</strong> あなたのアカウントを使用しますか？
+        scopes: 'このアプリケーションは:'
+        authorize: 認証する
+        deny: 拒む
+    errors:
+      messages:
+        invalid_request: リクエストに必須のパラメータがないか、サポートされていないパラメータ値が含まれているか、そうでなければ不正な形式です
+        invalid_redirect_uri: 含まれているリダイレクトuriは無効です。
+        unauthorized_client: クライアントは、このメソッドを使用してこの要求を実行する権限がありません。
+        access_denied: リソース所有者または許可サーバーが要求を拒否しました。
+        invalid_scope: 要求されたスコープが無効、不明、または不正です。
+        server_error: 認証サーバーが予期しない条件に遭遇し、要求を実行できなくなりました。
+        temporarily_unavailable: 認証サーバーは今オーバーローディングとメンテナンスのために要求を処理できません。
+        credential_flow_not_configured: リソース所有者パスワード資格情報フローが失敗しました、
+          Doorkeeper.configure.resource_owner_from_credentialsが設定されていないためです。
+        resource_owner_authenticator_not_configured: リソース所有者の検索に失敗しました、
+          Doorkeeper.configure.resource_owner_authenticatorが設定解除されているためです。
+        unsupported_response_type: 認証サーバーはこの応答タイプをサポートしていません。
+        invalid_client: クライアント認証に失敗しました、未知のクライアント、クライアント認証が含まれていない、またはサポートされていない認証方法のためです
+        invalid_grant: 指定された認証許可は無効、期限切れ、失効しているか、認証要求で使用されているリダイレクトURIと一致しないか、別のクライアントに発行されました。
+        unsupported_grant_type: 認証許可タイプは、サーバー認証によってサポートされていません。
+        invalid_resource_owner: 提供されたリソース所有者の資格情報は無効ですが、またはリソース所有者が見つかりません
+        invalid_token:
+          revoked: アクセストークンが取り消されました
+          expired: アクセストークンの有効期限が切れました
+          unknown: アクセストークンが無効です
+    flash:
+      applications:
+        create:
+          notice: アプリケーションが作成されました。
+        destroy:
+          notice: アプリケーションは削除されました
+        update:
+          notice: アプリケーションが更新されました。
+      authorized_applications:
+        destroy:
+          notice: アプリケーションは取り消されました。
+  easy_table:
+    satoshi:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    taocoin:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    ethereum:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    ripple:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    bank:
+      sn: SN
+      amount: 金額
+      created_at: 日時
+      fund_source: 資金源
+      memo: メモ
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    bitcoincash:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    bitcoingold:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    bitcoingold:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    kuberacoin:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+    ethereumclassic:
+      amount: 金額
+      txid: TxId
+      created_at: 日時
+      confirmations: 確認
+      member_name: メンバー
+      state_and_actions: ステータス/アクション
+      currency_obj_key_text: 通貨
+  enumerize:
+    account_version:
+      reason:
+        fix: FIX
+        unknown: UNKNOWN
+        strike_add: TRADE PLUS
+        strike_sub: TRADE SUB
+        strike_fee: TRADE FEE
+        strike_unlock: TRADE UNLOCK
+        order_cancel: ORDER CANCEL
+        order_submit: ORDER SUBMIT
+        deposit: DEPOSIT
+        withdraw: WITHDRAW
+        withdraw_lock: WITHDRAW LOCK
+        withdraw_unlock: WITHDRAW UNLOCK
+    state:
+      done: 完了
+      wait: 待つ
+      cancel: キャンセル
+    currency:
+      jpy: JPY
+      btc: BTC
+      tao: TAO
+      eth: ETH
+      xrp: XRP
+      bch: BCH
+      btg: BTG
+    order:
+      state:
+        done: 完了しました
+        wait: 待つ
+        cancel: キャンセルしました
+    deposit:
+      aasm_state:
+        submitted: 提出しました
+        submitting: 提出します
+        accepted: 受け入れられました
+        cancelled: キャンセルしました
+        rejected: 拒否されました
+        checked: チェックしました
+        warning: 警告
+    withdraw:
+      state:
+        submitting: 提出します
+        submitted: 提出済み
+        rejected: 拒否されました
+        accepted: 受け入れられる
+        suspect: 容疑者
+        processing: 処理しています
+        done: 完了しました
+        canceled: キャンセルしました
+    fund_source:
+      category:
+        satoshi: Bitcoin
+        taocoin: Taocoin
+        ethereum: Ethereum
+        ripple: Ripple
+        bank: 銀行
+        bitcoincash: BitcoinCash
+        bitcoingold: BitcoinGold
+    id_document:
+      id_document_type:
+        id_card: 在留カード（表・裏）
+        passport: パスポート（顔写真ページ・外務大臣印ページ・住所記載ページ）＋住民票
+        driver_license: 運転免許証（表・裏）
+        alien_registration_card: 外国人登録証明書（裏・表）
+        juki_net_card: 顔写真付き住基ネットカード（裏・表）
+        my_number_card: マイナンバーカード（表面のみ）
+        health_insurance: 健康保険証(表・裏)
+        seal_certificate: 印鑑証明書
+      id_bill_type:
+        bank_statement: 銀行声明
+        tax_bill: 住民票
+      job_type:
+        office_worker: 会社員役員
+        employee: 会社員
+        civil_servant: 公務員
+        group_staff: 団体職員
+        doctor: 医師・その他医療機関系
+        lawyer: 弁護士・会計士・税理士
+        faculty: 教職員
+        self_employed: 自営業
+        part_time_job: パート・アルバイト・派遣・契約
+        house_job: 専業主婦（主夫）
+        student: 学生
+        unemployed: 無職
+        other: その他
+      trade_purpose:
+        purchase_virtual: 仮想通貨を購入して、国内外への送金、決済等のため
+        trading_due_price: 仮想通貨の価格変動による差益取引のため
+        diversified_investment: 分散投資を行うため
+        investment_time: 中・長期投資のため
+        other: その他
+      company_trade_purpose:
+        purchase_virtual: 仮想通貨を購入して、国内外への送金、決済等のため
+        trading_due_price: 仮想通貨の価格変動による差益取引のため
+        diversified_investment: 分散投資を行うため
+        investment_time: 中・長期投資のため
+        other: その他
+      foreign:
+        is_not: 私は外国の重要な公人、もしくはその家族ではありません。
+        is: 私は外国の重要な公人、もしくはその家族です（過去にそうであった場合も含みます）。
+      manager_foreign:
+        is_not: 私は外国の重要な公人、もしくはその家族ではありません。
+        is: 私は外国の重要な公人、もしくはその家族です（過去にそうであった場合も含みます）。
+      manager_role:
+        shareholder: 議決権の25％超を直接又は間接的に保有する自然人
+        partner: 出資、融資、取引その他の関係を通じて貴社の事業活動に支配的な影響力を有する自然人
+        representative: 貴社の代表者
+      type_role:
+        representative: 代表者
+        transaction_personnel: 取引担当者
+      reason_reject:
+        inadequate_document: 書類不備のため
+        incomplete_input: 入力不備のため
+        image_unknown: 画像不鮮明のため
+    bank_account:
+      account_type:
+        current_bank_account: 当座預金
+        ordinary_bank_account: 普通預金
+  views:
+    pagination:
+      first: "&laquo; First"
+      last: Last &raquo;
+      previous: "&lsaquo; Prev"
+      next: Next &rsaquo;
+      truncate: "..."
+
+  mailer:
+    dear_user: お客様
+    signature_1: ありがとうございます。
+    signature_2: The Bit-Trading Solo
+    please_contact: <br/>設定の変更に覚えがない場合は、お問合せよりご連絡下さい。
+                    <br/>お問い合わせ:%{contact_mail}
+    footer: これは自動的に生成される電子メールです。返信しないでください。ご不明な点がございましたら、mailto:%{contact_mail}
+  arb_mailer:
+    send_profit:
+      subject: "[Bit-Trading Solo] アービトラージポットサービス配当金入金のお知らせ"
+      content: |
+        いつもBit-Trading Soloをご利用いただきありがとうございます。
+
+        %{this_month}月25日にお客様のウォレットに【%{last_month}月分 アービトラージポットサービスの配当金】を入金いたしましたのでご確認ください。
+        お客様の%{last_month}月分配当金は%{profit}円です。
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+  comment_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] ユーザーがチケットに返信する"
+      notification_content: ユーザー%{email}がチケットに返信します。下のリンクをクリックして詳細をご覧ください
+    user_notification:
+      subject: "[Bit-Trading Solo] あなたのチケットには新しい返信があります"
+      notification_content: 'チケットに新しい返信がありましたので、下のリンクをクリックして詳細をご覧ください：'
+  deposit_mailer:
+    accepted:
+      subject: "[Bit-Trading Solo]  入金成功をお知らせ"
+      content: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+
+        お客様のウォレットに%{amount} %{currency}が入金されました。ご確認ください。
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+  member_mailer:
+    new_password_mail:
+      subject: "[Bit-Trading Solo] New Password"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Your new password: %{new_password}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    notify_signin:
+      subject: "[Bit-Trading Solo] にログインしました。"
+      header: こんにちは、%{name}さん
+      header_no_name: ""
+      content: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+
+        Bit-Trading Solo にログインしました。
+
+        このログインに覚えがない場合は、お問合せよりご連絡下さい。
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    google_auth_activated:
+      subject: "[Bit-Trading Solo] Google認証システムが有効になりました"
+      google_auth_activated: Google 認証システムを有効にしました。
+    google_auth_deactivated:
+      subject: "[Bit-Trading Solo] Googleの認証システムが無効にしています"
+      google_auth_deactivated: Google 認証システムを無効にしました。
+    sms_auth_activated:
+      subject: "[Bit-Trading Solo] SMS認証システムが有効になりました"
+      sms_auth_activated: SMS認証が完了しました
+    sms_auth_deactivated:
+      subject: "[Bit-Trading Solo] SMS認証システムが無効になりました"
+      sms_auth_deactivated: あなたはSMS認証を無効にするのが成功しました
+    reset_password_done:
+      subject: "[Bit-Trading Solo] あなたのパスワードを変更しました"
+      successful: パスワードを変更しました。
+    phone_number_verified:
+      subject: "[Bit-Trading Solo] 電話番号を確認しました"
+      verified: '確認した電話番号: %{phone_number}'
+  system_mailer:
+    daily_stats:
+      member_stats: メンバーの統計
+      signup: サインアップ
+      activation: アクティベーション
+      asset_stats: 資産の変更
+      trade_stats: 商業変更
+      asset_value_change_total: デジタル資産の変更合計
+      trades_change_total: 商業変更合計
+  ticket_mailer:
+    admin_notification:
+      subject: "[Bit-Trading Solo] ユーザーが新しいチケットを作成しました"
+      admin_notification_content: ユーザー%{email}が新しいチケットを作成しました。下のリンクをクリックして詳細をご覧ください
+    author_notification:
+      subject: "[Bit-Trading Solo] チケットを提出していただきありがとうございます"
+      thanks_for_submit_ticket: 私たちにチケットを提出していただきありがとうございます、できるだけ早くあなたに連絡します。
+  token_mailer:
+    activation:
+      subject: "[Bit-Trading Solo] 登録メールアドレス確認"
+      content: |
+        この度は Bit-Trading Solo へのご登録ありがとうございます。
+        お客様にご登録いただいた、アカウントの情報です。
+        メールアドレス:　　%{email}
+
+        以下のリンクをクリックして登録を進めてください。
+        %{token_url}
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    edit_email:
+      subject: "[Bit-Trading Solo] メール変更をお知らせです"
+      content: |
+        以下のリンクをクリックしてメール変更を進めてください。
+        %{token_url}
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    reset_password:
+      subject: "[Bit-Trading Solo] パスワードをリセットしてください"
+      hi: Hi,
+      follow_the_link: 'このリンクをクリックして30分以内にパスワードをリセットしてください：'
+    accepted:
+      subject: "[Bit-Trading Solo] アカウント確認が完了しました。"
+      content: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+        またBit-Trading Soloへのアカウント確認の申請ありがとうございます。
+        確認が完了し、アカウントが承認されたことを本メールにて、
+        お知らせいたします。
+
+        本人認証を完了しましたのでウォレットの使用が可能となりました。
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    send_code:
+      subject: "[Bit-Trading Solo] 検証コード"
+      content: 'コード：%{code}'
+    activation_mobile:
+      subject: "[Bit-Trading Solo] Account Activation"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please enter this code to Bit-Trading Solo mobile application.
+        %{token}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    reset_password_mobile:
+      subject: "[Bit-Trading Solo] Reset Password"
+      content: |
+        Thank you for registering for Bit-Trading Solo.
+        It is information of your account registered with us.
+        Email address: %{email}.
+
+        Please enter this code to Bit-Trading Solo mobile application.
+        %{token}
+
+        Thank you for your continued support of Bit-Trading Solo.
+        ※ This mail can not be replied because it is dedicated for sending.
+        ※ For those who do not recognize this email, please contact us for any questions or comments
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+  withdraw_mailer:
+    submitted:
+      subject: "[Bit-Trading Solo] 出金処理申請完了のお知らせ。"
+      content: |
+        いつもBit-Trading Soloをご利用いただきありがとうございます。
+        お客様の出金処理申請を受け付けました。
+
+        金額：　%{amount}　%{currency}
+
+        お客様の口座に反映するまでもうしばらくお待ちください。
+
+        今後ともBit-Trading Soloをよろしくお願いいたします。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    processing:
+      subject: "[Bit-Trading Solo] あなたの出金ステータスの更新"
+      content: |
+        お客さんの%{currency}引出のリケストが進行中です。
+        処理が終了するまでお待ちください。
+
+        今後ともBit-Trading Soloをよろしくお願いいたします。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    done:
+      subject: "[Bit-Trading Solo] 出金処理完了のお知らせ"
+      content: |
+        いつもBit-Trading Soloをご利用いただきありがとうございます。
+        お客様の出金処理が完了いたしました。
+
+        本日、 %{amount} %{currency}をお客様の口座にお振り込みいたしましたので反映までしばらくお待ち下さい。
+
+        今後ともBit-Trading Soloをよろしくお願いいたします。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+    withdraw_state:
+      subject: "[Bit-Trading Solo] あなたの出金ステータスの更新"
+      your_state: 'あなたの出金ステータス: '
+  taocoin_mailer:
+    banks_taocoin_trades:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      address: "アドレス : %{address}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "あなたの講座にTAOCOINを振り込みしました。Bit-Trading Solo.jpにあなたのアカウントに蓄積されました詳細については、ログインしてください。"
+    reject_trades:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      address: "アドレス : %{address}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "ペイパルで取引が完了しないので、あなたの注文はBit-Trading Solo.jpによって拒否されました。"
+    bonus:
+      subject: "[Bit-Trading Solo] 1000TAOCOINをプレゼントお知らせです"
+      content: |
+        Bit-Trading Soloをご利用中の皆様
+
+        いつもBit-Trading Soloをご利用いただきありがとうございます。
+
+        只今キャンペーンを行っております。
+        アカウントクラスレベル３までレベルアップ完了されたお客様に、1000TAOCOINをプレゼント致します。
+
+        なお、送付に関しましては確認が取れましたお客様から順次お送りいたしますのでお時間を頂戴することもございます。予めご了承ください。
+
+        今後とも、Bit-Trading Soloをよろしくお願いします。
+    bonus_missing:
+      subject: "[Bit-Trading Solo] 友人紹介キャンペーンに関するお詫び"
+      content: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+
+        ご友人紹介キャンペーン1500TAOプレゼント企画において、
+        本来1500TAOをプレゼントする予定でしたが、こちらの手違いで現状1000TAOのみがお客様のウォレットに反映されている状況です。
+        お客様には、ご迷惑をおかけし申し訳ございません。本日中に残りのTAOをお送りいたします。
+
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい
+        --------------------------------------------------
+        Bit-Trading Solo株式会社
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        --------------------------------------------------
+  trade_mailer:
+    btc_trade_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      payment: "%{btc_address}へBTCを振り込みお願いします"
+      end: "TAOCOINは早速Bit-Trading Solo.jpであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+    paypal_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      end: "TAOCOINは早速Bit-Trading Solo.jp.comであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+    trade_email:
+      subject: "[Bit-Trading Solo] 確認情報"
+      order_infomations: "%{time}に%{price}JPYで%{amount}TAOCOINを注文しました。"
+      tradecode: "あなたのトーレドコード : %{tradecode}"
+      account: "あなたのアカウント : %{account}"
+      exchange_rate: "為替レート : %{exchange_rate}"
+      reject: "ペイパルで取引が完了しないので、あなたの注文はBit-Trading Solo.jpによって拒否されました。"
+      end: "TAOCOINは早速Bit-Trading Solo.jpであなたのアカウントに送られます。 そうでない場合は、管理者までご連絡ください。"
+  sendcoin_mailer:
+    sendcoin:
+      subject: "[Bit-Trading Solo] コインの送付が完了しました。"
+      sendcoin_information: "%{destination}に%{amount} %{currency}を送付しました。"
+    receivecoin:
+      subject: "[Bit-Trading Solo] コインの受け取りが完了しました。"
+      receivecoin_information: "%{source}から%{amount} %{currency}を受け取りました。"
+  reject_user_mailer:
+    incomplete_input_mail:
+      subject: "【Bit-Trading Solo】本人認証を行うことができませんでした"
+      incomplete_input_mail_information: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪入力不備≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        1 入力された住所と本人確認書類に記載の住所が一致しない。
+        2 住所入力欄：「字」の入力が抜けている。
+        3 住所入力欄：「マンション名・号室」の入力が抜けている。
+        4 住所入力欄：ハイフン「―」が「～」になっている。
+        　
+        転居により、本人確認書類に記載の住所と現住所が異なる場合は、他の本人確認書類や補完書類で住所確認を行うことが可能です。詳しくはお問い合わせください。
+
+
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリック から登録の手順が確認できます。
+        http://bit-trading.online
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社.
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    inadequate_document_mail:
+      subject: "【Bit-Trading Solo】本人認証を行うことができませんでした"
+      inadequate_document_mail_information: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪書類不備≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        ①免許証の裏面がアップロードされていない
+        ②受付可能書類（※）以外の書類がアップロードされている
+        ③書類の一部が欠けている（少し余白を入れ、欠けないように撮影をして下さい。）
+
+        ※受付可能書類
+        ・免許証（表・裏）
+        ・在留カード（表・裏）
+        ・パスポート（顔写真ページ・外務大臣印ページ・住所記載ページ）＋住民票（発行から３ヶ月以内）
+
+
+        お手数をお掛けして申し訳御座いませんが、再度、本人確認書類を撮影し送信頂きます様お願い申し上げます。
+
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリック から登録の手順が確認できます。
+        http://bit-trading.online
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社.
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+    image_unknown_mail:
+      subject: "【Bit-Trading Solo】本人認証を行うことができませんでした"
+      image_unknown_mail_information: |
+        いつも、Bit-Trading Soloをご利用いただきありがとうございます。
+        大変申し訳御座いませんが、≪画像不鮮明≫のため、お客様の本人確認認証を行うことができませんでした。
+
+        【承認することのできないよくある例】
+        ①画像がぼやけており文字を判読できない・顔の判別が出来ない
+        ②光が反射して文字を判読できない・顔写真が見えない
+        ③書類の一部が欠けている
+
+
+        お手数をお掛けして申し訳御座いませんが、再度、本人確認書類を撮影し送信頂きます様お願い申し上げます。
+
+        お手続きはこちらからお願いいたします。「アカウント確認」
+        登録方法はこちらをクリックから登録の手順が確認できます。
+        http://bit-trading.online
+
+        お客様にはご面倒をおかけいたしますが、安心・安全にお取引いただくために必要なお手続きでございますので、本メールが届き次第、ご対応いただけます様よろしくお願いいたします。
+        今後ともBit-Trading Soloをよろしくお願い致します。
+        ※本メールは送信専用のため返信することはできません。
+        ※本メールに心当たりの無い方や、ご意見ご質問等は下記へご連絡下さい。
+        ------------------------------------------------------------------------------------
+        Bit-Trading Solo株式会社.
+        Nonsawang Village, Sikhodtabong Distict, Vientiane Capital City, Lao P.D. R
+        ------------------------------------------------------------------------------------
+
+  contact_mailer:
+    send_contact:
+      sendcontact_information: |
+        メール: %{email}
+        カテゴリー: %{category}
+        内容:
+          %{content}
+  'true': 正しい
+  'false': 正しくない
+  view_on_github: Githubで見る
+  slogan: An open-source crypto-currency exchange for world.
+  tags:
+    vip: VIP
+    hero: ヒーローメンバー
+    admin: 管理者
+  trade:
+    markets: マーケット
+    realtime_price:
+      title: リアルタイム価格
+    account_balance:
+      title: バランス
+  gon:
+    ask: 売
+    bid: 購
+    brand: Bit-Trading Solo
+    notification:
+      title: Bit-Trading Solo
+      enabled: 通知が有効になっています。
+      new_trade: "%{kind} order#%{id} executed at %{price} %{quote_unit} for %{volume} %{base_unit}。"
+  back: Back
+  invalid_password: 不正なパスワード
+  all: 全て
+  date:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  time:
+    formats:
+      date-short: "%m-%d"
+      short: "%m-%d %H:%M"
+      default: "%m/%d/%Y %H:%M"
+  sms:
+    verification_code: '電話番号確認コードは%{code}です。'
+    password_changed: こんにちは%{email}、あなたのパスワードは正常に変更されました。
+    deposit_done: こんにちは%{email}、あなたの入金の要求が完了しました。
+    withdraw_done: こんにちは%{email}、あなたの引き出しの要求が完了しました。
+  header:
+    facebook: Facebook
+    twitter: Twitter
+    signin_facebook: Facebook
+    signin_twitter: Twitter
+    signup_facebook: Facebook
+    signup_twitter: Twitter
+    name: Bit-Trading Solo
+    brand: Bit-トレード
+    home: ホーム
+    dashboard: ダッシュボード
+    admin: 管理パネル
+    market: 取引所
+    settings: プロフィール
+    signin: ログイン
+    signout: ログアウト
+    signup: アカウント作成
+    level_about: アカウントクラスについて
+    logout: ログアウト
+    demo_screen: デモ画面
+    login_via_weibo: Weiboでログインする
+    funds: ウォレット
+    message_warning: ※一度実行された取引を取り消すことはできないのでご了承ください。
+    getstart: 開始
+    assets: ソルベンシー
+    history: 履歴
+    order_history: 注文
+    trade_history: 取引
+    account_history: 入金/出金
+    cloudsafe_history: クラウドセールの注文
+    sendcoin_history: コイン送信
+    my_profile: アカウント情報
+    tickets: お問い合わせ
+    account_balance: 資産総
+    back: 戻る
+    total: 合計
+    deposit: 入金
+    withdraw: 出金
+    sendcoin: コイン送信
+    termsofuse: ご利用規約
+    reset_password: パスワードを忘れた方はこちら
+    link_register: いますぐアカウント作成をする
+    title_service: ログインすることで可能なサビース
+    content1: 取引所での売買
+    content2: アービトラージ機能の活用
+    content3: 通貨が送受信可能に
+    content4: 知人紹介サービス
+    receivecoin_history: コイン受信
+    arb_history: アービトラージ
+    password: パスワードを入力
+    password_note: メールアドレスを変更するにはパスワードを入力してください。
+    next: 次へ
+    cancel: キャンセル
+    email: 新しいメール
+    email_note: 新しくメールアドレスの設定変更をすることができます。
+    update: 変更
+    send_mail: あなたの電子メールに送られたトークン。 メールを確認してください。
+    error_email: メールが間違えました。
+    email_exit: メールが既に存在しました
+    change_email: メールアドレスを変更
+  admin_header:
+    deposit_informations: 日本円入金のお問い合わせ
+    manage_servers: サーバー管理
+    send_mail: メールを送る
+    contacts_us: お問い合わせ
+    to_all: 全員に送る
+    deposits: 入金
+    withdraws: 出金
+    statistics: データ統計
+    id_documents: アカウント確認
+    cloudsafe: クラウドセール
+    cold_wallet: コールドウォレット
+  footer:
+    menu:
+      arbitrage_pot: アードトラージ
+      exchanges: 取引所
+      wallet: ウォレット
+      order_history: ご注文履歴
+      account: アカウント管理
+      terms_of_service: 取引所
+      faq:  ウォレット
+      coin_transmission: コイン送信
+      contact_us: カードを作る
+      logout: アフィリエイト
+      back: バック
+    about: 約
+    privacy: プライバシー
+    contact: お問い合わせ
+    price: 価格
+    liability_proof: 責任証明
+  actions:
+    go: 行く
+    submit: 送信
+    deposit: 入金
+    select: 選択してください
+    unlock: アンロック
+    confirm: 確認
+    back: 戻る
+    block: ブロック内のビュー
+    destroy: 削除
+    destroy_confirm: これを削除してもよろしいですか？
+    detail: 詳細
+    publish: 公開する
+    edit: 修正
+    preview: プレビュー
+    close: 閉じる
+    cancel: キャンセル
+    view: 見る
+    member: メンバー
+    transact: トランザクション
+    reject: 拒否
+    clipboard:
+      click: クリックしてコピーする
+      done: コピー済み
+  chart:
+    open: オープン
+    high: 高い
+    low: 低い
+    close: 閉じる
+    price: 価格
+    volume: 数量
+    candlestick: 'キャンドルスティック'
+    line: 'ライン'
+    minute: m
+    hour: 時間
+    day: 日
+    week: 週
+    month: 月
+    year: 年
+    zoom: ズーム
+    ask: ASK
+    bid: BID
+    depth: 深さ
+    depth_title: 市場の深さ
+  'yes': 'はい'
+  'no': 'いいえ'
+  simple_captcha:
+    label: ページをリフレッシュして新しいキャプチャを取得します。
+    placeholder: 画像に文字を入力する
+  helpers:
+    action:
+      view: ビュー
+      customer_service: お問い合わせ
+    submit:
+      order_ask:
+        create: ASK
+      order_bid:
+        create: BID
+      document:
+        create: ドキュメント作成
+        update: ドキュメント更新
+        destroy: ドキュメントを破棄する
+      member:
+        update: オープンアカウント
+      identity:
+        save: サインイン
+        create: サインアップ
+        destroy: サインアウト
+        verify: 確認
+        update: 変更
+      two_factor:
+        create: 確認
+        update: 活性化します
+      reset_two_factor:
+        create: 2ファクタ認証をリセットする
+      reset_password:
+        update: ログインパスワードをリセットする
+        create: ログインパスワードをリセットする
+      fund_source:
+        create: 保存
+      deposit:
+        create: 入金
+      id_document:
+        create: 送信
+      withdraw:
+        create: 送信
+      ticket:
+        create: 送信
+  activations:
+    new:
+      notice: メールボックスにメールが送信されました。できるだけ早く確認のためにチェックしてください。 もし受け取らなかったら、「もう一度送る」ボタンをクリックしてください。
+      verified: あなたのメールアドレスが認証されました
+      login_required: ログインが必要です!
+      tip: アクティベーションリンクが%{email}に送信されました
+      spam: アクティベーションリンクのスパムフォルダを確認してください。
+    edit:
+      notice: メール確認完成しました。
+      alert: アクティベーションリンクが有効期限切れまたは無効です。
+  activation_emails:
+    edit:
+      notice: メールを変更しました。
+      alert: メールを変更できませんでした。
+  authentications:
+    emails:
+      new:
+        title: セットアップメール
+        setup_email: あなたのメールアドレスを設定してください。
+        warning: メールアドレスを保存した後、受信トレイを確認してください。
+        email_address: メールアドレス
+        save: 保存
+    weibo:
+      destroy:
+        last_auth_alert: 最後の認証を削除できませんでした
+        unbind_success: Weiboからアンバインドする
+    identities:
+      new:
+        title: パスワードの設定
+        save: 保存
+      create:
+        success: パスワードを正常に設定
+  forum:
+    index:
+      notice:
+        display_name: フォーラムの表示名を設定してください。
+  identities:
+    new:
+      title: SIGN UP
+      signin: サインイン
+      password: 6文字以上のパスワードを入力してください。大文字と小文字の両方を含む方がよいでしょう。
+      check_term: 利用規約に同意する
+      password_number: 英数字６文字以上、大文字、小文字それぞれ含む
+    update:
+      auth-error: パスワードを入力してください。
+      auth-same: 入力した新しいパスワードは古いパスワードと同じです。再入力してください。
+      notice: アカウントのパスワードが正常に更新されました。
+    edit:
+      old_password: 現在のパスワード
+      new_password: 新しいパスワード
+      confirm_password: 新しいパスワード(確認)
+      change: 変更
+      hint: 6文字以上、大文字・小文字・数字をそれぞれ含む。
+      reset_password: パスワード変更
+    verify_password:
+      password_not_correct: パスワードが間違えました
+  layouts:
+    admin:
+      menus:
+        sections:
+          members: メンバー
+          deposits: 入金
+          sites_statistics: アナリティクス
+          operating: オペレーション
+        items:
+          operating:
+            proofs: 証明
+            deposits: 入金
+            documents: ドキュメント
+            withdraws: 出金
+            tickets: チケット
+          deposits:
+            currency: 入金
+    application:
+      close: 閉じる
+    meta:
+      page_title: Bit-trading
+      page_description: Bit-Trading（ビットトレーディング）では、初めての方でも簡単に仮想通貨・ビットコインのお取引をすることができます。
+      page_keywords: Bit-trading
+  members:
+    edit:
+      name: 申込書に必要事項を記入してください。
+  reset_passwords:
+    new:
+      title: パスワードをお忘れの方
+      sub-title: パスワードを再設定する為に、メールアドレスを入力してください。
+      send: 送信
+    create:
+      success: 紹介でパスワードをリセットする電子メールがあなたのメールボックスに送られました。 電子メールの受信に失敗した場合、最初に「迷惑メール」に行く、または再度要求を送信する。
+    edit:
+      title: パスワードを再設定する
+      sub-title: パスワードを確認します。
+      password: 6文字以上のパスワードを入力してください。大文字と小文字の両方を含む方がよいでしょう。
+      invalid: 不正なリクエスト
+      submit: リセットログインパスワード
+      alert: 無効なパスワードリセットリンク
+      send: 送信
+      assword_empty: パスワードを入力してください
+      password_confirmation_empty: パスワード確認を入力してください
+      password_dont_match: パスワードが一致しません
+    update:
+      success: ログインパスワードがリセットされました。新しいパスワードを保存してください。
+      invalid: 不正なリクエスト
+  sessions:
+    new:
+      reset_password: ログインパスワードをお忘れの場合はこちら
+    new_with_two_factor_auth:
+      title: 2ステップ確認
+      reset_two_factor: 失われた2ステップ確認デバイス
+    create_with_two_factor_auth:
+      session_expired: セッションの有効期限が切れ、再試行する。
+    create:
+      error: このアカウントがロックされた。管理者にご連絡してお願いします。
+      error_login: ログインできませんでした。
+      error_gg_auth: Google認証コードを確認してください。
+    failure:
+      account_locked: 失敗したログイン試行が多すぎます。お客様のアカウントの安全を確保するため、お客様のアカウントはロックされています。
+        ロックを解除するには、「パスワードを忘れた」をクリックしてパスワードをリセットします。
+      error: ログインIDまたはパスワードが間違います。
+  shared:
+    menu:
+      market: 取引所
+      security: セキュリティ
+      tickets: チケット
+      my_account: アカウント
+      withdraw: 送金
+      deposit: 入金
+      setting: 設定
+      history: 履歴
+      send_coin: コイン送信
+      bank_account: 銀行口座
+      withdraw_jpy: 日本円送金
+      deposit_jpy: 日本円入金
+      affiliates: アフィリエイト
+    menu_settings:
+      level1: レベル1
+      level2: レベル2
+      level3: レベル3
+      email: メールアドレス変更
+      id_document: アカウント確認
+      phone: 電話番号
+      two_factors: ２段階認証
+      password: パスワード
+      api: APIトークン
+    footer:
+      support: サポート
+      about: 情報
+      company: 会社
+      contact: お問合せ
+      fee: 料金
+      account_class: アカウントクラス
+      term_of_use: ご利用規約
+      about_company: 会社概要
+      jobs: 採用情報
+      blog: ブログ
+    admin:
+      member:
+        member_info: メンバー情報
+        deactive_sms_two_factor: 携帯電話承認
+        deactive_app_two_factor: 二段階Google
+        inactive: 非アクティブ
+        deactive: 非活性化します
+        are_you_sure: 2ファクタ認証を無効にしてもよろしいですか？
+      account:
+        account_info: メンバーのウォレット残高
+        payment_address: 入金アドレス
+    alert:
+      modern: 取引経験に影響を与えないために、より一般的なブラウザ取引を使用してください,
+        <a target='_blank' href='https://www.google.com/#q=google+chrome'> Google Chrome </a>をお勧めします。
+      pusher_unavailable: ネットワーク接続は一時的に利用できません... <a
+        href='#' class='alert-link'>リフレッシュしてください</a>。
+    header:
+      balance: バランス
+      market_menu: 取引所
+      signin: ログイン
+      signup: 新規登録
+
+    header_account_balance:
+      locked: ロックしました
+    market:
+      ticker:
+        ask_price: 売値
+        bid_price: 買値
+        high_price: 高
+        low_price: 低
+        volume: 数量
+        latest_price: 最後
+    frame:
+      deposit_now: 今すぐ入金
+  two_factors:
+    index:
+      verify: 確認
+    update:
+      alert: 携帯電話のコードがエラー、再入力してください。
+    auth:
+      please_active_two_factor: まず、２段階認証を設定してください。
+      submit: 提出します
+      otp_placeholder: 6ー桁のパスワード
+      google_app: Google認証
+      sms: SMSとメールの確認コード
+      send_code: コードを送信
+      send_code_alt: COUNT秒後に再送信
+      hints:
+        app: Google認証システムは30秒ごとに新しいパスワードを再生成します。タイムリーに入力してください
+        sms: あなたに確認コード付きのテキストメッセージをお送りします。
+  verify:
+    google_auths:
+      edit:
+        submit: 無効にする
+        warning: 'チップ: 何らかの理由でTwo-Factor認証を紛失し、Bit-Trading Soloアカウントにログインできない場合は、オンラインカスタマーサービスにご連絡ください。'
+      show:
+        step-1: 1. ダウンロード及びインストール
+        step-2: 2. Google Authenticator APPで次のQRコードをスキャン してください。
+        step-3: 3. スマートフォンで表示されるダイナミックパスワードを入力して、2ファクタ認証を有効にします。
+        or: OR
+        google_authenticator: Google 認証システム
+        otp_secret: シークレットキー
+        download-app: スマートフォンに "Google Authenticator"アプリをインストールして開きます。
+        guide-link: "<a href='https://support.google.com/accounts/answer/1066447'
+          target='_blank'>Installation Instructions</a>。"
+        scan-qr-code: 2. Google Authenticator APPで次のQRコードをスキャン してください。
+        enter-passcode: スマートフォンで表示されるダイナミックパスワードを入力して、2ファクタ認証を有効にします。
+        submit: 有効にする
+        cancel: キャンセル
+        ios: Iphone iOS
+        android: Android
+        blackbery: Blackberry
+        notice:
+          already_activated: Google認証システムが既に設定されています。
+          not_activated_yet: Google認証システムがまだ設定されていません。
+          confirm_two_factor: まず、Google認証を確認してください。
+      confirm_two_factor:
+        submit: 確認する
+      update:
+        alert: 認証のパスワードが間違っていますので、再入力してください。
+        notice: 2ファクタ認証が有効になりました。
+        sms_two_factor_error: SMSの確認コードが間違っています。再入力してください。
+      destroy:
+        alert: 認証のパスワードが間違っていますので、再入力してください。
+        notice: 2ファクタ認証が無効になりました。
+    sms_auths:
+      notice: まず、電話番号を確認してください。
+      show:
+        title: 電話番号登録
+        description: 電話番号を入力すると、アカウントがより安全になります。 早めにパスワードをリセットすることができ、アカウント操作に通知されます。
+        warning: 電話番号が設定されていない場合は、アカウントのパスワードを取得することはできません。
+        phone_number: 電話番号
+        send_code: コードを送信
+        send_code_alt: COUNT秒後に再送信
+        input_otp: あなたに送った6桁のコードを入力してください
+        hint_otp: 受信したメッセージに記載された6桁の認証コードを入力してください。
+        submit: 登録
+        cancel: キャンセル
+        notice:
+          send_code_success: 届いた確認コードを入力してください。
+          otp_success: コードの確認が成功しました。
+          already_activated: 電話番号が有効になっています。
+        alert:
+          phone_number_error: 電話番号のエラー
+  withdraw_channel:
+    bank:
+      key: 銀行振込
+      title: 銀行振込作業
+      intro: 銀行振り込み撤回、大リチャージをお勧めします
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    satoshi:
+      key: Blockchain
+      title: Bitcoin 出金
+      intro: あなたのBitcoinウォレットにBitcoinを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    taocoin:
+      key: Blockchain
+      title: Taocoin 出金
+      intro: あなたのTaocoinウォレットにBitcoinを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    ethereum:
+      key: Blockchain
+      title: Ethereum 出金
+      intro: あなたのEthereumウォレットにEthereumを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    ripple:
+      key: Blockchain
+      title: Ripple 出金
+      intro: あなたのRippleウォレットにRippleを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    bitcoincash:
+      key: Blockchain
+      title: BitcoinCash 出金
+      intro: あなたのBitcoinCashウォレットにBitcoinCashを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    bitcoingold:
+      key: Blockchain
+      title: BitcoinGold 出金
+      intro: あなたのBitcoinGoldウォレットにBitcoinGoldを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    ethereumclassic:
+      key: Blockchain
+      title: Ethereum Classic 出金
+      intro: あなたのEthereumClassicウォレットにEthereumClassicを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+    kuberacoin:
+      key: Blockchain
+      title: KuberaCoin 出金
+      intro: あなたのKuberacoinウォレットにKuberacoinを出金
+      latency: 30分
+      transfer: マニュアル
+      go: 出金
+  withdraws:
+    invalid_address: 有効ではありません。 この住所に出金ことはできません。
+  withdraws/bank:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/satoshi:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/taocoin:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/ethereum:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/ripple:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/bitcoincash:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/bitcoingold:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/ethereumclassic:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受け入れられます
+      suspect: 疑います
+      processing: 処理しています
+      done: 完了しました
+      almost_done: ほぼ完了
+      canceled: キャンセルしました
+      failed: 失敗しました
+  withdraws/kuberacoin:
+    aasm_state:
+      submitting: 提出しています
+      submitted: 提出しました
+      rejected: 拒否されました
+      accepted: 受けとりました
+      suspect: セキュリティチェック中
+      processing: 処理しています
+      done: 完了しました
+      almost_done: まもなく完了
+      canceled: キャンセルしました
+      failed: 失敗しました

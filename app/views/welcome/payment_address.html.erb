@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<style>
+  body,
+  html {
+      height: 100%;
+  }
+
+  .h1s {
+      margin-bottom: 20px;
+      text-align: center;
+      font-family: "Time new roman", Times, serif;
+      font-weight: 900;
+  }
+
+  .borderQR {}
+</style>
+<%=javascript_include_tag "payment" %>
+<div class="container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+        <div class="col col-sm-8 col-md-8 col-lg-8 col-xl-8">
+            <div class="h1s align-items-center">
+                <h1>Gate Payment</h1>
+            </div>
+            <!-- <form> -->
+            <div class="form-group">
+                <div class="row" align="center">
+                    <div class="col col-sm-12 col-md-12 col-lg-12 col-xl-12" >
+                        <div class="borderQR">
+                            <div class="" id="payQRcode">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="" style="margin: 10px;">
+                    <!-- <span class="glyphicon glyphicon-qrcode"></span> -->
+                    <input id="addrPayment" class="addrPayment form-control" type="text" readonly="readonly" style="text-align:center">
+
+                </div>
+                <div id="statusTransaction" class="form-group" style="margin: 10px;">
+                    <div id="st" align="center">
+
+                    </div>
+                    <div id="done" align="center">
+
+                    </div>
+                </div>
+            </div>
+            <!-- </form> -->
+        </div>
+    </div>
+</div>
+
+
+</div>
+<script>
+    window.onload = QR();
+</script>

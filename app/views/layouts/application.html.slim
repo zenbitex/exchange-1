@@ -1,0 +1,37 @@
+doctype html
+html lang="ja"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    - stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "application"
+    = stylesheet_link_tag stylesheet, media: "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    = yield(:scripts) if content_for?(:scripts)
+    = render 'shared/html5'
+    = render 'shared/meta'
+    meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}" class="#{locale_name}"
+    = render 'shared/alert'
+
+    div#container.bitirade-home-wrapper
+      div#header
+          - if content_for?(:header)
+            = yield(:header)
+          - else
+            = render 'shared/header'
+
+      div#body
+        - if content_for?(:frame)
+          = yield(:frame)
+        - else
+          = render 'shared/frame'
+
+      div#footer
+        - if content_for?(:footer)
+          = yield(:footer)
+        - else
+          = render 'shared/footer'

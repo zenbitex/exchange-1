@@ -1,0 +1,82 @@
+#market_trades{
+  div .panel-body{
+    padding: 0px;
+  }
+
+  tbody {
+      padding: 0px;
+      display:block;
+      height: $row_height*20 + 15;
+      overflow:auto;
+
+      tr{
+        .time{
+          color: #5E6C75;
+        }
+        .volume{
+          color: white;
+        }
+        .label { margin: 0 1px; padding: 2px; }
+        .text-down{
+          color: $sell_color;
+          g{
+            color: inherit;
+          }
+        }
+        .text-up{
+          color: $buy_color;
+          g{
+            color: inherit;
+          }
+        }
+        td{
+          text-align: center !important;
+          g{
+            color: inherit;
+          }
+        }
+      }
+  }
+  thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;
+  }
+
+  thead tr{
+    background-color: #73c6fc;
+    height: 42px;
+    th{
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  .title_trades{
+    color: #93461a;
+    font-size: 20px;
+  }
+
+}
+
+//Responsive
+@media screen and(min-width: 880px) {
+  #market_trades{
+    tbody {
+      height: $row_height*20 - 4;
+    }
+  }
+}
+@media screen and(min-width: 992px) {
+  #market_trades{
+    tbody {
+      height: $row_height*20 + 15;
+    }
+  }
+}
+@media screen and(min-width: 1172px) {
+  #market_trades{
+    tbody {
+      height: $row_height*20 - 4;
+    }
+  }
+}

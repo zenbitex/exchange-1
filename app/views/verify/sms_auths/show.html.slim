@@ -1,0 +1,31 @@
+= render "shared/menu_settings"
+
+.sms-author-container
+  .text-left
+    h1 = t(".title")
+  = simple_form_for @sms_auth, url: verify_sms_auth_path, html: {class: "form-default"}, remote: true, as: :sms_auth do |f|
+    .col-xs-12.col-sm-12
+      = f.input :country, as: :country, prompt: t('actions.select'), selected: "JP"
+    
+    .col-sm-12.col-xs-12
+      = f.input :phone_number do
+        .input-send-code
+          == f.text_field :phone_number, value: @phone_number, label: t('.phone_number'), class: 'string optional form-control'
+          span.input-group-btn
+            button.btn.btn-info type='submit' name="commit" value="send_code" data-orig-name=t('.send_code') data-alt-name=t('.send_code_alt') = t('.send_code')
+    .clearfix
+    .col-xs-12.col-sm-12
+      = f.input :otp, placeholder: t('.hint_otp')
+    .sms-author-button.form-group
+      = f.button :submit, t('.submit'), class: "button-primary"
+
+  = content_for :guide_title do
+    h3
+      i.fa.fa-mobile.fa-2x
+      span = t('.title')
+
+  = content_for :guide do
+    p.text-ignore
+      = t('.description')
+    p.text-warning
+      = t('.warning')

@@ -1,0 +1,39 @@
+<div>
+  <div id="security_setting_form">
+    <h4 class="page-title"><%= t('.header') %></h1>
+    <%= render "shared/flash" %>
+    <%= simple_form_for @security, url: security_path, method: :post, class: "form-inline" do |f| %>
+      <% Settings.list_settings.each do |key, value| %>
+        <div class="form-group">
+          <label class="text-label"><%= t('.two_factor_' + key.to_s )%></label>
+          <div class="onoffswitch">
+            <%= f.check_box ("two-factor-" + value).to_sym, checked: @security.two_factor[value],
+              id: (value +"-onoffswitch-two-factor"),
+              class: "onoffswitch-checkbox user-setting-two_factor form-control" %>
+            <label class="onoffswitch-label" for="<%= value %>-onoffswitch-two-factor">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="text-label"><%= t('.email_' + key.to_s )%></label>
+          <div class="onoffswitch">
+            <%= f.check_box ("send-email-" + value).to_sym, checked: @security.send_email[value],
+              id: (value +"-onoffswitch-email"),
+              class: "onoffswitch-checkbox user-setting-email" %>
+            <label class="onoffswitch-label" for="<%= value %>-onoffswitch-email">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+          </div>
+        </div>
+      <% end %>
+      <div class="form-group text-center">
+        <%= f.button :submit, t('.submit'), :class => "btn button-primary" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= render "private/history/signup_history" %>

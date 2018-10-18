@@ -1,0 +1,25 @@
+<div class="my-account">
+
+  <div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>チケットサポート!　</strong> 質問、不具合等があれば<a href="/tickets" class="alert-link">こちらで</a>やってください！
+  </div>
+
+  <div class="container_account">
+    <h1 class="title-header"><%= t('.header') %></h1>
+    <div class="row">
+      <div class="total user_infor">
+        <%= t('.total') %>: <span><%= number_to_currency(@total, unit: @base_unit) %></span>
+      </div>
+      <div class="user_infor">
+        <%= t('.id') %>: <span><%= current_user.sn_code %></span>
+      </div>
+    </div>
+
+    <%= render "account_balance", accounts: current_user.accounts %>
+    <%= render "pie_chart" %>
+    <%#= render "current_rate", markets: @markets %>
+    <%#= render "level" %>
+    <%#= render "history", account_versions: @account_versions %>
+  </div>
+</div>

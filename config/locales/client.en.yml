@@ -1,0 +1,354 @@
+en:
+  js:
+    sendcoin:
+      email_error: Invalid email address
+    buy_coin:
+      action_title: Buy coin with credit card
+      min_amount: The minimum payment on a credit card is %{min_amount} yen.
+    buy_sell_coin:
+      amount_null: Please input your amount。
+      buy_confirm: Are you sure you want to buy %{amount} %{currency}?
+      sell_confirm: Are you sure you want to sell %{amount} %{currency}?
+    alert_confirm:
+      destroy_confirm: Are you sure you want to delete this item?
+    id_documents:
+      errors:
+        empty: You can't leave this empty.
+        document_type_empty: You must select a document type
+    brand: Bit-station
+    submit: Submit
+    jpy_submit: Withdraw JPY
+    cancel: Cancel
+    confirm: Confirm
+    bank_account:
+      current_bank_account: Current bank account
+      ordinary_bank_account: Ordinary bank account
+    banks:
+      mufg: Mitsubishi UFJ Trust and Banking
+      smbc: SMBC Trust Bank (Sumitomo Mitsui Banking Corporation)
+      mzh: Mizuho Trust & Banking Co., Ltd (Mizuho FG)
+      nmrt: Nomura Trust and Banking
+      jpp: Japan Post Bank
+    fund_sources:
+      manage_bank_account: Bank Account Management
+      manage_bank_account_desc: To facilitate the choice of bank withdrawals address
+      manage_coin_address_bitcoin: Bitcoin Address Management
+      manage_coin_address_taocoin: Taocoin Address Management
+      manage_coin_address_ripple: Ripple Address Management
+      manage_coin_address_bitcoincash: Bitcoin Cash Address Management
+      manage_coin_address_bitcoingold: Bitcoin Gold Address Management
+      manage_coin_address_ethereum: Ethereum Address Management
+      manage_coin_address_ethereumclassic: Ethereum Classic Address Management
+      manage_coin_address_kuberacoin: Kubera Coin Address Management
+      manage_coin_address_desc: To facilitate the choice of coin withdrawals address
+      bank: Bank
+      account: Bank Account
+      label: Label
+      address: Address
+      address_btc: Address BTC
+      address_tao: Address TAO
+      address_bch: Address BCH
+      address_btg: Address BTG
+      address_xrp: Address XRP
+      address_eth: Address ETH
+      address_etc: Address ETC
+      address_kbr: Address KBR
+      action: Action
+      add: Add
+      remove: Remove
+      default: Default
+    funds:
+      deposit: Deposit
+      withdraw: Withdraw
+      currency_name:
+        jpy: JPY
+        btc: BTC
+        tao: TAOCOIN
+        xrp: XRP
+        bch: BCH
+        btg: BTG
+        eth: ETH
+        etc: ETC
+        etc: KBR
+      deposit_jpy:
+        title: Deposit JPY
+        desc: "To deposit via Bank transfer, please follow these steps:"
+        desc_item_1: "1. Submit the form to get the identification code."
+        desc_item_2: "2. Transfer the money to exchange's bank account. Please make sure your referral code was written on the form you fill in."
+        desc_item_3: "3. Your deposit will be confirmed as soon as the money is received."
+        attention: "Attention: The name of your bank account must be the same as your account name on our site, otherwise your deposit may fail."
+        from: From
+        to: To
+        deposit_name: Your name
+        deposit_account: Deposit Account
+        add: Add
+        manage: Manage
+        amount: Deposit Amount
+        min_amount: At least 10 yuan
+        to_account: Account
+        to_name: Name
+        to_bank_name: Bank Name
+        opening_bank_name: Account where created
+        remark: 'Referral Code (Transfer identification code)'
+        label:
+          company_name: Account holder
+          bank_name: Bank name
+          branch: Bank branch
+          account_number: Account number
+          account_kind: Account type
+          transfer_name: Transfer holder
+        content:
+          company_name: ビットステーション (カ
+          bank_name: The Bank of Nagoya
+          branch: Head Office Sales Dept. (101)
+          account_number: 3937838
+          account_kind: Normal
+        user_id: 'Your user ID: <b class="de-id">%{id}</b>'
+        title_note: Note
+        user_info: '<b class="de-id">%{id} &nbsp; %{name}</b>'
+        user_info_not_name: '<b class="de-id">%{id} &nbsp; Your Name</b>'
+        title_info_user: Account information
+        title_note_2: Note
+        note_1: ・Please register after registering account information · bank account information.
+        note_2: ・Please make sure to transfer from account of account holder same as account name.
+        note_2_content: If the transfer holder is different, we can not handle it properly, and payment and refund
+        note_2b_content: It may not be possible.
+        note_3: ・Please be sure to enter the user ID in the transfer holder field.
+        note_3_content: If you do not enter an ID
+        note_3_link: Inquiry of deposit in Japanese yen
+        note_4_content: From the page
+        note_5_content: Please inquire after filling in information / ID of deposit.
+        user_name: Your Name
+        desc_item_1: Account information /
+        desc_item_1_2: bank account information.
+        desc_item_1_1: Please register
+        desc_item_2: "Please set payer: <b>%{ids} Your name</b>"
+        help_item_0: Payer's name has to be same as an account name at Bit-station.
+        help_item_1: If payer's name is incorrect, we might not be able to deposit or refund.
+        help_item_2: We will send you an e-mail as soon as we finish depositing to your bank account.
+        help_item_3: If you deposit without your user id, please let us know your deposit information from <a href="" onClick="window.open('/deposit_infomation')">here</a>.
+
+      deposit_btc:
+        title: Deposit BTC
+
+      deposit_tao:
+        title: Deposit TAOCOIN
+
+      deposit_xrp:
+        title: Deposit RIPPLE
+
+      deposit_bch:
+        title: Deposit BCH
+
+      deposit_btg:
+        title: Deposit BTG
+
+      deposit_eth:
+        title: Deposit ETH
+
+      deposit_etc:
+        title: Deposit ETC
+
+      deposit_kbr:
+        title: Deposit KBR
+
+      deposit_coin:
+        balance: Balance
+        locked: Locked
+        address: Address
+        new_address: New Address
+        confirm_gen_new_address: You sure want to generate a new deposit address?
+        open-wallet-btc: Please use your common wallet services, local wallet, mobile terminal or online wallet, select a payment and send.
+        open-wallet-tao: Please use your common wallet services, local wallet, mobile terminal or online wallet, select a payment and send.
+        detail-1: Please paste the address blow in your wallet,
+        detail-2: and fill in the amount you want to deposit, then confirm and send.
+        scan-qr: Scanning QR code to Pay for In the mobile terminal wallet.
+        after_deposit: Once you complete sending, you can check the status of your new deposit below.
+        generate-new: Generate new address
+        cancle: Are you sure you want to cancel this request?
+
+      deposit_history:
+        title: Deposit History
+        number: '#'
+        identification: Identification Code
+        time: Time
+        txid: Transaction ID
+        confirmations: Confirmations
+        from: From
+        amount: Amount
+        state_and_action: "State/Action"
+        cancel: cancel
+        no_data: There is no history data
+
+        submitting: Submitting
+        cancelled: Cancelled
+        submitted: Submitted
+        accepted: Accepted
+        rejected: Rejected
+        checked: Checked
+        warning: Warning
+        suspect: Suspect
+
+      withdraw_jpy:
+        title: Withdraw JPY
+        fee_name: Fee (in Japan)
+        three_man_less: < 30,000 yen
+        three_man_greater: ">= 30,000 yen"
+        yen: yen
+        intro_item_1: Your preferred amount will be transfered to the account below.
+        intro_item_2: If your account information is incorrect, the money can't be refunded. Please be careful.
+        intro_item_3: Your fund will be transferred to your bank account in about <a>3 business days (3~4 days for foreign bank account)</a> after your withdrawal request.
+        intro_item_4: <a>Bank transfer withdrawal is inside the country.</a>
+        account_name: Account Name
+        withdraw_address: Withdraw Address
+        balance: Balance
+        withdraw_amount: Withdraw Amount
+        manage_withdraw: Manage Withdraw
+        fee_explain: About Fee
+        min: At least
+        withdraw_all: Withdraw all
+        bank_account: Bank account
+        bank_name: Bank name
+        bank_branch: Bank branch
+        account_type: Account type
+        account_number: Account number
+        owner: Owner
+        bank_account_register: Account registration
+        bank_account_edit: Edit Bank Account
+        fee: Fee
+        total: Total
+        remain: Remaining balance
+        insufficient_funds: Insufficient funds
+
+      withdraw_btc:
+        title: Withdraw BTC
+        intro: Please fill in the address and amount, then submit the form
+      withdraw_tao:
+        title: Withdraw TAOCOIN
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_xrp:
+        title: Withdraw RIPPLE
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_bch:
+        title: Withdraw BCH
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_btg:
+        title: Withdraw BTG
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_eth:
+        title: Withdraw ETH
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_etc:
+        title: Withdraw ETC
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_kbr:
+        title: Withdraw KBR
+        intro: Please fill in the address and amount, then submit the form.
+
+      withdraw_coin:
+        confirm: |
+          Are you sure to send %{amount}%{currency}?
+        amount_not_blank: Amount must be 0 greater！
+        balance: Balance
+        locked: Locked
+        intro: Please fill in the address and amount, then submit the form.
+        label: Address
+        balance: Balance
+        amount: Amount
+        manage_withdraw: Manage Address
+        min: At least
+        withdraw_all: Withdraw all
+        fee_explain: About Fee
+        cancle: Are you sure you want to cancel this request?
+        destination_tag: Destination Tag (Optional)
+        number: Number
+        send_coin: Send with email address
+        send_coin_link: Click here to send with email address
+
+
+      withdraw_history:
+        title: Withdraw History
+        number: Number
+        withdraw_time: Time
+        withdraw_account: Withdraw Account
+        withdraw_address: Address
+        withdraw_amount: Amount
+        actual_amount: Actual Amount
+        fee: Fee
+        miner_fee: Fee
+        state_and_action: "State/Action"
+        cancel: Cancel
+        no_data: There is no history data
+
+        submitting: Submitting
+        submitted: Submitted
+        rejected: Rejected
+        accepted: Accepted
+        suspect: Suspect
+        processing: Processing
+        coin_ready: Coin Ready
+        coin_done: Coin Done
+        done: Done
+        almost_done: Almost Done
+        canceled: Canceld
+        failed: Failed
+
+    auth:
+      please_active_two_factor: Please set mobile number or google authenticator first.
+      submit: Submit
+      otp_placeholder: Please enter verification code (6 digits)
+      google_app: Google Authenticator
+      sms: SMS Verification Messages
+      mail: Mail Verification Messages
+      mail_guide: We will send code to the registered e-mail address.
+      send_code: Send Code
+      send_code_alt: Resend in COUNT seconds
+      hints:
+        app: Google Authenticator will re-generate a new password every thirty seconds, please input timely.
+        sms: We'll send a text message to you phone with verify code.
+        mail: We'll send a text message to your mail with verify code.
+
+    private:
+      markets:
+        range_switch:
+          unknown: unknown
+          switch_1: 1m
+          switch_5: 5m
+          switch_15: 15m
+          switch_30: 30m
+          switch_60: 1h
+          switch_120: 2h
+          switch_240: 4h
+          switch_360: 6h
+          switch_720: 12h
+          switch_1440: 1d
+          switch_4320: 3d
+          switch_10080: 1w
+        market_trades:
+          up-price: buy
+          down-price: sell
+
+    markets:
+      market_list:
+        all: All Market
+        jpy: JPY Market
+        btc: BTC Market
+        tao: TAOCOIN Market
+        xrp: RIPPLE Market
+        bch: BCH Market
+        btg: BTG Market
+        eth: ETHEREUM Market
+        etc: ETC Market
+        kbr: KUBERA Market
+
+  private:
+    markets:
+      charts:
+        candlestick_period: "Period"
+        loading: Loading...

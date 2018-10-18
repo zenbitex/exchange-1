@@ -1,0 +1,27 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "info_user") do |sheet|
+    sheet.add_row ["ID", "名前", "メール","郵便番号" ,"都道府県","携帯電話番号", "誕生日", "住所", "国", "ご職業", "書類の種類", "レベル", "登録日時"]
+    @id_documents.each do |document|
+      sheet.add_row [
+      document.member.id,
+      document.name.nil? ? "なし" : document.name,
+      document.member.nil? ? "なし" : document.member.email.nil? ? "なし" : document.member.email,      
+      document.zipcode.nil? ? "なし" : document.zipcode,
+      document.city.nil? ? "なし" : document.city,
+      document.member.nil? ? "なし" : document.member.phone_number.nil? ? "なし" : document.member.phone_number,
+      document.birth_date.nil? ? "なし" : document.birth_date,
+      document.address.nil? ? "なし" : document.address,
+      document.country.nil? ? "なし" : document.country,
+      document.job_type.nil? ? "なし" : document.job_type,
+      document.id_document_type.nil? ? "なし" : document.id_document_type,
+      document.member.nil? ? "なし" : document.member.account_class.nil? ? "なし" : document.member.account_class,
+      l(document.created_at, format: '%Y-%m-%d %H:%M:%S')]
+    end
+  end
+
+end

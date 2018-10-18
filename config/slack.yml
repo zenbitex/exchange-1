@@ -1,0 +1,9 @@
+staging: &defaults
+  payload:
+    channel: '#exchangepro'
+    username: minabot
+  token: ~
+  hook_url: https://exchangepro.slack.com/services/hooks/incoming-webhook?token=
+
+production:
+  <<: *defaults

@@ -1,0 +1,196 @@
+@mixin custome_column($num,$width,$display: 0) {
+  thead tr {
+    th:nth-child(#{$num}){
+      width: $width;
+      @if $display != 0 {
+        display: $display;
+      }
+    }
+  }
+
+  tbody tr{
+    td:nth-child(#{$num}){
+      width: $width;
+      @if $display != 0 {
+        display: $display;
+      }
+    }
+  }
+}
+
+#my_orders_wrapper{
+  position: relative;
+  //cancel popup
+  #myorder_menu_wrapper{
+    position: relative;
+    #myorder_menu{
+      position: fixed;
+      z-index: 9999;
+      span {
+        cursor: default;
+        user-select: none;
+      }
+    }
+  }
+  //table
+  #my_orders {
+     .panel-body {
+      padding: 0px;
+    }
+    .panel-body-content {
+      overflow-x: auto !important;
+    }
+
+    table{
+      min-height: 100px;
+    }
+
+    @include custome_column(1, 12%);
+    @include custome_column(3, 10%);
+    @include custome_column(7, 5%, none);
+
+    thead tr {
+      padding: 10px;
+      th {
+        font-size: 14px;
+        vertical-align: middle;
+        text-align: center;
+
+        .cancel {
+          font-weight: 200;
+        }
+        span {
+          @media screen and (max-width: 568px) {
+            font-size: 13px;
+          }
+          font-weight: 500;
+          display: block;
+          line-height: 26px;
+        }
+      }
+    }
+
+    tbody {
+      padding: 0px;
+      display: block;
+      overflow: auto;
+      height: $row_height*20 + 15;
+      tr {
+        td {
+          border-right: 1px solid #ddd;
+          vertical-align: middle !important;
+          @media screen and (max-width: 568px) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+
+    overflow-y: auto;
+    border-color: #bc5b1d;
+
+    .information{
+      pointer-events: none;
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      top: 30px;
+      left: 15px;
+      width: calc(100% - 30px );
+      height: calc( 100% - 15px );
+      z-index: 901;
+      color: white;
+
+      div{
+        align-self: center;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    table {
+      user-select: none;
+      cursor: default;
+      tr {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        height: 42px;
+        td{
+          border: none;
+        }
+      }
+    }
+
+    .time, .price, .volume, .amount {
+      & > span { display: block; height: 16px; padding: 2px 0; }
+    }
+
+    .empty-row {
+      position: absolute;
+      align-self: center;
+      text-align: center;
+      width: 100%;
+    }
+
+    .label { margin: 0 1px; padding: 2px; }
+    .label-ask { background-color: $down-text-fade; }
+    .label-bid { background-color: $up-text-fade; }
+    .label-new { background-color: $gray-light; }
+    .label-partial { background-color: #2b90de; }
+    .span-ask {color: $sell_color;}
+    .span-bid {color: $buy_color;}
+
+    & > .mask { padding-top: 130px; }
+  }
+}
+
+//RESPONSIVE
+#my_orders_wrapper{
+  #my_orders {
+    @media screen and (min-width: 450px){
+      @include custome_column(3, 8%);
+      @include custome_column(7, 17%, table-cell);
+    }
+    @media screen and (min-width: 768px){
+      @include custome_column(3, 9%);
+      @include custome_column(7, 5%, none);
+    }
+    @media screen and (min-width: 950px){
+      @include custome_column(1, 7%);
+      @include custome_column(3, 10%);
+      @include custome_column(7, 20%, table-cell);
+    }
+
+    @media screen and (min-width: 1020px){
+      @include custome_column(1, 10%);
+      @include custome_column(3, 10%);
+      @include custome_column(7, 15%, table-cell);
+    }
+  }
+}
+
+//Responsive
+@media screen and(min-width: 880px) {
+  #my_orders_wrapper > #my_orders{
+    tbody {
+      height: $row_height*20 - 4;
+    }
+  }
+}
+@media screen and(min-width: 992px) {
+  #my_orders_wrapper > #my_orders{
+    tbody {
+      height: $row_height*20 + 15;
+    }
+  }
+}
+
+@media screen and(min-width: 1172px) {
+  #my_orders_wrapper > #my_orders{
+    tbody {
+      height: $row_height*20 - 4;
+    }
+  }
+}

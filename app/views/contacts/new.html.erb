@@ -1,0 +1,105 @@
+<script type="text/javascript">
+  var app = angular.module("contact", []);
+  app.controller("contact_controller", function($scope){
+    $scope.category_types = ['<%=t("actions.select")%>'];
+    <% for index in (1..7)%>
+      var data = '<%=t(".category_type#{index}")%>';
+      $scope.category_types.push(data);
+    <% end %>
+    $scope.category_type = $scope.category_types[0];
+  });
+</script>
+<div class="contact_screen form-default" ng-app="contact" ng-controller="contact_controller">
+  <div class="">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <%= simple_form_for @contact, :url => contacts_path, :method => :post, :html => {:class => 'form-horizontal', :id => 'create_form'} do |f| %>
+        <div class="contact-use" id="create_contact">
+          <h1 class="color-primary"><%= t('.title') %></h1>
+          <%= render ("shared/flash") %>
+          <div class="contact_input">
+            <b width="30%"><%= t('.name') %> <span class="color-star">*</span></b>
+            <div> 
+              <input class="string required form-control" name="contact[name]" type="text" ng-model="name">
+              <label class="form-error"><%= t('.error.name_blank') %></label>
+            </div><br>
+
+            <b width="30%"><%= t('.email') %> <span class="color-star">*</span></b>
+            <div> 
+              <input class="string required form-control email" name="contact[from_email]" type="text" ng-model="email">
+              <label class="form-error"><%= t('.error.email_blank') %></label>
+              <label class="form-error email_invalid"><%= t('.error.email') %></label>
+            </div><br>
+
+            <b width="30%"> <%= t('.category_select') %></b>
+            <div>
+              <input id="category_type" name="contact[category]" hidden value="{{category_type}}">
+              <select class="date optional form-control" id="category_list" data-ng-options="category for category in category_types" ng-model="category_type">
+              </select>
+              <label class="form-error"><%= t('.error.category_blank') %></label>
+            </div><br>
+            <b width="30%"> <%= t('.content') %> <span class="color-star">*</span></b>
+            <div> 
+              <textarea class="string required form-control" name="contact[message]" type="text" ng-model="content"> </textarea> 
+              <label class="form-error"><%= t('.error.content_blank') %></label>
+            </div>
+          </div>
+          <div class="text-center text-padding-custom">
+            <input class="btn button-primary" id="submit_1" value="<%= t('.button_confirm')%>" type="button">
+          </div>
+        </div>
+
+        <div class="contact-use confirm-contact" id="confirm_form">
+          <h1 class="color-primary"> <%= t('.title') %> </h1>
+          <div class="content_form">
+            <div class="content_confirm">
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= t('.name') %>
+                </div>
+                <div class="col-sm-8">
+                  {{name}}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= t('.email') %>
+                </div>
+                <div class="col-sm-8">
+                  {{email}}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= t('.category_select') %>
+                </div>
+                <div class="col-sm-8">
+                  {{category_type}}
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-4">
+                  <%= t('.content') %>
+                </div>
+                <div class="col-sm-8">
+                  {{content}}
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                <input class="btn button-primary send" type="submit" value="<%= t('.button_send')%>">
+              </div>
+             <div class="col-md-6 col-sm-6 col-xs-6 text-center">
+                <input class="btn button-cancel confirm_form_back" type="button" value="<%= t('.button_back')%>">
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+</div>

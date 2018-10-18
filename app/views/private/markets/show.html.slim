@@ -1,0 +1,61 @@
+doctype html
+html lang="en"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    = javascript_include_tag "market"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    = stylesheet_link_tag 'market', media: "all"
+    = render 'shared/html5'
+    = render 'shared/meta'    
+    meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}" class="#{locale_name}"
+    audio preload='preload' id='success-fx'
+      source src="/sounds/success.mp3"      
+    audio preload='preload' id='warning-fx'
+      source src="/sounds/warning.mp3"
+
+    #container.bitirade-home-wrapper
+      div ng-app="market"
+        #header
+          = render partial: "private/markets/header"
+        #body
+          #main_content
+            #place_order ng-controller="OrderController"
+              .row
+                #order_form.col-md-3.col-sm-4.col-xs-12
+                  .confirm_order
+                    .content
+                      .message=t(".confirm_message")
+                      .form-group.text-center
+                        .btn.btn-primary.btn-order ng-click="submitOrder()" = ".order"
+                        .btn.btn-danger.btn-cancel ng-click="closeConfirm()" = t(".cancel")
+                  .mini-balance
+                    p
+                      span.currency = @market.base_unit.upcase
+                      - if current_user
+                        span.amount = @accounts.first.balance
+                      - else
+                        span.amount = 0
+                    p
+                      span.currency = @market.quote_unit.upcase
+                      - if current_user
+                        span.amount = @accounts.last.balance
+                      - else
+                        span.amount = 0
+                  .switch-order-type
+                    button.btn.btn-primary.buy.active ng-click="switchForm('buy')" = t('.buy', currency: t(@market.bid['currency'], scope: 'market.currency'))
+                    button.btn.btn-danger.sell ng-click="switchForm('sell')" = t('.sell', currency: t(@market.ask['currency'], scope: 'market.currency'))
+                  = render partial: 'ask_entry', locals: {market: @market, order: @order_ask }
+                  = render partial: 'bid_entry', locals: {market: @market, order: @order_bid }
+                #charts.col-md-9.col-sm-8.col-xs-12
+                  = render partial: 'charts'
+              .row
+                #order.col-sm-4.col-md-3.col-xs-12.block_1
+                  = render partial: 'order_book'
+                .col-sm-5.col-md-6.col-xs-12.block_2
+                  = render partial: 'my_orders'
+                .col-sm-3.col-md-3.col-xs-12.block_3
+                  = render partial: 'market_trades'

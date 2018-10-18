@@ -1,0 +1,76 @@
+<style>
+#depost_confirm{
+	width: 100%;
+}
+
+.deposit_info {
+  border: solid 1px;
+  padding: 15px;
+}
+
+.check_list {
+	margin-bottom: 20px;
+  color: red;
+}
+
+.admin_bank_confirm .info {
+	margin-bottom: 20px;
+}
+</style>
+
+<div class="admin_bank_confirm">
+	<div class="row info">
+		<div class="col-sm-6">
+			<div class="deposit_info">
+				<h3> <strong><%= t('.user_info') %></strong> </h3>
+				<p> <strong><%= t('.id')%> </strong>:  <%= @deposit_member.id %></p>
+				<p> <strong><%= t('.name') %></strong>: <%= link_to @name, admin_id_document_path(@document_id) %> </p>
+
+				<h3> <strong><%= t('.account_info') %></strong> </h3>
+				<p> <strong><%= t('.bank_name') %></strong>:  <%= @deposit_member.bank_account.bank_name%></p>
+				<p> <strong><%= t('.bank_branch') %></strong>:  <%= @deposit_member.bank_account.bank_branch %></p>
+				<p>
+					<strong><%= t('.account_type') %>
+					</strong>: <%= @deposit_member.bank_account.account_type.text %>
+				</p>
+				<p> <strong><%= t('.account_number') %></strong>:  <%= @deposit_member.bank_account.account_number %></p>
+			</div>
+		</div>
+		<div class="col-sm-6">
+			<div class="deposit_info">
+				<p> <strong><%= t('.code') %></strong> : <%= @code %></p>
+				<p> <strong><%= t('.amount') %></strong> :  <%= @amount %>  円</p>
+			</div>
+		</div>
+	</div>
+
+
+	<h4> <%= t('.check_list')%> </h4>
+	<div class="check_list">
+		<div>
+			<input type="checkbox" id="check1"><label for="check1">&nbsp;&nbsp;  <%= t('.check1') %></label>
+		</div>
+		<div>
+			<input type="checkbox" id="check2"><label for="check2">&nbsp;&nbsp;  <%= t('.check2') %></label>
+		</div>
+		<div>
+			<input type="checkbox" id="check3"><label for="check3">&nbsp;&nbsp;  <%= t('.check3') %></label>
+		</div>
+		<div>
+			<input type="checkbox" id="check4"><label for="check4">&nbsp;&nbsp;  <%= t('.check4') %></label>
+		</div>
+		<div>
+			<input type="checkbox" id="check5"><label for="check5">&nbsp;&nbsp;  <%= t('.check5') %></label>
+		</div>
+	</div>
+
+	<%= form_for :deposit, :url => admin_deposits_create_deposit_yen_path, :method => 'POST',  html: {class: 'form-horizontal'} do |f| %>
+			<%= f.text_field:sn_code, type: "hidden", value: @code %>
+			<%= f.number_field:amount, type: "hidden", value: @amount %>
+			<%= f.submit t('.btn_send_to_wallet'), id: "send_jpy_bank", class: "btn btn-default", disabled: true %>
+			<%= link_to t('.btn_cancel') , new_admin_deposits_bank_path, class: "btn btn-warning" %>
+	<% end %>
+</div>
+<script type="text/javascript">
+	$(".flash-message").hide();
+</script>

@@ -1,0 +1,98 @@
+<div class="affiliates-index">
+  <h1 class="title"></i><%= t('.affiliate_program')%></h1>
+  <p class="help-text"><%= t('.help-text').html_safe %></p>
+  <div class="col-md-5 affiliate-status">
+    <div class = "panel panel-default affiliate-head">
+     <div class = "panel-heading" >
+        <%= t('.affiliate_status')%>
+     </div>
+     <div class = "panel-body">
+        <div id="people">
+          <p><%= t('.people')%></p>
+          <h2><%= @affiliate_count_user %> <span class="unit">人</span></h2>
+        </div>
+        <div id="sum_jpy">
+          <div class="row">
+            <p><%= t('.summary') %></p>
+            <div class="col-md-6">
+              <h2> <%= @bonus_kbr %> <span class="unit">KBR</span></h2>
+            </div>
+            <div class="col-md-6">
+              <h2> <%= @bonus_btc %> <span class="unit">BTC</span></h2>
+            </div>
+          </div>
+        </div>
+     </div>
+  </div>
+  </div>
+  <div class="col-md-7 affiliate-rewards">
+    <div class = "panel panel-default affiliate-head">
+       <div class = "panel-heading" >
+          <%= t('.rewards')%>
+       </div>
+       <div class = "panel-body">
+          <table class="table">
+          <tbody class="tbody"
+            <tr class="tr">
+              <td class="td"><%= t('.order_account')%></td>
+              <td class="td">500KBR</td>
+            </tr>
+            <tr class="tr">
+              <td class="td"><%= t('.user_invite_1000')%></td>
+              <td class="td">1BTC</td>
+            </tr>
+            <tr class="tr">
+              <td class="td"><%= t('.user_invite_10000')%></td>
+              <td class="td">10BTC</td>
+            </tr>
+            <!-- <tr class="tr">
+              <td class="td"><%= t('.total')%></td>
+              <td class="td goal-money">5000円</td>
+            </tr> -->
+          </tbody>
+        </table>
+
+        <strong class="process-help"><%= t('.target_text') %></strong>
+        <div class="progress">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="<%= @target_percent %>" aria-valuemin="0" aria-valuemax="100" style="width:<%= @target_percent %>%">
+            <%= @target_percent %>%
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12" >
+    <%= render "link" %>
+  </div>
+  <div class="col-md-12 affiliate-history">
+      <div class = "panel panel-default affiliate-middle">
+       <div class = "panel-heading" >
+          <span>
+            <%= t('.reward_history')%>
+          </span>
+       </div>
+       <div class = "panel-body">
+          <div class="table-responsive">
+            <table class="table table-options">
+            <thead>
+              <tr>
+                <th class="Email"><%= t('.email')%></th>
+                <th class="Order_btc"><%= t('.created_at')%></th>
+              </tr>
+            </thead>
+            <tbody>
+              <% @affiliate_users.each do |a| %>
+                <tr class="tr-body">
+                  <td class="Email"><%= email_censor  a.email %></td>
+                  <td class="Order_btc"><%= a.created_at %></td>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+          <div id="pading"><%= paginate @affiliate_users %> </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

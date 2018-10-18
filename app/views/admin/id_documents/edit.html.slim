@@ -1,0 +1,35 @@
+.row
+  .col-xs-12: .panel.panel-primary
+    .panel-heading = "Update member #{@id_document.id}"
+    .panel-body
+      = simple_form_for @id_document, :url => admin_path do |f|
+        .form-group
+          label for="email" = "紹介コード"
+          - if @code.nil?
+            input.form-control name="referrer_code"
+          - else
+            input.form-control name="referrer_code"  disabled="disabled" value=@code
+          
+        .form-group
+          = f.input :name, hint: false
+        .form-group
+          = f.input :birth_date, as: :date, label: t('private.id_documents.edit.birth_date').html_safe, \
+            start_year: 1900, \
+            end_year: Date.today.year - 12, \
+            order: [:year, :month, :day]
+        .form-group
+          = f.input :country
+        .form-group
+          = f.input :zipcode
+        .form-group
+          = f.input :city
+        .form-group
+          = f.input :address
+        .form-group
+          = f.input :job_type
+        .form-group
+          = f.input :trade_purpose
+        .form-group
+          = f.input :id_document_type
+        .form-group
+          = f.button :submit, "Edit" ,class: "btn btn-default btn-lg pull-right btn"

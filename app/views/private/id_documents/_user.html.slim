@@ -1,0 +1,99 @@
+.tab-pane.active id="user"
+  = simple_form_for @id_document, :html => {class: 'form-id-document'} do |f|
+    .id-document-account
+      .col-sm-12.col-xs-12
+        h2 =t('private.id_documents.edit.nav_content_select_text')
+        = f.input :name, label: t('private.id_documents.edit.name').html_safe, hint: false, placeholder: t('private.id_documents.edit.placeholder.name').html_safe, required: @id_document.name.nil?
+        .id-document-field-blank#id_document_name = t('id_documents.blank_name').html_safe
+      .col-sm-12.col-xs-12
+        .birth_date
+          = f.input :birth_date, as: :date, label: t('private.id_documents.edit.birth_date').html_safe, \
+            start_year: 1900, \
+            end_year: Date.today.year - 12, \
+            order: [:year, :month, :day], \
+            required: @id_document.birth_date.nil?
+    .id-document-info
+      .input-country.col-xs-12.col-sm-12
+        = f.input :country, as: :country, selected: @id_document.country.nil? ? @country : @country_current, label: t('private.id_documents.edit.country').html_safe, prompt: t('actions.select'), required: @id_document.country.nil?
+      .input-job.col-xs-12.col-sm-12
+        = f.input :job_type, label: t('private.id_documents.edit.job_type').html_safe, :input_html => {:class => 'need_foreign'}, prompt: t('actions.select'), error: t('id_documents.invalid_job_type'), required: @id_document.job_type.nil?
+        .id-document-field-blank#id_document_job_type = t('id_documents.blank_job_type').html_safe
+      .clearfix
+      .input-file1zipcode.col-xs-12.col-sm-12
+        = f.input :zipcode, label: t('private.id_documents.edit.zipcode').html_safe, placeholder: t('private.id_documents.edit.placeholder.zipcode').html_safe, error: t('id_documents.invalid_zipcode'), required: @id_document.zipcode.nil?
+        .id-document-field-blank#id_document_zipcode = t('id_documents.blank_zipcode').html_safe
+      .input-trade.col-xs-12.col-sm-12
+        = f.input :trade_purpose, label: t('private.id_documents.edit.trade_purpose').html_safe, :input_html => {:class => 'need_foreign'}, prompt: t('actions.select'), error: t('id_documents.invalid_trade_purpose'), required: @id_document.trade_purpose.nil?
+        .id-document-field-blank#id_document_trade_purpose = t('id_documents.blank_trade_purpose').html_safe
+      .clearfix
+      .input-city.col-xs-12.col-sm-12
+        = f.input :city, label: t('private.id_documents.edit.city').html_safe, placeholder: t('private.id_documents.edit.placeholder.city').html_safe, required: @id_document.city.nil?
+        .id-document-field-blank#id_document_city = t('id_documents.blank_city').html_safe
+      .clearfix
+      .input-address.col-xs-12.col-sm-12
+        = f.input :address, label: t('private.id_documents.edit.address').html_safe, placeholder: t('private.id_documents.edit.placeholder.address').html_safe, required: @id_document.address.nil?
+        .id-document-field-blank#id_document_address = t('id_documents.blank_address').html_safe
+      .clearfix
+      .input-foreign.radio
+        .form-label
+          = t('private.id_documents.edit.foreign').html_safe
+        = f.input :foreign, wrapper: :block_checkbox_and_radio, :input_html => {:class => 'need_foreign'}, as: :radio_buttons, label: false
+        .id-document-field-blank#id_document_foreign = t('id_documents.blank_foreign').html_safe
+      .input-cellphone.col-xs-12.col-sm-12
+        / = f.input :cell_phone, label: t('.cell_phone')
+      .input-phone.col-xs-12.col-sm-12
+        / = f.input :fixed_phone, label: t('.fixed_phone')
+      /.col-xs-12.text-center
+        p.text-red = t(".warning")
+    h2.title-header = t('private.id_documents.edit.header_id_card')
+
+    .id-document-upload.document_file
+      .input-document-type.col-xs-12.col-sm-12.col-md-12
+        = f.input :id_document_type, :input_html => {:class => 'select-upload-type'}, label: t('private.id_documents.edit.id_document_type').html_safe, prompt: t('actions.select'), required: @id_document.id_document_type.nil?
+        .id-document-field-blank#id_document_id_document_type = t('id_documents.blank_id_document_type').html_safe
+      .clearfix
+      .input-document-photo.col-xs-12
+        = f.simple_fields_for :id_document_file, @id_document.id_document_file || @id_document.build_id_document_file do |p|
+          div.group-img-upload.col-xs-6.col-md-6.image_upload1
+            h3 = t('private.id_documents.edit.label.staff_upload_1')
+            div class="gallery file1"
+              = p.input :file1, as: :file, label: false
+            span.btn-file-upload = t('private.id_documents.edit.label.upload')
+
+          div.group-img-upload.col-xs-6.col-md-6.image_upload2
+            h3 = t('private.id_documents.edit.label.staff_upload_2')
+            div class="gallery file2"
+              = p.input :file2, as: :file, label: false
+            span.btn-file-upload.btn-file-upload-2 = t('private.id_documents.edit.label.upload')
+
+          div.group-img-upload.col-xs-6.col-md-6.image_upload3
+            h3 = t('private.id_documents.edit.label.staff_upload_3')
+            div class="gallery file3"
+              = p.input :file3, as: :file, label: false
+            span.btn-file-upload.btn-file-upload-3 = t('private.id_documents.edit.label.upload')
+
+          div.group-img-upload.col-xs-6.col-md-6.image_upload4
+            h3 = t('private.id_documents.edit.label.staff_upload_4')
+            div class="gallery file4"
+              = p.input :file4, as: :file, label: false
+            span.btn-file-upload.btn-file-upload-4 = t('private.id_documents.edit.label.upload')
+
+      .document
+        .document_content
+          .border-document
+            p.hint_document
+              = raw t('private.id_documents.edit.hint_label_1')
+            p 
+              br
+              = t('private.id_documents.edit.hint_content_1')
+              br
+              br
+          .border-document
+            p.hint_document 
+              = raw t('private.id_documents.edit.hint_label_2')
+            p = raw t('private.id_documents.edit.hint_content_2')
+    - unless @id_document.aasm_state == 'verified' && @id_document.foreign
+      .id-document-button
+        div  hidden=""
+          = f.input :user_type, :input_html => {value: 0}
+        = f.button :submit, value: t('private.id_documents.edit.submit'), :class => 'button-primary btn-user-action need_foreign document_submit'

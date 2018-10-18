@@ -1,0 +1,31 @@
+.row
+  .col-md-6
+    #statistic.panel.panel-primary
+      .panel-heading
+        span = "統計"
+      .panel-body
+        = form_tag admin_count_orders_path, method: "get", remote: true do |f|
+          .form-group
+            label for="date_start_" = "開始日付："
+            input.form-control type="date" name="start" id="from_date" required=""
+          .form-group
+            label for="date_end_" = "終了日付："
+            input.form-control type="date" name="end" id="to_date" required=""
+          .form-group
+            = link_to "提出", admin_count_orders_path, class: "btn btn-primary btn-count-order"
+            .h4.ask 売り注文件数
+            -if @count_order_ask.blank?
+              span 0
+            -else
+              = @count_order_ask
+            .h4.bid 買い注文件数
+            -if @count_order_bid.blank?
+              span 0
+            -else
+              = @count_order_bid
+            .h4.transaction 定注文件数
+            -if @count_transaction.blank?
+              span 0
+            -else
+              = @count_transaction
+

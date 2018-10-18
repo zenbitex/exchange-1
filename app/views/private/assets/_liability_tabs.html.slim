@@ -1,0 +1,53 @@
+.tabbable
+  ul.nav.nav-tabs
+    li.active: a.btc-proof href="#btc-proof" data-toggle="tab" == t('.verify-btc')
+    li:        a.jpy-proof href="#jpy-proof" data-toggle="tab" == t('.verify-jpy')
+    li:        a.tao-proof href="#tao-proof" data-toggle="tab" == t('.verify-tao')
+    li:        a.eth-proof href="#eth-proof" data-toggle="tab" == t('.verify-eth')
+    li:        a.xrp-proof href="#xrp-proof" data-toggle="tab" == t('.verify-xrp')
+    li:        a.eth-proof href="#etc-proof" data-toggle="tab" == t('.verify-etc')
+
+  .tab-content
+    #btc-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.btc-assets-total')
+        span.currency
+          == t("currency.icon.btc")
+          = @btc_proof.sum
+      = render 'liability_data', account: @btc_account, proof: @btc_proof
+
+    #jpy-proof.tab-pane:        .trade-wrapper
+      .assets
+        span.title = t('.jpy-assets-total')
+        span.currency
+          == t("currency.icon.jpy")
+          = @jpy_proof.sum
+      = render 'liability_data', account: @jpy_account, proof: @jpy_proof
+    #tao-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.tao-assets-total')
+        span.currency
+          == t("currency.icon.tao")
+          = @tao_proof.sum
+      = render 'liability_data', account: @tao_account, proof: @tao_proof
+    #eth-proof.tab-pane: .trade-wrapper
+      .assets
+        span.title = t('.eth-assets-total')
+        span.currency
+          == t("currency.icon.eth")
+          = @eth_proof.sum
+      = render 'liability_data', account: @eth_account, proof: @eth_proof
+    #xrp-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.xrp-assets-total')
+        span.currency
+          == t("currency.icon.xrp")
+          = @xrp_proof.sum
+      = render 'liability_data', account: @xrp_account, proof: @xrp_proof
+    #etc-proof.tab-pane.active: .trade-wrapper
+      .assets
+        span.title = t('.etc-assets-total')
+        span.currency
+          == t("currency.icon.etc")
+          = @etc_proof.sum
+      = render 'liability_data', account: @etc_account, proof: @etc_proof

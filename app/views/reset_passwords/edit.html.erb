@@ -1,0 +1,50 @@
+<div class="container" >
+  <div id="resetPassword"%>
+    <h1 class="title-header"><%= t('.title') %></h1>
+    <%= simple_form_for @token, url: reset_password_path(@token), as: :reset_password, class: "etteete"  do |f| %>
+      <div class="row">
+      	<%= f.input :password, :label => false, :hint => false%>
+        <label class="password_empty" hidden><%= t(".password_empty") %></label>
+        <label class="password_empty" hidden><%= t(".password_empty") %></label>
+      </div>
+      <div class="row">
+        <%= f.input :password_confirmation, :label => false, :hint => false %>
+        <label class="password_empty" hidden><%= t(".password_confirmation_empty") %></label>
+        <label class="password_dont_match" hidden><%= t(".password_dont_match") %></label>
+      </div>
+      <div class="form-group text-center">
+    		<%= f.button :submit, t('.send'), class: "button-primary bt_reset_password" %>
+    	</div>
+    <% end %>
+  </div>
+</div>
+<script type="text/javascript">
+  $(".bt_reset_password").click(function(event)
+  {
+    event.preventDefault();
+    form = $("#edit_reset_password");
+    $(".error").remove();
+    is_error = false;
+    passwords = $("input.password");
+    passwords.each(function(index){
+      if ($(this).val() == "")
+      {
+        error = $(this).parents(".row").find(".password_empty").first().text();
+        console.log(error);
+        $(this).focus();
+        $(this).parent().append("<div class='error'>" + error + "</div>");
+        is_error = true;
+      }
+    });
+
+    if(is_error == true)
+      return;
+
+    if (passwords.first().val() != passwords.last().val())
+    {
+      passwords.last().parent().append("<div class='error'>" + $(".password_dont_match").text() + "</div>");
+      return ;
+    }
+    form.submit();
+  });
+</script> 

@@ -1,0 +1,55 @@
+<div class="list-trade">
+	<h2>Banks Trades</h2>
+	
+<%= collection_select( :trade, :status_id, Statuses.all, :status_id, :name, prompt: true, :selected => params[:status_id], :prompt => 'All') %>
+
+	<div class="table" >
+		<div class="tr-header">
+			<span class="id">ID</span>
+			<span class="email">User</span>
+			<span class="tradecode">Tradecode</span>
+			<span class="address">Address</span>
+			<span class="amount">Amount</span>
+			<span class="rate">Exchange Rate</span>
+			<span class="price">Prices</span>
+			<span class="change">Change</span>
+		</div>
+		<div class="t-content">	
+			<% @trades.each do |t| %>
+				<div class="tr-body">
+					<span class="id"><%= t.id %></span>
+					<span class="email"><%= t.account.member.email %></span>
+					<span class="tradecode"><%= t.tradecode %></span>
+					<span class="address"><%= t.account.payment_address.address %></span>
+					<span class="amount"><%= t.amount %></span>
+					<span class="rate"><%= t.exchangerate %></span>
+					<span class="price"><%= t.price %></span>
+					<span class="change"><%= link_to "View/Change", admin_banktrade_path(t) %></span>
+				</div>
+			<% end %>
+			<%= paginate @trades %>
+		</div>	
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $('#trade_status_id').change(function() {  
+	        var selectCategory = $("select[id$=trade_status_id]").val();
+	        //alert(selectCategory);
+	        load_data(selectCategory);
+	    });
+
+	    function load_data(id) {  
+	        $.ajax({
+		        url: "<%= admin_banktrades_path(:html) %>",
+		        type: "GET",
+		        data: {"status_id" : id},
+		        dataType: "html",
+		        success: function(data) {
+		            $(".t-content").html(data);
+		        },
+	        });
+	    };
+	})
+</script>

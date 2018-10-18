@@ -1,0 +1,78 @@
+- menu_current = get_menu_current
+#menu-left
+  = link_to "markets/btcjpyt", class: "menu-item" do
+    = image_tag "/menu-left/market.png"
+    span = t(".market")
+  = link_to accounts_path, class: "menu-item #{ 'active' if menu_current == accounts_path }" do
+    = image_tag "/menu-left/my-account.png"
+    span = t(".my_account")
+  = link_to "/funds?d=true#/deposits/btc", class: "menu-item deposit_coin" do
+    = image_tag "/menu-left/deposit.png"
+    span = t(".deposit")
+  = link_to "/funds#/withdraws/btc", class: "menu-item withdraw_coin" do
+    = image_tag "/menu-left/withdraw.png"
+    span = t(".withdraw")
+  = link_to id_document_path, class: "menu-item #{ 'active' if menu_current == id_document_path }" do
+    = image_tag "/menu-left/setting.png"
+    span = t(".setting")
+  = link_to order_history_path, class: "menu-item #{ 'active' if menu_current == order_history_path }" do
+    = image_tag "/menu-left/history.png"
+    span = t(".history")
+  = link_to sendcoin_index_path, class: "menu-item #{ 'active' if menu_current == sendcoin_index_path }" do
+    = image_tag "/menu-left/bitcoin.png"
+    span = t(".send_coin")
+  = link_to affiliates_path, class: "menu-item #{ 'active' if menu_current == affiliates_path }" do
+    = image_tag "/menu-left/affiliate.png"
+    span = t(".affiliates")  
+  = link_to security_path, class: "menu-item #{ 'active' if menu_current == security_path }" do
+    = image_tag "/menu-left/shield.png"
+    span = t(".security")
+  = link_to payment_system_path, class: "menu-item #{ 'active' if menu_current == payment_system_path }" do
+    = image_tag "/menu-left/payment.png"
+    span = t(".payment_system")
+  = link_to tickets_path, class: "menu-item #{ 'active' if menu_current == tickets_path }" do
+    = image_tag "/menu-left/tickets.png"
+    span = t(".tickets")
+  / = link_to new_bank_accounts_path, class: "menu-item #{ 'active' if menu_current == new_bank_accounts_path }" do
+  /   = image_tag "/menu-left/credit-card.png"
+  /   span = t(".bank_account")
+  / = link_to "/funds?d=true#/deposits/jpy", class: "menu-item deposit_jpy" do
+  /   img src="/menu-left/deposit.png"
+  /   span = t(".deposit_jpy")
+  / = link_to "/funds#/withdraws/jpy", class: "menu-item withdraw_jpy" do
+  /   img src="/menu-left/withdraw.png"
+  /   span = t(".withdraw_jpy")
+  / = link_to faqs_path, class: "menu-item #{ 'active' if menu_current == faqs_path }" do
+  /   = image_tag "/menu-left/FAQ.png"
+  /   span = "FAQ" 
+javascript:
+  function check_deposite_withdraw(element){
+    if (element == undefined)
+      url = window.location.href
+    else 
+      url = $(element).attr("href")
+    if (url.indexOf('/funds') < 0)
+      return
+    $("#menu-left .menu-item").removeClass("active")
+    if (url.indexOf("/jpy") > 0)
+    {
+      $(".funds-top").addClass("hidden")
+      if (url.indexOf("/deposits/") > 0)
+        $(".deposit_jpy").addClass("active")
+      else 
+        $(".withdraw_jpy").addClass("active")
+    }
+    else 
+    {
+      $(".funds-top").removeClass("hidden")
+      if (url.indexOf("/deposits/") > 0)
+        $(".deposit_coin").addClass("active")
+      else 
+        $(".withdraw_coin").addClass("active")
+    }
+  }
+  check_deposite_withdraw()
+  $(".deposit_jpy, .withdraw_jpy, .deposit_coin, .withdraw_coin").bind("click", function(){
+    check_deposite_withdraw(this)
+  })
+  

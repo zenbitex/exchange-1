@@ -1,0 +1,12 @@
+<div id="current_rate" class="col-xs-12">
+  <h2 class="title-header"><%= t('.header')%></h2>
+  <div class="content">
+    <% markets.each do |market| %>
+      <% if market.quote_unit != "jpy" %>
+        <div class="col-xs-6 col-md-4">
+          <span><%= market.base_unit.upcase %> = <%= market.ticker[:last] %> <%= market.quote_unit.upcase %></span>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

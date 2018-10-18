@@ -1,0 +1,34 @@
+<div id="coin_trade">
+  <h1 class="page-title"> <%= t('.title')%> </h1>
+  <div class="row tiny_market">
+    <div id="charts" class="col-md-12" ng-controller="OrderController">
+      <%= render partial: 'private/markets/charts' %>
+    </div>
+  </div>
+
+  <div class="row" id="list_market">
+    <%= render partial: 'market_list' %>
+  </div>
+
+  <div class="row">
+    <div ng-app="coinBuySellApp" ng-cloak>
+      <div class="row">
+        <div class="col-md-6 col-sm-6" ng-controller="coinBuyController" id="buy">
+          <%= render partial: "buy_form", locals: {coin_trade: @coin_trade, button: '.btn_buy'} %>
+        </div>
+        <hr>
+        <div class="col-md-6 col-sm-6" ng-controller="coinSellController" id="sell">
+          <%= render partial: "sell_form", locals: {coin_trade: @coin_trade, button: '.btn_sell'} %>
+        </div>
+      </div>
+      <!-- HISTORY SELL -->
+      <div class="history" ng-controller="historyController">
+        <h1 class="page-title"> <%= t('.history') %> </h1>
+        <%= render partial: "history_trade_bid_ask", locals: {history: @history} %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= javascript_include_tag "tiny_market" %>
+<%= javascript_include_tag "locales/#{I18n.locale}" %>

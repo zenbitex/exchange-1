@@ -1,0 +1,134 @@
+#change_email_form {
+  background: #fff;
+  text-align: center;
+  padding-bottom: 40px;
+  .tilte-header {
+    font-size: 28px;
+    font-weight: 700;
+    color: #696969;
+    letter-spacing: 0;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-top: 50px;
+    @media screen and (max-width: 991px) {
+      font-size: 24px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 16px;
+    }
+  }
+
+  .change-email-input {
+    width: 40%;
+    margin: auto;
+    min-width: 300px;
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      min-width: 100%;
+    }
+  }
+
+  .note-2 {
+    color: #696969;
+    margin-bottom: 50px;
+    font-size: 20px;
+    @media screen and (max-width: 991px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+      line-height: 20px;
+      padding: 0 30px;
+      margin-bottom: 20px;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 13px;
+    }
+  }
+  span {
+    font-size: 16px;
+  }
+  .form-group {
+    display: inline-block;
+    width: 100%;
+    @media screen and (min-width: 768px){
+      margin-bottom: 25px;
+    }
+    label {
+      font-size: 17px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    .col-form-label {
+      padding-top: 26px;
+      padding-bottom: calc(.5rem - 1px * 2);
+      margin-bottom: 0;
+    }
+    .button-primary {
+      background: #2591fd;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      width: 200px;
+      @media screen and (max-width: 600px) {
+        width: 150px;
+      }
+    }
+    .form-input {
+      float: none;
+      width: 100% !important;
+      input {
+        background-color: #fff;
+        border-color: #9c9393;
+        border:1px solid #acacac;
+        border-radius: 5px;
+        line-height: 40px;
+        padding: 0 10px;
+        max-width: unset;
+        margin: 5px 0;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+#submit_current_password_form {
+  background-color: #fff;
+  .form-group
+  {
+    .form-input{
+      text-align: center;
+      width: 100%;
+      input{
+        width: 40%;
+        margin: auto;
+        min-width: 300px;
+      }
+    }
+    span.hint{
+      text-align: center;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .form-group{
+      margin: 0px;
+      .form-input{
+        input{
+          width: 100%;
+          min-width: 100%;
+        }
+      }
+      span.hint{
+        text-align: left;
+      }
+    }
+  }
+
+  .button-primary {
+    margin-bottom: 50px;
+  }
+}

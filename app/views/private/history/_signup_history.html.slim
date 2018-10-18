@@ -1,0 +1,24 @@
+.history-pages
+  h2.title
+    = t('.title')
+  .history-transaction#signup_history
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @signup_histories.empty?)
+          th = t('.login_time')
+          th = t('.ip')
+          th = t('.local_system')
+        - if @signup_histories.length != 0             
+          tbody.list 
+            - @signup_histories.each do |signup_history|
+              tr
+                td data-th=t('.login_time') =signup_history.created_at
+                td data-th=t('.ip') =signup_history.ip
+                td data-th=t('.local_system') =signup_history.ua
+      - if @signup_histories.length == 0
+        div.empty_history 
+          = t('.empty_signup_histories').html_safe
+      .pull-right
+        = paginate @signup_histories
+
+

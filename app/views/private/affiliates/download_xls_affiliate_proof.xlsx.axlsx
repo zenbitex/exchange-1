@@ -1,0 +1,15 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "affiliate_proof") do |sheet|
+    sheet.add_row ["メール", "レベル", "約定BTC"]
+    @proof.each do |p|
+      order_btc = sum_btc_trade(p)
+      sheet.add_row [p.email, p.account_class, order_btc]
+    end
+  end
+
+end

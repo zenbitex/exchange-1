@@ -1,0 +1,25 @@
+wb = xlsx_package.workbook
+
+wb.styles do |style|
+
+  highlight_cell = style.add_style(bg_color: "EFC376")
+
+  wb.add_worksheet(name: "price_report") do |sheet|
+    sheet.add_row ["ユーザーID", "メール", "JPYT", "BTC", "ETH", "XRP", "ETC","BCH", "KBR", "BTG"]
+    @balances.each do |balance|
+      sheet.add_row [
+        balance[:member_id],
+        balance[:email],
+        balance[:balances][0],
+        balance[:balances][1],
+        balance[:balances][2],
+        balance[:balances][3],
+        balance[:balances][4],
+        balance[:balances][5],
+        balance[:balances][6],
+        balance[:balances][7]
+      ]
+    end
+  end
+
+end

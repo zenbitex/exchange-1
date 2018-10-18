@@ -1,0 +1,68 @@
+<div class="arb-container">
+  <div class="text-left primary-title">
+    <h1><%= t('.title') %></h1>
+  </div>
+  <div class="arb-content">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <div class="arb-price">
+          <h3 class="pull-left"><%= t('.tao_amount') %></h3>
+          <h3 class="pull-right"><%= @tao_amount %> TAO</h3>
+        </div>
+      </div>
+      <!-- <div class="col-sm-offset-1 col-sm-5 col-xs-12">
+        <div class="arb-price arb-price-last">
+          <h3 class="pull-left">1 TAO</h3>
+          <h3 class="pull-right"><%= @rate.to_f %> <%= t('.jpy_amount') %></h3>
+        </div>
+      </div> -->
+    </div>
+    <div class="row">
+      <div class="col-sm-7 col-xs-12">
+        <div class="arb-title">
+          <h2>TAOCOIN</h2>
+        </div>
+      </div>
+      <div class="col-sm-5 col-xs-12">
+        <div class="arb-title arb-title-last">
+          <h2><%= @taocoin.nil? == true ? "0" : @taocoin %> TAO</h2>
+        </div>
+      </div>
+    </div>
+    <%= simple_form_for @arb, :html => {:class => 'form-arb'} do |f|%>
+      <div class="row arb-input">
+        <div class="col-sm-4 col-xs-12">
+          <h3 class="pull-left"><%= t('.datetime') %></h3>
+          <h3 class="pull-right"><%= @day %><%= t('.days') %></h3>
+        </div>
+        <div class="col-sm-7 col-sm-offset-1 col-xs-12">
+          <div class="form-input">
+              <div class="input-desc">
+              <span>TAO</span>
+            </div>
+            <%= f.input :tao_amount, label: false, input_html: {value: ''}%>
+            <p class="error arb-error" style="display: none;"><%= t('.error.tao_amount_too_small') %></p>
+            <p class="error arb-error-amount" style="display: none;"><%= t('.error.tao_amount_integer') %></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group arb-button">
+        <div class="form-submit">
+          <div class="col-xs-6">
+              <%= f.button :submit, value: t('.withdraw'), class: "btn btn-submit-green withdraw-arbs", name: 'withdraw'%>
+          </div>
+          <div class="col-xs-6">
+              <%= f.button :submit, value: t('.deposit'), class: "btn btn-submit-pink deposit-arbs", name: 'deposit'%>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 text-center arb-dividend">
+          <h3><%= t('.profit') %></h3>
+          <span><%= @last_profit.nil? == true ? "0" : @last_profit %> <%= t('.jpy_amount') %></span>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

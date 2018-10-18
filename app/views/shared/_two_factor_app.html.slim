@@ -1,0 +1,10 @@
+.two-factor
+	label.string.required.col-xs-12 for="two_factor_otp"
+	  h1 = t('two_factors.auth.google_app')
+
+	.col-xs-12
+	  .input-group
+	    input.two_factor_auth_type type="hidden" name="two_factor[type]" value="app"
+	    input.string.required.form-control id="two_factor_otp" name="two_factor[otp]" placeholder=t('two_factors.auth.otp_placeholder')
+	  span.hint.app = t('two_factors.auth.hints.app')
+	  .captcha-wrap

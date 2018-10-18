@@ -1,0 +1,66 @@
+<div class="row">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <span>検索</span>
+    </div>
+    <div class="panel-body">
+      <div class="row" >
+        <%= link_to "ユーザー残高ダウンロード", admin_download_xlsx_user_balance_path(format: :xlsx), class: "btn btn-default", style: "float: right;" %>
+        <%= form_for :search, url: admin_user_balance_path, method: 'get' do |f| %>
+
+          <div class="col-xs-1 submit_order">
+            <div class="input-group">
+              <%=f.text_field :content_search, class: 'form-control', autofocus: true, placeholder: 'IDまたはメールを入力してください', style: 'min-width: 300px' %>
+              <span class="input-group-btn">
+                <%= submit_tag "検索する", class: "btn btn-secondary"%>
+              </span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <%= button_to "すべて表示", admin_user_balance_path, method: "get", class: "btn btn-secondary", style: "margin-top: 30px;"%>
+    </div>
+
+  </div>
+</div>
+
+<div class="row user_balance">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <span>
+        ユーザー残高のリスト
+      </span>
+    </div>
+    <div class="panel panel-body">
+      <table class="table table-condensed table-hover pretty">
+        <thead>
+           <tr>
+             <th><%= sortable :id, "ユーザーId" %></th>
+             <th><%= sortable :email, "メールアドレス" %></th>
+             <th><%= sortable :jpy, "日本円" %></th>
+             <th><%= sortable :btc, "Bitcoin" %></th>
+             <th><%= sortable :tao, "Taocoin" %></th>
+             <th><%= sortable :xrp, "Ripple" %></th>
+             <th><%= sortable :bcc, "BitcoinCash" %></th>
+           </tr>
+        </thead>
+        <tbody>
+          <% if  @members && @user_balance %>
+            <% @user_balance.map do |key, value| %>
+              <tr>
+                <td class="col-xs-2"><%= key %></td>
+                <td class="col-xs-2"><%= value[:email] %></td>
+                <td class="col-xs-2"><%= value[:jpy] %></td>
+                <td class="col-xs-2"><%= value[:btc] %></td>
+                <td class="col-xs-2"><%= value[:tao] %></td>
+                <td class="col-xs-2"><%= value[:xrp] %></td>
+                <td class="col-xs-2"><%= value[:bcc] %></td>
+              </tr>
+            <% end %>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+    <%= paginate @members if @members %>
+  </div>
+</div>

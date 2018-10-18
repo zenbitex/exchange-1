@@ -1,0 +1,77 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">コントロールパネル</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-sm-12">
+        <%= form_tag(admin_coin_trades_path, method: "get", class: "form-inline") do %>
+          <div class="form-group">
+            <select class="form-control" name="coin_trade[field]">
+              <option value="member_id">ユーザーID</option>
+              <option value="email">メール</option>
+              <!-- <option value="name">名前</option> -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <input type="text" name="coin_trade[search]" value="" class="form-control" placeholder="検索要件を入力してください！">
+          </div>
+          <button type="submit" class="btn btn-default" name="button"> 検索 </button>
+        <% end %>
+      </div>
+      <div class="col-sm-12">
+        <%= link_to "販売場の設定", admin_coin_trade_prices_path, {class: 'btn btn-warning'} %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    販売場履歴
+  </div>
+  <div class="panel-body">
+    <div class="table-history">
+      <table class="table">
+        <thead>
+          <tr>
+            <td>メール</td>
+            <th>タイプ</th>
+            <th>状態</th>
+            <th>通貨</th>
+            <th>支払通貨</th>
+            <th>価格</th>
+            <th>数量</th>
+            <th>金額</th>
+            <th data-toggle="tooltip" title="Krakenに注文の価格">原価(*)</th>
+            <th>Kraken注文ID</th>
+            <th>時間</th>
+          </tr>
+        </thead>
+      <tbody>
+        <% @history.each do |h| %>
+          <tr>
+            <td><%= h.member.email %></td>
+            <th><%= type_to_text(h.type) %></th>
+            <th> <span class="label <%= h.aasm_state %>"> <%= h.aasm_state %> </span></th>
+            <th class="uppercase"><%= h.currency %></th>
+            <th class="uppercase"><%= h.payment_type %> </th>
+            <th><%= h.price %> </th>
+            <th><%= h.amount %> </th>
+            <th><%= h.total %> </th>
+            <th><%= h.origin_price %> </th>
+            <th><%= h.txid %></th>
+            <th><%= h.created_at %> </th>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+      <%= paginate @history %>
+    </div>
+  </div>
+</div>
+<script>
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>

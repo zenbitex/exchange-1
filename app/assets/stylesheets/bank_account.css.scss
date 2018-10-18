@@ -1,0 +1,193 @@
+.bank-container{
+  background: #fff;
+  text-align: center;
+  padding-bottom: 50px;
+
+  form{
+    max-width: 650px;
+  }
+
+  .col-xs-12{
+    padding: 0;
+  }
+
+  .form-group{
+    margin: 0 0 10px;
+    width: 100%;
+    .form-input{
+      width: 100%;
+    }
+    .form-label {
+      color: #696969;
+      text-align: left;
+      width: 100%;
+      label{
+        font-weight: 900;
+      }
+      abbr {
+        display: none;
+      }
+    }
+  }
+
+  abbr[title] {
+    border-bottom: 0px;
+    color: red;
+    font-size: 18px;
+    float: right;
+    vertical-align: -webkit-baseline-middle;
+    vertical-align: baseline-middle;
+  }
+
+  .bank_account_owner {
+    margin-bottom: 0;
+  }
+
+  .form-error{
+    width: 100%;
+    text-align: left;
+    display: block;
+  }
+  .form-input
+  {
+    input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .form-group{
+      display: block;
+    }
+  }
+
+  input[type=text]:disabled,
+  input[type=text][readonly="readonly"],
+  textarea:disabled,
+  textarea[readonly="readonly"] {
+    background: #dddddd;
+  }
+  .bank-button {
+    margin-bottom: 20px;
+    margin: auto;
+  }
+  .text-red{
+    color: red;
+    font-size: 18px;
+  }
+  .form-button{
+    .btn{
+      width: 120px;
+      min-width: auto;
+    }
+  }
+
+  .account-content{
+    display: inline-block;
+    padding: 20px 0;
+    width: 100%;
+    text-align: center;
+    ul{
+      max-width: 500px;
+      margin: auto;
+      border: 2px dashed rgba(145, 78, 13, 0.39);
+      padding: 15px 10px 0;
+      border-radius: 10px;
+      li{
+        margin-bottom: 15px;
+        list-style: none;
+        clear: both;
+        display: flow-root;
+        .col-xs-12{
+          width: auto;
+          float: left;
+          h3{
+            font-size: 13px;
+            text-align: left;
+            width: 100%;
+            line-height: 0;
+            padding: 0;
+            margin: 10px 0;
+          }
+        }
+        .col-md-5{
+          h3{
+            font-weight: bold;
+            &:after{
+              content: ":";
+            }
+          }
+        }
+        .col-md-7{
+          h3{
+            padding-left: 10px;
+          }
+        }
+      }
+    } 
+  }
+
+  @media screen and (min-width: 500px) {
+    form{
+      .form-group{
+        display: flex;
+        .form-label{
+          width: 40%;
+        }
+      }
+      .bank_account_owner{
+        display: grid;
+      }
+      .form-button{
+        display: block;
+      }
+    }
+    .account-content{
+      ul li{
+        .col-xs-12 h3{
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 700px) {
+    form{
+      label{
+        font-size: 16px;
+      }
+      .form-button{
+        .btn{
+          width: 160px;
+          font-size: 17px;
+          padding: 20px 0;
+          line-height: 0;
+        }
+      }
+    }
+    .account-content{
+      ul{
+        max-width: 650px;
+        padding: 35px 30px 15px;
+        li{
+          margin-bottom: 20px;
+          .col-xs-12 h3{
+            font-size: 17px;
+          }
+          .col-md-5{
+            width: 260px;
+            h3{
+              &:after{
+                content: "";
+              }
+            }
+          }
+          .col-md-7{
+            h3{
+              padding-left: 10px;
+            }
+          }
+        }
+      } 
+    }
+  }
+}

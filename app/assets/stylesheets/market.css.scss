@@ -1,0 +1,612 @@
+@import "bourbon";
+@import 'vars/bootstrap';
+@import 'vars/bootstrap_market';
+@import 'bootstrap';
+@import 'bootstrap-switch.min';
+@import 'vars/basic';
+@import 'vars/market';
+@import 'vars/custom';
+@import 'bootstrap.min';
+@import "font-awesome-sprockets";
+@import 'font-awesome';
+@import 'csshake.min';
+@import 'layouts/basic';
+@import 'social-share-button';
+@import 'highchart';
+@import 'share-social-network';
+@import "market/header";
+
+/* basic layout ------------------------------------------------ */
+html, body{
+  max-width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: $market_background;
+  background-repeat: repeat;
+
+  // fixed icon spin
+  -webkit-font-smoothing: antialiased !important;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-focus-ring-color: transparent !important;
+
+  * {
+    -webkit-font-smoothing: antialiased !important;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0) !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-focus-ring-color: transparent !important;
+  }
+
+  a.hand-point {
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  #body{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  #header{
+    .nav.navbar-nav.navbar-right{
+      border: none;
+      // background-color: #FFD482;
+
+      .dropdown-toggle > span{
+        font-weight: bold;
+      }
+    }
+    .navbar.navbar-default{
+      background-color: $table-color-background;
+      border: none;
+    }
+
+    #settings{
+      ul{
+        a > i, span{
+          color: #fffff;
+          display: inline;
+        }
+
+        a > span {
+          font-family: 'Comic Sans MS', 'Open Sans', sans-serif;
+        }
+      }
+    }
+    #btc_tao_price
+    {
+      color: #861001;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      margin-top: 35px;
+      span{
+        margin-right: 15px;
+      }
+      span{
+        display: inline-block;
+      }
+    }
+    #account_balance_header{
+      pointer-events: none;
+      margin-right: 16px;
+      text-align: right;
+      > div {
+        font-family: 'Comic Sans MS', 'Open Sans', sans-serif;
+        display: inline-block;
+      }
+    }
+
+    #table_accounts{
+      z-index: 9000;
+      color: #a76b69;
+      table-layout: fixed;
+      width: 100%;
+      tr {
+        border-top: 1px solid #d0b6b4;
+        border-bottom: 2px solid #d0b6b4;
+
+        &:first-child {
+          border-top: none;
+        }
+      }
+      td {
+        border: none;
+      }
+      > tbody > tr > td:nth-child(2) {
+        span{
+          font-weight: bold;
+          font-size: 14px;
+        }
+        span.locked{
+          color: #e84f63;
+        }
+        span.amount{
+          color: #861001;
+        }
+      }
+    }
+
+    nav div.container-fluid{
+      #navbar{
+        margin-top: -14px !important;
+      }
+    }
+
+    button.navbar-toggle{
+      z-index: 2000;
+    }
+
+    .logo-icon{
+      height: 25px;
+    }
+  }
+
+  #main_content {
+    background-color: $market_background;
+    margin: auto;
+    margin-top: 10px;
+
+    .mk_tb{
+      thead {
+        tr{
+          color: #AAB9C2;
+          background-color: $table-color-background;
+          th {
+            font-weight: 500;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 2px solid $market_background;
+          }
+        }
+      }
+
+      tbody {
+        background-color: $table-color-background;
+      }
+    }
+
+    @import 'market/order_form';
+
+    .volume_24h{
+      text-align: center;
+      color: #93461a;
+    }
+
+    @import 'market/chart';
+
+    .block_3{
+      margin-bottom: 10px;
+    }
+    @import 'market/my_order';
+  }
+
+  .highcharts-container {
+    width: 100% !important;
+    height: 100% !important;
+  }
+}
+
+a.navbar-brand{
+  padding-top: 10px;
+}
+
+.logo-text{
+  font-family: 'Comic Sans MS', 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin: 0px;
+  @media screen and (max-width: 350px){
+    font-size: 14px;
+  }
+}
+
+#language {
+  .lang-icon {
+    height: 20px;
+  }
+  a {
+    text-align: left;
+  }
+}
+
+#settings {
+  .dropdown-toggle{
+    i.fa.fa-user{
+      font-size: 20px;
+      color: #861001;
+    }
+  }
+}
+
+.bootstrap-switch-handle-on span {
+  color : #e84f63 !important;
+}
+
+#account_summary {
+  > a > span {
+    color: #861001;
+  }
+  font-family: $font-family-monospace;
+  img{
+    max-width: 40px;
+  }
+}
+
+
+.panel-transparent{
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+.panel-transparent .panel-heading {
+  background: transparent;
+}
+
+.panel-transparent .panel-body {
+  border: none;
+  background: transparent;
+}
+
+.color-primary{
+  color:  #861001;
+}
+
+.float {
+  position: absolute;
+  @include transition(0.1s);
+  @include transition-property(width);
+
+  .sideways {
+    width: auto;
+    position: absolute;
+
+    li > a { background: #000; }
+
+    &.tabs-left {
+      left: 3px;
+      li { float: right; } // turn tabs
+      @include transform(rotate(-90deg));
+      @include transform-origin(left bottom);
+    }
+
+    &.tabs-right {
+      right: 3px;
+      li { float: left; } // turn tabs
+      @include transform(rotate(90deg));
+      @include transform-origin(right bottom);
+    }
+  }
+
+  i.fa.fa-close { position: relative; z-index: 910; }
+  .tab-content .tab-pane > * { width: 100%; height: 100%; }
+}
+
+
+@mixin float-wrapper($width, $height, $ul-top: 198px, $ul-width: 182px) {
+  & > ul { width: $ul-width; top: $ul-top; }
+  height: $height;
+
+  width: 0px;
+  .tab-content { display: none; }
+
+  &.hover, &.hover-force {
+    width: $width;
+    .tab-content { display: block; }
+    .sideways.tabs-left { left: 1px; }
+  }
+}
+
+/* layout position
+----------------------------------------------- */
+@import 'market/order_book';
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: none !important;
+  background-color: transparent !important;
+}
+/* order-book trades my-orders table
+---------------------------------------------------*/
+.col-left { padding-right: 12px; }
+.panel-body-head { border-bottom: 1px solid #333; }
+
+@import "market/market_trades";
+
+#market_trades, #my_orders {
+  table {
+    margin-bottom: 0px;
+
+    &.hidden-buy { tr.bid { display: none; } }
+    &.hidden-sell { tr.ask { display: none; } }
+
+    td, th {
+      padding: 0px 2px;
+      border: none;
+    }
+
+    tr.highlight {
+      background-color: #ff0000;
+    }
+
+    tbody tr:hover{
+      background-color: $market_background;
+    }
+
+    td {
+      &.price, &.amount, &.volume, &.change {
+        text-align: right;
+        // font-family: 'Courier New';
+        // font-size: 16px;
+      }
+      // border: 1px solid chocolate;
+      border-top: none;
+    }
+
+    td.menu-toggle {
+      vertical-align: middle;
+      i {
+          font-size: 20px;
+      }
+    }
+  }
+}
+
+.available-fund{
+
+  div:first-child{
+    text-align: center;
+  }
+
+  span.title {
+    color: green;
+  }
+
+  div:nth-child(2){
+    color: chocolate;
+    text-align: right;
+    padding: 0px;
+  }
+
+  div:last-child{
+    text-align: center;
+  }
+}
+
+span.order_status{
+  visibility: visible;
+  top: 0px;
+  left: 20px;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+
+span.order_status.hide-out{
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 2s linear;
+}
+
+.panel-body-content::-webkit-scrollbar { width: 0 !important }
+.panel-body-content { overflow-y: auto; -ms-overflow-style: none; overflow: -moz-scrollbars-auto; }
+
+.panel-heading {
+  .pull-right + .pull-right {
+    margin-right: 10px;
+  }
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently */
+}
+
+.dropdown .dropdown-menu {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.bootstrap-switch .bootstrap-switch-handle-on.bootstrap-switch-primary {
+  background: #e84f63;
+}
+
+.span-witdh-menu {
+  padding: 0px;
+}
+
+.noti-float-right {
+  float: left;
+}
+
+.account-symbol {
+  padding-right: 0 !important;
+}
+
+
+.span-market-setting {
+  color: #861001;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 9px;
+  font-weight: bold;
+}
+
+.currency-image {
+  width: 50px;
+}
+.padding-left-7 {
+  margin-left: 8.1px;
+  padding-left: 3px;
+}
+
+@media screen and (max-width: 1400px) {
+  .padding-left-7 {
+    height: 20px;
+    margin-left: 2.1px;
+    padding-left: 3px;
+  }
+
+  .user-margin-left {
+    margin-left: 9px !important;
+  }
+}
+
+.language-menu {
+  top: 36px;
+  min-width: 60px !important;
+  background-color: #ffd482;
+  border: none !important;
+  right: 7px !important;
+
+  @media screen and (max-width: 768px) {
+    position: absolute !important;
+    left: -17px !important;
+    .lang-icon {
+      height: 20px;
+      margin-left: -6px;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 768px) {
+    .lang-icon {
+      height: 20px;
+      margin-left: -2px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .user-button {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .custom-header-market {
+    margin-top: 15px;
+    display: inline-flex;
+  }
+
+  .icon-market {
+    padding-left: 0px !important;
+  }
+
+  #a_drop_down {
+    width: 80px;
+    height: 25px;
+
+    i {
+      color: #ffffff !important;
+    }
+  }
+
+  .langguage-menu {
+    transform: translate(-75%, 0) !important;
+    position: absolute !important;
+  }
+}
+
+.switch-float {
+  float: right;
+  display: inline-flex;
+}
+
+@media screen and (min-width: 1400px) {
+  .switch-float {
+    float: left !important;
+  }
+}
+
+.account-balance {
+  padding-top: 22px !important;
+}
+
+.link-user {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  color: #861001 !important;
+  display: inline-block !important;
+}
+
+.user-margin-left {
+  margin-left: 4px;
+}
+
+#account_balance_header .color-primary span {
+  font-size: 12px !important;
+}
+
+.balance {
+  @media screen and (max-width: 1400px){
+    display: none !important;
+  }
+}
+
+.visible-pc {
+  margin-top: 3px
+}
+
+#markets-show {
+  .text-color {
+    color: #797979;
+  }
+}
+
+.block_2{
+  margin-bottom: 10px;
+}
+
+//RESPONSIVE
+@media screen and(min-width: 768px) {
+  #order_form{
+    padding-right: 7px;
+  }
+  #charts{
+    margin-top: 0px !important;
+  }
+  .block_1{
+    padding-right: 7px;
+  }
+  .block_2{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .block_3{
+    padding-left: 7px;
+    padding-right: 0px;
+  }
+
+  //group 3 table
+  #place_order{
+    .row:nth-child(1){
+      margin-right: -5px;
+    }
+    .row:nth-child(2){
+      margin-bottom: 10px;
+      margin-right: -5px;
+    }
+  }
+
+}

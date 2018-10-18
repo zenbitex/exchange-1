@@ -1,0 +1,165 @@
+<div id="send_coin_form">
+  <%= render "shared/flash" %>
+  <%= simple_form_for @sendcoin, :url => sendcoin_index_path do |f| %>
+
+    <div class = "form-group balance_infor">
+      <img src="icon-<%= @coin_name.downcase %>.png"  class="coin_icon"/>
+      <div class="balance">
+        <label>
+          <%= t(".balance")%>
+        </label>
+        <div class="amount" price="<%= @price %>">
+          <%= @amount + " " + @coin_name %>
+        </div>
+      </div>
+    </div>
+    <div class="message_send_coin">
+      <%= t(".free_fee_send") %>
+    </div>
+    <div id="coin-email">
+      <%= f.input :email, label: (t('.email') + "<div id='manage_email'> #{t('.manage_email')}</div>").html_safe, :input_html => {:class => 'email-send-text'}, collection: @email.map{|x| x[:email]}, prompt: t('actions.select') %>
+    <div class="error email-send-error">
+      <%= t('.email_not_valid') %>
+    </div>
+      <div class="overlay">
+        <div class="content_manage">
+          <div class="close_manage">
+          </div>
+          <h3>
+            <%= t(".manage_title") %>
+          </h3>
+          <ul>
+            <li class="li-1 hidden-xs">
+              <div class="col-sm-4 col-xs-12 label_name">
+                <%= t(".label_name")%>
+              </div>
+              <div class="col-sm-6 col-xs-12 email_address">
+                <%= t(".email_address")%>
+              </div>
+              <div class="col-sm-2 col-xs-12 select_action">
+                <%= t(".select_action")%>
+              </div>
+            </li>
+
+            <div class="email_list">
+              <div class="confirm_delete" hidden>
+                <%= t(".confirm_delete") %>
+              </div>
+              <% @email.each do |data| %>
+                <li class="li-2">
+                  <div class="visible-xs col-xs-12">
+                    <%= t(".label_name")%>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <%= data.label %>
+                  </div>
+                  <div class="visible-xs col-xs-12">
+                    <%= t(".email_address")%>
+                  </div>
+                  <div class="col-sm-6 col-xs-12">
+                    <%= data.email %>
+                  </div>
+                  <div class="visible-xs col-xs-12">
+                    <%= t(".select_action")%>
+                  </div>
+                  <div class="col-sm-2 col-xs-12">
+                    <input type="radio" class="select_email" data="<%= data.email %>">
+                    <a data="<%= data.email %>" class="delete_email"><i class="fa fa-trash-o">&nbsp;</i></a>
+                  </div>
+                </li>
+              <% end -%>
+            </div>
+
+            <li class="li-3">
+              <div class="alert alert-danger message">
+              </div>
+              <div class="col-sm-4 col-xs-12">
+                <input class="string form-control" id="input_label" placeholder="<%= t(".label_name") %>" value="">
+              </div>
+              <div class="col-sm-6 col-xs-12">
+                <input class="string form-control" id="input_email" placeholder="<%= t(".email_address") %>" value="">
+              </div>
+              <div class="col-sm-2 col-xs-12">
+                <button class="form-control btn btn-send-coin-popup" id="add_email" type="button">
+                  <%= t(".add_address") %>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div id="coin_type">
+      <%= f.input :currency, label: t('.currency'), :collection => @currencies_summary.collect{ |cs| [cs[:name], cs[:id]] }, selected:@coin_code%>
+      <input type="text" id="coin_name" name="coin_name" class="hidden" value="<%= @coin_name %>" />
+    </div>
+
+    <%= f.input :amount, as: :decimal, required: true, label: t('.amount'), input_html: { min: '0' }%>
+
+    <div class="error amount-send-error">
+      <%= t('.amount_small') %>
+    </div>
+
+    <div class="error amount-send-tao">
+      <%= t('.amount_is_int') %>
+    </div>
+    <!-- estimate price by jpy
+    <div class="form-group no-margin-bottom jpy-form">
+      <div class="form-label">
+        <%= t('.jpy_label') %>
+      </div>
+      <div class="form-label jpy_money">
+        <span class="jpy_amount">
+
+        </span>
+        &nbsp; <%= t('.yen') %>
+      </div>
+    </div> 
+    -->
+    <div class="form-group">
+      <span class="hint">
+        <%= t('.notice') %>
+      </span>
+    </div>
+    <%= f.button :submit, value: t('.send') ,class: "btn btn-send-coin-primary btn-lg btn-send-coin" %>
+  <% end -%>
+
+  <div class="sendcoin-details">
+    <h1><%= t('.submit') %></h1>
+    <table class="table">
+      <tr>
+        <td>
+          <%= t('.currency') %>
+        </td>
+        <td class="currency-send">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= t('.email') %>
+        </td>
+        <td class="email-send">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <%= t('.amount') %>
+        </td>
+        <td class="amount-send">
+        </td>
+      </tr>
+    </table>
+
+    <div class="button-popup">
+      <a class="btn btn-next-send">
+        <%= t('.next') %>
+      </a>
+      <a class="btn btn-close-send">
+        <%= t('.cancel') %>
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container">
+  <form id="activation-form">
+    <h2><%= t('wait_activation.header') %></h2>
+      <div class="form-group text-center activation-article">
+        <div class="activation-article-group">
+          <p class="activation-article-text"><%= raw t('wait_activation.sent', email: @member.email) %></p>
+          <br>
+          <p class="activation-article-text"> <%= t('wait_activation.click') %> </p>
+        </div>
+        <div class="text-center activation-article-link col-sm-6">
+          <%= link_to t('wait_activation.resend'), send_email_activation_path(email: @member.email), class: 'btn activation-email-resend button-primary' %>
+        </div>
+        <div class="text-center activation-article-link col-sm-6">
+           <%= link_to t('wait_activation.back'), root_url, class: 'btn button-cancel link-back' %>
+        </div>       
+      </div>
+  </form>
+</div>

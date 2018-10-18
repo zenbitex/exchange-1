@@ -1,0 +1,29 @@
+= javascript_include_tag "lib/clipboard.min"
+= javascript_include_tag "funds/events"
+= render "shared/menu_settings"
+.form-default.api_created
+  h4.title = t('.desc')
+  p
+    .input-group.key-value
+      .input-group-addon style='width: 160px;' = t('.access_key')
+      .form-control.form-control-static#data-copy-access style='text-align: center;' = @token.access_key
+      .input-group-addon.token-data id="i-data-copy-access" idata-clipboard-action="copy" data-clipboard-target="#data-copy-access"
+        i.fa.fa-copy
+        span class="i-tooltip" Click To Copy
+    .input-group.key-value
+      .input-group-addon style='width: 160px;' = t('.secret_key')
+      .form-control.form-control-static#data-copy-secret style='text-align: center;' = @token.secret_key
+      .input-group-addon.token-data id="i-data-copy-secret" idata-clipboard-action="copy" data-clipboard-target="#data-copy-secret"
+        i.fa.fa-copy 
+        span class="i-tooltip" Click To Copy
+javascript:
+  $('.token-data').click(function() {
+    $('.i-tooltip').html("Copied");
+    $('.i-tooltip').addClass('copied');
+    $(this).addClass("active");
+  }) 
+  $('.token-data').mouseleave(function(){
+    $('.i-tooltip').html("Click To Copy");
+    $('.i-tooltip').removeClass('copied');
+    $(this).removeClass("active");
+  })

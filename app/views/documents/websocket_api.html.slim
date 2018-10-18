@@ -1,0 +1,134 @@
+.jumbotron
+  h2 WebSocket data interface (WebSocket API)
+  small interface URI: wss: //Bit-station.com:8080
+  br
+  small return the result format: JSON
+
+.panel.panel-default
+  .panel-heading
+    h3 WebSocket API
+
+  .panel-body
+    p The WebSocket API provides developers with a more real-time data path. Server can orderbook changes and market transactions data through the websocket long connection real-time push (push) to the WebSocket API users.
+    p WebSocket API can be divided into three simple steps:
+    ol
+      li 1. Establish a websocket connection
+      li 2. Use api token to authenticate
+      li 3. Receive and process the data
+
+.panel.panel-default
+  .panel-heading
+    h3 create a websocket connection
+
+  .panel-body
+    p WebSocket is widely used standards, various languages ​​have their own support library. Take Javascript as an example:
+    p Javascript:
+    pre: code
+      | var host = 'wss://Bit-station.com:8080';
+        var socket = new WebSocket(host);
+        socket.onopen = function() {
+          console.log("opened");
+        }
+
+        socket.onmessage = function(msg) {
+          console.log(msg);
+        }
+
+        socket.onclose = function() {
+          console.log("closed");
+        }
+    p
+      | You can also refer to the official Ruby client implementation of Brave: & nbsp;
+      a href='https://github.com/Bit-station/Bit-station-client-ruby/blob/master/lib/Bit-station_api/streaming_client.rb'
+        | https://github.com/Bit-station/Bit-station-client-ruby/blob/master/lib/Bit-station_api/streaming_client.rb
+
+
+.panel.panel-default
+  .panel-heading
+    h3 Use api token to authenticate
+
+  .panel-body
+    p Before you can authenticate, you must have your access / secret key ready. After registering and authenticating, just visit the <a href='/api_tokens'> API Key </a> page to get your Key.
+    p When you establish a WebSocket connection with the Pixiu server by the previous step, the server will return a challenge message with the following format:
+    pre: code
+      | {"challenge":"d45sSFIZZdYzRgwi-zDqA8HFP2MfVoWqXlHX-2LbB_37q9_3pkZ8og"}
+    p challenge contains a randomly generated string, the client needs to use the access / secret key on the string signature, and then back to the server signature, the server to verify the signature, the right to continue the next step, or return an error message.
+    p signature generation is very simple, first of all your access key and challenge string connection:
+    pre: code
+      | payload = access_key + challenge
+    p Assume the access key is "abc" and the challenge is "def", then the payload is "abcdef." Next, use HMAC-SHA256 and secret key to calculate the payload signature:
+    pre: code
+      | signature = HMAC-SHA256(secret_key, payload).to_hex
+    p assuming secret_key as 'ghi', with HMAC-SHA256 on the example of the payload signature results are:
+    pre: code
+      | signature = HMAC-SHA256('ghi', 'abcdef').to_hex
+                  = '52ca0e5beab532532c62155e78d81c7dc8ad6d6f744cf3797668cf52dd2f9a41'
+    p Now we just need to return the signature to the server in the following format:
+    pre: code
+      | {auth: {access_key: 'your_access_key', answer: 'the_signature'}}
+    p
+      | For more information, please refer to the implementation of the official Pixty Ruby client: & nbsp;
+      a href='https://github.com/Bit-station/Bit-station-client-ruby/blob/master/lib/Bit-station_api/streaming_client.rb'
+        | https://github.com/Bit-station/Bit-station-client-ruby/blob/master/lib/Bit-station_api/streaming_client.rb
+
+.panel.panel-default
+  .panel-heading
+    h3 Accept the data
+
+  .panel-body
+    p after verification can be accepted by the server to send real-time data.At present Brave through the WebSocket API provides two types of real-time data: Trade and Orderbook. Detailed data format is as follows:
+    table.table.result
+      thead
+        tr
+          th data type
+          th data structure / example
+          th Remarks
+      tbody
+        tr
+          td Trade
+          td: pre: code
+            | { "trade"=>
+                  { "id"=>2435,
+                    "price"=>"3500.0",
+                    "volume"=>"0.0331",
+                    "funds"=>"115.85",
+                    "market"=>"btcjpy",
+                    "created_at"=>"2014-06-16T05:02:37Z",
+                    "side"=>"bid",
+                    "bid"=>{
+                      "id"=>3248, "side"=>"buy", "price"=>nil,
+                      "avg_price"=>"3500.0", "state"=>"done", "market"=>"btcjpy",
+                      "created_at"=>"2014-06-16T05:02:37Z", "volume"=>"0.0331",
+                      "remaining_volume"=>"0.0", "executed_volume"=>"0.0331"
+                    }
+                  }
+              }
+          td
+            p Trade news represents a new deal for your pending order.
+            p price / volume: transaction price / volume of transactions
+            p funds: Turnover (in quotation currency)
+            p market: The base currency / quote currency pair
+            p side: your role in the deal (ask: seller, bid: buyer)
+            p ask or bid: after the transaction pending order data
+        tr
+          td Orderbook
+          td: pre: code
+            | { "orderbook"=>
+                { "action"=>"add",
+                  "order"=>{
+                    "id"=>3252,
+                    "timestamp"=>1402898864,
+                    "type"=>"ask",
+                    "volume"=>"1.0",
+                    "price"=>"3500.0",
+                    "market"=>"btcjpy",
+                    "ord_type"=>"limit"}
+                }
+              }
+          td style='width: 350px'
+            p Orderbook messages indicate that the orderbook has changed.
+            p Orderbook add message ("action" => "add") indicates that a new order is added to the orderbook.
+            p Orderbook remove message ("action" => "remove") indicates that the orderbook removed the order (the reason may be the user to cancel the pending order or pending order complete transaction).
+            p The orderbook update message ("action" => "update") indicates that the order in the orderbook has been updated.
+            p action: orderbook operation, value range: add, remove, update
+            p order: the operation of the order

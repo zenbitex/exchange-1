@@ -1,0 +1,557 @@
+.faq_content{
+  text-align: center;
+  padding: 30px 15px;
+  max-width: 1000px;
+  margin: auto;
+  a{
+    color: black;
+  }
+
+  ul{
+    padding-left: 5px;
+    li{
+      list-style: none;
+    } 
+  }
+
+  .col-xs-12 {
+    padding: 0;
+  }
+  .search_text{
+    margin: 0px auto 30px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .faq-cat-title {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding-right: 30px;
+    padding-left: 70px;
+    position: relative;
+    background-color: #297fb8;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    font-size: 15px;
+    min-width: 240px;
+    text-align: center;
+    &:before{
+      content: "✓";
+      position: absolute;
+      left: 0;
+      width: 50px;
+      background-color:rgba(0,0,0,0.5);
+    }
+  }
+  .faq-content{
+    a{
+      &:before{
+        font: normal normal normal 14px/1 'FontAwesome';
+        content: "\f00c";
+        padding-right: 5px;
+        color: #006b08;
+      }
+    }
+    .list_item{
+      display: inline-block;
+    }
+    ul{
+      display: inline-block;
+      text-align: left;
+      li{
+        list-style: none;
+        &:before {    
+          font-family: 'FontAwesome';
+          content: '\f067';
+          padding: 0 10px;
+        }
+      }
+    }
+    .col-xs-12 {
+      width: 100%;
+      text-align: left;
+    }
+  }
+  .faq-content1{
+    .col-xs-12 {
+      clear: both;
+    }
+  }
+  .faq-content2{
+    padding-top: 20px;
+    .item{
+      border-bottom: 2px dotted rgba(144, 111, 111, 0.35);
+      margin-bottom: 15px;
+      padding-bottom: 6px;
+    }
+    .contacts{
+      margin-bottom: 20px;
+      a{
+        text-decoration: underline;
+        color: red;
+        &:before {    
+          content: '';
+        }
+      }
+    }
+  }
+  .title{
+    font-size: 14px;
+    color: #b15500;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+  .faq_type_coin{
+    ul {
+      li {
+        border-bottom: 2px dashed rgba(128, 85, 0, 0.19);
+        display: inline-block;
+        padding-bottom: 10px;
+        .coin{
+          display: inline-block;
+          margin: 10px auto;
+          h3{
+            display: inline-table;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 36px;
+            margin: 0;
+          }
+        }
+        img{
+          float: left;
+          margin: auto;
+          height: 35px;
+        }
+        .col-sm-8{
+          text-align: left;
+          padding: 0px;
+        }
+      }
+    }
+  }
+
+  .faq_fee_list{
+    margin-top: 20px;
+    ul li{
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+      border: 1px solid rgb(213, 217, 225);
+      .col-md-5{
+        background: #8096a4;
+        text-align: center;
+        color: white;
+        line-height: 40px;
+      }
+      .col-md-7{
+        background: white;
+        text-align: center;
+        color: black;
+        line-height: 40px;
+      }
+    }
+    table{
+      font-size: 11px;
+      text-align: left;
+      background: white;
+      thead th{
+        text-align: center;
+        background: rgba(195, 196, 186, 0.2);
+      }
+    }
+  }
+  .faq-chart{
+    .chart-title{
+      padding: 10px 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .chart-container{
+      .col-xs-12 {
+        margin: 0px 0 10px;
+      }
+    }
+    .faq-chart-3-1, .faq-chart-3-2{
+      margin: 10px 0;
+    }
+    .faq-chart-3-3{
+      ul {
+        text-align: left;
+        display: inline-block;
+        padding: 10px 20px;
+        border: 1px dashed #d2cfd5;
+        span{
+          width: 140px;
+          display: inline-block;
+        }
+      }
+    }
+    .faq-chart-4{
+      img {
+        margin: 10px 0;
+      }
+    }
+    .faq-chart-7{
+      img {
+        margin: 10px 0 20px;
+      }
+    }
+  } 
+  .part_title{
+    padding: 10px 0;
+    background: white;
+    margin: 15px auto 5px;
+    display: block;
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    max-width: 300px;
+  }
+  .chart-text{
+    text-align: left;
+  }
+  .text-green, .color-green{
+    color: #318435;
+  }
+  .text-red {
+    color: #fc2d1c;
+  }
+  .faq-qa{
+    .accordion{
+      text-align: left;
+      .accordion-toggle{
+        clear: both;
+        h3{
+          display: inline;
+          font-size: 14px;
+        }  
+      } 
+      strong{
+        float: left;
+        margin-right: 10px;
+        color: #f14545;
+      }
+      .accordion-content{
+        color: #cea051;
+        display: none;
+        .answer-content{
+          display: table;
+          font-size: 13px;
+        }
+      }
+      .img-faq{
+        margin: 5px 0 10px;
+        text-align: center;
+      }
+    }
+  }
+  .faq-infor{
+    height: auto;
+  }
+  .faq-acount{
+    margin-top: 20px;
+    .faq-account-content{
+      border: 1px solid #dcdad5;
+      background: whitesmoke;
+      ul{
+        padding: 0;
+        li{
+          box-sizing:border-box;
+          width: auto;
+          border-right: 1px solid #dcdad5;
+          width: calc(100%/3);
+          a{
+            margin: 0px;
+          }
+        }
+        .active{
+          border-right: none;
+          a{
+            color: #f3f2f2;
+            border-radius: 0px;
+            font-weight: bold;
+            background-color: #2a5580;
+          }
+        }
+      }
+      .tab-content{
+        text-align: left;
+        padding: 10px;
+        .text-big{
+          font-size: 16px;
+          margin: 20px 0 5px;
+          text-align: left;
+          font-weight: bold;
+        }
+        .text-small{
+          b{
+            color: rgb(41, 53, 234);
+          }
+        }
+        i{
+          padding-left: 10px;
+        }
+        p {
+          padding-left: 10px;
+          display: inline-block;
+        }
+        .list_item{
+          b{
+            color: #f14545;
+          }
+        }
+      }
+    }
+  }
+  .faq-line{
+    border-top: 1px dotted #7b8c9c;
+    margin: 10px 0;
+  }
+  @media screen and (min-width: 420px) {
+    padding: 40px 30px;
+    .faq-content{
+      display: inline-block;
+      width: 100%;
+    }
+    .faq-content2{
+      .list_item{
+        display: block;
+        width: 100%;
+      }
+    }
+    .faq_type_coin{
+      ul li {
+        width: 100%;
+      }
+    }
+    p {
+      font-size: 14px;
+    }
+    .faq-cat-title {
+      font-size: 16px;
+    }
+    .faq_fee_list 
+    {
+      table {
+        font-size: 13px;
+        tr td{
+          text-align: center;
+        }
+      }
+      ul li{
+        display: flex;
+        border-bottom: 0;
+        margin-bottom: 0;
+      }
+      .col-md-5
+      {
+        display: inline-block;
+        float: left;
+        width: 60%;
+      }
+      .col-md-7
+      {
+        display: inline-block;
+        float: left;
+        width: 40%;
+      }  
+      ul:last-child{
+        margin-bottom: 30px;
+      }
+    }
+    .title{
+      text-align: center;
+    }
+    .part_title{
+      font-size: 15px;
+    }
+  }
+  @media (min-width: 768px)
+  {
+    padding: 40px 0; 
+    p{
+      font-size: 16px;
+    }
+    .faq_container .search_text{
+      input, button{
+        font-size: 15px;
+        height: 40px;
+      }
+    }
+    .col-xs-12{
+      font-size: 15px;
+    }
+    .faq-cat-title {
+      font-size: 18px;
+      line-height: 50px;
+      height: 50px;
+    }
+    .faq-content1{
+      .list_item{
+        width: 550px;
+      }
+      .col-xs-12{
+        clear: none;
+        width: 50%;
+        &:nth-child(even){
+          padding-left: 140px;
+        }
+      }
+    }
+    .faq-content2{
+      .contacts {
+        font-size: 18px;
+        clear: both;
+      }
+      .item {
+        border: 2px dotted rgba(0, 0, 0, 0.23);
+        padding: 10px;
+      }
+      .col-xs-12 {
+        width: 50%;
+        &:first-child{
+          padding-right: 10px;
+        }
+        &:last-child{
+          padding-left: 10px;
+        }
+      }
+    }
+    .faq_fee_list{
+      table{
+        font-size: 16px;
+      }
+    }
+    .faq_fee_list{
+      .col-md-5 {
+        width: 50%;
+      }
+      .col-md-7 {
+        width: 50%;
+      }
+    }
+    .faq_type_coin ul li {
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      .coin h3 {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      img {
+        height: 55px;
+      }
+    }
+    .faq-chart{
+      .chart-title {
+        font-size: 18px;
+      }
+      .chart-container{
+        .col-sm-6:nth-child(1){
+          padding-right: 10px;
+        }
+        .col-sm-6:nth-child(2){
+          padding-left: 10px;
+        }
+      } 
+      .faq-chart-3-3{
+        padding: 10px;
+        ul span {
+          width: 170px;
+        } 
+      }
+    }
+    .faq-account-content{
+      font-size: 17px;
+    }
+
+    .faq-qa 
+    {
+      min-height: 650px;
+      .accordion{ 
+        .accordion-toggle{
+          font-size: 19px;
+          h3 {
+            font-size: 17px;
+          }
+        }
+        .accordion-content{
+          .icon-a{
+            font-size: 16px;
+          }
+          .answer-content {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+    .faq-infor{
+      min-height: auto;
+    }
+    .part_title {
+      font-size: 17px;
+      line-height: 30px;
+    }
+    .title {
+      font-size: 16px;
+    }
+
+  }
+}
+
+
+.termofuser{
+  font-size: 13px;
+  background: white;
+  text-align: left;
+
+  ul li{
+    list-style-type: none;
+    ul{
+      padding: 0 0 0 15px;
+    }
+  }
+  .color-primary{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    color: #276ae4;
+    margin-top: 20px;
+  }
+  .none-bullet{
+    padding: 0;
+    > li:first-child {
+      margin-top: 10px;
+    }
+  }
+  .rule_number{
+    border-bottom: 2px dotted rgba(247, 158, 9, 0.31);
+    margin: 10px 0 5px;
+    font-size: 14px; 
+    font-weight: bold;
+  }
+  @media screen and (min-width: 420px) {
+    font-size: 14px;
+    .color-primary{
+      font-size: 19px;
+      margin-top: 30px;
+    }
+    .rule_number{
+      font-size: 16px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    .color-primary{
+      font-size: 21px;
+      margin-top: 35px;
+    }
+    .rule_number{
+      font-size: 18px;
+    }
+  }
+}

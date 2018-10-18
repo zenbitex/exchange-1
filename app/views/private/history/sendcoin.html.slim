@@ -1,0 +1,21 @@
+.history-pages
+  .history-tab
+    = render 'tabs', active: :sendcoin
+
+  .history-transaction#sendcoin
+    .table-responsive
+      table.table.table-bordered.table-striped.customize_table
+        thead: tr class=("empty" if @sendcoins.empty?)
+          th = t('.from')
+          th = t('.to')
+          th = t('.amount')
+          th = t('.currency')
+          th = t('.timestamp')        
+        - if @sendcoins.length != 0          
+          tbody.list
+            = render partial: 'sendcoin', collection: @sendcoins
+      - if @sendcoins.length == 0
+        div.empty_history 
+          = t('.empty_sendcoins').html_safe
+      .pull-right
+        = paginate @sendcoins
