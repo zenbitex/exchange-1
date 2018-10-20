@@ -1,5 +1,5 @@
-ADMIN_EMAIL = 'nguyenvinhphu1111@gmail.com'
-ADMIN_PASSWORD = '123123'
+ADMIN_EMAIL = 'xenhyipcrypto@gmail.com'
+ADMIN_PASSWORD = 'P3gajahan0101'
 
 admin_identity = Identity.find_or_create_by(email: ADMIN_EMAIL)
 admin_identity.password = admin_identity.password_confirmation = ADMIN_PASSWORD
@@ -25,14 +25,14 @@ two_factor.save!
 if Rails.env == 'development'
   NORMAL_PASSWORD = 'PassWord'
 
-  foo = Identity.create(email: 'foo@exchangepro.dev', password: NORMAL_PASSWORD, password_confirmation: NORMAL_PASSWORD, is_active: true)
+  foo = Identity.create(email: 'foo@zenbitex.com', password: NORMAL_PASSWORD, password_confirmation: NORMAL_PASSWORD, is_active: true)
   foo_member = Member.create(email: foo.email)
   foo_member.authentications.build(provider: 'identity', uid: foo.id)
   foo_member.tag_list.add 'vip'
   foo_member.tag_list.add 'hero'
   foo_member.save
 
-  bar = Identity.create(email: 'bar@exchangepro.dev', password: NORMAL_PASSWORD, password_confirmation: NORMAL_PASSWORD, is_active: true)
+  bar = Identity.create(email: 'bar@zenbitex.com', password: NORMAL_PASSWORD, password_confirmation: NORMAL_PASSWORD, is_active: true)
   bar_member = Member.create(email: bar.email)
   bar_member.authentications.build(provider: 'identity', uid: bar.id)
   bar_member.tag_list.add 'vip'
@@ -74,8 +74,8 @@ currencies = [
    {id: 1, currency: "jpy"},
    {id: 2, currency: "btc"},
    {id: 3, currency: "usd"}
-   # {id: 4, currency: "eth"},
-   # {id: 5, currency: "euro"},
+   {id: 4, currency: "eth"},
+   {id: 5, currency: "doge"},
    # {id: 6, currency: "cny"}
 ]
 
